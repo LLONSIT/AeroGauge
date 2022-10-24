@@ -1,0 +1,159 @@
+name: Aerogauge (North America)
+sha1: 77626171c35fb1a4dfebb0927280897f362225ed
+options:
+  basename: AeroGauge
+  target_path: baserom.z64
+  base_path: .
+  compiler: IDO
+  find_file_boundaries: True
+  header_encoding: ASCII
+  platform: n64
+  symbol_addrs_path: symbol_addrs.txt
+
+segments:
+  - name: header
+    type: header
+    start: 0x0
+  - name: boot
+    type: bin
+    start: 0x40
+  - name: main
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    subsegments:
+      - [0x1000, asm]
+      - [0x11C0, asm]
+      - [0x1FC0, asm]
+      - [0x2360, asm]
+      - [0x2D80, asm]
+      - [0x5850, asm]
+      - [0x6BE0, asm]
+      - [0x6C90, asm]
+      - [0x6EA0, asm]
+      - [0x9D50, asm]
+      - [0xA160, asm]
+      - [0xA220, asm]
+      - [0xA910, asm]
+      - [0xDA40, asm]
+      - [0xE270, asm]
+      - [0xEBD0, asm]
+      - [0xEC90, asm]
+      - [0x10520, asm]
+      - [0x10640, asm]
+      - [0x108F0, asm]
+      - [0x10D60, asm]
+      - [0x12760, asm]
+      - [0x14060, asm]
+      - [0x14720, asm]
+      - [0x15020, asm]
+      - [0x15D60, asm]
+      - [0x16840, asm]
+      - [0x16BD0, asm]
+      - [0x198F0, asm]
+      - [0x19A90, asm]
+      - [0x19AA0, asm]
+      - [0x1A230, asm]
+      - [0x1CA50, asm]
+      - [0x1CC30, asm]
+      - [0x1EDC0, asm]
+      - [0x1F0E0, asm]
+      - [0x1FD50, asm]
+      - [0x202A0, asm]
+      - [0x20D90, asm]
+      - [0x22680, asm]
+      - [0x22EC0, asm]
+      - [0x24530, asm]
+      - [0x24890, asm]
+      - [0x24B70, asm]
+      - [0x24CC0, asm]
+      - [0x24D00, asm]
+      - [0x24DF0, asm]
+      - [0x24E40, asm]
+      - [0x24EE0, asm]
+      - [0x25440, asm]
+      - [0x255D0, asm]
+      - [0x25760, asm]
+      - [0x25A60, asm]
+      - [0x25BE0, asm]
+      - [0x25D70, asm]
+      - [0x25F20, asm]
+      - [0x25FC0, asm]
+      - [0x26440, asm]
+      - [0x26520, asm]
+      - [0x265C0, asm]
+      - [0x26610, asm]
+      - [0x28470, asm]
+      - [0x2E0B0, asm]
+      - [0x2F1E0, asm]
+      - [0x337B0, asm]
+      - [0x37B40, asm]
+      - [0x3AD90, asm]
+      - [0x3C840, asm]
+      - [0x3F900, asm]
+      - [0x43090, asm]
+      - [0x470E0, asm]
+      - [0x4B490, asm]
+      - [0x4FA50, asm]
+      - [0x53A60, asm]
+      - [0x57E00, asm]
+      - [0x58530, asm]
+      - [0x58710, asm]
+      - [0x5D0C0, asm]
+      - [0x5D350, asm]
+      - [0x5F6B0, asm]
+      - [0x61570, asm]
+      - [0x62900, asm]
+      - [0x63A60, asm]
+      - [0x65610, asm]
+      - [0x65FF0, asm]
+      - [0x66230, asm]
+      - [0x66340, asm]
+      - [0x66740, asm]
+      - [0x667A0, asm]
+      - [0x669F0, asm]
+      - [0x66A30, asm]
+      - [0x66A60, asm]
+      - [0x66B10, asm]
+      - [0x66C20, asm]
+      - [0x66C60, asm]
+      - [0x66DD0, asm]
+      - [0x67890, asm]
+      - [0x678D0, asm]
+      - [0x68220, asm]
+      - [0x682C0, asm]
+      - [0x682E0, asm]
+      - [0x68340, asm]
+      - [0x683A0, asm]
+      - [0x68400, asm]
+      - [0x68460, asm]
+      - [0x684B0, asm]
+      - [0x68590, asm]
+      - [0x68900, asm]
+      - [0x68A80, asm]
+      - [0x68AB0, asm]
+      - [0x68B30, asm]
+      - [0x68BE0, asm]
+      - [0x68BF0, asm]
+      - [0x69420, asm]
+      - [0x6AD60, asm]
+      - [0x6B170, asm]
+      - [0x6B2C0, asm]
+      - [0x6B350, asm]
+      - [0x6B580, asm]
+      - [0x6B670, asm]
+      - [0x6B710, asm]
+      - [0x6B850, asm]
+      - [0x6B9F0, hasm]
+
+
+
+
+
+
+
+
+
+  - type: bin
+    start: 0x7CC30
+  - [0x800000]

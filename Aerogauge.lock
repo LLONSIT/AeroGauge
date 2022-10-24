@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Sun Oct 23 12:19:59 COT 2022
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+Hostname=Arcris
+OS\ Architecture=amd64
+OS\ Name=Linux
+OS\ Version=5.19.16-hardened1-1-hardened
+Timestamp=10/23/22, 12\:19 PM
+Username=usr

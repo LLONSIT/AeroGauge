@@ -1,0 +1,62 @@
+osAppNmiBuffer =    0x8000031C;
+  __osCleanupThread =  0x800711A0;
+    __osRestoreInt = 0x80070880;
+__osActiveQueue = 0x8009487C;
+osTvType = 0x80000300;
+osRomBase = 0x80000308;
+ osResetType = 0x8000030C;
+
+
+osCreateThread =    0x80067BB0;
+ _Printf =  0x800766C0;
+ __osTimerInterrupt =   0x80076DAC;
+__osSetTimerIntr =    0x80076F24;
+    __osInsertTimer = 0x80076F98;
+  __osViInit = 0x80077120  ;
+   __osContRamWrite = 0x80077260;
+ osEepromWrite =   0x800775C0;
+__osEepStatus =    0x800778B8;
+  osPfsIsPlug =  0x80077AE0;
+ __osPfsRequestData =   0x80077C80;
+ __osContAddressCrc =    0x80077E20;
+ __osContDataCrc =   0x80077ED0;
+  osGetThreadPri =  0x80077FA0;
+ __osSpRawStartDma =   0x80078740;
+   __osGetSR = 0x80078840;
+  __osSpRawReadIo =  0x80078860;
+  __osSpRawWriteIo =   0x800788B0;
+  osPiRawStartDma =  0x80078D00;
+ osEPiRawStartDma =   0x80078DE0;
+  __osDevMgrMain =  0x80079010;
+   __osLeoInterrupt = 0x800794A0;
+  osDestroyThread =   0x80079D20;
+    _filterBuffer = 0x80079EF8;
+  _saveBuffer =  0x80079FB0;
+  _loadBuffer =  0x8007A138;
+ _loadOutputBuffer =  0x8007A2C4;
+ alFxParamHdl =   0x8007A4E8;
+ alFxParam =   0x8007A744;
+ alFxPull  =  0x8007A75C;
+  _Litob =  0x8007AAD0;
+  _Ldtob =  0x8007B2E0;
+
+    bzero = 0x7006C4A0;
+
+__osSetGlobalIntMask = 0x8007BBD0 ;
+
+   osYieldThread = 0x8007BC20;
+   lldiv = 0x8007BC70;
+  ldiv = 0x8007BD70;
+  __osCurrentTime =  0x8008C8E0;
+  alGlobals  = 0x80092E40;
+  aisetnextbuf_data_0000  = 0x80092E50;
+  __osContinitialized  = 0x80092E60;
+  __osMotorinitialized  = 0x80093670;
+ osViModeTable   = 0x800936A0;
+ osViClock   = 0x80094828;
+   __OSGlobalIntMask = 0x80094830;
+    __osPiDevMgr = 0x80094840;
+  player_bss_003C  = 0x80094848;
+   __osCurrentHandle = 0x80094860;
+gPlayerLapCount = 0x8013FC98;
+gPlayerRacePos = 0x8013FC91;
