@@ -37,8 +37,8 @@ if args.make:		#only for AeroGauge :)
 baseimg = f"baserom.us.z64"
 basemap = f"expected/build/AeroGauge.us.map"
 
-myimg = f"build/quest64.us.z64"
-mymap = f"build/quest64.us.map"
+myimg = f"build/AeroGauge.us.z64"
+mymap = f"build/AeroGauge.us.map"
 
 if not os.path.isfile(baseimg):
     print(f"{baseimg} must exist.")

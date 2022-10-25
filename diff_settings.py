@@ -1,7 +1,7 @@
 import os
 
 def apply(config, args):
-    basename = 'quest64'
+    basename = 'AeroGauge'
     if os.path.exists(f'build/{basename}.us.bin'):
         version = 'us'
     elif os.path.exists(f'build/{basename}.eu.bin'):
