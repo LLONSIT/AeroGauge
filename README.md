@@ -1,6 +1,6 @@
 A early decompilation of a spedy game!
 
-##building !
+## Building !
 Clone with --recursive flag
 
 Copy the Aerogauge rom to baserom.z64
