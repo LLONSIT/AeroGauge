@@ -1,7 +1,7 @@
 
 ## AeroGauge
 
-A early decompilation of a spedy game!
+This repo contains a WIP Decompilation of AeroGauge USA Version
 
 ## Dependencies
 
