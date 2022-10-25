@@ -99,3 +99,5 @@ MAKEFLAGS += --no-builtin-rules
 print-% : ; $(info $* is a $(flavor $*) variable set to [$($*)]) @true
 
 
+python3 tools/asm-processor/build.py tools/ido/cc -- mips-linux-gnu-as -march=vr4300 -mabi=32 -I include -I build/us --defsym F3DEX_GBI=1 -- -c -Wab,-r4300_mul -non_shared -G 0 -Xcpluscomm -Xfullwarn -signed -O2 -nostdinc -I include/libc -DTARGET_N64 -I include -I build/us -I include/PR -I src -I . -mips2 -32 -DF3DEX_GBI -D_LANGUAGE_C -o build/src/code_68590.c.o src/code_68590.c
+	

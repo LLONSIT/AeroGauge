@@ -195,12 +195,9 @@ Discarded input sections
  .pdr           0x0000000000000000        0x0 build/asm/19AA0.s.o
  .gnu.attributes
                 0x0000000000000000       0x10 build/asm/19AA0.s.o
- .reginfo       0x0000000000000000       0x18 build/asm/1A230.s.o
- .MIPS.abiflags
-                0x0000000000000000       0x18 build/asm/1A230.s.o
- .pdr           0x0000000000000000        0x0 build/asm/1A230.s.o
- .gnu.attributes
-                0x0000000000000000       0x10 build/asm/1A230.s.o
+ .options       0x0000000000000000       0x20 build/src/code_1A230.c.o
+ .reginfo       0x0000000000000000       0x18 build/src/code_1A230.c.o
+ .mdebug        0x0000000000000000     0x18dc build/src/code_1A230.c.o
  .reginfo       0x0000000000000000       0x18 build/asm/1CA50.s.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 build/asm/1CA50.s.o
@@ -645,12 +642,9 @@ Discarded input sections
  .pdr           0x0000000000000000        0x0 build/asm/684B0.s.o
  .gnu.attributes
                 0x0000000000000000       0x10 build/asm/684B0.s.o
- .reginfo       0x0000000000000000       0x18 build/asm/68590.s.o
- .MIPS.abiflags
-                0x0000000000000000       0x18 build/asm/68590.s.o
- .pdr           0x0000000000000000        0x0 build/asm/68590.s.o
- .gnu.attributes
-                0x0000000000000000       0x10 build/asm/68590.s.o
+ .options       0x0000000000000000       0x20 build/src/code_68590.c.o
+ .reginfo       0x0000000000000000       0x18 build/src/code_68590.c.o
+ .mdebug        0x0000000000000000      0x5b8 build/src/code_68590.c.o
  .reginfo       0x0000000000000000       0x18 build/asm/68900.s.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 build/asm/68900.s.o
@@ -788,7 +782,7 @@ LOAD build/asm/16BD0.s.o
 LOAD build/asm/198F0.s.o
 LOAD build/asm/19A90.s.o
 LOAD build/asm/19AA0.s.o
-LOAD build/asm/1A230.s.o
+LOAD build/src/code_1A230.c.o
 LOAD build/asm/1CA50.s.o
 LOAD build/asm/1CC30.s.o
 LOAD build/asm/1EDC0.s.o
@@ -863,7 +857,7 @@ LOAD build/asm/683A0.s.o
 LOAD build/asm/68400.s.o
 LOAD build/asm/68460.s.o
 LOAD build/asm/684B0.s.o
-LOAD build/asm/68590.s.o
+LOAD build/src/code_68590.c.o
 LOAD build/asm/68900.s.o
 LOAD build/asm/68A80.s.o
 LOAD build/asm/68AB0.s.o
@@ -1439,8 +1433,8 @@ LOAD build/assets/7CC30.bin.o
                 0x0000000080018ea0                func_80018EA0
                 0x00000000800191fc                func_800191FC
                 0x0000000080019508                func_80019508
- build/asm/1A230.s.o(.text)
- .text          0x0000000080019630     0x2820 build/asm/1A230.s.o
+ build/src/code_1A230.c.o(.text)
+ .text          0x0000000080019630     0x2820 build/src/code_1A230.c.o
                 0x0000000080019630                func_80019630
                 0x00000000800199a0                func_800199A0
                 0x0000000080019b90                func_80019B90
@@ -2418,8 +2412,8 @@ LOAD build/assets/7CC30.bin.o
                 0x00000000800678b0                func_800678B0
                 0x00000000800678d0                func_800678D0
                 0x0000000080067920                func_80067920
- build/asm/68590.s.o(.text)
- .text          0x0000000080067990      0x370 build/asm/68590.s.o
+ build/src/code_68590.c.o(.text)
+ .text          0x0000000080067990      0x370 build/src/code_68590.c.o
                 0x0000000080067990                func_80067990
                 0x0000000080067af0                func_80067AF0
                 0x0000000080067b20                func_80067B20
@@ -2941,9 +2935,8 @@ LOAD build/assets/7CC30.bin.o
                 0x000000008007c030                _19AA0_s = .
  build/asm/19AA0.s.o(.data)
  .data          0x000000008007c030        0x0 build/asm/19AA0.s.o
-                0x000000008007c030                _1A230_s = .
- build/asm/1A230.s.o(.data)
- .data          0x000000008007c030        0x0 build/asm/1A230.s.o
+                0x000000008007c030                code_1A230_c = .
+ build/src/code_1A230.c.o(.data)
                 0x000000008007c030                _1CA50_s = .
  build/asm/1CA50.s.o(.data)
  .data          0x000000008007c030        0x0 build/asm/1CA50.s.o
@@ -3166,9 +3159,8 @@ LOAD build/assets/7CC30.bin.o
                 0x000000008007c030                _684B0_s = .
  build/asm/684B0.s.o(.data)
  .data          0x000000008007c030        0x0 build/asm/684B0.s.o
-                0x000000008007c030                _68590_s = .
- build/asm/68590.s.o(.data)
- .data          0x000000008007c030        0x0 build/asm/68590.s.o
+                0x000000008007c030                code_68590_c = .
+ build/src/code_68590.c.o(.data)
                 0x000000008007c030                _68900_s = .
  build/asm/68900.s.o(.data)
  .data          0x000000008007c030        0x0 build/asm/68900.s.o
@@ -3251,7 +3243,7 @@ LOAD build/assets/7CC30.bin.o
  build/asm/198F0.s.o(.rodata)
  build/asm/19A90.s.o(.rodata)
  build/asm/19AA0.s.o(.rodata)
- build/asm/1A230.s.o(.rodata)
+ build/src/code_1A230.c.o(.rodata)
  build/asm/1CA50.s.o(.rodata)
  build/asm/1CC30.s.o(.rodata)
  build/asm/1EDC0.s.o(.rodata)
@@ -3326,7 +3318,7 @@ LOAD build/assets/7CC30.bin.o
  build/asm/68400.s.o(.rodata)
  build/asm/68460.s.o(.rodata)
  build/asm/684B0.s.o(.rodata)
- build/asm/68590.s.o(.rodata)
+ build/src/code_68590.c.o(.rodata)
  build/asm/68900.s.o(.rodata)
  build/asm/68A80.s.o(.rodata)
  build/asm/68AB0.s.o(.rodata)
@@ -3411,8 +3403,7 @@ LOAD build/assets/7CC30.bin.o
  .bss           0x000000008007c030        0x0 build/asm/19A90.s.o
  build/asm/19AA0.s.o(.bss)
  .bss           0x000000008007c030        0x0 build/asm/19AA0.s.o
- build/asm/1A230.s.o(.bss)
- .bss           0x000000008007c030        0x0 build/asm/1A230.s.o
+ build/src/code_1A230.c.o(.bss)
  build/asm/1CA50.s.o(.bss)
  .bss           0x000000008007c030        0x0 build/asm/1CA50.s.o
  build/asm/1CC30.s.o(.bss)
@@ -3561,8 +3552,7 @@ LOAD build/assets/7CC30.bin.o
  .bss           0x000000008007c030        0x0 build/asm/68460.s.o
  build/asm/684B0.s.o(.bss)
  .bss           0x000000008007c030        0x0 build/asm/684B0.s.o
- build/asm/68590.s.o(.bss)
- .bss           0x000000008007c030        0x0 build/asm/68590.s.o
+ build/src/code_68590.c.o(.bss)
  build/asm/68900.s.o(.bss)
  .bss           0x000000008007c030        0x0 build/asm/68900.s.o
  build/asm/68A80.s.o(.bss)

@@ -66,7 +66,7 @@ SECTIONS
         build/asm/198F0.s.o(.text);
         build/asm/19A90.s.o(.text);
         build/asm/19AA0.s.o(.text);
-        build/asm/1A230.s.o(.text);
+        build/src/code_1A230.c.o(.text);
         build/asm/1CA50.s.o(.text);
         build/asm/1CC30.s.o(.text);
         build/asm/1EDC0.s.o(.text);
@@ -141,7 +141,7 @@ SECTIONS
         build/asm/68400.s.o(.text);
         build/asm/68460.s.o(.text);
         build/asm/684B0.s.o(.text);
-        build/asm/68590.s.o(.text);
+        build/src/code_68590.c.o(.text);
         build/asm/68900.s.o(.text);
         build/asm/68A80.s.o(.text);
         build/asm/68AB0.s.o(.text);
@@ -223,8 +223,8 @@ SECTIONS
         build/asm/19A90.s.o(.data);
         _19AA0_s = .;
         build/asm/19AA0.s.o(.data);
-        _1A230_s = .;
-        build/asm/1A230.s.o(.data);
+        code_1A230_c = .;
+        build/src/code_1A230.c.o(.data);
         _1CA50_s = .;
         build/asm/1CA50.s.o(.data);
         _1CC30_s = .;
@@ -373,8 +373,8 @@ SECTIONS
         build/asm/68460.s.o(.data);
         _684B0_s = .;
         build/asm/684B0.s.o(.data);
-        _68590_s = .;
-        build/asm/68590.s.o(.data);
+        code_68590_c = .;
+        build/src/code_68590.c.o(.data);
         _68900_s = .;
         build/asm/68900.s.o(.data);
         _68A80_s = .;
@@ -441,7 +441,7 @@ SECTIONS
         build/asm/198F0.s.o(.rodata);
         build/asm/19A90.s.o(.rodata);
         build/asm/19AA0.s.o(.rodata);
-        build/asm/1A230.s.o(.rodata);
+        build/src/code_1A230.c.o(.rodata);
         build/asm/1CA50.s.o(.rodata);
         build/asm/1CC30.s.o(.rodata);
         build/asm/1EDC0.s.o(.rodata);
@@ -516,7 +516,7 @@ SECTIONS
         build/asm/68400.s.o(.rodata);
         build/asm/68460.s.o(.rodata);
         build/asm/684B0.s.o(.rodata);
-        build/asm/68590.s.o(.rodata);
+        build/src/code_68590.c.o(.rodata);
         build/asm/68900.s.o(.rodata);
         build/asm/68A80.s.o(.rodata);
         build/asm/68AB0.s.o(.rodata);
@@ -571,7 +571,7 @@ SECTIONS
         build/asm/198F0.s.o(.bss);
         build/asm/19A90.s.o(.bss);
         build/asm/19AA0.s.o(.bss);
-        build/asm/1A230.s.o(.bss);
+        build/src/code_1A230.c.o(.bss);
         build/asm/1CA50.s.o(.bss);
         build/asm/1CC30.s.o(.bss);
         build/asm/1EDC0.s.o(.bss);
@@ -646,7 +646,7 @@ SECTIONS
         build/asm/68400.s.o(.bss);
         build/asm/68460.s.o(.bss);
         build/asm/684B0.s.o(.bss);
-        build/asm/68590.s.o(.bss);
+        build/src/code_68590.c.o(.bss);
         build/asm/68900.s.o(.bss);
         build/asm/68A80.s.o(.bss);
         build/asm/68AB0.s.o(.bss);
