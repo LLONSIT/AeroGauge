@@ -31,11 +31,11 @@ args = parser.parse_args()
 
 diff_count = args.count
 
-if args.make:
-    check_call(["make", "build/quest64.us.z64"])
+if args.make:		#only for AeroGauge :)
+    check_call(["make", "build/AeroGauge.us.z64"])
 
 baseimg = f"baserom.us.z64"
-basemap = f"expected/build/quest64.us.map"
+basemap = f"expected/build/AeroGauge.us.map"
 
 myimg = f"build/quest64.us.z64"
 mymap = f"build/quest64.us.map"

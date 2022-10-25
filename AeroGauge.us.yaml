@@ -157,3 +157,4 @@ segments:
   - type: bin
     start: 0x7CC30
   - [0x800000]
+
