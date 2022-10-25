@@ -1,4 +1,5 @@
-#include "ultratypes.h" //Temporal
+#include "ultratypes.h" 
+#include "ultra64.h"
 
 //0x8008B
 extern s16 D_8008B7DC;
@@ -16,4 +17,4 @@ unsigned short unkFC;
 
 
 
-char gPlayerRacePos;
+

@@ -59,4 +59,4 @@ __osSetGlobalIntMask = 0x8007BBD0 ;
   player_bss_003C  = 0x80094848;
    __osCurrentHandle = 0x80094860;
 gPlayerLapCount = 0x8013FC98;
-gPlayerRacePos = 0x8013FC91;
+gPlayerRacePos = 0x8013FC91; 

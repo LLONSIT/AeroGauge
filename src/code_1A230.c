@@ -1,3 +1,6 @@
+#include "ultra64.h"
+#include "ultratypes.h"
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_80019630.s")
 
@@ -21,9 +24,7 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_8001ADC4.s")
 
-//non Matching test
 void func_8001AFFC(void) {
-int b;
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_8001B004.s")
