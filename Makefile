@@ -4,7 +4,7 @@ VERSION  := us
 BUILD_DIR = build
 ASM_DIRS  = asm
 BIN_DIRS  = assets
-SRC_DIR   = src
+SRC_DIR   = src 
 
 SRC_DIRS  = $(SRC_DIR)
 
@@ -95,6 +95,7 @@ clean:
 ### Recipes
 
 .baserom.$(VERSION).ok: baserom.$(VERSION).z64
+	cp -a build expected/build # for asm differ 
 	@sha1sum -c .AeroGauge.sha1
 
 $(TARGET).elf: $(O_FILES) $(LANG_O_FILES)

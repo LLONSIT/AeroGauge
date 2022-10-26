@@ -12,9 +12,10 @@ src_dir = root_dir + "src/"
 
 # Project-specific
 CPP_FLAGS = [
-    "-Iinclude",
-    "-Isrc",
-    "-Iver/current/build/include",
+    "-I include",
+    "-I include/PR",
+    "-I src",
+    "-I ver/current/build/include",
     "-D_LANGUAGE_C",
     "-DF3DEX_GBI_2",
     "-D_MIPS_SZLONG=32",

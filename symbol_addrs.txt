@@ -6,7 +6,7 @@ osTvType = 0x80000300;
 osRomBase = 0x80000308;
  osResetType = 0x8000030C;
 
-
+alEvtqPostEvent =  0x8006A27C; 
 osCreateThread =    0x80067BB0;
  _Printf =  0x800766C0;
  __osTimerInterrupt =   0x80076DAC;
@@ -60,3 +60,4 @@ __osSetGlobalIntMask = 0x8007BBD0 ;
    __osCurrentHandle = 0x80094860;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91; 
+alSndpSetPan = 0x80067740;

@@ -1,6 +1,7 @@
-#include "ultra64.h"
-#include "ultratypes.h"
-#include "variables.h"
+#include <os_internal.h>
+#include <R4300.h>
+#include <types.h>
+
 #pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067990.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067AF0.s")

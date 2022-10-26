@@ -24,7 +24,7 @@ glabel func_800677A0
 /* 683D4 800677D4 AFB90024 */  sw         $t9, 0x24($sp)
 /* 683D8 800677D8 27A50020 */  addiu      $a1, $sp, 0x20
 /* 683DC 800677DC 24840014 */  addiu      $a0, $a0, 0x14
-/* 683E0 800677E0 0C01A89F */  jal        func_8006A27C
+/* 683E0 800677E0 0C01A89F */  jal        alEvtqPostEvent
 /* 683E4 800677E4 00003025 */   or        $a2, $zero, $zero
 /* 683E8 800677E8 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 683EC 800677EC 27BD0030 */  addiu      $sp, $sp, 0x30

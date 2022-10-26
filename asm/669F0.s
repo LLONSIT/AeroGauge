@@ -15,7 +15,7 @@ glabel func_80065DF0
 /* 66A00 80065E00 A7AE0018 */  sh         $t6, 0x18($sp)
 /* 66A04 80065E04 27A50018 */  addiu      $a1, $sp, 0x18
 /* 66A08 80065E08 24840048 */  addiu      $a0, $a0, 0x48
-/* 66A0C 80065E0C 0C01A89F */  jal        func_8006A27C
+/* 66A0C 80065E0C 0C01A89F */  jal        alEvtqPostEvent
 /* 66A10 80065E10 00003025 */   or        $a2, $zero, $zero
 /* 66A14 80065E14 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 66A18 80065E18 27BD0028 */  addiu      $sp, $sp, 0x28

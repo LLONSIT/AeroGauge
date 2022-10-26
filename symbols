@@ -28,8 +28,9 @@ labels:
     0x70068820 __setInstChanState
     0x70068874 __resetPerfChanState
     0x70069F64 __initChanState
-    0x7006A27C alEvtqPostEvent
-    0x7006A3A0 alEvtqNextEvent
+alEvtqPostEvent   0x8006A27C;
+    
+0x7006A3A0 alEvtqNextEvent
     0x7006A42C alEvtqNew
     0x7006A4A0 alSynAddPlayer
     0x7006A620 alSynSetVol

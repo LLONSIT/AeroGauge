@@ -136,7 +136,7 @@ SECTIONS
         build/asm/68220.s.o(.text);
         build/asm/682C0.s.o(.text);
         build/asm/682E0.s.o(.text);
-        build/asm/68340.s.o(.text);
+        build/src/alSndpSetPan.c.o(.text);
         build/asm/683A0.s.o(.text);
         build/asm/68400.s.o(.text);
         build/asm/68460.s.o(.text);
@@ -363,8 +363,8 @@ SECTIONS
         build/asm/682C0.s.o(.data);
         _682E0_s = .;
         build/asm/682E0.s.o(.data);
-        _68340_s = .;
-        build/asm/68340.s.o(.data);
+        alSndpSetPan_c = .;
+        build/src/alSndpSetPan.c.o(.data);
         _683A0_s = .;
         build/asm/683A0.s.o(.data);
         _68400_s = .;
@@ -511,7 +511,7 @@ SECTIONS
         build/asm/68220.s.o(.rodata);
         build/asm/682C0.s.o(.rodata);
         build/asm/682E0.s.o(.rodata);
-        build/asm/68340.s.o(.rodata);
+        build/src/alSndpSetPan.c.o(.rodata);
         build/asm/683A0.s.o(.rodata);
         build/asm/68400.s.o(.rodata);
         build/asm/68460.s.o(.rodata);
@@ -641,7 +641,7 @@ SECTIONS
         build/asm/68220.s.o(.bss);
         build/asm/682C0.s.o(.bss);
         build/asm/682E0.s.o(.bss);
-        build/asm/68340.s.o(.bss);
+        build/src/alSndpSetPan.c.o(.bss);
         build/asm/683A0.s.o(.bss);
         build/asm/68400.s.o(.bss);
         build/asm/68460.s.o(.bss);

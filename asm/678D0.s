@@ -14,7 +14,7 @@ glabel func_80066CD0
 /* 678DC 80066CDC A7AE0018 */  sh         $t6, 0x18($sp)
 /* 678E0 80066CE0 27A50018 */  addiu      $a1, $sp, 0x18
 /* 678E4 80066CE4 24840048 */  addiu      $a0, $a0, 0x48
-/* 678E8 80066CE8 0C01A89F */  jal        func_8006A27C
+/* 678E8 80066CE8 0C01A89F */  jal        alEvtqPostEvent
 /* 678EC 80066CEC 00003025 */   or        $a2, $zero, $zero
 /* 678F0 80066CF0 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 678F4 80066CF4 27BD0028 */  addiu      $sp, $sp, 0x28
@@ -241,7 +241,7 @@ glabel func_80066F9C
 /* 67BF4 80066FF4 02E02025 */   or        $a0, $s7, $zero
 /* 67BF8 80066FF8 A7AE00F4 */  sh         $t6, 0xF4($sp)
 /* 67BFC 80066FFC 8EC60048 */  lw         $a2, 0x48($s6)
-/* 67C00 80067000 0C01A89F */  jal        func_8006A27C
+/* 67C00 80067000 0C01A89F */  jal        alEvtqPostEvent
 /* 67C04 80067004 27A500F4 */   addiu     $a1, $sp, 0xF4
 /* 67C08 80067008 10000122 */  b          .L80067494
 /* 67C0C 8006700C 02E02025 */   or        $a0, $s7, $zero
@@ -347,7 +347,7 @@ glabel L80067038
 /* 67D88 80067188 44062000 */  mfc1       $a2, $f4
 /* 67D8C 8006718C 00000000 */  nop
 .L80067190:
-/* 67D90 80067190 0C01A89F */  jal        func_8006A27C
+/* 67D90 80067190 0C01A89F */  jal        alEvtqPostEvent
 /* 67D94 80067194 27A500C0 */   addiu     $a1, $sp, 0xC0
 /* 67D98 80067198 100000BE */  b          .L80067494
 /* 67D9C 8006719C 02E02025 */   or        $a0, $s7, $zero
@@ -388,7 +388,7 @@ glabel L800671A0
 /* 67E1C 8006721C AFB500C4 */  sw         $s5, 0xC4($sp)
 /* 67E20 80067220 02E02025 */  or         $a0, $s7, $zero
 /* 67E24 80067224 27A500C0 */  addiu      $a1, $sp, 0xC0
-/* 67E28 80067228 0C01A89F */  jal        func_8006A27C
+/* 67E28 80067228 0C01A89F */  jal        alEvtqPostEvent
 /* 67E2C 8006722C 02003025 */   or        $a2, $s0, $zero
 /* 67E30 80067230 24190002 */  addiu      $t9, $zero, 0x2
 /* 67E34 80067234 10000096 */  b          L80067490
@@ -537,7 +537,7 @@ glabel L800673B4
 /* 68044 80067444 AFB500C4 */  sw         $s5, 0xC4($sp)
 /* 68048 80067448 02E02025 */  or         $a0, $s7, $zero
 /* 6804C 8006744C 27A500C0 */  addiu      $a1, $sp, 0xC0
-/* 68050 80067450 0C01A89F */  jal        func_8006A27C
+/* 68050 80067450 0C01A89F */  jal        alEvtqPostEvent
 /* 68054 80067454 02003025 */   or        $a2, $s0, $zero
 /* 68058 80067458 1000000E */  b          .L80067494
 /* 6805C 8006745C 02E02025 */   or        $a0, $s7, $zero
@@ -647,7 +647,7 @@ glabel func_800674E4
 /* 681E0 800675E0 A7B80034 */  sh         $t8, 0x34($sp)
 /* 681E4 800675E4 8E060048 */  lw         $a2, 0x48($s0)
 /* 681E8 800675E8 8FA40028 */  lw         $a0, 0x28($sp)
-/* 681EC 800675EC 0C01A89F */  jal        func_8006A27C
+/* 681EC 800675EC 0C01A89F */  jal        alEvtqPostEvent
 /* 681F0 800675F0 27A50034 */   addiu     $a1, $sp, 0x34
 /* 681F4 800675F4 8FA40028 */  lw         $a0, 0x28($sp)
 /* 681F8 800675F8 0C01A8E8 */  jal        func_8006A3A0

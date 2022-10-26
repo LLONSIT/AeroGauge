@@ -15,7 +15,7 @@ glabel func_80066C90
 /* 678A0 80066CA0 A7AE0018 */  sh         $t6, 0x18($sp)
 /* 678A4 80066CA4 27A50018 */  addiu      $a1, $sp, 0x18
 /* 678A8 80066CA8 24840048 */  addiu      $a0, $a0, 0x48
-/* 678AC 80066CAC 0C01A89F */  jal        func_8006A27C
+/* 678AC 80066CAC 0C01A89F */  jal        alEvtqPostEvent
 /* 678B0 80066CB0 00003025 */   or        $a2, $zero, $zero
 /* 678B4 80066CB4 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 678B8 80066CB8 27BD0028 */  addiu      $sp, $sp, 0x28

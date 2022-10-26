@@ -88,7 +88,7 @@ glabel func_8006A20C
 /* 6AE74 8006A274 03E00008 */  jr         $ra
 /* 6AE78 8006A278 27BD0038 */   addiu     $sp, $sp, 0x38
 
-glabel func_8006A27C
+glabel alEvtqPostEvent
 /* 6AE7C 8006A27C 27BDFFD0 */  addiu      $sp, $sp, -0x30
 /* 6AE80 8006A280 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 6AE84 8006A284 AFA40030 */  sw         $a0, 0x30($sp)

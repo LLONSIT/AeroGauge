@@ -1,6 +1,4 @@
-#include "ultra64.h"
-#include "ultratypes.h"
-
+#include <ultratypes.h>
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_80019630.s")
 

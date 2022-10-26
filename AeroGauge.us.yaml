@@ -123,7 +123,7 @@ segments:
       - [0x68220, asm]
       - [0x682C0, asm]
       - [0x682E0, asm]
-      - [0x68340, asm]
+      - [0x68340, c, alSndpSetPan]
       - [0x683A0, asm]
       - [0x68400, asm]
       - [0x68460, asm]
