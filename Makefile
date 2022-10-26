@@ -88,7 +88,6 @@ split:
 	$(PYTHON) $(TOOLS_DIR)/splat/split.py $(BASENAME).$(VERSION).yaml
 
 clean:
-	rm -rf assets
 	rm -rf build
 	#rm -f *auto.txt
 
@@ -102,7 +101,7 @@ $(TARGET).elf: $(O_FILES) $(LANG_O_FILES)
 	@$(LD) $(LDFLAGS) -o $@
 
 #TODO remove this pitiful way to compile C files
-A = python3 tools/asm-processor/build.py tools/ido/cc -- mips-linux-gnu-as -march=vr4300 -mabi=32 -I include -I build/us --defsym F3DEX_GBI=1 -- -c -Wab,-r4300_mul -non_shared -G 0 -Xcpluscomm -Xfullwarn -signed -O2 -nostdinc -I include/libc -DTARGET_N64 -I include -I build/us -I include/PR -I src -I . -mips2 -32 -DF3DEX_GBI -D_LANGUAGE_C -o
+A = $(PYTHON) tools/asm-processor/build.py tools/ido/cc -- mips-linux-gnu-as -march=vr4300 -mabi=32 -I include -I build/us --defsym F3DEX_GBI=1 -- -c -Wab,-r4300_mul -non_shared -G 0 -Xcpluscomm -Xfullwarn -signed -O2 -g3 -nostdinc -I include/libc -DTARGET_N64 -I include -I build/us -I include/PR -I src -I . -mips2 -32 -DF3DEX_GBI -D_LANGUAGE_C -o
 
 
 ifndef PERMUTER
