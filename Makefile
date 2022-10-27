@@ -5,7 +5,7 @@ BUILD_DIR = build
 ASM_DIRS  = asm asm/data
 BIN_DIRS  = assets
 SRC_DIR   = src 
-CORES = 8
+CORES =  
 SRC_DIRS  = $(SRC_DIR)
 
 TOOLS_DIR := tools
