@@ -10,7 +10,7 @@ Install ``mips64-elf-binutils`` and ``mips-linux-gnu-binutils
   make -j -C tools/ido
 
 ## Building the rom !
-Clone with ``--recursive flag`` or run ``git submodule init``
+Clone with ``--recursive flag`` or run ``git submodule init ; git submodule update``
 
 Copy the Aerogauge rom to ``baserom.z64``
 
