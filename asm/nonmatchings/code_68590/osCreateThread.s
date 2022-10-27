@@ -63,7 +63,7 @@ glabel osCreateThread
 /* 688A4 80067CA4 8FA80028 */  lw         $t0, 0x28($sp)
 /* 688A8 80067CA8 A5180010 */  sh         $t8, 0x10($t0)
 /* 688AC 80067CAC 8FA90028 */  lw         $t1, 0x28($sp)
-/* 688B0 80067CB0 0C01C218 */  jal        func_80070860
+/* 688B0 80067CB0 0C01C218 */  jal        __osDisableInt
 /* 688B4 80067CB4 A5200012 */   sh        $zero, 0x12($t1)
 /* 688B8 80067CB8 3C0A8009 */  lui        $t2, %hi(__osActiveQueue)
 /* 688BC 80067CBC 8D4A487C */  lw         $t2, %lo(__osActiveQueue)($t2)

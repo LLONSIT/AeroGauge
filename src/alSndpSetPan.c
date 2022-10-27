@@ -14,6 +14,7 @@ void alSndpSetPan(ALSndPlayer *sndp, ALPan pan) {
     sp28 = pan;
     sp24 = (pan + 0x3C * 0x30) + pan + 0x40;
     alEvtqPostEvent(pan + 0x14, &sp20, NULL);
-*/
 
+}
+*/
 #pragma GLOBAL_ASM("asm/nonmatchings/alSndpSetPan/alSndpSetPan.s")

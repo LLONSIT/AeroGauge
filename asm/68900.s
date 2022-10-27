@@ -12,7 +12,7 @@ glabel func_80067D00
 /* 68904 80067D04 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 68908 80067D08 AFA40028 */  sw         $a0, 0x28($sp)
 /* 6890C 80067D0C AFB10018 */  sw         $s1, 0x18($sp)
-/* 68910 80067D10 0C01C218 */  jal        func_80070860
+/* 68910 80067D10 0C01C218 */  jal        __osDisableInt
 /* 68914 80067D14 AFB00014 */   sw        $s0, 0x14($sp)
 /* 68918 80067D18 8FAE0028 */  lw         $t6, 0x28($sp)
 /* 6891C 80067D1C 24010001 */  addiu      $at, $zero, 0x1

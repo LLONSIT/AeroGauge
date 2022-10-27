@@ -28,7 +28,7 @@ glabel func_80066090
 /* 66C9C 8006609C AFA5002C */  sw         $a1, 0x2C($sp)
 /* 66CA0 800660A0 AFA60030 */  sw         $a2, 0x30($sp)
 /* 66CA4 800660A4 AFB10018 */  sw         $s1, 0x18($sp)
-/* 66CA8 800660A8 0C01C218 */  jal        func_80070860
+/* 66CA8 800660A8 0C01C218 */  jal        __osDisableInt
 /* 66CAC 800660AC AFB00014 */   sw        $s0, 0x14($sp)
 /* 66CB0 800660B0 8FAE0028 */  lw         $t6, 0x28($sp)
 /* 66CB4 800660B4 00408025 */  or         $s0, $v0, $zero

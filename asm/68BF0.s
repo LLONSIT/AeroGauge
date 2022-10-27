@@ -495,7 +495,7 @@ glabel func_800686D0
 /* 692E0 800686E0 AFA60040 */  sw         $a2, 0x40($sp)
 /* 692E4 800686E4 AFB20020 */  sw         $s2, 0x20($sp)
 /* 692E8 800686E8 AFB1001C */  sw         $s1, 0x1C($sp)
-/* 692EC 800686EC 0C01C218 */  jal        func_80070860
+/* 692EC 800686EC 0C01C218 */  jal        __osDisableInt
 /* 692F0 800686F0 AFB00018 */   sw        $s0, 0x18($sp)
 /* 692F4 800686F4 8FAE0038 */  lw         $t6, 0x38($sp)
 /* 692F8 800686F8 00408025 */  or         $s0, $v0, $zero

@@ -1,7 +1,12 @@
 
+
+__osDisableInt = 0x80070860; 
+
 gScreen_var1 = 0x80096ABC;
 gScreen_var2 = 0x80096AC0;
 gScreen_var3 = 0x80096AC4;
+  alSndpStop = 0x80067860;
+    
 
 
 osAppNmiBuffer =    0x8000031C;
@@ -46,7 +51,7 @@ __osEepStatus =    0x800778B8;
   _Litob =  0x8007AAD0;
   _Ldtob =  0x8007B2E0;
 
-    bzero = 0x7006C4A0;
+    bzero = 0x8006C4A0;
 
 __osSetGlobalIntMask = 0x8007BBD0 ;
 

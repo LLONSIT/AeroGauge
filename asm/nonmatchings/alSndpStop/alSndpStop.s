@@ -1,13 +1,4 @@
-.include "macro.inc"
-
-/* assembler directives */
-.set noat      /* allow manual use of $at */
-.set noreorder /* don't insert nops after branches */
-.set gp=64     /* allow use of 64-bit general purpose registers */
-
-.section .text, "ax"
-
-glabel func_80067860
+glabel alSndpStop
 /* 68460 80067860 27BDFFD0 */  addiu      $sp, $sp, -0x30
 /* 68464 80067864 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 68468 80067868 8C820040 */  lw         $v0, 0x40($a0)

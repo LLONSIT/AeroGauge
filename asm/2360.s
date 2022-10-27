@@ -304,7 +304,7 @@ glabel func_80001A54
 /* 27B8 80001BB8 3C128011 */  lui        $s2, %hi(D_80109C28)
 /* 27BC 80001BBC 26529C28 */  addiu      $s2, $s2, %lo(D_80109C28)
 .L80001BC0:
-/* 27C0 80001BC0 0C019E18 */  jal        func_80067860
+/* 27C0 80001BC0 0C019E18 */  jal        alSndpStop
 /* 27C4 80001BC4 8E440000 */   lw        $a0, 0x0($s2)
 /* 27C8 80001BC8 26520018 */  addiu      $s2, $s2, 0x18
 /* 27CC 80001BCC 1656FFFC */  bne        $s2, $s6, .L80001BC0
