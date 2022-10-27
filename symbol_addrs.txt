@@ -1,4 +1,4 @@
-
+alSeqpSetSeq = 0x80066C90;
 
 __osDisableInt = 0x80070860; 
 
