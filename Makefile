@@ -5,7 +5,7 @@ BUILD_DIR = build
 ASM_DIRS  = asm asm/data
 BIN_DIRS  = assets
 SRC_DIR   = src 
-
+CORES = 8
 SRC_DIRS  = $(SRC_DIR)
 
 TOOLS_DIR := tools
@@ -36,8 +36,9 @@ OBJCOPYFLAGS = -O binary
 
 CC := $(TOOLS_DIR)/ido/cc
 
-OPT_FLAGS := -O2 -g3
+OPT_FLAGS := -O2 -g0 #confirmed
 MIPSISET := -mips2 -32
+
 
 INCLUDE_CFLAGS := -I . -I include -I include/libc -I include/PR
 
@@ -114,7 +115,12 @@ endif
 $(BUILD_DIR)/%.c.o: %.c
 	$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(MIPSISET) -o $@ $<
 
+
+
+		
+	
 $(BUILD_DIR)/%.s.o: %.s
+	make -j$(CORES) -C  $(TOOLS_DIR)/ido 
 	$(AS) $(ASFLAGS) -o $@ $<
 
 $(BUILD_DIR)/%.bin.o: %.bin
