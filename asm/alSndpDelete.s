@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80067E80
+glabel alSndpDelete
 /* 68A80 80067E80 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 68A84 80067E84 00802825 */  or         $a1, $a0, $zero
 /* 68A88 80067E88 AFBF0014 */  sw         $ra, 0x14($sp)

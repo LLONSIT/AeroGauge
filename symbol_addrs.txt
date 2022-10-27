@@ -1,7 +1,7 @@
-alSeqpSetSeq = 0x80066C90;
-
+alSeqpSetSeq = 0x80066C90; //type:function
+alSndpSetFXMix = 0x800677A0;
 __osDisableInt = 0x80070860; 
-
+alSndpDelete =  0x80067E80;
 gScreen_var1 = 0x80096ABC;
 gScreen_var2 = 0x80096AC0;
 gScreen_var3 = 0x80096AC4;
@@ -18,7 +18,7 @@ osRomBase = 0x80000308;
  osResetType = 0x8000030C;
 
 alEvtqPostEvent =  0x8006A27C; 
-osCreateThread =    0x80067BB0;
+osCreateThread =    0x80067BB0; //type:functions
  _Printf =  0x800766C0;
  __osTimerInterrupt =   0x80076DAC;
 __osSetTimerIntr =    0x80076F24;
@@ -72,3 +72,8 @@ __osSetGlobalIntMask = 0x8007BBD0 ;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91; 
 alSndpSetPan = 0x80067740;
+D_8008B7DC = 0x8008B7DC; //type:defined
+D_8008B7E0 = 0x8008B7E0; //type:defined
+D_8008B7E4 = 0x8008B7E4; //type:defined
+D_8008B7E8 = 0x8008B7E8; //type:defined
+D_8008B7EC = 0x8008B7EC; //type:defined

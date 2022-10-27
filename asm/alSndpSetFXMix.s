@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_800677A0
+glabel alSndpSetFXMix
 /* 683A0 800677A0 27BDFFD0 */  addiu      $sp, $sp, -0x30
 /* 683A4 800677A4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 683A8 800677A8 AFA50034 */  sw         $a1, 0x34($sp)

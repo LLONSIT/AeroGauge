@@ -124,13 +124,13 @@ segments:
       - [0x682C0, asm]
       - [0x682E0, asm]
       - [0x68340, asm, alSndpSetPan]
-      - [0x683A0, asm]
+      - [0x683A0, asm, alSndpSetFXMix]
       - [0x68400, asm, alSndpSetPitch]
       - [0x68460, asm, alSndpStop]
-      - [0x684B0, asm]
+      - [0x684B0, c, code_68B40]
       - [0x68590, c, code_68590]
       - [0x68900, asm]
-      - [0x68A80, asm]
+      - [0x68A80, asm, alSndpDelete]
       - [0x68AB0, asm]
       - [0x68B30, asm]
       - [0x68BE0, data]
@@ -172,7 +172,19 @@ segments:
       - [0x6EEF0, asm]
       - [0x6EF80, asm]
       - [0x6F720, asm]
-
+      - [0x6FC40, asm]
+      - [0x703F0, asm]
+      - [0x70750, asm]
+      - [0x707C0, asm]
+      - [0x70830, asm]
+      - [0x70DC0, asm]
+      - [0x70E70, asm]
+      - [0x71120, asm]
+      - [0x713F0, asm]
+      - [0x71460, asm]
+      - [0x714A0, asm]
+      - [0x71E40, asm]
+      
 
 
 

@@ -1,15 +1,13 @@
-#include "ultratypes.h" 
-#include "ultra64.h"
+#include <ultratypes.h>
+#include <ultra64.h>
 
-//D_A
-s32 D_A4500004;
 
 //0x8008B
-extern s16 D_8008B7DC;
-extern s16 D_8008B7E0;
-extern s16 D_8008B7E4;
-extern s16 D_8008B7E8;
-extern s16 D_8008B7EC;
+s16 D_8008B7DC;
+s16 D_8008B7E0;
+s16 D_8008B7E4;  //lap timer ?
+s16 D_8008B7E8;
+s16 D_8008B7EC;
 
 struct unk_struct_8013FC {
 
@@ -18,6 +16,13 @@ unsigned short unkFC;
 
 };
 
+struct unk_struct_8006B {
 
 
-s8 gPlayerRacePos;
+s32 unk3C;
+s32 unk40;
+s32 unk28;
+
+
+};
+
