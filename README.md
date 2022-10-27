@@ -1,4 +1,3 @@
-
 ## AeroGauge
 
 This repo contains a WIP Decompilation of AeroGauge USA Version
@@ -7,7 +6,10 @@ This repo contains a WIP Decompilation of AeroGauge USA Version
 
 Install ``mips64-elf-binutils`` and ``mips-linux-gnu-binutils
 ``
-## Building !
+## Building Tools (Compiler)
+  ``make -j -C tools/ido``
+
+## Building rom !
 Clone with ``--recursive flag``
 
 Copy the Aerogauge rom to ``baserom.z64``
