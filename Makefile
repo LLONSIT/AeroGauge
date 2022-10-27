@@ -120,7 +120,6 @@ $(BUILD_DIR)/%.c.o: %.c
 		
 	
 $(BUILD_DIR)/%.s.o: %.s
-	make -j$(CORES) -C  $(TOOLS_DIR)/ido 
 	$(AS) $(ASFLAGS) -o $@ $<
 
 $(BUILD_DIR)/%.bin.o: %.bin
