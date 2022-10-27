@@ -7,7 +7,7 @@ This repo contains a WIP Decompilation of AeroGauge USA Version
 Install ``mips64-elf-binutils`` and ``mips-linux-gnu-binutils
 ``
 ## Building Tools (Compiler)
-  ``make -j -C tools/ido``
+  make -j -C tools/ido
 
 ## Building rom !
 Clone with ``--recursive flag``
