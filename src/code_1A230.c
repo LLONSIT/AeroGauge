@@ -32,13 +32,20 @@ void func_8001AFFC(void) {
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_8001B35C.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_8001B58C.s")
+
+
+
+//TEMP structures, TODO: set up the structures in order to compile this func
 /*
-void func_8001BAD4(struct unk_struct_8013FC *D_8013FC80) {
+struct unk_struct_8013FC *D_8013FC80;
+
+void func_8001BAD4(void) {
     D_8008B7DC = 0x7F;
     D_8008B7E0 = 0xFF;
-    D_8008B7E4 = 0x141 - D_8013FC80->unkFC;
+    D_8008B7E4 = 0x141 - D_8013FC80->unkFC; 
     D_8008B7E8 = 0;
     D_8008B7EC = 0x140;
+
     }
 */
 
