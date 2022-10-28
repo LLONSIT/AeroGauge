@@ -12,8 +12,8 @@ extern s32 alGlobals;
 
 
 
-//
-void func_80067B44(void) {
+
+void alClose(void) {
     if (alGlobals != 0) {
         func_80071240();
         alGlobals = 0;
