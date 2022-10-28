@@ -183,7 +183,12 @@ segments:
       - [0x713F0, asm]
       - [0x71460, asm]
       - [0x714A0, asm]
-      - [0x71E40, asm]
+      - [0x71E40, c, alSynDelete]
+      - [0x71E50, asm]
+      - [0x71EF0, asm]
+      - [0x71FB0, asm]
+      - [0x72780, asm]
+      - [0x72820, asm]
       
 
 

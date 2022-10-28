@@ -15,7 +15,7 @@ extern s32 alGlobals;
 
 void alClose(void) {
     if (alGlobals != 0) {
-        func_80071240();
+        alSynDelete();
         alGlobals = 0;
     }
 }

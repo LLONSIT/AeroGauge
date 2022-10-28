@@ -7,6 +7,7 @@ gScreen_var2 = 0x80096AC0;
 gScreen_var3 = 0x80096AC4;
   alSndpStop = 0x80067860;
 alClose  =  0x80067B44; //function:true
+alSynDelete =  0x80071240;
     
 
 

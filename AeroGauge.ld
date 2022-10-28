@@ -201,7 +201,12 @@ SECTIONS
         build/asm/713F0.s.o(.text);
         build/asm/71460.s.o(.text);
         build/asm/714A0.s.o(.text);
-        build/asm/71E40.s.o(.text);
+        build/src/alSynDelete.c.o(.text);
+        build/asm/71E50.s.o(.text);
+        build/asm/71EF0.s.o(.text);
+        build/asm/71FB0.s.o(.text);
+        build/asm/72780.s.o(.text);
+        build/asm/72820.s.o(.text);
         main_TEXT_END = .;
         main_TEXT_SIZE = ABSOLUTE(main_TEXT_END - main_TEXT_START);
         main_RODATA_START = .;
@@ -364,7 +369,12 @@ SECTIONS
         build/asm/713F0.s.o(.rodata);
         build/asm/71460.s.o(.rodata);
         build/asm/714A0.s.o(.rodata);
-        build/asm/71E40.s.o(.rodata);
+        build/src/alSynDelete.c.o(.rodata);
+        build/asm/71E50.s.o(.rodata);
+        build/asm/71EF0.s.o(.rodata);
+        build/asm/71FB0.s.o(.rodata);
+        build/asm/72780.s.o(.rodata);
+        build/asm/72820.s.o(.rodata);
         main_RODATA_END = .;
         main_RODATA_SIZE = ABSOLUTE(main_RODATA_END - main_RODATA_START);
     }
@@ -531,7 +541,12 @@ SECTIONS
         build/asm/713F0.s.o(.bss);
         build/asm/71460.s.o(.bss);
         build/asm/714A0.s.o(.bss);
-        build/asm/71E40.s.o(.bss);
+        build/src/alSynDelete.c.o(.bss);
+        build/asm/71E50.s.o(.bss);
+        build/asm/71EF0.s.o(.bss);
+        build/asm/71FB0.s.o(.bss);
+        build/asm/72780.s.o(.bss);
+        build/asm/72820.s.o(.bss);
         main_BSS_END = .;
         main_BSS_SIZE = ABSOLUTE(main_BSS_END - main_BSS_START);
     }
