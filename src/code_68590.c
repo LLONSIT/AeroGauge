@@ -1,7 +1,6 @@
 #include <os_internal.h>
 #include <R4300.h>
 #include <types.h>
-extern void func_80071240();                                  /* extern */
 extern s32 alGlobals;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067990.s")
