@@ -203,10 +203,10 @@ glabel func_80068A5C
 /* 696D8 80068AD8 03284821 */  addu       $t1, $t9, $t0
 /* 696DC 80068ADC AE290008 */  sw         $t1, 0x8($s1)
 .L80068AE0:
-/* 696E0 80068AE0 0C019EBC */  jal        func_80067AF0
+/* 696E0 80068AE0 0C019EBC */  jal        alUnlink
 /* 696E4 80068AE4 02002025 */   or        $a0, $s0, $zero
 /* 696E8 80068AE8 02002025 */  or         $a0, $s0, $zero
-/* 696EC 80068AEC 0C019EC8 */  jal        func_80067B20
+/* 696EC 80068AEC 0C019EC8 */  jal        alLink
 /* 696F0 80068AF0 02402825 */   or        $a1, $s2, $zero
 .L80068AF4:
 /* 696F4 80068AF4 1620FFED */  bnez       $s1, .L80068AAC
@@ -276,11 +276,11 @@ glabel func_80068B88
 /* 697E4 80068BE4 AFA7002C */  sw         $a3, 0x2C($sp)
 .L80068BE8:
 /* 697E8 80068BE8 A3A9001F */  sb         $t1, 0x1F($sp)
-/* 697EC 80068BEC 0C019EBC */  jal        func_80067AF0
+/* 697EC 80068BEC 0C019EBC */  jal        alUnlink
 /* 697F0 80068BF0 AFAA0030 */   sw        $t2, 0x30($sp)
 /* 697F4 80068BF4 8FAA0030 */  lw         $t2, 0x30($sp)
 /* 697F8 80068BF8 8FA4002C */  lw         $a0, 0x2C($sp)
-/* 697FC 80068BFC 0C019EC8 */  jal        func_80067B20
+/* 697FC 80068BFC 0C019EC8 */  jal        alLink
 /* 69800 80068C00 25450048 */   addiu     $a1, $t2, 0x48
 /* 69804 80068C04 10000005 */  b          .L80068C1C
 /* 69808 80068C08 93A9001F */   lbu       $t1, 0x1F($sp)
@@ -1627,7 +1627,7 @@ glabel func_80069E60
 /* 6AACC 80069ECC 26B40048 */  addiu      $s4, $s5, 0x48
 /* 6AAD0 80069ED0 0320F809 */  jalr       $t9
 /* 6AAD4 80069ED4 00000000 */   nop
-/* 6AAD8 80069ED8 0C019EBC */  jal        func_80067AF0
+/* 6AAD8 80069ED8 0C019EBC */  jal        alUnlink
 /* 6AADC 80069EDC 02002025 */   or        $a0, $s0, $zero
 /* 6AAE0 80069EE0 12200005 */  beqz       $s1, .L80069EF8
 /* 6AAE4 80069EE4 02002025 */   or        $a0, $s0, $zero
@@ -1636,7 +1636,7 @@ glabel func_80069E60
 /* 6AAF0 80069EF0 01F84021 */  addu       $t0, $t7, $t8
 /* 6AAF4 80069EF4 AE280008 */  sw         $t0, 0x8($s1)
 .L80069EF8:
-/* 6AAF8 80069EF8 0C019EC8 */  jal        func_80067B20
+/* 6AAF8 80069EF8 0C019EC8 */  jal        alLink
 /* 6AAFC 80069EFC 02802825 */   or        $a1, $s4, $zero
 /* 6AB00 80069F00 56760006 */  bnel       $s3, $s6, .L80069F1C
 /* 6AB04 80069F04 924B0037 */   lbu       $t3, 0x37($s2)

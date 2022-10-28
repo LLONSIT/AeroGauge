@@ -103,7 +103,7 @@ glabel func_80067E50
 /* 68A50 80067E50 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 68A54 80067E54 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 68A58 80067E58 00802825 */  or         $a1, $a0, $zero
-/* 68A5C 80067E5C 0C01C494 */  jal        func_80071250
+/* 68A5C 80067E5C 0C01C494 */  jal        alSynRemovePlayer
 /* 68A60 80067E60 8C840014 */   lw        $a0, 0x14($a0)
 /* 68A64 80067E64 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 68A68 80067E68 27BD0018 */  addiu      $sp, $sp, 0x18

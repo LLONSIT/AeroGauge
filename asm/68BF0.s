@@ -40,11 +40,11 @@ glabel func_80068050
 /* 68C54 80068054 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 68C58 80068058 AFA40018 */  sw         $a0, 0x18($sp)
 /* 68C5C 8006805C AFA5001C */  sw         $a1, 0x1C($sp)
-/* 68C60 80068060 0C019EBC */  jal        func_80067AF0
+/* 68C60 80068060 0C019EBC */  jal        alUnlink
 /* 68C64 80068064 00A02025 */   or        $a0, $a1, $zero
 /* 68C68 80068068 8FA50018 */  lw         $a1, 0x18($sp)
 /* 68C6C 8006806C 8FA4001C */  lw         $a0, 0x1C($sp)
-/* 68C70 80068070 0C019EC8 */  jal        func_80067B20
+/* 68C70 80068070 0C019EC8 */  jal        alLink
 /* 68C74 80068074 24A50014 */   addiu     $a1, $a1, 0x14
 /* 68C78 80068078 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 68C7C 8006807C 27BD0018 */  addiu      $sp, $sp, 0x18
@@ -63,10 +63,10 @@ glabel func_80068088
 /* 68CA8 800680A8 5200000A */  beql       $s0, $zero, .L800680D4
 /* 68CAC 800680AC 8FBF0024 */   lw        $ra, 0x24($sp)
 .L800680B0:
-/* 68CB0 800680B0 0C019EBC */  jal        func_80067AF0
+/* 68CB0 800680B0 0C019EBC */  jal        alUnlink
 /* 68CB4 800680B4 02002025 */   or        $a0, $s0, $zero
 /* 68CB8 800680B8 02002025 */  or         $a0, $s0, $zero
-/* 68CBC 800680BC 0C019EC8 */  jal        func_80067B20
+/* 68CBC 800680BC 0C019EC8 */  jal        alLink
 /* 68CC0 800680C0 02402825 */   or        $a1, $s2, $zero
 /* 68CC4 800680C4 8E300014 */  lw         $s0, 0x14($s1)
 /* 68CC8 800680C8 1600FFF9 */  bnez       $s0, .L800680B0
@@ -405,7 +405,7 @@ glabel func_800683D0
 .L80068590:
 /* 69190 80068590 8FA50048 */  lw         $a1, 0x48($sp)
 /* 69194 80068594 0200A825 */  or         $s5, $s0, $zero
-/* 69198 80068598 0C019EC8 */  jal        func_80067B20
+/* 69198 80068598 0C019EC8 */  jal        alLink
 /* 6919C 8006859C 02002025 */   or        $a0, $s0, $zero
 /* 691A0 800685A0 AE000008 */  sw         $zero, 0x8($s0)
 /* 691A4 800685A4 8EC50024 */  lw         $a1, 0x24($s6)

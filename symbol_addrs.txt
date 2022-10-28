@@ -8,8 +8,10 @@ gScreen_var3 = 0x80096AC4;
   alSndpStop = 0x80067860;
 alClose  =  0x80067B44; //function:true
 alSynDelete =  0x80071240;
-    
-
+alUnlink =  0x80067AF0;
+alSynRemovePlayer  =  0x80071250;
+alEvtqPostEvent =  0x8006A27C;
+alLink  =  0x80067B20;
 
 osAppNmiBuffer =    0x8000031C;
   __osCleanupThread =  0x800711A0;

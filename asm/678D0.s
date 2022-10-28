@@ -190,10 +190,10 @@ glabel func_80066F10
 /* 67B50 80066F50 01F8C821 */  addu       $t9, $t7, $t8
 /* 67B54 80066F54 AE390008 */  sw         $t9, 0x8($s1)
 .L80066F58:
-/* 67B58 80066F58 0C019EBC */  jal        func_80067AF0
+/* 67B58 80066F58 0C019EBC */  jal        alUnlink
 /* 67B5C 80066F5C 02002025 */   or        $a0, $s0, $zero
 /* 67B60 80066F60 02002025 */  or         $a0, $s0, $zero
-/* 67B64 80066F64 0C019EC8 */  jal        func_80067B20
+/* 67B64 80066F64 0C019EC8 */  jal        alLink
 /* 67B68 80066F68 02402825 */   or        $a1, $s2, $zero
 .L80066F6C:
 /* 67B6C 80066F6C 1620FFF0 */  bnez       $s1, .L80066F30

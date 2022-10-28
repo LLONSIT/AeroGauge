@@ -1,26 +1,40 @@
-#include <os_internal.h>
-#include <R4300.h>
-#include <types.h>
-extern s32 alGlobals;
+#include <ultra64.h>
+#include <libaudio.h>
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067990.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067AF0.s")
+void alUnlink(ALLink *ln) {
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067B20.s")
+    if (ln->next != NULL) {
+        ln->next->prev = ln->prev;
+    }
+
+    if (ln->prev != NULL) {
+        ln->prev->next = ln->next;
+    }
+}
+
+void alLink(ALLink *element, ALLink *after) {
+
+    element->next = after->next;
+    element->prev = after;
+    
+    if (after->next != NULL) {
+    after->next->prev = element;
+    }
+    after->next = element;
+}
 
 
 
-
-void alClose(void) {
-    if (alGlobals != 0) {
-        alSynDelete();
+void alClose(ALGlobals *glob) {
+    if (alGlobals != 0) { 
+        alSynDelete(&glob->drvr);
         alGlobals = 0;
     }
 }
 
 
-//#pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067B44.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_68590/func_80067B7C.s")
 

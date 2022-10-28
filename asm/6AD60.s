@@ -37,10 +37,10 @@ glabel func_8006A160
 /* 6ADC4 8006A1C4 03194021 */  addu       $t0, $t8, $t9
 /* 6ADC8 8006A1C8 AE280008 */  sw         $t0, 0x8($s1)
 .L8006A1CC:
-/* 6ADCC 8006A1CC 0C019EBC */  jal        func_80067AF0
+/* 6ADCC 8006A1CC 0C019EBC */  jal        alUnlink
 /* 6ADD0 8006A1D0 02002025 */   or        $a0, $s0, $zero
 /* 6ADD4 8006A1D4 02002025 */  or         $a0, $s0, $zero
-/* 6ADD8 8006A1D8 0C019EC8 */  jal        func_80067B20
+/* 6ADD8 8006A1D8 0C019EC8 */  jal        alLink
 /* 6ADDC 8006A1DC 02402825 */   or        $a1, $s2, $zero
 .L8006A1E0:
 /* 6ADE0 8006A1E0 1620FFF0 */  bnez       $s1, .L8006A1A4
@@ -71,10 +71,10 @@ glabel func_8006A20C
 /* 6AE38 8006A238 00000000 */   nop
 .L8006A23C:
 /* 6AE3C 8006A23C 8E110000 */  lw         $s1, 0x0($s0)
-/* 6AE40 8006A240 0C019EBC */  jal        func_80067AF0
+/* 6AE40 8006A240 0C019EBC */  jal        alUnlink
 /* 6AE44 8006A244 02002025 */   or        $a0, $s0, $zero
 /* 6AE48 8006A248 02002025 */  or         $a0, $s0, $zero
-/* 6AE4C 8006A24C 0C019EC8 */  jal        func_80067B20
+/* 6AE4C 8006A24C 0C019EC8 */  jal        alLink
 /* 6AE50 8006A250 02402825 */   or        $a1, $s2, $zero
 /* 6AE54 8006A254 1620FFF9 */  bnez       $s1, .L8006A23C
 /* 6AE58 8006A258 02208025 */   or        $s0, $s1, $zero
@@ -110,7 +110,7 @@ glabel alEvtqPostEvent
 .L8006A2C4:
 /* 6AEC4 8006A2C4 AFA5001C */  sw         $a1, 0x1C($sp)
 /* 6AEC8 8006A2C8 AFA70038 */  sw         $a3, 0x38($sp)
-/* 6AECC 8006A2CC 0C019EBC */  jal        func_80067AF0
+/* 6AECC 8006A2CC 0C019EBC */  jal        alUnlink
 /* 6AED0 8006A2D0 AFA8002C */   sw        $t0, 0x2C($sp)
 /* 6AED4 8006A2D4 8FA8002C */  lw         $t0, 0x2C($sp)
 /* 6AED8 8006A2D8 8FA40034 */  lw         $a0, 0x34($sp)
@@ -140,7 +140,7 @@ glabel alEvtqPostEvent
 /* 6AF30 8006A330 AD000008 */   sw        $zero, 0x8($t0)
 /* 6AF34 8006A334 AD070008 */  sw         $a3, 0x8($t0)
 .L8006A338:
-/* 6AF38 8006A338 0C019EC8 */  jal        func_80067B20
+/* 6AF38 8006A338 0C019EC8 */  jal        alLink
 /* 6AF3C 8006A33C 01002025 */   or        $a0, $t0, $zero
 /* 6AF40 8006A340 10000011 */  b          .L8006A388
 /* 6AF44 8006A344 00000000 */   nop
@@ -154,7 +154,7 @@ glabel alEvtqPostEvent
 /* 6AF60 8006A360 8CD90008 */  lw         $t9, 0x8($a2)
 /* 6AF64 8006A364 01002025 */  or         $a0, $t0, $zero
 /* 6AF68 8006A368 03274823 */  subu       $t1, $t9, $a3
-/* 6AF6C 8006A36C 0C019EC8 */  jal        func_80067B20
+/* 6AF6C 8006A36C 0C019EC8 */  jal        alLink
 /* 6AF70 8006A370 ACC90008 */   sw        $t1, 0x8($a2)
 /* 6AF74 8006A374 10000004 */  b          .L8006A388
 /* 6AF78 8006A378 00000000 */   nop
@@ -186,14 +186,14 @@ glabel func_8006A3A0
 /* 6AFCC 8006A3CC 00001825 */  or         $v1, $zero, $zero
 /* 6AFD0 8006A3D0 5200000D */  beql       $s0, $zero, .L8006A408
 /* 6AFD4 8006A3D4 240FFFFF */   addiu     $t7, $zero, -0x1
-/* 6AFD8 8006A3D8 0C019EBC */  jal        func_80067AF0
+/* 6AFD8 8006A3D8 0C019EBC */  jal        alUnlink
 /* 6AFDC 8006A3DC 02002025 */   or        $a0, $s0, $zero
 /* 6AFE0 8006A3E0 2604000C */  addiu      $a0, $s0, 0xC
 /* 6AFE4 8006A3E4 8FA50034 */  lw         $a1, 0x34($sp)
 /* 6AFE8 8006A3E8 0C01D008 */  jal        func_80074020
 /* 6AFEC 8006A3EC 24060010 */   addiu     $a2, $zero, 0x10
 /* 6AFF0 8006A3F0 02002025 */  or         $a0, $s0, $zero
-/* 6AFF4 8006A3F4 0C019EC8 */  jal        func_80067B20
+/* 6AFF4 8006A3F4 0C019EC8 */  jal        alLink
 /* 6AFF8 8006A3F8 8FA50030 */   lw        $a1, 0x30($sp)
 /* 6AFFC 8006A3FC 10000003 */  b          .L8006A40C
 /* 6B000 8006A400 8E030008 */   lw        $v1, 0x8($s0)
@@ -229,7 +229,7 @@ glabel func_8006A42C
 /* 6B068 8006A468 00A08825 */  or         $s1, $a1, $zero
 .L8006A46C:
 /* 6B06C 8006A46C 02202025 */  or         $a0, $s1, $zero
-/* 6B070 8006A470 0C019EC8 */  jal        func_80067B20
+/* 6B070 8006A470 0C019EC8 */  jal        alLink
 /* 6B074 8006A474 02402825 */   or        $a1, $s2, $zero
 /* 6B078 8006A478 26100001 */  addiu      $s0, $s0, 0x1
 /* 6B07C 8006A47C 1613FFFB */  bne        $s0, $s3, .L8006A46C
