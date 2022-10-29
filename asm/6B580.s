@@ -17,7 +17,7 @@ glabel func_8006A980
 /* 6B598 8006A998 51C0002F */  beql       $t6, $zero, .L8006AA58
 /* 6B59C 8006A99C 8FBF0014 */   lw        $ra, 0x14($sp)
 /* 6B5A0 8006A9A0 AFA40020 */  sw         $a0, 0x20($sp)
-/* 6B5A4 8006A9A4 0C01A040 */  jal        func_80068100
+/* 6B5A4 8006A9A4 0C01A040 */  jal        __allocParam
 /* 6B5A8 8006A9A8 AFA50024 */   sw        $a1, 0x24($sp)
 /* 6B5AC 8006A9AC 8FA40020 */  lw         $a0, 0x20($sp)
 /* 6B5B0 8006A9B0 8FA70024 */  lw         $a3, 0x24($sp)
@@ -49,7 +49,7 @@ glabel func_8006A980
 /* 6B614 8006AA14 E4C4000C */  swc1       $f4, 0xC($a2)
 /* 6B618 8006AA18 AFA70024 */  sw         $a3, 0x24($sp)
 /* 6B61C 8006AA1C AFA6001C */  sw         $a2, 0x1C($sp)
-/* 6B620 8006AA20 0C019FFE */  jal        func_80067FF8
+/* 6B620 8006AA20 0C019FFE */  jal        _timeToSamples
 /* 6B624 8006AA24 8FA5003C */   lw        $a1, 0x3C($sp)
 /* 6B628 8006AA28 8FA6001C */  lw         $a2, 0x1C($sp)
 /* 6B62C 8006AA2C 8FA70024 */  lw         $a3, 0x24($sp)

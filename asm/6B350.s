@@ -103,7 +103,7 @@ glabel func_8006A838
 /* 6B4A0 8006A8A0 8FA9002C */  lw         $t1, 0x2C($sp)
 /* 6B4A4 8006A8A4 8D2A0008 */  lw         $t2, 0x8($t1)
 /* 6B4A8 8006A8A8 AD400008 */  sw         $zero, 0x8($t2)
-/* 6B4AC 8006A8AC 0C01A040 */  jal        func_80068100
+/* 6B4AC 8006A8AC 0C01A040 */  jal        __allocParam
 /* 6B4B0 8006A8B0 AFA40028 */   sw        $a0, 0x28($sp)
 /* 6B4B4 8006A8B4 8FAB0030 */  lw         $t3, 0x30($sp)
 /* 6B4B8 8006A8B8 8FA40028 */  lw         $a0, 0x28($sp)
@@ -121,7 +121,7 @@ glabel func_8006A838
 /* 6B4E8 8006A8E8 8C990008 */  lw         $t9, 0x8($a0)
 /* 6B4EC 8006A8EC 0320F809 */  jalr       $t9
 /* 6B4F0 8006A8F0 00000000 */   nop
-/* 6B4F4 8006A8F4 0C01A040 */  jal        func_80068100
+/* 6B4F4 8006A8F4 0C01A040 */  jal        __allocParam
 /* 6B4F8 8006A8F8 00000000 */   nop
 /* 6B4FC 8006A8FC 8FA40028 */  lw         $a0, 0x28($sp)
 /* 6B500 8006A900 10400012 */  beqz       $v0, .L8006A94C

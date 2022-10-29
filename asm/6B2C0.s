@@ -15,7 +15,7 @@ glabel func_8006A6C0
 /* 6B2D0 8006A6D0 8CAE0008 */  lw         $t6, 0x8($a1)
 /* 6B2D4 8006A6D4 51C00018 */  beql       $t6, $zero, .L8006A738
 /* 6B2D8 8006A6D8 8FBF0014 */   lw        $ra, 0x14($sp)
-/* 6B2DC 8006A6DC 0C01A040 */  jal        func_80068100
+/* 6B2DC 8006A6DC 0C01A040 */  jal        __allocParam
 /* 6B2E0 8006A6E0 AFA5001C */   sw        $a1, 0x1C($sp)
 /* 6B2E4 8006A6E4 8FA7001C */  lw         $a3, 0x1C($sp)
 /* 6B2E8 8006A6E8 10400012 */  beqz       $v0, .L8006A734

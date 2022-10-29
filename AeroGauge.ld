@@ -155,7 +155,7 @@ SECTIONS
         build/asm/68BF0.s.o(.text);
         build/asm/69420.s.o(.text);
         build/asm/6AD60.s.o(.text);
-        build/asm/6B170.s.o(.text);
+        build/src/code_6B170.c.o(.text);
         build/asm/6B2C0.s.o(.text);
         build/asm/6B350.s.o(.text);
         build/asm/6B580.s.o(.text);
@@ -193,7 +193,7 @@ SECTIONS
         build/asm/6FC40.s.o(.text);
         build/asm/703F0.s.o(.text);
         build/asm/70750.s.o(.text);
-        build/asm/707C0.s.o(.text);
+        build/src/osViSetEvent.c.o(.text);
         build/asm/70830.s.o(.text);
         build/asm/70DC0.s.o(.text);
         build/asm/70E70.s.o(.text);
@@ -323,7 +323,7 @@ SECTIONS
         build/asm/68BF0.s.o(.rodata);
         build/asm/69420.s.o(.rodata);
         build/asm/6AD60.s.o(.rodata);
-        build/asm/6B170.s.o(.rodata);
+        build/src/code_6B170.c.o(.rodata);
         build/asm/6B2C0.s.o(.rodata);
         build/asm/6B350.s.o(.rodata);
         build/asm/6B580.s.o(.rodata);
@@ -361,7 +361,7 @@ SECTIONS
         build/asm/6FC40.s.o(.rodata);
         build/asm/703F0.s.o(.rodata);
         build/asm/70750.s.o(.rodata);
-        build/asm/707C0.s.o(.rodata);
+        build/src/osViSetEvent.c.o(.rodata);
         build/asm/70830.s.o(.rodata);
         build/asm/70DC0.s.o(.rodata);
         build/asm/70E70.s.o(.rodata);
@@ -495,7 +495,7 @@ SECTIONS
         build/asm/68BF0.s.o(.bss);
         build/asm/69420.s.o(.bss);
         build/asm/6AD60.s.o(.bss);
-        build/asm/6B170.s.o(.bss);
+        build/src/code_6B170.c.o(.bss);
         build/asm/6B2C0.s.o(.bss);
         build/asm/6B350.s.o(.bss);
         build/asm/6B580.s.o(.bss);
@@ -533,7 +533,7 @@ SECTIONS
         build/asm/6FC40.s.o(.bss);
         build/asm/703F0.s.o(.bss);
         build/asm/70750.s.o(.bss);
-        build/asm/707C0.s.o(.bss);
+        build/src/osViSetEvent.c.o(.bss);
         build/asm/70830.s.o(.bss);
         build/asm/70DC0.s.o(.bss);
         build/asm/70E70.s.o(.bss);

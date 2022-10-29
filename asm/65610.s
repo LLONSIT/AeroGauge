@@ -63,7 +63,7 @@ glabel func_80064A10
 /* 656E0 80064AE0 2406029D */   addiu     $a2, $zero, 0x29D
 /* 656E4 80064AE4 02202025 */  or         $a0, $s1, $zero
 /* 656E8 80064AE8 2405029A */  addiu      $a1, $zero, 0x29A
-/* 656EC 80064AEC 0C01BEF0 */  jal        func_8006FBC0
+/* 656EC 80064AEC 0C01BEF0 */  jal        osViSetEvent
 /* 656F0 80064AF0 93A6003B */   lbu       $a2, 0x3B($sp)
 /* 656F4 80064AF4 8FA9002C */  lw         $t1, 0x2C($sp)
 /* 656F8 80064AF8 8FAA0030 */  lw         $t2, 0x30($sp)

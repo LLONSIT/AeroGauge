@@ -11,7 +11,7 @@ glabel func_80067FF0
 /* 68BF0 80067FF0 03E00008 */  jr         $ra
 /* 68BF4 80067FF4 00000000 */   nop
 
-glabel func_80067FF8
+glabel _timeToSamples
 /* 68BF8 80067FF8 8C8E0044 */  lw         $t6, 0x44($a0)
 /* 68BFC 80067FFC 44852000 */  mtc1       $a1, $f4
 /* 68C00 80068000 3C01800A */  lui        $at, %hi(D_800989F0)
@@ -87,7 +87,7 @@ glabel func_800680E8
 /* 68CF8 800680F8 03E00008 */  jr         $ra
 /* 68CFC 800680FC AC44002C */   sw        $a0, 0x2C($v0)
 
-glabel func_80068100
+glabel __allocParam
 /* 68D00 80068100 3C028009 */  lui        $v0, %hi(alGlobals)
 /* 68D04 80068104 8C422E40 */  lw         $v0, %lo(alGlobals)($v0)
 /* 68D08 80068108 00001825 */  or         $v1, $zero, $zero

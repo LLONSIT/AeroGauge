@@ -1,3 +1,4 @@
+//libaudio syms
 alSeqpSetSeq = 0x80066C90; //type:function
 alSndpSetFXMix = 0x800677A0;
 __osDisableInt = 0x80070860; 
@@ -12,7 +13,14 @@ alUnlink =  0x80067AF0;
 alSynRemovePlayer  =  0x80071250;
 alEvtqPostEvent =  0x8006A27C;
 alLink  =  0x80067B20;
+osViSetEvent = 0x8006FBC0;
+__osViNext = 0x80094C54;
+alSynFreeVoice =   0x8006A570;
+alSynSetVol  =  0x8006A620;
+__allocParam = 0x80068100;
+_timeToSamples = 0x80067FF8; 
 
+//os syms
 osAppNmiBuffer =    0x8000031C;
   __osCleanupThread =  0x800711A0;
     __osRestoreInt = 0x80070880;

@@ -651,7 +651,7 @@ glabel func_800711B0
 /* 71DC0 800711C0 8CAE0008 */  lw         $t6, 0x8($a1)
 /* 71DC4 800711C4 51C0001A */  beql       $t6, $zero, .L80071230
 /* 71DC8 800711C8 8FBF0014 */   lw        $ra, 0x14($sp)
-/* 71DCC 800711CC 0C01A040 */  jal        func_80068100
+/* 71DCC 800711CC 0C01A040 */  jal        __allocParam
 /* 71DD0 800711D0 AFA5001C */   sw        $a1, 0x1C($sp)
 /* 71DD4 800711D4 8FA7001C */  lw         $a3, 0x1C($sp)
 /* 71DD8 800711D8 10400014 */  beqz       $v0, .L8007122C
