@@ -1,6 +1,5 @@
 # AeroGauge
-
-This repo contains a WIP Decompilation of AeroGauge USA Version
+AeroGauge is a fzero style game, but it has different and special mechanics!
 
 ## Dependencies
 
