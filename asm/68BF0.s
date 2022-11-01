@@ -35,7 +35,7 @@ glabel _timeToSamples
 /* 68C48 80068048 03E00008 */  jr         $ra
 /* 68C4C 8006804C 03001025 */   or        $v0, $t8, $zero
 
-glabel func_80068050
+glabel _freePVoice
 /* 68C50 80068050 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 68C54 80068054 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 68C58 80068058 AFA40018 */  sw         $a0, 0x18($sp)

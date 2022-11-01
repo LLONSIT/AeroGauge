@@ -19,6 +19,7 @@ alSynFreeVoice =   0x8006A570;
 alSynSetVol  =  0x8006A620;
 __allocParam = 0x80068100;
 _timeToSamples = 0x80067FF8; 
+_freePVoice = 0x80068050;
 
 //os syms
 osAppNmiBuffer =    0x8000031C;
@@ -89,3 +90,4 @@ D_8008B7E0 = 0x8008B7E0; //type:defined
 D_8008B7E4 = 0x8008B7E4; //type:defined
 D_8008B7E8 = 0x8008B7E8; //type:defined
 D_8008B7EC = 0x8008B7EC; //type:defined
+D_8016C470 = 0x8016C470; //type:defined

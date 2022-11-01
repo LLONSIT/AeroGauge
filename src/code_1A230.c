@@ -1,6 +1,11 @@
 #include <ultra64.h>
 #include <ultratypes.h>
-#include "variables.h"
+#include "structs.h"
+extern s16 D_8008B7DC;
+extern s16 D_8008B7E0;
+extern s16 D_8008B7E4;
+extern s16 D_8008B7E8;
+extern s16 D_8008B7EC;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_80019630.s")
 
@@ -36,19 +41,19 @@ void func_8001AFFC(void) {
 
 
 //TEMP structures, TODO: set up the structures in order to compile this func
-/*
+
 struct unk_struct_8013FC *D_8013FC80;
 
 void func_8001BAD4(void) {
     D_8008B7DC = 0x7F;
     D_8008B7E0 = 0xFF;
-    D_8008B7E4 = 0x141 - D_8013FC80->unkFC; 
+    D_8008B7E4 = 0x141 - D_8013FC80->unkFC;
     D_8008B7E8 = 0;
     D_8008B7EC = 0x140;
 
     }
-*/
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_8001BAD4.s")
+
+//#pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_8001BAD4.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/code_1A230/func_8001BB20.s")
