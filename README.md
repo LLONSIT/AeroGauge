@@ -1,10 +1,9 @@
 # AeroGauge
-
-This repo contains a WIP Decompilation of AeroGauge USA Version
+AeroGauge is a fzero style game, but it has different and special mechanics!
 
 ## Dependencies
 
-Install ``mips64-elf-binutils`` and ``mips-linux-gnu-binutils
+Install ``mips64-elf-binutils``
 ``
 ## Building Tools (Compiler)
  ``make -j -C tools/ido``
