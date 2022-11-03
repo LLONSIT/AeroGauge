@@ -31,3 +31,9 @@ s32 unk28;
 
 };
 
+struct struct_8001AB94 {
+    s16 unk0;
+    s16 unk2;
+    s8 pad[0x8]; // dunno whats here
+    s32 unk10; // Could be anything, perhaps f32.
+};

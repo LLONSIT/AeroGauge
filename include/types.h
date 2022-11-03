@@ -1,2 +1,3 @@
-#define NULL 0
-extern void osCreateThread(OSThread *t, OSId id, void (*entry)(void *), void *arg, void *sp, OSPri p);
+//code_703F0
+extern void func_8006F980(void *arg0);
+

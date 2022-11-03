@@ -2,3 +2,6 @@
 	path = tools/splat
 	url = https://github.com/ethteck/splat
 
+[submodule "tools/m2ctx"]
+	path = tools/m2ctx
+	url = https://github.com/ethteck/m2ctx

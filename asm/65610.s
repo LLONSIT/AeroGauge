@@ -31,11 +31,11 @@ glabel func_80064A10
 /* 65660 80064A60 24910040 */  addiu      $s1, $a0, 0x40
 /* 65664 80064A64 02202025 */  or         $a0, $s1, $zero
 /* 65668 80064A68 26050058 */  addiu      $a1, $s0, 0x58
-/* 6566C 80064A6C 0C01978C */  jal        func_80065E30
+/* 6566C 80064A6C 0C01978C */  jal        osCreateMesgQueue
 /* 65670 80064A70 24060008 */   addiu     $a2, $zero, 0x8
 /* 65674 80064A74 26040078 */  addiu      $a0, $s0, 0x78
 /* 65678 80064A78 26050090 */  addiu      $a1, $s0, 0x90
-/* 6567C 80064A7C 0C01978C */  jal        func_80065E30
+/* 6567C 80064A7C 0C01978C */  jal        osCreateMesgQueue
 /* 65680 80064A80 24060008 */   addiu     $a2, $zero, 0x8
 /* 65684 80064A84 0C01BDFC */  jal        func_8006F7F0
 /* 65688 80064A88 240400FE */   addiu     $a0, $zero, 0xFE
@@ -51,15 +51,15 @@ glabel func_80064A10
 /* 656B0 80064AB0 24040001 */   addiu     $a0, $zero, 0x1
 /* 656B4 80064AB4 24040004 */  addiu      $a0, $zero, 0x4
 /* 656B8 80064AB8 02202825 */  or         $a1, $s1, $zero
-/* 656BC 80064ABC 0C01AB80 */  jal        func_8006AE00
+/* 656BC 80064ABC 0C01AB80 */  jal        osSetEventMesg
 /* 656C0 80064AC0 2406029B */   addiu     $a2, $zero, 0x29B
 /* 656C4 80064AC4 24040009 */  addiu      $a0, $zero, 0x9
 /* 656C8 80064AC8 02202825 */  or         $a1, $s1, $zero
-/* 656CC 80064ACC 0C01AB80 */  jal        func_8006AE00
+/* 656CC 80064ACC 0C01AB80 */  jal        osSetEventMesg
 /* 656D0 80064AD0 2406029C */   addiu     $a2, $zero, 0x29C
 /* 656D4 80064AD4 2404000E */  addiu      $a0, $zero, 0xE
 /* 656D8 80064AD8 02202825 */  or         $a1, $s1, $zero
-/* 656DC 80064ADC 0C01AB80 */  jal        func_8006AE00
+/* 656DC 80064ADC 0C01AB80 */  jal        osSetEventMesg
 /* 656E0 80064AE0 2406029D */   addiu     $a2, $zero, 0x29D
 /* 656E4 80064AE4 02202025 */  or         $a0, $s1, $zero
 /* 656E8 80064AE8 2405029A */  addiu      $a1, $zero, 0x29A
@@ -76,7 +76,7 @@ glabel func_80064A10
 /* 65714 80064B14 AFA90010 */  sw         $t1, 0x10($sp)
 /* 65718 80064B18 0C019EEC */  jal        osCreateThread
 /* 6571C 80064B1C AFAA0014 */   sw        $t2, 0x14($sp)
-/* 65720 80064B20 0C019F40 */  jal        func_80067D00
+/* 65720 80064B20 0C019F40 */  jal        osStartThread
 /* 65724 80064B24 02202025 */   or        $a0, $s1, $zero
 /* 65728 80064B28 8FBF0024 */  lw         $ra, 0x24($sp)
 /* 6572C 80064B2C 8FB0001C */  lw         $s0, 0x1C($sp)

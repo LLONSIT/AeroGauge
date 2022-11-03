@@ -47,10 +47,10 @@ glabel func_80071424
 /* 72028 80071428 AFA5001C */  sw         $a1, 0x1C($sp)
 /* 7202C 8007142C AFA60020 */  sw         $a2, 0x20($sp)
 /* 72030 80071430 AFBF0014 */  sw         $ra, 0x14($sp)
-/* 72034 80071434 3C068007 */  lui        $a2, %hi(func_80071C20)
-/* 72038 80071438 3C058007 */  lui        $a1, %hi(func_80071C50)
-/* 7203C 8007143C 24A51C50 */  addiu      $a1, $a1, %lo(func_80071C50)
-/* 72040 80071440 24C61C20 */  addiu      $a2, $a2, %lo(func_80071C20)
+/* 72034 80071434 3C068007 */  lui        $a2, %hi(alMainBusParam)
+/* 72038 80071438 3C058007 */  lui        $a1, %hi(alMainBusPull)
+/* 7203C 8007143C 24A51C50 */  addiu      $a1, $a1, %lo(alMainBusPull)
+/* 72040 80071440 24C61C20 */  addiu      $a2, $a2, %lo(alMainBusParam)
 /* 72044 80071444 AFA40018 */  sw         $a0, 0x18($sp)
 /* 72048 80071448 0C01E78C */  jal        func_80079E30
 /* 7204C 8007144C 24070007 */   addiu     $a3, $zero, 0x7
@@ -92,10 +92,10 @@ glabel func_800714CC
 /* 720CC 800714CC 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 720D0 800714D0 AFA50024 */  sw         $a1, 0x24($sp)
 /* 720D4 800714D4 AFBF001C */  sw         $ra, 0x1C($sp)
-/* 720D8 800714D8 3C058007 */  lui        $a1, %hi(func_800729AC)
-/* 720DC 800714DC 3C068007 */  lui        $a2, %hi(func_800728C0)
-/* 720E0 800714E0 24C628C0 */  addiu      $a2, $a2, %lo(func_800728C0)
-/* 720E4 800714E4 24A529AC */  addiu      $a1, $a1, %lo(func_800729AC)
+/* 720D8 800714D8 3C058007 */  lui        $a1, %hi(alResamplePull)
+/* 720DC 800714DC 3C068007 */  lui        $a2, %hi(alResampleParam)
+/* 720E0 800714E0 24C628C0 */  addiu      $a2, $a2, %lo(alResampleParam)
+/* 720E4 800714E4 24A529AC */  addiu      $a1, $a1, %lo(alResamplePull)
 /* 720E8 800714E8 AFA40020 */  sw         $a0, 0x20($sp)
 /* 720EC 800714EC 0C01E78C */  jal        func_80079E30
 /* 720F0 800714F0 24070001 */   addiu     $a3, $zero, 0x1
@@ -130,11 +130,11 @@ glabel func_80071554
 /* 7215C 8007155C AFA60030 */  sw         $a2, 0x30($sp)
 /* 72160 80071560 AFBF0024 */  sw         $ra, 0x24($sp)
 /* 72164 80071564 AFB00020 */  sw         $s0, 0x20($sp)
-/* 72168 80071568 3C068007 */  lui        $a2, %hi(func_80071D70)
-/* 7216C 8007156C 3C058007 */  lui        $a1, %hi(func_8007241C)
+/* 72168 80071568 3C068007 */  lui        $a2, %hi(alLoadParam)
+/* 7216C 8007156C 3C058007 */  lui        $a1, %hi(alAdpcmPull)
 /* 72170 80071570 00808025 */  or         $s0, $a0, $zero
-/* 72174 80071574 24A5241C */  addiu      $a1, $a1, %lo(func_8007241C)
-/* 72178 80071578 24C61D70 */  addiu      $a2, $a2, %lo(func_80071D70)
+/* 72174 80071574 24A5241C */  addiu      $a1, $a1, %lo(alAdpcmPull)
+/* 72178 80071578 24C61D70 */  addiu      $a2, $a2, %lo(alLoadParam)
 /* 7217C 8007157C 0C01E78C */  jal        func_80079E30
 /* 72180 80071580 00003825 */   or        $a3, $zero, $zero
 /* 72184 80071584 240E0020 */  addiu      $t6, $zero, 0x20

@@ -3161,10 +3161,10 @@ glabel func_80035A98
 /* 36754 80035B54 27A40030 */  addiu      $a0, $sp, 0x30
 /* 36758 80035B58 8FA6002C */  lw         $a2, 0x2C($sp)
 /* 3675C 80035B5C 8FA70028 */  lw         $a3, 0x28($sp)
-/* 36760 80035B60 0C01AE81 */  jal        func_8006BA04
+/* 36760 80035B60 0C01AE81 */  jal        sprintf
 /* 36764 80035B64 AFA90010 */   sw        $t1, 0x10($sp)
 /* 36768 80035B68 2404002C */  addiu      $a0, $zero, 0x2C
-/* 3676C 80035B6C 0C007DAD */  jal        func_8001F6B4
+/* 3676C 80035B6C 0C007DAD */  jal        osSetTime
 /* 36770 80035B70 24050085 */   addiu     $a1, $zero, 0x85
 /* 36774 80035B74 3C068009 */  lui        $a2, %hi(D_8008C31C)
 /* 36778 80035B78 24C6C31C */  addiu      $a2, $a2, %lo(D_8008C31C)

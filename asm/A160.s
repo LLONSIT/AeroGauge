@@ -19,11 +19,11 @@ glabel func_80009560
 /* A180 80009580 AFA60068 */  sw         $a2, 0x68($sp)
 /* A184 80009584 24060005 */  addiu      $a2, $zero, 0x5
 /* A188 80009588 02002025 */  or         $a0, $s0, $zero
-/* A18C 8000958C 0C01978C */  jal        func_80065E30
+/* A18C 8000958C 0C01978C */  jal        osCreateMesgQueue
 /* A190 80009590 27A50034 */   addiu     $a1, $sp, 0x34
 /* A194 80009594 24040005 */  addiu      $a0, $zero, 0x5
 /* A198 80009598 02002825 */  or         $a1, $s0, $zero
-/* A19C 8000959C 0C01AB80 */  jal        func_8006AE00
+/* A19C 8000959C 0C01AB80 */  jal        osSetEventMesg
 /* A1A0 800095A0 24060001 */   addiu     $a2, $zero, 0x1
 /* A1A4 800095A4 02002025 */  or         $a0, $s0, $zero
 /* A1A8 800095A8 02202825 */  or         $a1, $s1, $zero

@@ -377,7 +377,7 @@ glabel func_800683D0
 /* 69128 80068528 AEC00004 */   sw        $zero, 0x4($s6)
 .L8006852C:
 /* 6912C 8006852C 8EC40030 */  lw         $a0, 0x30($s6)
-/* 69130 80068530 0C01C708 */  jal        func_80071C20
+/* 69130 80068530 0C01C708 */  jal        alMainBusParam
 /* 69134 80068534 8EC60034 */   lw        $a2, 0x34($s6)
 /* 69138 80068538 AEC00004 */  sw         $zero, 0x4($s6)
 .L8006853C:
@@ -414,14 +414,14 @@ glabel func_800683D0
 /* 691B0 800685B0 02E03025 */   or        $a2, $s7, $zero
 /* 691B4 800685B4 02602025 */  or         $a0, $s3, $zero
 /* 691B8 800685B8 24050001 */  addiu      $a1, $zero, 0x1
-/* 691BC 800685BC 0C01C75C */  jal        func_80071D70
+/* 691BC 800685BC 0C01C75C */  jal        alLoadParam
 /* 691C0 800685C0 00003025 */   or        $a2, $zero, $zero
 /* 691C4 800685C4 02402025 */  or         $a0, $s2, $zero
 /* 691C8 800685C8 0C01C533 */  jal        func_800714CC
 /* 691CC 800685CC 02E02825 */   or        $a1, $s7, $zero
 /* 691D0 800685D0 02402025 */  or         $a0, $s2, $zero
 /* 691D4 800685D4 24050001 */  addiu      $a1, $zero, 0x1
-/* 691D8 800685D8 0C01CA30 */  jal        func_800728C0
+/* 691D8 800685D8 0C01CA30 */  jal        alResampleParam
 /* 691DC 800685DC 02603025 */   or        $a2, $s3, $zero
 /* 691E0 800685E0 02202025 */  or         $a0, $s1, $zero
 /* 691E4 800685E4 0C01C57F */  jal        func_800715FC
@@ -566,7 +566,7 @@ glabel func_800686D0
 /* 693E4 800687E4 0C01C405 */  jal        func_80071014
 /* 693E8 800687E8 03002025 */   or        $a0, $t8, $zero
 /* 693EC 800687EC 00409025 */  or         $s2, $v0, $zero
-/* 693F0 800687F0 0C019F40 */  jal        func_80067D00
+/* 693F0 800687F0 0C019F40 */  jal        osStartThread
 /* 693F4 800687F4 02402025 */   or        $a0, $s2, $zero
 .L800687F8:
 /* 693F8 800687F8 0C01C220 */  jal        __osRestoreInt

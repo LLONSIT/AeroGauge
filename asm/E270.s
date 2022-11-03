@@ -150,7 +150,7 @@ glabel func_8000D708
 /* E45C 8000D85C 8D8D0000 */  lw         $t5, 0x0($t4)
 /* E460 8000D860 00C02025 */  or         $a0, $a2, $zero
 /* E464 8000D864 240500B9 */  addiu      $a1, $zero, 0xB9
-/* E468 8000D868 0C007DAD */  jal        func_8001F6B4
+/* E468 8000D868 0C007DAD */  jal        osSetTime
 /* E46C 8000D86C AFAD002C */   sw        $t5, 0x2C($sp)
 /* E470 8000D870 3C078008 */  lui        $a3, %hi(D_8008214B)
 /* E474 8000D874 90E7214B */  lbu        $a3, %lo(D_8008214B)($a3)
@@ -201,12 +201,12 @@ glabel func_8000D708
 /* E524 8000D924 3C048014 */  lui        $a0, %hi(D_8013F830)
 /* E528 8000D928 3C058009 */  lui        $a1, %hi(D_80095510)
 /* E52C 8000D92C 24A55510 */  addiu      $a1, $a1, %lo(D_80095510)
-/* E530 8000D930 0C01AE81 */  jal        func_8006BA04
+/* E530 8000D930 0C01AE81 */  jal        sprintf
 /* E534 8000D934 2484F830 */   addiu     $a0, $a0, %lo(D_8013F830)
 /* E538 8000D938 10000003 */  b          .L8000D948
 /* E53C 8000D93C 00000000 */   nop
 .L8000D940:
-/* E540 8000D940 0C01AE81 */  jal        func_8006BA04
+/* E540 8000D940 0C01AE81 */  jal        sprintf
 /* E544 8000D944 24A55524 */   addiu     $a1, $a1, %lo(D_80095524)
 .L8000D948:
 /* E548 8000D948 3C058014 */  lui        $a1, %hi(D_8013F830)
@@ -556,7 +556,7 @@ glabel func_8000DE54
 /* EA88 8000DE88 2484F7E0 */  addiu      $a0, $a0, %lo(D_8013F7E0)
 /* EA8C 8000DE8C 8CE72124 */  lw         $a3, %lo(D_80082124)($a3)
 /* EA90 8000DE90 25C60001 */  addiu      $a2, $t6, 0x1
-/* EA94 8000DE94 0C01AE81 */  jal        func_8006BA04
+/* EA94 8000DE94 0C01AE81 */  jal        sprintf
 /* EA98 8000DE98 AFB80010 */   sw        $t8, 0x10($sp)
 /* EA9C 8000DE9C 8FB90028 */  lw         $t9, 0x28($sp)
 /* EAA0 8000DEA0 3C058014 */  lui        $a1, %hi(D_8013F7E0)

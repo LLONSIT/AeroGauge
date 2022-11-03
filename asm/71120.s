@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80070520
+glabel osSetThreadPri
 /* 71120 80070520 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 71124 80070524 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 71128 80070528 AFA40028 */  sw         $a0, 0x28($sp)
@@ -80,13 +80,13 @@ glabel func_80070600
 /* 71220 80070620 AFA7003C */   sw        $a3, 0x3C($sp)
 /* 71224 80070624 8FA40034 */  lw         $a0, 0x34($sp)
 /* 71228 80070628 8FA50038 */  lw         $a1, 0x38($sp)
-/* 7122C 8007062C 0C01978C */  jal        func_80065E30
+/* 7122C 8007062C 0C01978C */  jal        osCreateMesgQueue
 /* 71230 80070630 8FA6003C */   lw        $a2, 0x3C($sp)
 /* 71234 80070634 3C04801B */  lui        $a0, %hi(D_801AD2D0)
 /* 71238 80070638 3C05801B */  lui        $a1, %hi(D_801AD2E8)
 /* 7123C 8007063C 24A5D2E8 */  addiu      $a1, $a1, %lo(D_801AD2E8)
 /* 71240 80070640 2484D2D0 */  addiu      $a0, $a0, %lo(D_801AD2D0)
-/* 71244 80070644 0C01978C */  jal        func_80065E30
+/* 71244 80070644 0C01978C */  jal        osCreateMesgQueue
 /* 71248 80070648 24060001 */   addiu     $a2, $zero, 0x1
 /* 7124C 8007064C 3C0F8009 */  lui        $t7, %hi(D_80094C60)
 /* 71250 80070650 8DEF4C60 */  lw         $t7, %lo(D_80094C60)($t7)
@@ -99,7 +99,7 @@ glabel func_80070600
 /* 71268 80070668 3C062222 */  lui        $a2, (0x22222222 >> 16)
 /* 7126C 8007066C 34C62222 */  ori        $a2, $a2, (0x22222222 & 0xFFFF)
 /* 71270 80070670 24A5D2D0 */  addiu      $a1, $a1, %lo(D_801AD2D0)
-/* 71274 80070674 0C01AB80 */  jal        func_8006AE00
+/* 71274 80070674 0C01AB80 */  jal        osSetEventMesg
 /* 71278 80070678 24040008 */   addiu     $a0, $zero, 0x8
 /* 7127C 8007067C 2418FFFF */  addiu      $t8, $zero, -0x1
 /* 71280 80070680 AFB80028 */  sw         $t8, 0x28($sp)
@@ -113,7 +113,7 @@ glabel func_80070600
 /* 712A0 800706A0 00000000 */   nop
 /* 712A4 800706A4 AFB90028 */  sw         $t9, 0x28($sp)
 /* 712A8 800706A8 00002025 */  or         $a0, $zero, $zero
-/* 712AC 800706AC 0C01C148 */  jal        func_80070520
+/* 712AC 800706AC 0C01C148 */  jal        osSetThreadPri
 /* 712B0 800706B0 01002825 */   or        $a1, $t0, $zero
 .L800706B4:
 /* 712B4 800706B4 0C01C218 */  jal        __osDisableInt
@@ -154,7 +154,7 @@ glabel func_80070600
 /* 71340 80070740 0C019EEC */  jal        osCreateThread
 /* 71344 80070744 AFA80014 */   sw        $t0, 0x14($sp)
 /* 71348 80070748 3C04801B */  lui        $a0, %hi(D_801AC120)
-/* 7134C 8007074C 0C019F40 */  jal        func_80067D00
+/* 7134C 8007074C 0C019F40 */  jal        osStartThread
 /* 71350 80070750 2484C120 */   addiu     $a0, $a0, %lo(D_801AC120)
 /* 71354 80070754 0C01C220 */  jal        __osRestoreInt
 /* 71358 80070758 8FA4002C */   lw        $a0, 0x2C($sp)
@@ -163,7 +163,7 @@ glabel func_80070600
 /* 71364 80070764 11210004 */  beq        $t1, $at, .L80070778
 /* 71368 80070768 00000000 */   nop
 /* 7136C 8007076C 00002025 */  or         $a0, $zero, $zero
-/* 71370 80070770 0C01C148 */  jal        func_80070520
+/* 71370 80070770 0C01C148 */  jal        osSetThreadPri
 /* 71374 80070774 01202825 */   or        $a1, $t1, $zero
 .L80070778:
 /* 71378 80070778 8FBF001C */  lw         $ra, 0x1C($sp)

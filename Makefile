@@ -61,7 +61,7 @@ SPLAT    = $(TOOLS_DIR)/splat/split.py
 IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
 # Flags
 
-OPT_FLAGS      = -O2
+OPT_FLAGS      = -O2 
 LOOP_UNROLL    =
 
 MIPSISET       = -mips2 -32
@@ -125,7 +125,7 @@ ASM_PROCESSOR_DIR := $(TOOLS_DIR)/asm-processor
 ASM_PROCESSOR      = $(PYTHON) $(ASM_PROCESSOR_DIR)/asm_processor.py
 
 ### Optimisation Overrides
-#$(BUILD_DIR)/$(SRC_DIR)/os/alSndpSetPan.c.o: OPT_FLAGS := -O
+#$(BUILD_DIR)/$(SRC_DIR)/os/osCreateThread.c.o: OPT_FLAGS := -O1
 #$(BUILD_DIR)/$(SRC_DIR)/core/string.c.o: OPT_FLAGS := -O2
 # $(BUILD_DIR)/$(SRC_DIR)/core/eeprom.c.o: OPT_FLAGS := -O2
 

@@ -32,7 +32,7 @@ glabel func_8006578C
 /* 6638C 8006578C 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 66390 80065790 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 66394 80065794 3C04801A */  lui        $a0, %hi(D_801A45A0)
-/* 66398 80065798 0C019F40 */  jal        func_80067D00
+/* 66398 80065798 0C019F40 */  jal        osStartThread
 /* 6639C 8006579C 248445A0 */   addiu     $a0, $a0, %lo(D_801A45A0)
 /* 663A0 800657A0 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 663A4 800657A4 27BD0018 */  addiu      $sp, $sp, 0x18
@@ -58,7 +58,7 @@ glabel func_800657B0
 /* 663EC 800657EC A04E0005 */  sb         $t6, 0x5($v0)
 /* 663F0 800657F0 24A58768 */  addiu      $a1, $a1, %lo(D_801A8768)
 /* 663F4 800657F4 02002025 */  or         $a0, $s0, $zero
-/* 663F8 800657F8 0C01978C */  jal        func_80065E30
+/* 663F8 800657F8 0C01978C */  jal        osCreateMesgQueue
 /* 663FC 800657FC 24060040 */   addiu     $a2, $zero, 0x40
 /* 66400 80065800 0C002454 */  jal        func_80009150
 /* 66404 80065804 02002025 */   or        $a0, $s0, $zero

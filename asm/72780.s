@@ -36,7 +36,7 @@ glabel func_80071B80
 /* 727E4 80071BE4 8E040030 */  lw         $a0, 0x30($s0)
 /* 727E8 80071BE8 24050002 */  addiu      $a1, $zero, 0x2
 /* 727EC 80071BEC 03313021 */  addu       $a2, $t9, $s1
-/* 727F0 80071BF0 0C01C708 */  jal        func_80071C20
+/* 727F0 80071BF0 0C01C708 */  jal        alMainBusParam
 /* 727F4 80071BF4 24C60020 */   addiu     $a2, $a2, 0x20
 /* 727F8 80071BF8 8E0A0034 */  lw         $t2, 0x34($s0)
 /* 727FC 80071BFC 8FBF001C */  lw         $ra, 0x1C($sp)

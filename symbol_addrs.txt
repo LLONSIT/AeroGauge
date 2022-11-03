@@ -20,8 +20,19 @@ alSynSetVol  =  0x8006A620;
 __allocParam = 0x80068100;
 _timeToSamples = 0x80067FF8; 
 _freePVoice = 0x80068050;
+alMainBusParam =  0x80071C20;
+ alMainBusPull =  0x80071C50;
+alLoadParam  =  0x80071D70;
+alRaw16Pull  =  0x80071F44:
+alAdpcmPull  =  0x8007241C;
+alResampleParam  =  0x800728C0;
+ alResamplePull = 0x800729AC;
+load_text_0580  =  0x800722F0;
+alCopy =  0x80074020:
 
 //os syms
+alCSPNew =  0x80004C50;
+
 osAppNmiBuffer =    0x8000031C;
   __osCleanupThread =  0x800711A0;
     __osRestoreInt = 0x80070880;
@@ -85,9 +96,23 @@ __osSetGlobalIntMask = 0x8007BBD0 ;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91; 
 alSndpSetPan = 0x80067740;
+osSetThreadPri  =  0x80070520;
+osSetEventMesg =  0x8006AE00;
+osCreateMesgQueue =  0x80065E30;
+osStartThread = 0x80067D00;
+sprintf = 0x8006BA04; //defined:true
+osSetTime =  0x8001F6B4;
+__osSetSR = 0x80078830:
+
 D_8008B7DC = 0x8008B7DC; //type:defined
 D_8008B7E0 = 0x8008B7E0; //type:defined
 D_8008B7E4 = 0x8008B7E4; //type:defined
 D_8008B7E8 = 0x8008B7E8; //type:defined
 D_8008B7EC = 0x8008B7EC; //type:defined
 D_8016C470 = 0x8016C470; //type:defined
+
+
+//Game Symbols
+
+gUnk_YPos = 0x8013f898;
+

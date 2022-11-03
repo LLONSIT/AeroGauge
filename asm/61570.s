@@ -14,12 +14,12 @@ glabel func_80060970
 /* 6157C 8006097C 3C05801A */  lui        $a1, %hi(D_8019FB90)
 /* 61580 80060980 24A5FB90 */  addiu      $a1, $a1, %lo(D_8019FB90)
 /* 61584 80060984 2484FB78 */  addiu      $a0, $a0, %lo(D_8019FB78)
-/* 61588 80060988 0C01978C */  jal        func_80065E30
+/* 61588 80060988 0C01978C */  jal        osCreateMesgQueue
 /* 6158C 8006098C 24060014 */   addiu     $a2, $zero, 0x14
 /* 61590 80060990 3C05801A */  lui        $a1, %hi(D_8019FB78)
 /* 61594 80060994 24A5FB78 */  addiu      $a1, $a1, %lo(D_8019FB78)
 /* 61598 80060998 24040005 */  addiu      $a0, $zero, 0x5
-/* 6159C 8006099C 0C01AB80 */  jal        func_8006AE00
+/* 6159C 8006099C 0C01AB80 */  jal        osSetEventMesg
 /* 615A0 800609A0 24060001 */   addiu     $a2, $zero, 0x1
 /* 615A4 800609A4 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 615A8 800609A8 27BD0018 */  addiu      $sp, $sp, 0x18

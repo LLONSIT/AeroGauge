@@ -18,7 +18,7 @@ glabel func_8006B9E0
 /* 6C5FC 8006B9FC 03E00008 */  jr         $ra
 /* 6C600 8006BA00 004E1021 */   addu      $v0, $v0, $t6
 
-glabel func_8006BA04
+glabel sprintf
 /* 6C604 8006BA04 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 6C608 8006BA08 AFA40020 */  sw         $a0, 0x20($sp)
 /* 6C60C 8006BA0C AFBF0014 */  sw         $ra, 0x14($sp)

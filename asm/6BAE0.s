@@ -36,7 +36,7 @@ glabel func_8006AEE0
 /* 6BB40 8006AF40 00000000 */   nop
 /* 6BB44 8006AF44 27A40028 */  addiu      $a0, $sp, 0x28
 /* 6BB48 8006AF48 27A5006C */  addiu      $a1, $sp, 0x6C
-/* 6BB4C 8006AF4C 0C01978C */  jal        func_80065E30
+/* 6BB4C 8006AF4C 0C01978C */  jal        osCreateMesgQueue
 /* 6BB50 8006AF50 24060001 */   addiu     $a2, $zero, 0x1
 /* 6BB54 8006AF54 8FA80060 */  lw         $t0, 0x60($sp)
 /* 6BB58 8006AF58 8FA90064 */  lw         $t1, 0x64($sp)
@@ -95,7 +95,7 @@ glabel func_8006AEE0
 /* 6BC28 8006B028 3C05801B */  lui        $a1, %hi(D_801AAC10)
 /* 6BC2C 8006B02C 24A5AC10 */  addiu      $a1, $a1, %lo(D_801AAC10)
 /* 6BC30 8006B030 2484ABF8 */  addiu      $a0, $a0, %lo(D_801AABF8)
-/* 6BC34 8006B034 0C01978C */  jal        func_80065E30
+/* 6BC34 8006B034 0C01978C */  jal        osCreateMesgQueue
 /* 6BC38 8006B038 24060001 */   addiu     $a2, $zero, 0x1
 /* 6BC3C 8006B03C 8FA20068 */  lw         $v0, 0x68($sp)
 .L8006B040:

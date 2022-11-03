@@ -14,7 +14,7 @@ glabel func_8001F6A0
 /* 202AC 8001F6AC 03E00008 */  jr         $ra
 /* 202B0 8001F6B0 AC25C8F8 */   sw        $a1, %lo(D_8008C8F8)($at)
 
-glabel func_8001F6B4
+glabel osSetTime
 /* 202B4 8001F6B4 3C018009 */  lui        $at, %hi(D_8008C8DC)
 /* 202B8 8001F6B8 AC24C8DC */  sw         $a0, %lo(D_8008C8DC)($at)
 /* 202BC 8001F6BC 3C018009 */  lui        $at, %hi(__osCurrentTime)

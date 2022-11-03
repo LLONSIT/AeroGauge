@@ -13,11 +13,11 @@ glabel func_80009150
 /* 9D58 80009158 AFA40040 */  sw         $a0, 0x40($sp)
 /* 9D5C 8000915C 27A40024 */  addiu      $a0, $sp, 0x24
 /* 9D60 80009160 27A50020 */  addiu      $a1, $sp, 0x20
-/* 9D64 80009164 0C01978C */  jal        func_80065E30
+/* 9D64 80009164 0C01978C */  jal        osCreateMesgQueue
 /* 9D68 80009168 24060001 */   addiu     $a2, $zero, 0x1
 /* 9D6C 8000916C 24040005 */  addiu      $a0, $zero, 0x5
 /* 9D70 80009170 27A50024 */  addiu      $a1, $sp, 0x24
-/* 9D74 80009174 0C01AB80 */  jal        func_8006AE00
+/* 9D74 80009174 0C01AB80 */  jal        osSetEventMesg
 /* 9D78 80009178 24060001 */   addiu     $a2, $zero, 0x1
 /* 9D7C 8000917C 0C01AB9C */  jal        func_8006AE70
 /* 9D80 80009180 24040002 */   addiu     $a0, $zero, 0x2
@@ -103,7 +103,7 @@ glabel func_80009298
 /* 9EA0 800092A0 00802825 */  or         $a1, $a0, $zero
 /* 9EA4 800092A4 3C068011 */  lui        $a2, %hi(D_8010CA70)
 /* 9EA8 800092A8 24C6CA70 */  addiu      $a2, $a2, %lo(D_8010CA70)
-/* 9EAC 800092AC 0C01AB80 */  jal        func_8006AE00
+/* 9EAC 800092AC 0C01AB80 */  jal        osSetEventMesg
 /* 9EB0 800092B0 24040005 */   addiu     $a0, $zero, 0x5
 /* 9EB4 800092B4 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 9EB8 800092B8 27BD0018 */  addiu      $sp, $sp, 0x18

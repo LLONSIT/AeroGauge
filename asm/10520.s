@@ -56,7 +56,7 @@ glabel func_8000F990
 /* 105C8 8000F9C8 0C007DD7 */  jal        func_8001F75C
 /* 105CC 8000F9CC AFAF001C */   sw        $t7, 0x1C($sp)
 /* 105D0 8000F9D0 24040020 */  addiu      $a0, $zero, 0x20
-/* 105D4 8000F9D4 0C007DAD */  jal        func_8001F6B4
+/* 105D4 8000F9D4 0C007DAD */  jal        osSetTime
 /* 105D8 8000F9D8 24050070 */   addiu     $a1, $zero, 0x70
 /* 105DC 8000F9DC 3C058009 */  lui        $a1, %hi(D_80095590)
 /* 105E0 8000F9E0 3C068009 */  lui        $a2, %hi(D_8008C0EC)

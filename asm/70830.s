@@ -161,7 +161,7 @@ glabel func_8006FD30
 /* 70A4C 8006FE4C 0C01C405 */  jal        func_80071014
 /* 70A50 8006FE50 01A02025 */   or        $a0, $t5, $zero
 /* 70A54 8006FE54 00408825 */  or         $s1, $v0, $zero
-/* 70A58 8006FE58 0C019F40 */  jal        func_80067D00
+/* 70A58 8006FE58 0C019F40 */  jal        osStartThread
 /* 70A5C 8006FE5C 02202025 */   or        $a0, $s1, $zero
 .L8006FE60:
 /* 70A60 8006FE60 0C01C220 */  jal        __osRestoreInt

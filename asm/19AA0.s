@@ -87,7 +87,7 @@ glabel func_80018EA0
 /* 19BBC 80018FBC 00006012 */  mflo       $t4
 /* 19BC0 80018FC0 5180000F */  beql       $t4, $zero, .L80019000
 /* 19BC4 80018FC4 8FAD0044 */   lw        $t5, 0x44($sp)
-/* 19BC8 80018FC8 0C007DAD */  jal        func_8001F6B4
+/* 19BC8 80018FC8 0C007DAD */  jal        osSetTime
 /* 19BCC 80018FCC 24050020 */   addiu     $a1, $zero, 0x20
 /* 19BD0 80018FD0 240400FF */  addiu      $a0, $zero, 0xFF
 /* 19BD4 80018FD4 240500FF */  addiu      $a1, $zero, 0xFF
@@ -517,7 +517,7 @@ glabel func_80019508
 /* 1A1E8 800195E8 87A4001E */  lh         $a0, 0x1E($sp)
 /* 1A1EC 800195EC 24050070 */  addiu      $a1, $zero, 0x70
 /* 1A1F0 800195F0 0004C8C0 */  sll        $t9, $a0, 3
-/* 1A1F4 800195F4 0C007DAD */  jal        func_8001F6B4
+/* 1A1F4 800195F4 0C007DAD */  jal        osSetTime
 /* 1A1F8 800195F8 2724000C */   addiu     $a0, $t9, 0xC
 /* 1A1FC 800195FC 3C068009 */  lui        $a2, %hi(D_8008BEBC)
 /* 1A200 80019600 24C6BEBC */  addiu      $a2, $a2, %lo(D_8008BEBC)

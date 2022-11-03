@@ -269,7 +269,7 @@ glabel func_8000FF38
 /* 10CC4 800100C4 46085400 */  add.s      $f16, $f10, $f8
 /* 10CC8 800100C8 4600848D */  trunc.w.s  $f18, $f16
 /* 10CCC 800100CC 44059000 */  mfc1       $a1, $f18
-/* 10CD0 800100D0 0C007DAD */  jal        func_8001F6B4
+/* 10CD0 800100D0 0C007DAD */  jal        osSetTime
 /* 10CD4 800100D4 00000000 */   nop
 /* 10CD8 800100D8 02E02025 */  or         $a0, $s7, $zero
 /* 10CDC 800100DC 8E450000 */  lw         $a1, 0x0($s2)

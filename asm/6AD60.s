@@ -115,7 +115,7 @@ glabel alEvtqPostEvent
 /* 6AED4 8006A2D4 8FA8002C */  lw         $t0, 0x2C($sp)
 /* 6AED8 8006A2D8 8FA40034 */  lw         $a0, 0x34($sp)
 /* 6AEDC 8006A2DC 24060010 */  addiu      $a2, $zero, 0x10
-/* 6AEE0 8006A2E0 0C01D008 */  jal        func_80074020
+/* 6AEE0 8006A2E0 0C01D008 */  jal        alCopy
 /* 6AEE4 8006A2E4 2505000C */   addiu     $a1, $t0, 0xC
 /* 6AEE8 8006A2E8 8FA70038 */  lw         $a3, 0x38($sp)
 /* 6AEEC 8006A2EC 3C017FFF */  lui        $at, (0x7FFFFFFF >> 16)
@@ -190,7 +190,7 @@ glabel func_8006A3A0
 /* 6AFDC 8006A3DC 02002025 */   or        $a0, $s0, $zero
 /* 6AFE0 8006A3E0 2604000C */  addiu      $a0, $s0, 0xC
 /* 6AFE4 8006A3E4 8FA50034 */  lw         $a1, 0x34($sp)
-/* 6AFE8 8006A3E8 0C01D008 */  jal        func_80074020
+/* 6AFE8 8006A3E8 0C01D008 */  jal        alCopy
 /* 6AFEC 8006A3EC 24060010 */   addiu     $a2, $zero, 0x10
 /* 6AFF0 8006A3F0 02002025 */  or         $a0, $s0, $zero
 /* 6AFF4 8006A3F4 0C019EC8 */  jal        alLink

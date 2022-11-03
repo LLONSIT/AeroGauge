@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_8006AE00
+glabel osSetEventMesg
 /* 6BA00 8006AE00 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 6BA04 8006AE04 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 6BA08 8006AE08 AFA40028 */  sw         $a0, 0x28($sp)

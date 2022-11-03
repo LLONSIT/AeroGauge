@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80067D00
+glabel osStartThread
 /* 68900 80067D00 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 68904 80067D04 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 68908 80067D08 AFA40028 */  sw         $a0, 0x28($sp)

@@ -865,12 +865,12 @@ glabel func_8003ADA8
 /* 3BAA8 8003AEA8 02602025 */  or         $a0, $s3, $zero
 /* 3BAAC 8003AEAC 8FA60078 */  lw         $a2, 0x78($sp)
 /* 3BAB0 8003AEB0 8FA70074 */  lw         $a3, 0x74($sp)
-/* 3BAB4 8003AEB4 0C01AE81 */  jal        func_8006BA04
+/* 3BAB4 8003AEB4 0C01AE81 */  jal        sprintf
 /* 3BAB8 8003AEB8 AFAA0010 */   sw        $t2, 0x10($sp)
 /* 3BABC 8003AEBC 10000004 */  b          .L8003AED0
 /* 3BAC0 8003AEC0 4618A100 */   add.s     $f4, $f20, $f24
 .L8003AEC4:
-/* 3BAC4 8003AEC4 0C01AE81 */  jal        func_8006BA04
+/* 3BAC4 8003AEC4 0C01AE81 */  jal        sprintf
 /* 3BAC8 8003AEC8 24A575D0 */   addiu     $a1, $a1, %lo(D_800975D0)
 /* 3BACC 8003AECC 4618A100 */  add.s      $f4, $f20, $f24
 .L8003AED0:
@@ -878,7 +878,7 @@ glabel func_8003ADA8
 /* 3BAD4 8003AED4 461A2182 */  mul.s      $f6, $f4, $f26
 /* 3BAD8 8003AED8 4600320D */  trunc.w.s  $f8, $f6
 /* 3BADC 8003AEDC 44054000 */  mfc1       $a1, $f8
-/* 3BAE0 8003AEE0 0C007DAD */  jal        func_8001F6B4
+/* 3BAE0 8003AEE0 0C007DAD */  jal        osSetTime
 /* 3BAE4 8003AEE4 00000000 */   nop
 /* 3BAE8 8003AEE8 02802025 */  or         $a0, $s4, $zero
 /* 3BAEC 8003AEEC 02602825 */  or         $a1, $s3, $zero
@@ -917,7 +917,7 @@ glabel func_8003ADA8
 /* 3BB68 8003AF68 02602025 */  or         $a0, $s3, $zero
 /* 3BB6C 8003AF6C 8FA60078 */  lw         $a2, 0x78($sp)
 /* 3BB70 8003AF70 8FA70074 */  lw         $a3, 0x74($sp)
-/* 3BB74 8003AF74 0C01AE81 */  jal        func_8006BA04
+/* 3BB74 8003AF74 0C01AE81 */  jal        sprintf
 /* 3BB78 8003AF78 AFB80010 */   sw        $t8, 0x10($sp)
 /* 3BB7C 8003AF7C 8E59003C */  lw         $t9, 0x3C($s2)
 /* 3BB80 8003AF80 3C0123C3 */  lui        $at, (0x23C34600 >> 16)
@@ -926,7 +926,7 @@ glabel func_8003ADA8
 /* 3BB8C 8003AF8C 1020000A */  beqz       $at, .L8003AFB8
 /* 3BB90 8003AF90 240400A4 */   addiu     $a0, $zero, 0xA4
 /* 3BB94 8003AF94 240400B4 */  addiu      $a0, $zero, 0xB4
-/* 3BB98 8003AF98 0C007DAD */  jal        func_8001F6B4
+/* 3BB98 8003AF98 0C007DAD */  jal        osSetTime
 /* 3BB9C 8003AF9C 24050066 */   addiu     $a1, $zero, 0x66
 /* 3BBA0 8003AFA0 02802025 */  or         $a0, $s4, $zero
 /* 3BBA4 8003AFA4 02602825 */  or         $a1, $s3, $zero
@@ -935,7 +935,7 @@ glabel func_8003ADA8
 /* 3BBB0 8003AFB0 10000011 */  b          .L8003AFF8
 /* 3BBB4 8003AFB4 3C0140E8 */   lui       $at, (0x40E80000 >> 16)
 .L8003AFB8:
-/* 3BBB8 8003AFB8 0C007DAD */  jal        func_8001F6B4
+/* 3BBB8 8003AFB8 0C007DAD */  jal        osSetTime
 /* 3BBBC 8003AFBC 24050066 */   addiu     $a1, $zero, 0x66
 /* 3BBC0 8003AFC0 02802025 */  or         $a0, $s4, $zero
 /* 3BBC4 8003AFC4 02602825 */  or         $a1, $s3, $zero
@@ -944,7 +944,7 @@ glabel func_8003ADA8
 /* 3BBD0 8003AFD0 10000009 */  b          .L8003AFF8
 /* 3BBD4 8003AFD4 3C0140E8 */   lui       $at, (0x40E80000 >> 16)
 .L8003AFD8:
-/* 3BBD8 8003AFD8 0C007DAD */  jal        func_8001F6B4
+/* 3BBD8 8003AFD8 0C007DAD */  jal        osSetTime
 /* 3BBDC 8003AFDC 24050066 */   addiu     $a1, $zero, 0x66
 /* 3BBE0 8003AFE0 3C058009 */  lui        $a1, %hi(D_800975EC)
 /* 3BBE4 8003AFE4 24A575EC */  addiu      $a1, $a1, %lo(D_800975EC)
@@ -981,12 +981,12 @@ glabel func_8003ADA8
 /* 3BC58 8003B058 02602025 */  or         $a0, $s3, $zero
 /* 3BC5C 8003B05C 8FA60078 */  lw         $a2, 0x78($sp)
 /* 3BC60 8003B060 8FA70074 */  lw         $a3, 0x74($sp)
-/* 3BC64 8003B064 0C01AE81 */  jal        func_8006BA04
+/* 3BC64 8003B064 0C01AE81 */  jal        sprintf
 /* 3BC68 8003B068 AFAC0010 */   sw        $t4, 0x10($sp)
 /* 3BC6C 8003B06C 10000004 */  b          .L8003B080
 /* 3BC70 8003B070 4618A480 */   add.s     $f18, $f20, $f24
 .L8003B074:
-/* 3BC74 8003B074 0C01AE81 */  jal        func_8006BA04
+/* 3BC74 8003B074 0C01AE81 */  jal        sprintf
 /* 3BC78 8003B078 24A57608 */   addiu     $a1, $a1, %lo(D_80097608)
 /* 3BC7C 8003B07C 4618A480 */  add.s      $f18, $f20, $f24
 .L8003B080:
@@ -994,7 +994,7 @@ glabel func_8003ADA8
 /* 3BC84 8003B084 461A9102 */  mul.s      $f4, $f18, $f26
 /* 3BC88 8003B088 4600218D */  trunc.w.s  $f6, $f4
 /* 3BC8C 8003B08C 44053000 */  mfc1       $a1, $f6
-/* 3BC90 8003B090 0C007DAD */  jal        func_8001F6B4
+/* 3BC90 8003B090 0C007DAD */  jal        osSetTime
 /* 3BC94 8003B094 00000000 */   nop
 /* 3BC98 8003B098 02802025 */  or         $a0, $s4, $zero
 /* 3BC9C 8003B09C 02602825 */  or         $a1, $s3, $zero
@@ -1033,7 +1033,7 @@ glabel func_8003ADA8
 /* 3BD18 8003B118 02602025 */  or         $a0, $s3, $zero
 /* 3BD1C 8003B11C 8FA60078 */  lw         $a2, 0x78($sp)
 /* 3BD20 8003B120 8FA70074 */  lw         $a3, 0x74($sp)
-/* 3BD24 8003B124 0C01AE81 */  jal        func_8006BA04
+/* 3BD24 8003B124 0C01AE81 */  jal        sprintf
 /* 3BD28 8003B128 AFA80010 */   sw        $t0, 0x10($sp)
 /* 3BD2C 8003B12C 8E490040 */  lw         $t1, 0x40($s2)
 /* 3BD30 8003B130 3C0123C3 */  lui        $at, (0x23C34600 >> 16)
@@ -1042,7 +1042,7 @@ glabel func_8003ADA8
 /* 3BD3C 8003B13C 1020000A */  beqz       $at, .L8003B168
 /* 3BD40 8003B140 240400A4 */   addiu     $a0, $zero, 0xA4
 /* 3BD44 8003B144 240400B4 */  addiu      $a0, $zero, 0xB4
-/* 3BD48 8003B148 0C007DAD */  jal        func_8001F6B4
+/* 3BD48 8003B148 0C007DAD */  jal        osSetTime
 /* 3BD4C 8003B14C 240500C6 */   addiu     $a1, $zero, 0xC6
 /* 3BD50 8003B150 02802025 */  or         $a0, $s4, $zero
 /* 3BD54 8003B154 02602825 */  or         $a1, $s3, $zero
@@ -1051,7 +1051,7 @@ glabel func_8003ADA8
 /* 3BD60 8003B160 10000011 */  b          .L8003B1A8
 /* 3BD64 8003B164 8FAA009C */   lw        $t2, 0x9C($sp)
 .L8003B168:
-/* 3BD68 8003B168 0C007DAD */  jal        func_8001F6B4
+/* 3BD68 8003B168 0C007DAD */  jal        osSetTime
 /* 3BD6C 8003B16C 240500C6 */   addiu     $a1, $zero, 0xC6
 /* 3BD70 8003B170 02802025 */  or         $a0, $s4, $zero
 /* 3BD74 8003B174 02602825 */  or         $a1, $s3, $zero
@@ -1060,7 +1060,7 @@ glabel func_8003ADA8
 /* 3BD80 8003B180 10000009 */  b          .L8003B1A8
 /* 3BD84 8003B184 8FAA009C */   lw        $t2, 0x9C($sp)
 .L8003B188:
-/* 3BD88 8003B188 0C007DAD */  jal        func_8001F6B4
+/* 3BD88 8003B188 0C007DAD */  jal        osSetTime
 /* 3BD8C 8003B18C 240500C6 */   addiu     $a1, $zero, 0xC6
 /* 3BD90 8003B190 3C058009 */  lui        $a1, %hi(D_80097624)
 /* 3BD94 8003B194 24A57624 */  addiu      $a1, $a1, %lo(D_80097624)

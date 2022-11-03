@@ -1278,10 +1278,10 @@ glabel func_800500B0
 /* 50D1C 8005011C 27A40030 */  addiu      $a0, $sp, 0x30
 /* 50D20 80050120 8FA6002C */  lw         $a2, 0x2C($sp)
 /* 50D24 80050124 8FA70028 */  lw         $a3, 0x28($sp)
-/* 50D28 80050128 0C01AE81 */  jal        func_8006BA04
+/* 50D28 80050128 0C01AE81 */  jal        sprintf
 /* 50D2C 8005012C AFB80010 */   sw        $t8, 0x10($sp)
 /* 50D30 80050130 24040049 */  addiu      $a0, $zero, 0x49
-/* 50D34 80050134 0C007DAD */  jal        func_8001F6B4
+/* 50D34 80050134 0C007DAD */  jal        osSetTime
 /* 50D38 80050138 2405008C */   addiu     $a1, $zero, 0x8C
 /* 50D3C 8005013C 3C068009 */  lui        $a2, %hi(D_8008C31C)
 /* 50D40 80050140 24C6C31C */  addiu      $a2, $a2, %lo(D_8008C31C)

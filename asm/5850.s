@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80004C50
+glabel alCSPNew
 /* 5850 80004C50 27BDFFC0 */  addiu      $sp, $sp, -0x40
 /* 5854 80004C54 AFBF0024 */  sw         $ra, 0x24($sp)
 /* 5858 80004C58 AFB10020 */  sw         $s1, 0x20($sp)

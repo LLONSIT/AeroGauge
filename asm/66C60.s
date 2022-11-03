@@ -96,7 +96,7 @@ glabel func_80066090
 /* 66D94 80066194 0C01C405 */  jal        func_80071014
 /* 66D98 80066198 27240004 */   addiu     $a0, $t9, 0x4
 /* 66D9C 8006619C 00408825 */  or         $s1, $v0, $zero
-/* 66DA0 800661A0 0C019F40 */  jal        func_80067D00
+/* 66DA0 800661A0 0C019F40 */  jal        osStartThread
 /* 66DA4 800661A4 02202025 */   or        $a0, $s1, $zero
 .L800661A8:
 /* 66DA8 800661A8 0C01C220 */  jal        __osRestoreInt
