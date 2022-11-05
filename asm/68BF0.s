@@ -487,7 +487,7 @@ glabel func_800683D0
 /* 692C8 800686C8 03E00008 */  jr         $ra
 /* 692CC 800686CC 27BD0078 */   addiu     $sp, $sp, 0x78
 
-glabel func_800686D0
+glabel osSendMesg
 /* 692D0 800686D0 27BDFFC8 */  addiu      $sp, $sp, -0x38
 /* 692D4 800686D4 AFBF0024 */  sw         $ra, 0x24($sp)
 /* 692D8 800686D8 AFA40038 */  sw         $a0, 0x38($sp)

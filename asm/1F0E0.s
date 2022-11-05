@@ -180,7 +180,7 @@ glabel func_8001E6FC
 /* 1F364 8001E764 02202025 */  or         $a0, $s1, $zero
 .L8001E768:
 /* 1F368 8001E768 02402825 */  or         $a1, $s2, $zero
-/* 1F36C 8001E76C 0C019824 */  jal        func_80066090
+/* 1F36C 8001E76C 0C019824 */  jal        osRecvMesg
 /* 1F370 8001E770 02603025 */   or        $a2, $s3, $zero
 /* 1F374 8001E774 8FAF0044 */  lw         $t7, 0x44($sp)
 /* 1F378 8001E778 85E30000 */  lh         $v1, 0x0($t7)
@@ -222,7 +222,7 @@ glabel func_8001E6FC
 /* 1F3F0 8001E7F0 24140002 */  addiu      $s4, $zero, 0x2
 /* 1F3F4 8001E7F4 02402825 */  or         $a1, $s2, $zero
 /* 1F3F8 8001E7F8 02202025 */  or         $a0, $s1, $zero
-/* 1F3FC 8001E7FC 0C019824 */  jal        func_80066090
+/* 1F3FC 8001E7FC 0C019824 */  jal        osRecvMesg
 /* 1F400 8001E800 00003025 */   or        $a2, $zero, $zero
 /* 1F404 8001E804 2410FFFF */  addiu      $s0, $zero, -0x1
 /* 1F408 8001E808 5050000E */  beql       $v0, $s0, .L8001E844
@@ -237,7 +237,7 @@ glabel func_8001E6FC
 /* 1F428 8001E828 10740001 */  beq        $v1, $s4, .L8001E830
 /* 1F42C 8001E82C 00000000 */   nop
 .L8001E830:
-/* 1F430 8001E830 0C019824 */  jal        func_80066090
+/* 1F430 8001E830 0C019824 */  jal        osRecvMesg
 /* 1F434 8001E834 00003025 */   or        $a2, $zero, $zero
 /* 1F438 8001E838 5450FFF6 */  bnel       $v0, $s0, .L8001E814
 /* 1F43C 8001E83C 8FAB0044 */   lw        $t3, 0x44($sp)
@@ -528,7 +528,7 @@ glabel func_8001EB1C
 /* 1F854 8001EC54 00E02825 */  or         $a1, $a3, $zero
 /* 1F858 8001EC58 ACF9000C */  sw         $t9, 0xC($a3)
 /* 1F85C 8001EC5C 8C84AAF0 */  lw         $a0, %lo(D_801AAAF0)($a0)
-/* 1F860 8001EC60 0C01A1B4 */  jal        func_800686D0
+/* 1F860 8001EC60 0C01A1B4 */  jal        osSendMesg
 /* 1F864 8001EC64 24060001 */   addiu     $a2, $zero, 0x1
 /* 1F868 8001EC68 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 1F86C 8001EC6C 27BD0018 */  addiu      $sp, $sp, 0x18

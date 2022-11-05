@@ -13,7 +13,7 @@ glabel func_800701C0
 /* 70DC8 800701C8 AFA40028 */  sw         $a0, 0x28($sp)
 /* 70DCC 800701CC AFA60030 */  sw         $a2, 0x30($sp)
 /* 70DD0 800701D0 AFA70034 */  sw         $a3, 0x34($sp)
-/* 70DD4 800701D4 0C01E200 */  jal        func_80078800
+/* 70DD4 800701D4 0C01E200 */  jal        __osDpDeviceBusy
 /* 70DD8 800701D8 AFB00018 */   sw        $s0, 0x18($sp)
 /* 70DDC 800701DC 10400003 */  beqz       $v0, .L800701EC
 /* 70DE0 800701E0 00000000 */   nop

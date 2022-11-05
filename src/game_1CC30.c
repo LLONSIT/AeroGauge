@@ -42,6 +42,31 @@ void func_8001C268(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1CC30/func_8001D8D0.s")
 
+struct unk_struct_D801DD30 *D_8013FC88;
+struct unk_struct_D801DD30 *D_8013FC9C;
+/*
+void func_8001DD30(u32 arg0) {
+   // s32 *var_v1;
+    u32 temp_a0;
+    u32 temp_v0;
+
+   // var_v1 = &D_8013FC9C;
+    if (arg0 < D_8013FC88->unk2D8) {
+        D_8013FC88->unk2DC = arg0;
+loop_2:
+     //   var_v1 -= 4;
+        if (D_8013FC9C->unk2C8 < D_8013FC9C->unk2C4) {
+            D_8013FC9C->unk2CC = temp_a0;
+            D_8013FC9C->unk2C8 = temp_v0;
+            if (D_8013FC9C != D_8013FC88) {
+                goto loop_2;
+            }
+        }
+    }
+}
+*/
+
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1CC30/func_8001DD30.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1CC30/func_8001DD80.s")

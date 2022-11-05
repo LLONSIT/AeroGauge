@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_8006CFA0
+glabel osPfsNumFiles
 /* 6DBA0 8006CFA0 27BDFFB8 */  addiu      $sp, $sp, -0x48
 /* 6DBA4 8006CFA4 AFA40048 */  sw         $a0, 0x48($sp)
 /* 6DBA8 8006CFA8 8FAE0048 */  lw         $t6, 0x48($sp)

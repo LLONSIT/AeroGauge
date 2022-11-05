@@ -1,4 +1,4 @@
-name: Aerogauge (North America)
+wname: Aerogauge (North America)
 sha1: 77626171c35fb1a4dfebb0927280897f362225ed
 options:
   basename: AeroGauge
@@ -44,7 +44,7 @@ segments:
       - [0x108F0, asm]
       - [0x10D60, asm]
       - [0x12760, asm]
-      - [0x14060, asm]
+      - [0x14060, c, game_14060]
       - [0x14720, asm]
       - [0x15020, asm]
       - [0x15D60, asm]
@@ -164,7 +164,7 @@ segments:
       - [0x6D900, asm]
       - [0x6D940, asm]
       - [0x6D9E0, asm]
-      - [0x6DBA0, asm]
+      - [0x6DBA0, asm, osPfsNumFiles] #Libultra
       - [0x6DCF0, asm]
       - [0x6DE40, asm]
       - [0x6DED0, asm]
@@ -187,7 +187,7 @@ segments:
       - [0x71E40, asm, alSynDelete] #Libultra
       - [0x71E50, asm]
       - [0x71EF0, asm]
-      - [0x71FB0, asm]
+      - [0x71FB0, asm] #Libultra
       - [0x72780, asm]
       - [0x72820, asm] #Libultra
       - [0x734C0, asm]
@@ -199,7 +199,7 @@ segments:
       - [0x74EF0, asm]
       - [0x75E90, asm]
       - [0x761F0, asm]
-      - [0x77910, asm]
+      - [0x77910, asm,osGetCount]
       - [0x77920, asm]
       - [0x77E60, asm]
       - [0x781C0, asm]
@@ -212,7 +212,7 @@ segments:
       - [0x79300, asm]
       - [0x79340, asm]
       - [0x793D0, asm]
-      - [0x79400, asm]
+      - [0x79400, asm,osDpDeviceBusy]
       - [0x79430, asm]
       - [0x79450, asm]
       - [0x79500, asm]

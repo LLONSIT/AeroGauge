@@ -64,7 +64,7 @@ glabel __osTimerInterrupt
 /* 779E8 80076DE8 1000004A */  b          .L80076F14
 /* 779EC 80076DEC AC20D340 */   sw        $zero, %lo(D_801AD340)($at)
 .L80076DF0:
-/* 779F0 80076DF0 0C01DB44 */  jal        func_80076D10
+/* 779F0 80076DF0 0C01DB44 */  jal        osGetCount
 /* 779F4 80076DF4 00000000 */   nop
 /* 779F8 80076DF8 AFA20020 */  sw         $v0, 0x20($sp)
 /* 779FC 80076DFC 3C09801B */  lui        $t1, %hi(D_801AD340)
@@ -124,7 +124,7 @@ glabel __osTimerInterrupt
 /* 77ACC 80076ECC 00000000 */   nop
 /* 77AD0 80076ED0 01C02025 */  or         $a0, $t6, $zero
 /* 77AD4 80076ED4 8F25001C */  lw         $a1, 0x1C($t9)
-/* 77AD8 80076ED8 0C01A1B4 */  jal        func_800686D0
+/* 77AD8 80076ED8 0C01A1B4 */  jal        osSendMesg
 /* 77ADC 80076EDC 00003025 */   or        $a2, $zero, $zero
 .L80076EE0:
 /* 77AE0 80076EE0 8FAF0024 */  lw         $t7, 0x24($sp)
@@ -153,7 +153,7 @@ glabel __osSetTimerIntr
 /* 77B2C 80076F2C AFA40028 */  sw         $a0, 0x28($sp)
 /* 77B30 80076F30 0C01C218 */  jal        __osDisableInt
 /* 77B34 80076F34 AFA5002C */   sw        $a1, 0x2C($sp)
-/* 77B38 80076F38 0C01DB44 */  jal        func_80076D10
+/* 77B38 80076F38 0C01DB44 */  jal        osGetCount
 /* 77B3C 80076F3C AFA2001C */   sw        $v0, 0x1C($sp)
 /* 77B40 80076F40 3C01801B */  lui        $at, %hi(D_801AD340)
 /* 77B44 80076F44 AC22D340 */  sw         $v0, %lo(D_801AD340)($at)

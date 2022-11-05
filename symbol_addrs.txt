@@ -103,6 +103,13 @@ osStartThread = 0x80067D00;
 sprintf = 0x8006BA04; //defined:true
 osSetTime =  0x8001F6B4;
 __osSetSR = 0x80078830:
+osPfsInitPak =  0x8006B440;
+osRecvMesg = 0x80066090;
+osSendMesg = 0x800686D0;
+osPfsNumFiles =  0x8006CFA0;
+ __osDpDeviceBusy =  0x80078800;
+osGetCount =  0x80076D10;
+
 
 D_8008B7DC = 0x8008B7DC; //type:defined
 D_8008B7E0 = 0x8008B7E0; //type:defined

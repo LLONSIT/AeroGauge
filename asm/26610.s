@@ -671,7 +671,7 @@ glabel func_80026384
 /* 26FB0 800263B0 3C04801A */  lui        $a0, %hi(D_8019FB78)
 /* 26FB4 800263B4 2484FB78 */  addiu      $a0, $a0, %lo(D_8019FB78)
 /* 26FB8 800263B8 27A50018 */  addiu      $a1, $sp, 0x18
-/* 26FBC 800263BC 0C01AD10 */  jal        func_8006B440
+/* 26FBC 800263BC 0C01AD10 */  jal        osPfsInitPak
 /* 26FC0 800263C0 8FA60088 */   lw        $a2, 0x88($sp)
 /* 26FC4 800263C4 1040000A */  beqz       $v0, .L800263F0
 /* 26FC8 800263C8 00402025 */   or        $a0, $v0, $zero
@@ -752,7 +752,7 @@ glabel func_800264D4
 /* 270D4 800264D4 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 270D8 800264D8 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 270DC 800264DC 27A50020 */  addiu      $a1, $sp, 0x20
-/* 270E0 800264E0 0C01B3E8 */  jal        func_8006CFA0
+/* 270E0 800264E0 0C01B3E8 */  jal        osPfsNumFiles
 /* 270E4 800264E4 27A6001C */   addiu     $a2, $sp, 0x1C
 /* 270E8 800264E8 0002182B */  sltu       $v1, $zero, $v0
 /* 270EC 800264EC 10600003 */  beqz       $v1, .L800264FC

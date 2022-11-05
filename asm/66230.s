@@ -58,7 +58,7 @@ glabel func_80065690
 /* 662E0 800656E0 3C04801A */  lui        $a0, %hi(D_801A4580)
 /* 662E4 800656E4 24844580 */  addiu      $a0, $a0, %lo(D_801A4580)
 /* 662E8 800656E8 27A5002C */  addiu      $a1, $sp, 0x2C
-/* 662EC 800656EC 0C019824 */  jal        func_80066090
+/* 662EC 800656EC 0C019824 */  jal        osRecvMesg
 /* 662F0 800656F0 24060001 */   addiu     $a2, $zero, 0x1
 /* 662F4 800656F4 8FBF0024 */  lw         $ra, 0x24($sp)
 /* 662F8 800656F8 27BD0048 */  addiu      $sp, $sp, 0x48

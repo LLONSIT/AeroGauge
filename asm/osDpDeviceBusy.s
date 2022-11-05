@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80078800
+glabel __osDpDeviceBusy
 /* 79400 80078800 3C0EA410 */  lui        $t6, %hi(D_A410000C)
 /* 79404 80078804 8DC4000C */  lw         $a0, %lo(D_A410000C)($t6)
 /* 79408 80078808 27BDFFF8 */  addiu      $sp, $sp, -0x8

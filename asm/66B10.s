@@ -70,7 +70,7 @@ glabel func_80065F10
 /* 66BEC 80065FEC 00408825 */  or         $s1, $v0, $zero
 /* 66BF0 80065FF0 02202025 */  or         $a0, $s1, $zero
 /* 66BF4 80065FF4 8FA50028 */  lw         $a1, 0x28($sp)
-/* 66BF8 80065FF8 0C01A1B4 */  jal        func_800686D0
+/* 66BF8 80065FF8 0C01A1B4 */  jal        osSendMesg
 /* 66BFC 80065FFC 00003025 */   or        $a2, $zero, $zero
 /* 66C00 80066000 00408025 */  or         $s0, $v0, $zero
 .L80066004:

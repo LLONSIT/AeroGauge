@@ -22,7 +22,7 @@ glabel func_800740A0
 /* 74CCC 800740CC 3C04801B */  lui        $a0, %hi(D_801AD2F8)
 /* 74CD0 800740D0 2484D2F8 */  addiu      $a0, $a0, %lo(D_801AD2F8)
 /* 74CD4 800740D4 00002825 */  or         $a1, $zero, $zero
-/* 74CD8 800740D8 0C01A1B4 */  jal        func_800686D0
+/* 74CD8 800740D8 0C01A1B4 */  jal        osSendMesg
 /* 74CDC 800740DC 00003025 */   or        $a2, $zero, $zero
 /* 74CE0 800740E0 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 74CE4 800740E4 27BD0018 */  addiu      $sp, $sp, 0x18
@@ -42,7 +42,7 @@ glabel func_800740F0
 /* 74D10 80074110 3C04801B */  lui        $a0, %hi(D_801AD2F8)
 /* 74D14 80074114 2484D2F8 */  addiu      $a0, $a0, %lo(D_801AD2F8)
 /* 74D18 80074118 27A5001C */  addiu      $a1, $sp, 0x1C
-/* 74D1C 8007411C 0C019824 */  jal        func_80066090
+/* 74D1C 8007411C 0C019824 */  jal        osRecvMesg
 /* 74D20 80074120 24060001 */   addiu     $a2, $zero, 0x1
 /* 74D24 80074124 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 74D28 80074128 27BD0020 */  addiu      $sp, $sp, 0x20
@@ -55,7 +55,7 @@ glabel func_80074134
 /* 74D3C 8007413C 3C04801B */  lui        $a0, %hi(D_801AD2F8)
 /* 74D40 80074140 2484D2F8 */  addiu      $a0, $a0, %lo(D_801AD2F8)
 /* 74D44 80074144 00002825 */  or         $a1, $zero, $zero
-/* 74D48 80074148 0C01A1B4 */  jal        func_800686D0
+/* 74D48 80074148 0C01A1B4 */  jal        osSendMesg
 /* 74D4C 8007414C 00003025 */   or        $a2, $zero, $zero
 /* 74D50 80074150 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 74D54 80074154 27BD0018 */  addiu      $sp, $sp, 0x18

@@ -21,3 +21,4 @@ extern s32 D_801AB060;
 extern s32 D_80093690;
 extern  char D_801AC092;
 f32 gUnk_YPos;
+

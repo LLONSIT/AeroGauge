@@ -8,7 +8,7 @@
 .section .text, "ax"
 
 # Handwritten function
-glabel func_80076D10
+glabel osGetCount
 /* 77910 80076D10 40024800 */  mfc0       $v0, $9
 /* 77914 80076D14 03E00008 */  jr         $ra
 /* 77918 80076D18 00000000 */   nop

@@ -7,7 +7,7 @@ import subprocess
 import tempfile
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
-root_dir = os.path.abspath(os.path.join(script_dir, ".."))
+root_dir = os.path.abspath(os.path.join(script_dir, "."))
 src_dir = root_dir + "src/"
 
 # Project-specific
@@ -23,6 +23,7 @@ CPP_FLAGS = [
     "-D__asm__(...)=",
     "-ffreestanding",
     "-DM2CTX",
+    "-Iinclude/2.0/PR"
 ]
 
 def import_c_file(in_file) -> str:

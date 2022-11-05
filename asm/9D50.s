@@ -65,7 +65,7 @@ glabel func_80009150
 /* 9E18 80009218 27A40024 */   addiu     $a0, $sp, 0x24
 /* 9E1C 8000921C 27A40024 */  addiu      $a0, $sp, 0x24
 /* 9E20 80009220 00002825 */  or         $a1, $zero, $zero
-/* 9E24 80009224 0C019824 */  jal        func_80066090
+/* 9E24 80009224 0C019824 */  jal        osRecvMesg
 /* 9E28 80009228 24060001 */   addiu     $a2, $zero, 0x1
 /* 9E2C 8000922C 3C048011 */  lui        $a0, %hi(D_8010CA98)
 /* 9E30 80009230 0C01ACAB */  jal        func_8006B2AC

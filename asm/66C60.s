@@ -21,7 +21,7 @@ glabel func_80066060
 /* 66C88 80066088 03E00008 */  jr         $ra
 /* 66C8C 8006608C 00000000 */   nop
 
-glabel func_80066090
+glabel osRecvMesg
 /* 66C90 80066090 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 66C94 80066094 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 66C98 80066098 AFA40028 */  sw         $a0, 0x28($sp)

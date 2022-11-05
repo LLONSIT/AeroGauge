@@ -27,7 +27,7 @@ glabel func_8006B220
 /* 6BE60 8006B260 AFA2001C */  sw         $v0, 0x1C($sp)
 /* 6BE64 8006B264 8FA40020 */  lw         $a0, 0x20($sp)
 /* 6BE68 8006B268 00002825 */  or         $a1, $zero, $zero
-/* 6BE6C 8006B26C 0C019824 */  jal        func_80066090
+/* 6BE6C 8006B26C 0C019824 */  jal        osRecvMesg
 /* 6BE70 8006B270 24060001 */   addiu     $a2, $zero, 0x1
 .L8006B274:
 /* 6BE74 8006B274 3C05801B */  lui        $a1, %hi(D_801AAB90)
@@ -156,7 +156,7 @@ glabel func_8006B354
 /* 6C038 8006B438 03E00008 */  jr         $ra
 /* 6C03C 8006B43C A1590000 */   sb        $t9, 0x0($t2)
 
-glabel func_8006B440
+glabel osPfsInitPak
 /* 6C040 8006B440 27BDFF98 */  addiu      $sp, $sp, -0x68
 /* 6C044 8006B444 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 6C048 8006B448 AFA40068 */  sw         $a0, 0x68($sp)

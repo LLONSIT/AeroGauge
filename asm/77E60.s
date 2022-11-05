@@ -49,7 +49,7 @@ glabel __osContRamWrite
 /* 77EF4 800772F4 AFA2005C */  sw         $v0, 0x5C($sp)
 /* 77EF8 800772F8 8FA40060 */  lw         $a0, 0x60($sp)
 /* 77EFC 800772FC 00002825 */  or         $a1, $zero, $zero
-/* 77F00 80077300 0C019824 */  jal        func_80066090
+/* 77F00 80077300 0C019824 */  jal        osRecvMesg
 /* 77F04 80077304 24060001 */   addiu     $a2, $zero, 0x1
 .L80077308:
 /* 77F08 80077308 3C05801B */  lui        $a1, %hi(D_801AD350)
@@ -59,7 +59,7 @@ glabel __osContRamWrite
 /* 77F18 80077318 AFA2005C */  sw         $v0, 0x5C($sp)
 /* 77F1C 8007731C 8FA40060 */  lw         $a0, 0x60($sp)
 /* 77F20 80077320 00002825 */  or         $a1, $zero, $zero
-/* 77F24 80077324 0C019824 */  jal        func_80066090
+/* 77F24 80077324 0C019824 */  jal        osRecvMesg
 /* 77F28 80077328 24060001 */   addiu     $a2, $zero, 0x1
 /* 77F2C 8007732C 8FAA0064 */  lw         $t2, 0x64($sp)
 /* 77F30 80077330 3C09801B */  lui        $t1, %hi(D_801AD350)

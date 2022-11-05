@@ -37,7 +37,7 @@ glabel func_800609B4
 /* 615D0 800609D0 AFB00018 */  sw         $s0, 0x18($sp)
 /* 615D4 800609D4 02202025 */  or         $a0, $s1, $zero
 /* 615D8 800609D8 02402825 */  or         $a1, $s2, $zero
-/* 615DC 800609DC 0C019824 */  jal        func_80066090
+/* 615DC 800609DC 0C019824 */  jal        osRecvMesg
 /* 615E0 800609E0 00003025 */   or        $a2, $zero, $zero
 /* 615E4 800609E4 1440000C */  bnez       $v0, .L80060A18
 /* 615E8 800609E8 3C10801B */   lui       $s0, %hi(D_801A8750)
@@ -45,11 +45,11 @@ glabel func_800609B4
 /* 615F0 800609F0 02002025 */  or         $a0, $s0, $zero
 .L800609F4:
 /* 615F4 800609F4 8FA5002C */  lw         $a1, 0x2C($sp)
-/* 615F8 800609F8 0C01A1B4 */  jal        func_800686D0
+/* 615F8 800609F8 0C01A1B4 */  jal        osSendMesg
 /* 615FC 800609FC 00003025 */   or        $a2, $zero, $zero
 /* 61600 80060A00 02202025 */  or         $a0, $s1, $zero
 /* 61604 80060A04 02402825 */  or         $a1, $s2, $zero
-/* 61608 80060A08 0C019824 */  jal        func_80066090
+/* 61608 80060A08 0C019824 */  jal        osRecvMesg
 /* 6160C 80060A0C 00003025 */   or        $a2, $zero, $zero
 /* 61610 80060A10 5040FFF8 */  beql       $v0, $zero, .L800609F4
 /* 61614 80060A14 02002025 */   or        $a0, $s0, $zero
@@ -75,7 +75,7 @@ glabel func_80060A3C
 /* 61658 80060A58 AFB10018 */  sw         $s1, 0x18($sp)
 /* 6165C 80060A5C AFB00014 */  sw         $s0, 0x14($sp)
 /* 61660 80060A60 27A5005C */  addiu      $a1, $sp, 0x5C
-/* 61664 80060A64 0C01B3E8 */  jal        func_8006CFA0
+/* 61664 80060A64 0C01B3E8 */  jal        osPfsNumFiles
 /* 61668 80060A68 27A60058 */   addiu     $a2, $sp, 0x58
 /* 6166C 80060A6C 14400006 */  bnez       $v0, .L80060A88
 /* 61670 80060A70 02A02025 */   or        $a0, $s5, $zero
@@ -159,11 +159,11 @@ glabel func_80060B64
 /* 61780 80060B80 3C05801A */  lui        $a1, %hi(D_8019FBE0)
 /* 61784 80060B84 24A5FBE0 */  addiu      $a1, $a1, %lo(D_8019FBE0)
 /* 61788 80060B88 8FA40020 */  lw         $a0, 0x20($sp)
-/* 6178C 80060B8C 0C019824 */  jal        func_80066090
+/* 6178C 80060B8C 0C019824 */  jal        osRecvMesg
 /* 61790 80060B90 24060001 */   addiu     $a2, $zero, 0x1
 /* 61794 80060B94 8FA40020 */  lw         $a0, 0x20($sp)
 /* 61798 80060B98 02002825 */  or         $a1, $s0, $zero
-/* 6179C 80060B9C 0C01AD10 */  jal        func_8006B440
+/* 6179C 80060B9C 0C01AD10 */  jal        osPfsInitPak
 /* 617A0 80060BA0 93A6002B */   lbu       $a2, 0x2B($sp)
 /* 617A4 80060BA4 2C41000C */  sltiu      $at, $v0, 0xC
 /* 617A8 80060BA8 10200016 */  beqz       $at, L80060C04

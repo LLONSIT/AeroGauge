@@ -41,7 +41,7 @@ glabel func_8006E380
 /* 6EFF4 8006E3F4 8FAE0050 */  lw         $t6, 0x50($sp)
 /* 6EFF8 8006E3F8 00002825 */  or         $a1, $zero, $zero
 /* 6EFFC 8006E3FC 24060001 */  addiu      $a2, $zero, 0x1
-/* 6F000 8006E400 0C019824 */  jal        func_80066090
+/* 6F000 8006E400 0C019824 */  jal        osRecvMesg
 /* 6F004 8006E404 8DC40004 */   lw        $a0, 0x4($t6)
 /* 6F008 8006E408 3C05801B */  lui        $a1, %hi(D_801AD350)
 /* 6F00C 8006E40C 24A5D350 */  addiu      $a1, $a1, %lo(D_801AD350)
@@ -51,7 +51,7 @@ glabel func_8006E380
 /* 6F01C 8006E41C AFA20048 */  sw         $v0, 0x48($sp)
 /* 6F020 8006E420 00002825 */  or         $a1, $zero, $zero
 /* 6F024 8006E424 24060001 */  addiu      $a2, $zero, 0x1
-/* 6F028 8006E428 0C019824 */  jal        func_80066090
+/* 6F028 8006E428 0C019824 */  jal        osRecvMesg
 /* 6F02C 8006E42C 8DE40004 */   lw        $a0, 0x4($t7)
 /* 6F030 8006E430 8FB90050 */  lw         $t9, 0x50($sp)
 /* 6F034 8006E434 3C18801B */  lui        $t8, %hi(D_801AD350)
@@ -153,7 +153,7 @@ glabel func_8006E520
 /* 6F194 8006E594 8FAE0050 */  lw         $t6, 0x50($sp)
 /* 6F198 8006E598 00002825 */  or         $a1, $zero, $zero
 /* 6F19C 8006E59C 24060001 */  addiu      $a2, $zero, 0x1
-/* 6F1A0 8006E5A0 0C019824 */  jal        func_80066090
+/* 6F1A0 8006E5A0 0C019824 */  jal        osRecvMesg
 /* 6F1A4 8006E5A4 8DC40004 */   lw        $a0, 0x4($t6)
 /* 6F1A8 8006E5A8 3C05801B */  lui        $a1, %hi(D_801AD350)
 /* 6F1AC 8006E5AC 24A5D350 */  addiu      $a1, $a1, %lo(D_801AD350)
@@ -163,7 +163,7 @@ glabel func_8006E520
 /* 6F1BC 8006E5BC AFA20048 */  sw         $v0, 0x48($sp)
 /* 6F1C0 8006E5C0 00002825 */  or         $a1, $zero, $zero
 /* 6F1C4 8006E5C4 24060001 */  addiu      $a2, $zero, 0x1
-/* 6F1C8 8006E5C8 0C019824 */  jal        func_80066090
+/* 6F1C8 8006E5C8 0C019824 */  jal        osRecvMesg
 /* 6F1CC 8006E5CC 8DE40004 */   lw        $a0, 0x4($t7)
 /* 6F1D0 8006E5D0 8FB90050 */  lw         $t9, 0x50($sp)
 /* 6F1D4 8006E5D4 3C18801B */  lui        $t8, %hi(D_801AD350)

@@ -220,7 +220,7 @@ glabel func_8006C800
 /* 6D404 8006C804 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 6D408 8006C808 0C01C218 */  jal        __osDisableInt
 /* 6D40C 8006C80C AFB00018 */   sw        $s0, 0x18($sp)
-/* 6D410 8006C810 0C01DB44 */  jal        func_80076D10
+/* 6D410 8006C810 0C01DB44 */  jal        osGetCount
 /* 6D414 8006C814 00408025 */   or        $s0, $v0, $zero
 /* 6D418 8006C818 AFA20034 */  sw         $v0, 0x34($sp)
 /* 6D41C 8006C81C 3C0F801B */  lui        $t7, %hi(D_801AD338)

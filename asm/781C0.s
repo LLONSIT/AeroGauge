@@ -93,7 +93,7 @@ glabel osEepromWrite
 /* 782EC 800776EC AFA20044 */  sw         $v0, 0x44($sp)
 /* 782F0 800776F0 8FA40048 */  lw         $a0, 0x48($sp)
 /* 782F4 800776F4 00002825 */  or         $a1, $zero, $zero
-/* 782F8 800776F8 0C019824 */  jal        func_80066090
+/* 782F8 800776F8 0C019824 */  jal        osRecvMesg
 /* 782FC 800776FC 24060001 */   addiu     $a2, $zero, 0x1
 /* 78300 80077700 3C05801B */  lui        $a1, %hi(D_801AAC30)
 /* 78304 80077704 24A5AC30 */  addiu      $a1, $a1, %lo(D_801AAC30)
@@ -105,7 +105,7 @@ glabel osEepromWrite
 /* 7831C 8007771C A02EABD0 */  sb         $t6, %lo(D_801AABD0)($at)
 /* 78320 80077720 8FA40048 */  lw         $a0, 0x48($sp)
 /* 78324 80077724 00002825 */  or         $a1, $zero, $zero
-/* 78328 80077728 0C019824 */  jal        func_80066090
+/* 78328 80077728 0C019824 */  jal        osRecvMesg
 /* 7832C 8007772C 24060001 */   addiu     $a2, $zero, 0x1
 /* 78330 80077730 AFA00040 */  sw         $zero, 0x40($sp)
 .L80077734:
@@ -287,7 +287,7 @@ glabel __osEepStatus
 /* 785C8 800779C8 AFA2002C */  sw         $v0, 0x2C($sp)
 /* 785CC 800779CC 8FA40030 */  lw         $a0, 0x30($sp)
 /* 785D0 800779D0 00002825 */  or         $a1, $zero, $zero
-/* 785D4 800779D4 0C019824 */  jal        func_80066090
+/* 785D4 800779D4 0C019824 */  jal        osRecvMesg
 /* 785D8 800779D8 24060001 */   addiu     $a2, $zero, 0x1
 /* 785DC 800779DC 3C01801B */  lui        $at, %hi(D_801AABD0)
 /* 785E0 800779E0 3C05801B */  lui        $a1, %hi(D_801AAC30)
@@ -298,7 +298,7 @@ glabel __osEepStatus
 /* 785F4 800779F4 AFA2002C */  sw         $v0, 0x2C($sp)
 /* 785F8 800779F8 8FA40030 */  lw         $a0, 0x30($sp)
 /* 785FC 800779FC 00002825 */  or         $a1, $zero, $zero
-/* 78600 80077A00 0C019824 */  jal        func_80066090
+/* 78600 80077A00 0C019824 */  jal        osRecvMesg
 /* 78604 80077A04 24060001 */   addiu     $a2, $zero, 0x1
 /* 78608 80077A08 8FAB002C */  lw         $t3, 0x2C($sp)
 /* 7860C 80077A0C 11600003 */  beqz       $t3, .L80077A1C

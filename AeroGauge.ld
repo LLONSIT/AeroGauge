@@ -57,7 +57,7 @@ SECTIONS
         build/asm/108F0.s.o(.text);
         build/asm/10D60.s.o(.text);
         build/asm/12760.s.o(.text);
-        build/asm/14060.s.o(.text);
+        build/src/game_14060.c.o(.text);
         build/asm/14720.s.o(.text);
         build/asm/15020.s.o(.text);
         build/asm/15D60.s.o(.text);
@@ -182,7 +182,7 @@ SECTIONS
         build/asm/6D900.s.o(.text);
         build/asm/6D940.s.o(.text);
         build/asm/6D9E0.s.o(.text);
-        build/asm/6DBA0.s.o(.text);
+        build/asm/osPfsNumFiles.s.o(.text);
         build/asm/6DCF0.s.o(.text);
         build/asm/6DE40.s.o(.text);
         build/asm/6DED0.s.o(.text);
@@ -217,7 +217,7 @@ SECTIONS
         build/asm/74EF0.s.o(.text);
         build/asm/75E90.s.o(.text);
         build/asm/761F0.s.o(.text);
-        build/asm/77910.s.o(.text);
+        build/asm/osGetCount.s.o(.text);
         build/asm/77920.s.o(.text);
         build/asm/77E60.s.o(.text);
         build/asm/781C0.s.o(.text);
@@ -230,7 +230,7 @@ SECTIONS
         build/asm/79300.s.o(.text);
         build/asm/79340.s.o(.text);
         build/asm/793D0.s.o(.text);
-        build/asm/79400.s.o(.text);
+        build/asm/osDpDeviceBusy.s.o(.text);
         build/asm/79430.s.o(.text);
         build/asm/79450.s.o(.text);
         build/asm/79500.s.o(.text);
@@ -285,7 +285,7 @@ SECTIONS
         build/asm/108F0.s.o(.bss);
         build/asm/10D60.s.o(.bss);
         build/asm/12760.s.o(.bss);
-        build/asm/14060.s.o(.bss);
+        build/src/game_14060.c.o(.bss);
         build/asm/14720.s.o(.bss);
         build/asm/15020.s.o(.bss);
         build/asm/15D60.s.o(.bss);
@@ -402,7 +402,7 @@ SECTIONS
         build/asm/6D900.s.o(.bss);
         build/asm/6D940.s.o(.bss);
         build/asm/6D9E0.s.o(.bss);
-        build/asm/6DBA0.s.o(.bss);
+        build/asm/osPfsNumFiles.s.o(.bss);
         build/asm/6DCF0.s.o(.bss);
         build/asm/6DE40.s.o(.bss);
         build/asm/6DED0.s.o(.bss);
@@ -437,7 +437,7 @@ SECTIONS
         build/asm/74EF0.s.o(.bss);
         build/asm/75E90.s.o(.bss);
         build/asm/761F0.s.o(.bss);
-        build/asm/77910.s.o(.bss);
+        build/asm/osGetCount.s.o(.bss);
         build/asm/77920.s.o(.bss);
         build/asm/77E60.s.o(.bss);
         build/asm/781C0.s.o(.bss);
@@ -450,7 +450,7 @@ SECTIONS
         build/asm/79300.s.o(.bss);
         build/asm/79340.s.o(.bss);
         build/asm/793D0.s.o(.bss);
-        build/asm/79400.s.o(.bss);
+        build/asm/osDpDeviceBusy.s.o(.bss);
         build/asm/79430.s.o(.bss);
         build/asm/79450.s.o(.bss);
         build/asm/79500.s.o(.bss);
