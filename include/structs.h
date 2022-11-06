@@ -59,3 +59,13 @@ typedef struct {
     unk_struct_8001369C *unk0[5];
 } D_801369C; // size 0x14
 
+struct unk_struct_80041964 {
+
+    s8 pad[0x5]; //padding
+    s8 unk4; //used
+    s8 unk5; //used
+    s8 unk7; //used
+
+
+
+};

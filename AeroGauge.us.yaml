@@ -90,7 +90,7 @@ segments:
       - [0x37B40, asm]
       - [0x3AD90, asm]
       - [0x3C840, asm]
-      - [0x3F900, asm]
+      - [0x3F900, c, game_3F900]
       - [0x43090, asm]
       - [0x470E0, asm]
       - [0x4B490, asm]

@@ -59,7 +59,6 @@ void func_8001AFFC(void) {
 
 
 
-//TEMP structures, TODO: set up the structures in order to compile this func
 
 struct unk_struct_8013FC *D_8013FC80;
 

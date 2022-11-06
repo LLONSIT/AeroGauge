@@ -1,3 +1,7 @@
+#include <ultra64.h>
+#include "structs.h"
+#include <variables.h>
+
 
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_68B40/func_800678B0.s")

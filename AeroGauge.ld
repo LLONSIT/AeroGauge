@@ -105,7 +105,7 @@ SECTIONS
         build/asm/37B40.s.o(.text);
         build/asm/3AD90.s.o(.text);
         build/asm/3C840.s.o(.text);
-        build/asm/3F900.s.o(.text);
+        build/src/game_3F900.c.o(.text);
         build/asm/43090.s.o(.text);
         build/asm/470E0.s.o(.text);
         build/asm/4B490.s.o(.text);
@@ -330,7 +330,7 @@ SECTIONS
         build/asm/37B40.s.o(.bss);
         build/asm/3AD90.s.o(.bss);
         build/asm/3C840.s.o(.bss);
-        build/asm/3F900.s.o(.bss);
+        build/src/game_3F900.c.o(.bss);
         build/asm/43090.s.o(.bss);
         build/asm/470E0.s.o(.bss);
         build/asm/4B490.s.o(.bss);
