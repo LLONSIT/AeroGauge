@@ -109,6 +109,7 @@ osSendMesg = 0x800686D0;
 osPfsNumFiles =  0x8006CFA0;
  __osDpDeviceBusy =  0x80078800;
 osGetCount =  0x80076D10;
+__osPfsGetInitData =  0x80077D50;
 
 
 D_8008B7DC = 0x8008B7DC; //type:defined

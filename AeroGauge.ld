@@ -79,7 +79,7 @@ SECTIONS
         build/asm/22680.s.o(.text);
         build/asm/22EC0.s.o(.text);
         build/asm/24530.s.o(.text);
-        build/asm/24890.s.o(.text);
+        build/src/game_24890.c.o(.text);
         build/asm/24B70.s.o(.text);
         build/asm/24CC0.s.o(.text);
         build/asm/24D00.s.o(.text);
@@ -304,7 +304,7 @@ SECTIONS
         build/asm/22680.s.o(.bss);
         build/asm/22EC0.s.o(.bss);
         build/asm/24530.s.o(.bss);
-        build/asm/24890.s.o(.bss);
+        build/src/game_24890.c.o(.bss);
         build/asm/24B70.s.o(.bss);
         build/asm/24CC0.s.o(.bss);
         build/asm/24D00.s.o(.bss);

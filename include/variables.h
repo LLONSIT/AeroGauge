@@ -25,3 +25,17 @@ extern f32 gUnk_YPos;
 
 extern u8 D_8019E6A8;
 extern unsigned short D_8019EE02;
+
+//game_24890
+
+/* func_80023C90*/
+
+
+
+/* func_80023E7C*/
+extern f32 func_80023C90(f32);
+extern f32 D_80097230;
+extern f32 D_80097234;
+extern f64 D_80097238;
+extern f64 D_80097240;
+

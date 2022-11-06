@@ -39,7 +39,7 @@ glabel osPfsIsPlug
 /* 7874C 80077B4C 0C019824 */  jal        osRecvMesg
 /* 78750 80077B50 24060001 */   addiu     $a2, $zero, 0x1
 /* 78754 80077B54 27A40037 */  addiu      $a0, $sp, 0x37
-/* 78758 80077B58 0C01DF54 */  jal        func_80077D50
+/* 78758 80077B58 0C01DF54 */  jal        __osPfsGetInitData
 /* 7875C 80077B5C 27A50024 */   addiu     $a1, $sp, 0x24
 /* 78760 80077B60 3C0F801B */  lui        $t7, %hi(D_801AABD1)
 /* 78764 80077B64 91EFABD1 */  lbu        $t7, %lo(D_801AABD1)($t7)
@@ -177,7 +177,7 @@ glabel __osPfsRequestData
 /* 78948 80077D48 03E00008 */  jr         $ra
 /* 7894C 80077D4C A30D0000 */   sb        $t5, 0x0($t8)
 
-glabel func_80077D50
+glabel __osPfsGetInitData
 /* 78950 80077D50 3C0F801B */  lui        $t7, %hi(D_801AABD1)
 /* 78954 80077D54 91EFABD1 */  lbu        $t7, %lo(D_801AABD1)($t7)
 /* 78958 80077D58 27BDFFE8 */  addiu      $sp, $sp, -0x18
