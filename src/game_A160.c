@@ -2,6 +2,7 @@
 #include <ultratypes.h>
 //Not libultra
 
+//debug func?
 
 extern void func_80009298(OSMesgQueue *);
 

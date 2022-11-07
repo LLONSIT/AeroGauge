@@ -1,5 +1,6 @@
 #include "ultratypes.h"
 
+
 struct unk_8001DF40 {
 
 	u8 unk0;
@@ -19,6 +20,7 @@ struct unk_struct_8013FC {
 
 
 };
+
 struct unk_struct_8006B {
 
 
@@ -67,5 +69,15 @@ struct unk_struct_80041964 {
     s8 unk7; //used
 
 
+
+};
+
+
+
+struct unk_struct_80024240 {
+
+    f32 unk0;
+    f32 unk4;
+    f32 unk8;
 
 };

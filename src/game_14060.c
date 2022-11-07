@@ -15,7 +15,7 @@ void func_8001369C(D_801369C arg0[], u8 arg1) {
     temp_v0->unk382 = arg1 / 2 * 4;
 
 }
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_14060/func_8001369C.s")
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_14060/func_800136DC.s")
 

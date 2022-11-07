@@ -39,3 +39,12 @@ extern f32 D_80097234;
 extern f64 D_80097238;
 extern f64 D_80097240;
 
+
+
+//game_3F900
+
+extern u8 D_8008EF4C;
+extern s32 D_80394518;
+extern s32 D_80394A70;
+extern s32 D_80394A98;
+extern s32 D_80394DE8;

@@ -1,7 +1,7 @@
 #include <ultra64.h>
 #include "variables.h"
 
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_24890/func_80023C90.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/game_24890/func_80023C90.s")
 
 f32 func_80023E7C(f32 arg0, f32 arg1) {
     if (arg1 == 0.0f) {
@@ -25,3 +25,4 @@ block_5:
     }
     return 0.0f;
 }
+

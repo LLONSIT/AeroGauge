@@ -60,7 +60,7 @@ SECTIONS
         build/src/game_14060.c.o(.text);
         build/asm/14720.s.o(.text);
         build/asm/15020.s.o(.text);
-        build/asm/15D60.s.o(.text);
+        build/src/game_15D60.c.o(.text);
         build/asm/16840.s.o(.text);
         main_DATA_START = .;
         _16BD0_data__s = .;
@@ -84,7 +84,7 @@ SECTIONS
         build/asm/24CC0.s.o(.text);
         build/asm/24D00.s.o(.text);
         build/asm/24DF0.s.o(.text);
-        build/asm/24E40.s.o(.text);
+        build/src/game_24E40.c.o(.text);
         build/asm/24EE0.s.o(.text);
         build/asm/25440.s.o(.text);
         build/asm/255D0.s.o(.text);
@@ -288,7 +288,7 @@ SECTIONS
         build/src/game_14060.c.o(.bss);
         build/asm/14720.s.o(.bss);
         build/asm/15020.s.o(.bss);
-        build/asm/15D60.s.o(.bss);
+        build/src/game_15D60.c.o(.bss);
         build/asm/16840.s.o(.bss);
         build/asm/198F0.s.o(.bss);
         build/asm/19A90.s.o(.bss);
@@ -309,7 +309,7 @@ SECTIONS
         build/asm/24CC0.s.o(.bss);
         build/asm/24D00.s.o(.bss);
         build/asm/24DF0.s.o(.bss);
-        build/asm/24E40.s.o(.bss);
+        build/src/game_24E40.c.o(.bss);
         build/asm/24EE0.s.o(.bss);
         build/asm/25440.s.o(.bss);
         build/asm/255D0.s.o(.bss);
