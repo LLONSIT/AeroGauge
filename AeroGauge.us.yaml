@@ -54,12 +54,12 @@ segments:
       - [0x19A90, asm]
       - [0x19AA0, asm]
       - [0x1A230, c, game_1A230]
-      - [0x1CA50, asm]
+      - [0x1CA50, c, game_1CA50]
       - [0x1CC30, c, game_1CC30]
       - [0x1EDC0, asm]
       - [0x1F0E0, asm]
       - [0x1FD50, asm]
-      - [0x202A0, asm]
+      - [0x202A0, c, game_202A0]
       - [0x20D90, asm]
       - [0x22680, asm]
       - [0x22EC0, asm]
@@ -68,7 +68,7 @@ segments:
       - [0x24B70, asm]
       - [0x24CC0, asm]
       - [0x24D00, asm]
-      - [0x24DF0, asm]
+      - [0x24DF0, c, game_24DF0]
       - [0x24E40, c, game_24E40]
       - [0x24EE0, asm]
       - [0x25440, asm]
@@ -130,9 +130,9 @@ segments:
       - [0x68460, asm, alSndpStop] #Libultra
       - [0x684B0, c, game_68B40] #Libultra
       - [0x68590, asm, code_68590] #Libultra
-      - [0x68900, asm]
-      - [0x68A80, asm, alSndpDelete]
-      - [0x68AB0, asm]
+      - [0x68900, asm] #Libultra
+      - [0x68A80, asm, alSndpDelete] #Libultra
+      - [0x68AB0, asm, osVirtualToPhysical] #Libultra
       - [0x68B30, asm]
       - [0x68BE0, data]
       - [0x68BF0, asm]

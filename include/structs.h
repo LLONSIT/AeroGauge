@@ -10,12 +10,7 @@ struct unk_8001DF40 {
 
 struct unk_struct_8013FC { 
 
-    float a[4][4];
-    float b[6][6];
-    int n;
-    float y;
-    char g[0x1];
-    char c[0x22];
+    s8 pad[0xFC];
  unsigned short unkFC;
 
 
@@ -73,11 +68,19 @@ struct unk_struct_80041964 {
 };
 
 
-
 struct unk_struct_80024240 {
 
     f32 unk0;
     f32 unk4;
     f32 unk8;
+
+};
+
+struct unk_struct_8001BFE {
+
+s8 unk0;
+s8 unk1;
+s8 unk2;
+s8 unk3;
 
 };

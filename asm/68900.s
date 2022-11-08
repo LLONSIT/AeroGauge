@@ -99,7 +99,7 @@ glabel osStartThread
 /* 68A48 80067E48 03E00008 */  jr         $ra
 /* 68A4C 80067E4C 27BD0028 */   addiu     $sp, $sp, 0x28
 
-glabel func_80067E50
+glabel alSeqpDelete
 /* 68A50 80067E50 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 68A54 80067E54 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 68A58 80067E58 00802825 */  or         $a1, $a0, $zero

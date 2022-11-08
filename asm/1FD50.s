@@ -89,7 +89,7 @@ glabel func_8001F174
 /* 1FE70 8001F270 3C04801E */  lui        $a0, %hi(D_801DA800)
 /* 1FE74 8001F274 2484A800 */  addiu      $a0, $a0, %lo(D_801DA800)
 /* 1FE78 8001F278 AFA6003C */  sw         $a2, 0x3C($sp)
-/* 1FE7C 8001F27C 0C019FAC */  jal        func_80067EB0
+/* 1FE7C 8001F27C 0C019FAC */  jal        osVirtualToPhysical
 /* 1FE80 8001F280 AFA7001C */   sw        $a3, 0x1C($sp)
 /* 1FE84 8001F284 8FA3003C */  lw         $v1, 0x3C($sp)
 /* 1FE88 8001F288 8FA7001C */  lw         $a3, 0x1C($sp)

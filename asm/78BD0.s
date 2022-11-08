@@ -21,7 +21,7 @@ glabel func_80077FD0
 /* 78BF8 80077FF8 8E300008 */  lw         $s0, 0x8($s1)
 /* 78BFC 80077FFC 31F80001 */  andi       $t8, $t7, 0x1
 /* 78C00 80078000 AFB8002C */  sw         $t8, 0x2C($sp)
-/* 78C04 80078004 0C019FAC */  jal        func_80067EB0
+/* 78C04 80078004 0C019FAC */  jal        osVirtualToPhysical
 /* 78C08 80078008 8E240004 */   lw        $a0, 0x4($s1)
 /* 78C0C 8007800C 8FB9002C */  lw         $t9, 0x2C($sp)
 /* 78C10 80078010 00409025 */  or         $s2, $v0, $zero
@@ -153,7 +153,7 @@ glabel func_80077FD0
 /* 78DE4 800781E4 11800005 */  beqz       $t4, .L800781FC
 /* 78DE8 800781E8 00000000 */   nop
 /* 78DEC 800781EC AE20002C */  sw         $zero, 0x2C($s1)
-/* 78DF0 800781F0 0C019FAC */  jal        func_80067EB0
+/* 78DF0 800781F0 0C019FAC */  jal        osVirtualToPhysical
 /* 78DF4 800781F4 8E240004 */   lw        $a0, 0x4($s1)
 /* 78DF8 800781F8 AFA2003C */  sw         $v0, 0x3C($sp)
 .L800781FC:
@@ -166,7 +166,7 @@ glabel func_80077FD0
 /* 78E14 80078214 8E240004 */  lw         $a0, 0x4($s1)
 /* 78E18 80078218 000E6C00 */  sll        $t5, $t6, 16
 /* 78E1C 8007821C 01A1C024 */  and        $t8, $t5, $at
-/* 78E20 80078220 0C019FAC */  jal        func_80067EB0
+/* 78E20 80078220 0C019FAC */  jal        osVirtualToPhysical
 /* 78E24 80078224 AE38002C */   sw        $t8, 0x2C($s1)
 /* 78E28 80078228 AFA2003C */  sw         $v0, 0x3C($sp)
 .L8007822C:

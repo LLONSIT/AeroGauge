@@ -29,11 +29,11 @@ glabel func_800701C0
 /* 70E00 80070200 32190001 */  andi       $t9, $s0, 0x1
 /* 70E04 80070204 1720FFFC */  bnez       $t9, .L800701F8
 /* 70E08 80070208 00000000 */   nop
-/* 70E0C 8007020C 0C019FAC */  jal        func_80067EB0
+/* 70E0C 8007020C 0C019FAC */  jal        osVirtualToPhysical
 /* 70E10 80070210 8FA40028 */   lw        $a0, 0x28($sp)
 /* 70E14 80070214 3C08A410 */  lui        $t0, %hi(D_A4100000)
 /* 70E18 80070218 AD020000 */  sw         $v0, %lo(D_A4100000)($t0)
-/* 70E1C 8007021C 0C019FAC */  jal        func_80067EB0
+/* 70E1C 8007021C 0C019FAC */  jal        osVirtualToPhysical
 /* 70E20 80070220 8FA40028 */   lw        $a0, 0x28($sp)
 /* 70E24 80070224 8FAD0034 */  lw         $t5, 0x34($sp)
 /* 70E28 80070228 00405825 */  or         $t3, $v0, $zero

@@ -41,7 +41,7 @@ glabel func_80067F30
 /* 68B9C 80067F9C 10000009 */  b          .L80067FC4
 /* 68BA0 80067FA0 2402FFFF */   addiu     $v0, $zero, -0x1
 .L80067FA4:
-/* 68BA4 80067FA4 0C019FAC */  jal        func_80067EB0
+/* 68BA4 80067FA4 0C019FAC */  jal        osVirtualToPhysical
 /* 68BA8 80067FA8 8FA4001C */   lw        $a0, 0x1C($sp)
 /* 68BAC 80067FAC 3C0CA450 */  lui        $t4, %hi(D_A4500000)
 /* 68BB0 80067FB0 AD820000 */  sw         $v0, %lo(D_A4500000)($t4)

@@ -23,7 +23,7 @@ glabel __osSpRawStartDma
 /* 7936C 8007876C 8FAE001C */  lw         $t6, 0x1C($sp)
 /* 79370 80078770 3C0FA404 */  lui        $t7, %hi(D_A4040000)
 /* 79374 80078774 ADEE0000 */  sw         $t6, %lo(D_A4040000)($t7)
-/* 79378 80078778 0C019FAC */  jal        func_80067EB0
+/* 79378 80078778 0C019FAC */  jal        osVirtualToPhysical
 /* 7937C 8007877C 8FA40020 */   lw        $a0, 0x20($sp)
 /* 79380 80078780 3C18A404 */  lui        $t8, %hi(D_A4040004)
 /* 79384 80078784 AF020004 */  sw         $v0, %lo(D_A4040004)($t8)

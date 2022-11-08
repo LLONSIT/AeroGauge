@@ -26,7 +26,7 @@ glabel func_80074240
 /* 74E78 80074278 0C01E19C */  jal        func_80078670
 /* 74E7C 8007427C 24050040 */   addiu     $a1, $zero, 0x40
 .L80074280:
-/* 74E80 80074280 0C019FAC */  jal        func_80067EB0
+/* 74E80 80074280 0C019FAC */  jal        osVirtualToPhysical
 /* 74E84 80074284 8FA4001C */   lw        $a0, 0x1C($sp)
 /* 74E88 80074288 3C0FA480 */  lui        $t7, %hi(D_A4800000)
 /* 74E8C 8007428C ADE20000 */  sw         $v0, %lo(D_A4800000)($t7)

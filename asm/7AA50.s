@@ -72,7 +72,7 @@ glabel _filterBuffer
 /* 7AB30 80079F30 ACEA0008 */  sw         $t2, 0x8($a3)
 /* 7AB34 80079F34 AFA80028 */  sw         $t0, 0x28($sp)
 /* 7AB38 80079F38 AFA70034 */  sw         $a3, 0x34($sp)
-/* 7AB3C 80079F3C 0C019FAC */  jal        func_80067EB0
+/* 7AB3C 80079F3C 0C019FAC */  jal        osVirtualToPhysical
 /* 7AB40 80079F40 24840008 */   addiu     $a0, $a0, 0x8
 /* 7AB44 80079F44 8FA70034 */  lw         $a3, 0x34($sp)
 /* 7AB48 80079F48 8FA80028 */  lw         $t0, 0x28($sp)
@@ -90,7 +90,7 @@ glabel _filterBuffer
 /* 7AB78 80079F78 03194825 */  or         $t1, $t8, $t9
 /* 7AB7C 80079F7C AC690000 */  sw         $t1, 0x0($v1)
 /* 7AB80 80079F80 8D040028 */  lw         $a0, 0x28($t0)
-/* 7AB84 80079F84 0C019FAC */  jal        func_80067EB0
+/* 7AB84 80079F84 0C019FAC */  jal        osVirtualToPhysical
 /* 7AB88 80079F88 AFA30018 */   sw        $v1, 0x18($sp)
 /* 7AB8C 80079F8C 8FA50018 */  lw         $a1, 0x18($sp)
 /* 7AB90 80079F90 8FA80028 */  lw         $t0, 0x28($sp)
@@ -144,7 +144,7 @@ glabel _saveBuffer
 /* 7AC44 8007A044 AFA70028 */  sw         $a3, 0x28($sp)
 /* 7AC48 8007A048 AFA6002C */  sw         $a2, 0x2C($sp)
 /* 7AC4C 8007A04C 26100008 */  addiu      $s0, $s0, 0x8
-/* 7AC50 8007A050 0C019FAC */  jal        func_80067EB0
+/* 7AC50 8007A050 0C019FAC */  jal        osVirtualToPhysical
 /* 7AC54 8007A054 00A02025 */   or        $a0, $a1, $zero
 /* 7AC58 8007A058 8FAC0044 */  lw         $t4, 0x44($sp)
 /* 7AC5C 8007A05C 8FA70028 */  lw         $a3, 0x28($sp)
@@ -170,7 +170,7 @@ glabel _saveBuffer
 /* 7ACAC 8007A0AC ACB90000 */  sw         $t9, 0x0($a1)
 /* 7ACB0 8007A0B0 8D440014 */  lw         $a0, 0x14($t2)
 /* 7ACB4 8007A0B4 AFA5003C */  sw         $a1, 0x3C($sp)
-/* 7ACB8 8007A0B8 0C019FAC */  jal        func_80067EB0
+/* 7ACB8 8007A0B8 0C019FAC */  jal        osVirtualToPhysical
 /* 7ACBC 8007A0BC 26100008 */   addiu     $s0, $s0, 0x8
 /* 7ACC0 8007A0C0 8FA5003C */  lw         $a1, 0x3C($sp)
 /* 7ACC4 8007A0C4 8FA6002C */  lw         $a2, 0x2C($sp)
@@ -194,7 +194,7 @@ glabel _saveBuffer
 /* 7AD08 8007A108 AC790000 */  sw         $t9, 0x0($v1)
 /* 7AD0C 8007A10C AFA30030 */  sw         $v1, 0x30($sp)
 /* 7AD10 8007A110 26100008 */  addiu      $s0, $s0, 0x8
-/* 7AD14 8007A114 0C019FAC */  jal        func_80067EB0
+/* 7AD14 8007A114 0C019FAC */  jal        osVirtualToPhysical
 /* 7AD18 8007A118 00A02025 */   or        $a0, $a1, $zero
 /* 7AD1C 8007A11C 8FA30030 */  lw         $v1, 0x30($sp)
 /* 7AD20 8007A120 AC620004 */  sw         $v0, 0x4($v1)
@@ -247,7 +247,7 @@ glabel _loadBuffer
 /* 7ADCC 8007A1CC AFA70028 */  sw         $a3, 0x28($sp)
 /* 7ADD0 8007A1D0 AFA6002C */  sw         $a2, 0x2C($sp)
 /* 7ADD4 8007A1D4 26100008 */  addiu      $s0, $s0, 0x8
-/* 7ADD8 8007A1D8 0C019FAC */  jal        func_80067EB0
+/* 7ADD8 8007A1D8 0C019FAC */  jal        osVirtualToPhysical
 /* 7ADDC 8007A1DC 00A02025 */   or        $a0, $a1, $zero
 /* 7ADE0 8007A1E0 8FAB0024 */  lw         $t3, 0x24($sp)
 /* 7ADE4 8007A1E4 8FAD0068 */  lw         $t5, 0x68($sp)
@@ -273,7 +273,7 @@ glabel _loadBuffer
 /* 7AE34 8007A234 ACB80000 */  sw         $t8, 0x0($a1)
 /* 7AE38 8007A238 8D440014 */  lw         $a0, 0x14($t2)
 /* 7AE3C 8007A23C AFA5003C */  sw         $a1, 0x3C($sp)
-/* 7AE40 8007A240 0C019FAC */  jal        func_80067EB0
+/* 7AE40 8007A240 0C019FAC */  jal        osVirtualToPhysical
 /* 7AE44 8007A244 26100008 */   addiu     $s0, $s0, 0x8
 /* 7AE48 8007A248 8FA5003C */  lw         $a1, 0x3C($sp)
 /* 7AE4C 8007A24C 8FA6002C */  lw         $a2, 0x2C($sp)
@@ -293,7 +293,7 @@ glabel _loadBuffer
 /* 7AE80 8007A280 AFA70028 */  sw         $a3, 0x28($sp)
 /* 7AE84 8007A284 AFA30034 */  sw         $v1, 0x34($sp)
 /* 7AE88 8007A288 26100008 */  addiu      $s0, $s0, 0x8
-/* 7AE8C 8007A28C 0C019FAC */  jal        func_80067EB0
+/* 7AE8C 8007A28C 0C019FAC */  jal        osVirtualToPhysical
 /* 7AE90 8007A290 00A02025 */   or        $a0, $a1, $zero
 /* 7AE94 8007A294 8FA30034 */  lw         $v1, 0x34($sp)
 /* 7AE98 8007A298 8FA70028 */  lw         $a3, 0x28($sp)
@@ -416,7 +416,7 @@ glabel _loadOutputBuffer
 /* 7B060 8007A460 AC4D0008 */  sw         $t5, 0x8($v0)
 /* 7B064 8007A464 8E0F0024 */  lw         $t7, 0x24($s0)
 /* 7B068 8007A468 8DE40014 */  lw         $a0, 0x14($t7)
-/* 7B06C 8007A46C 0C019FAC */  jal        func_80067EB0
+/* 7B06C 8007A46C 0C019FAC */  jal        osVirtualToPhysical
 /* 7B070 8007A470 AFA3005C */   sw        $v1, 0x5C($sp)
 /* 7B074 8007A474 8FAE0030 */  lw         $t6, 0x30($sp)
 /* 7B078 8007A478 8FA9002C */  lw         $t1, 0x2C($sp)

@@ -539,7 +539,7 @@ glabel func_800227E4
 /* 23670 80022A70 A7AC005A */  sh         $t4, 0x5A($sp)
 /* 23674 80022A74 A7AB005C */  sh         $t3, 0x5C($sp)
 /* 23678 80022A78 A7AA005E */  sh         $t2, 0x5E($sp)
-/* 2367C 80022A7C 0C019FAC */  jal        func_80067EB0
+/* 2367C 80022A7C 0C019FAC */  jal        osVirtualToPhysical
 /* 23680 80022A80 AFA30038 */   sw        $v1, 0x38($sp)
 /* 23684 80022A84 8FA90038 */  lw         $t1, 0x38($sp)
 /* 23688 80022A88 87AA005E */  lh         $t2, 0x5E($sp)

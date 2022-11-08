@@ -198,7 +198,7 @@ glabel alResamplePull
 /* 73778 80072B78 AC4F0008 */  sw         $t7, 0x8($v0)
 /* 7377C 80072B7C 24450010 */  addiu      $a1, $v0, 0x10
 /* 73780 80072B80 8D040014 */  lw         $a0, 0x14($t0)
-/* 73784 80072B84 0C019FAC */  jal        func_80067EB0
+/* 73784 80072B84 0C019FAC */  jal        osVirtualToPhysical
 /* 73788 80072B88 AFA50048 */   sw        $a1, 0x48($sp)
 /* 7378C 80072B8C 8FB80028 */  lw         $t8, 0x28($sp)
 /* 73790 80072B90 8FA80050 */  lw         $t0, 0x50($sp)

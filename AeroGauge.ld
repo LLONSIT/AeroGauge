@@ -69,12 +69,12 @@ SECTIONS
         build/asm/19A90.s.o(.text);
         build/asm/19AA0.s.o(.text);
         build/src/game_1A230.c.o(.text);
-        build/asm/1CA50.s.o(.text);
+        build/src/game_1CA50.c.o(.text);
         build/src/game_1CC30.c.o(.text);
         build/asm/1EDC0.s.o(.text);
         build/asm/1F0E0.s.o(.text);
         build/asm/1FD50.s.o(.text);
-        build/asm/202A0.s.o(.text);
+        build/src/game_202A0.c.o(.text);
         build/asm/20D90.s.o(.text);
         build/asm/22680.s.o(.text);
         build/asm/22EC0.s.o(.text);
@@ -83,7 +83,7 @@ SECTIONS
         build/asm/24B70.s.o(.text);
         build/asm/24CC0.s.o(.text);
         build/asm/24D00.s.o(.text);
-        build/asm/24DF0.s.o(.text);
+        build/src/game_24DF0.c.o(.text);
         build/src/game_24E40.c.o(.text);
         build/asm/24EE0.s.o(.text);
         build/asm/25440.s.o(.text);
@@ -147,7 +147,7 @@ SECTIONS
         build/asm/code_68590.s.o(.text);
         build/asm/68900.s.o(.text);
         build/asm/alSndpDelete.s.o(.text);
-        build/asm/68AB0.s.o(.text);
+        build/asm/osVirtualToPhysical.s.o(.text);
         build/asm/68B30.s.o(.text);
         _68BE0_data__s = .;
         build/asm/data/68BE0.data.s.o(.data);
@@ -294,12 +294,12 @@ SECTIONS
         build/asm/19A90.s.o(.bss);
         build/asm/19AA0.s.o(.bss);
         build/src/game_1A230.c.o(.bss);
-        build/asm/1CA50.s.o(.bss);
+        build/src/game_1CA50.c.o(.bss);
         build/src/game_1CC30.c.o(.bss);
         build/asm/1EDC0.s.o(.bss);
         build/asm/1F0E0.s.o(.bss);
         build/asm/1FD50.s.o(.bss);
-        build/asm/202A0.s.o(.bss);
+        build/src/game_202A0.c.o(.bss);
         build/asm/20D90.s.o(.bss);
         build/asm/22680.s.o(.bss);
         build/asm/22EC0.s.o(.bss);
@@ -308,7 +308,7 @@ SECTIONS
         build/asm/24B70.s.o(.bss);
         build/asm/24CC0.s.o(.bss);
         build/asm/24D00.s.o(.bss);
-        build/asm/24DF0.s.o(.bss);
+        build/src/game_24DF0.c.o(.bss);
         build/src/game_24E40.c.o(.bss);
         build/asm/24EE0.s.o(.bss);
         build/asm/25440.s.o(.bss);
@@ -371,7 +371,7 @@ SECTIONS
         build/asm/code_68590.s.o(.bss);
         build/asm/68900.s.o(.bss);
         build/asm/alSndpDelete.s.o(.bss);
-        build/asm/68AB0.s.o(.bss);
+        build/asm/osVirtualToPhysical.s.o(.bss);
         build/asm/68B30.s.o(.bss);
         build/asm/68BF0.s.o(.bss);
         build/asm/69420.s.o(.bss);

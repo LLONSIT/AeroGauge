@@ -295,7 +295,7 @@ glabel func_80001A54
 .L80001B98:
 /* 2798 80001B98 0C019818 */  jal        func_80066060
 /* 279C 80001B9C 02002025 */   or        $a0, $s0, $zero
-/* 27A0 80001BA0 0C019F94 */  jal        func_80067E50
+/* 27A0 80001BA0 0C019F94 */  jal        alSeqpDelete
 /* 27A4 80001BA4 02002025 */   or        $a0, $s0, $zero
 /* 27A8 80001BA8 26520020 */  addiu      $s2, $s2, 0x20
 /* 27AC 80001BAC 0255082B */  sltu       $at, $s2, $s5
@@ -376,7 +376,7 @@ glabel func_80001CA0
 /* 28AC 80001CAC 00808025 */  or         $s0, $a0, $zero
 /* 28B0 80001CB0 0C000818 */  jal        func_80002060
 /* 28B4 80001CB4 AFA50044 */   sw        $a1, 0x44($sp)
-/* 28B8 80001CB8 0C019FAC */  jal        func_80067EB0
+/* 28B8 80001CB8 0C019FAC */  jal        osVirtualToPhysical
 /* 28BC 80001CBC 8E040000 */   lw        $a0, 0x0($s0)
 /* 28C0 80001CC0 8FA30044 */  lw         $v1, 0x44($sp)
 /* 28C4 80001CC4 AFA2003C */  sw         $v0, 0x3C($sp)
@@ -530,7 +530,7 @@ glabel func_80001E90
 /* 2AE8 80001EE8 8DEFF554 */  lw         $t7, %lo(D_8007F554)($t7)
 /* 2AEC 80001EEC 0307C821 */  addu       $t9, $t8, $a3
 /* 2AF0 80001EF0 03222023 */  subu       $a0, $t9, $v0
-/* 2AF4 80001EF4 0C019FAC */  jal        func_80067EB0
+/* 2AF4 80001EF4 0C019FAC */  jal        osVirtualToPhysical
 /* 2AF8 80001EF8 AE0F000C */   sw        $t7, 0xC($s0)
 /* 2AFC 80001EFC 10000046 */  b          .L80002018
 /* 2B00 80001F00 8FBF002C */   lw        $ra, 0x2C($sp)
@@ -542,7 +542,7 @@ glabel func_80001E90
 /* 2B10 80001F10 8D100008 */  lw         $s0, 0x8($t0)
 /* 2B14 80001F14 16000005 */  bnez       $s0, .L80001F2C
 /* 2B18 80001F18 02002025 */   or        $a0, $s0, $zero
-/* 2B1C 80001F1C 0C019FAC */  jal        func_80067EB0
+/* 2B1C 80001F1C 0C019FAC */  jal        osVirtualToPhysical
 /* 2B20 80001F20 02202025 */   or        $a0, $s1, $zero
 /* 2B24 80001F24 1000003C */  b          .L80002018
 /* 2B28 80001F28 8FBF002C */   lw        $ra, 0x2C($sp)
@@ -605,7 +605,7 @@ glabel func_80001E90
 /* 2BFC 80001FFC AFA80010 */  sw         $t0, 0x10($sp)
 /* 2C00 80002000 0C0197C4 */  jal        func_80065F10
 /* 2C04 80002004 AFA80044 */   sw        $t0, 0x44($sp)
-/* 2C08 80002008 0C019FAC */  jal        func_80067EB0
+/* 2C08 80002008 0C019FAC */  jal        osVirtualToPhysical
 /* 2C0C 8000200C 8FA40044 */   lw        $a0, 0x44($sp)
 /* 2C10 80002010 00511021 */  addu       $v0, $v0, $s1
 /* 2C14 80002014 8FBF002C */  lw         $ra, 0x2C($sp)

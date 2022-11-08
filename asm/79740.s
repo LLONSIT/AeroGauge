@@ -149,7 +149,7 @@ glabel osPiRawStartDma
 /* 79940 80078D40 1720FFFC */  bnez       $t9, .L80078D34
 /* 79944 80078D44 00000000 */   nop
 .L80078D48:
-/* 79948 80078D48 0C019FAC */  jal        func_80067EB0
+/* 79948 80078D48 0C019FAC */  jal        osVirtualToPhysical
 /* 7994C 80078D4C 8FA40030 */   lw        $a0, 0x30($sp)
 /* 79950 80078D50 3C08A460 */  lui        $t0, %hi(D_A4600000)
 /* 79954 80078D54 AD020000 */  sw         $v0, %lo(D_A4600000)($t0)
@@ -304,7 +304,7 @@ glabel osEPiRawStartDma
 /* 79B64 80078F64 002B0821 */  addu       $at, $at, $t3
 /* 79B68 80078F68 AC2E4860 */  sw         $t6, %lo(__osCurrentHandle)($at)
 .L80078F6C:
-/* 79B6C 80078F6C 0C019FAC */  jal        func_80067EB0
+/* 79B6C 80078F6C 0C019FAC */  jal        osVirtualToPhysical
 /* 79B70 80078F70 8FA4003C */   lw        $a0, 0x3C($sp)
 /* 79B74 80078F74 3C18A460 */  lui        $t8, %hi(D_A4600000)
 /* 79B78 80078F78 AF020000 */  sw         $v0, %lo(D_A4600000)($t8)

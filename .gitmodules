@@ -8,3 +8,6 @@
 [submodule "tools/decomp-permuter"]
 	path = tools/decomp-permuter
 	url = https://github.com/simonlindholm/decomp-permuter
+[submodule "tools/n64sym"]
+	path = tools/n64sym
+	url = https://github.com/shygoo/n64sym

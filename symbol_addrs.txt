@@ -29,6 +29,7 @@ alResampleParam  =  0x800728C0;
  alResamplePull = 0x800729AC;
 load_text_0580  =  0x800722F0;
 alCopy =  0x80074020:
+alSeqpDelete = 0x80067E50;
 
 //os syms
 alCSPNew =  0x80004C50;
@@ -101,7 +102,7 @@ osSetEventMesg =  0x8006AE00;
 osCreateMesgQueue =  0x80065E30;
 osStartThread = 0x80067D00;
 sprintf = 0x8006BA04; //defined:true
-osSetTime =  0x8001F6B4;
+osSetTime =  0x8001F6B4; 
 __osSetSR = 0x80078830:
 osPfsInitPak =  0x8006B440;
 osRecvMesg = 0x80066090;
@@ -110,6 +111,7 @@ osPfsNumFiles =  0x8006CFA0;
  __osDpDeviceBusy =  0x80078800;
 osGetCount =  0x80076D10;
 __osPfsGetInitData =  0x80077D50;
+osVirtualToPhysical =  0x80067EB0;
 
 
 D_8008B7DC = 0x8008B7DC; //type:defined

@@ -2,12 +2,7 @@
 #include "structs.h"
 #include <gbi.h> //for macros
 #include "functions.h"
-
-extern s16 D_8008B7DC;
-extern s16 D_8008B7E0;
-extern s16 D_8008B7E4;
-extern s16 D_8008B7E8;
-extern s16 D_8008B7EC;
+#include "variables.h"
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_80019630.s")
 
@@ -68,7 +63,6 @@ void func_8001BAD4(void) {
     D_8008B7E4 = 0x141 - D_8013FC80->unkFC; 
     D_8008B7E8 = 0;
     D_8008B7EC = 0x140;
-
     }
 
 

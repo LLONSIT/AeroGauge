@@ -55,7 +55,6 @@ XGCC     = mips-linux-gnu-gcc
 
 GREP     = grep -rl
 CC       = $(TOOLS_DIR)/ido5.3_recomp/cc
-RNC64    = $(TOOLS_DIR)/rnc_propack_source/rnc64
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
 IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
