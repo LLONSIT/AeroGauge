@@ -1,5 +1,3 @@
-#include "ultratypes.h"
-
 
 struct unk_8001DF40 {
 
@@ -82,5 +80,27 @@ s8 unk0;
 s8 unk1;
 s8 unk2;
 s8 unk3;
+
+};
+
+struct unk_struct_80013F40 {
+
+
+s8 pad[0x33];
+s32 unk34;
+
+
+};
+
+struct unk_struct_800061C4 {
+
+
+s8 pad[0xB0];
+f32 unkB0;
+f32 unkB4;
+f32 unkB8;
+f32 unkBC;
+f32 unkC0;
+
 
 };

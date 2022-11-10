@@ -293,7 +293,7 @@ glabel func_80001A54
 /* 2790 80001B90 00008825 */  or         $s1, $zero, $zero
 /* 2794 80001B94 8E500008 */  lw         $s0, 0x8($s2)
 .L80001B98:
-/* 2798 80001B98 0C019818 */  jal        func_80066060
+/* 2798 80001B98 0C019818 */  jal        alSeqpStop
 /* 279C 80001B9C 02002025 */   or        $a0, $s0, $zero
 /* 27A0 80001BA0 0C019F94 */  jal        alSeqpDelete
 /* 27A4 80001BA4 02002025 */   or        $a0, $s0, $zero

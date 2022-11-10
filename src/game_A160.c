@@ -1,10 +1,11 @@
 #include <ultra64.h>
 #include <ultratypes.h>
-//Not libultra
+#include "functions.h"
+
+/*Not libultra*/
 
 //debug func?
 
-extern void func_80009298(OSMesgQueue *);
 
 s32 func_80009560(OSMesgQueue* arg0, OSPfs* arg1, s32 *arg2) {
     OSMesgQueue sp48;

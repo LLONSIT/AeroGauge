@@ -1,5 +1,3 @@
-#include <ultratypes.h>
-#include <ultra64.h>
 
 //0x8008B  asm symbols
 extern s16 D_8008B7DC;
@@ -20,11 +18,18 @@ extern s32 D_8009369C;
 extern s32 D_801AB060;
 extern s32 D_80093690;
 extern  u8 D_801AC092;
-
+extern s8 gPlayerLapCount;
 extern f32 gUnk_YPos;
 
 extern u8 D_8019E6A8;
 extern u16 D_8019EE02;
+
+
+//game_DA40
+extern u8 D_8013FFB8;
+extern f64 D_80095420;
+extern f32 D_8013F7D0;
+extern f32 D_8013F7D4;
 
 
 //game_1A230

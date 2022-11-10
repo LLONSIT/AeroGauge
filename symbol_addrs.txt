@@ -30,9 +30,13 @@ alResampleParam  =  0x800728C0;
 load_text_0580  =  0x800722F0;
 alCopy =  0x80074020:
 alSeqpDelete = 0x80067E50;
-
+n_alSeqpDelete =  0x80007A70;
+alSeqpStop =  0x80066060;
+__osThreadTail  = 0x80094870;
 //os syms
 alCSPNew =  0x80004C50;
+alSndpNew = 0x800674E4;
+alSndpSetPitch = 0x80067800;
 
 osAppNmiBuffer =    0x8000031C;
   __osCleanupThread =  0x800711A0;

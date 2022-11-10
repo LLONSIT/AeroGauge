@@ -7,8 +7,8 @@ import subprocess
 import tempfile
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
-root_dir = os.path.abspath(os.path.join(script_dir, "."))
-src_dir = root_dir + "src/"
+root_dir = os.path.abspath(os.path.join(script_dir, "/home/usr/AeroGauge/"))
+src_dir = root_dir  + "src/"
 
 # Project-specific
 CPP_FLAGS = [
@@ -24,6 +24,7 @@ CPP_FLAGS = [
     "-ffreestanding",
     "-DM2CTX",
     "-Iinclude/2.0/PR"
+    " -I include"
 ]
 
 def import_c_file(in_file) -> str:

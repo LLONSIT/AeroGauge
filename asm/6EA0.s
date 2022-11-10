@@ -1644,7 +1644,7 @@ glabel L800079AC
 /* 8668 80007A68 03E00008 */  jr         $ra
 /* 866C 80007A6C 00000000 */   nop
 
-glabel func_80007A70
+glabel n_alSeqpDelete
 /* 8670 80007A70 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 8674 80007A74 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 8678 80007A78 0C002423 */  jal        func_8000908C

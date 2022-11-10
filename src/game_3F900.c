@@ -47,7 +47,7 @@ void func_80041964(void) {
             return;
         }
         D_8013FF90.unk7 = D_8013FF90.unk7 ^ 1;
-    }
+    }   
 }
 
 

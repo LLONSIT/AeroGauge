@@ -1,4 +1,4 @@
-wname: Aerogauge (North America)
+name: Aerogauge (North America)
 sha1: 77626171c35fb1a4dfebb0927280897f362225ed
 options:
   basename: AeroGauge
@@ -10,6 +10,14 @@ options:
   platform: n64
   symbol_addrs_path: symbol_addrs.txt
   compression: lzma
+  migrate_rodata_to_functions: yes
+generate_c_preamble: |
+#include <ultra64.h>
+#include "structs.h"
+#include "variables.h"
+#include "functions.h"
+
+
 segments:
   - name: header
     type: header
@@ -27,15 +35,15 @@ segments:
       - [0x1FC0, asm]
       - [0x2360, asm]
       - [0x2D80, asm]
-      - [0x5850, asm] #Libultra
+      - [0x5850, asm] 
       - [0x6BE0, asm]
-      - [0x6C90, asm]
+      - [0x6C90, c, game_6C90]
       - [0x6EA0, asm]
       - [0x9D50, asm]
       - [0xA160, c, game_A160] #Game
       - [0xA220, asm]
       - [0xA910, asm]
-      - [0xDA40, asm]
+      - [0xDA40, c, game_DA40]
       - [0xE270, asm]
       - [0xEBD0, asm]
       - [0xEC90, asm]
@@ -45,7 +53,7 @@ segments:
       - [0x10D60, asm]
       - [0x12760, asm]
       - [0x14060, c, game_14060]
-      - [0x14720, asm]
+      - [0x14720, c, game_14720]
       - [0x15020, asm]
       - [0x15D60, c, game_15D60]
       - [0x16840, asm]
@@ -113,26 +121,27 @@ segments:
       - [0x66740, asm]
       - [0x667A0, asm]
       - [0x669F0, asm]
-      - [0x66A30, asm, osCreateMesgQueue] #Libultra
+      - [0x66A30, c, os/osCreateMesgQueue]
       - [0x66A60, asm]
       - [0x66B10, asm]
       - [0x66C20, asm]
       - [0x66C60, asm]
       - [0x66DD0, asm]
-      - [0x67890, asm, alSeqpSetSeq] #Libultra
-      - [0x678D0, asm]
+      - [0x67890, c, os/audio/alSeqpSetSeq]
+      - [0x678D0, c, os/libultra_temp_seg]
+#      - [0x67BB0, c, os/osCreateThread]   
       - [0x68220, asm]
       - [0x682C0, asm]
       - [0x682E0, asm]
-      - [0x68340, asm, alSndpSetPan] #Libultra
-      - [0x683A0, asm, alSndpSetFXMix] #Libultra
-      - [0x68400, asm, alSndpSetPitch] #Libultra
-      - [0x68460, asm, alSndpStop] #Libultra
-      - [0x684B0, c, game_68B40] #Libultra
-      - [0x68590, asm, code_68590] #Libultra
-      - [0x68900, asm] #Libultra
-      - [0x68A80, asm, alSndpDelete] #Libultra
-      - [0x68AB0, asm, osVirtualToPhysical] #Libultra
+      - [0x68340, c, os/audio/alSndpSetPan]
+      - [0x683A0, c, os/audio/alSndpSetFXMix]
+      - [0x68400, c, os/audio/alSndpSetPitch]
+      - [0x68460, c, os/audio/alSndpStop]
+      - [0x684B0, c, game_68B40]
+      - [0x68590, asm, code_68590]
+      - [0x68900, asm]
+      - [0x68A80, asm, alSndpDelete]
+      - [0x68AB0, asm, osVirtualToPhysical]
       - [0x68B30, asm]
       - [0x68BE0, data]
       - [0x68BF0, asm]
@@ -164,7 +173,7 @@ segments:
       - [0x6D900, asm]
       - [0x6D940, asm]
       - [0x6D9E0, asm]
-      - [0x6DBA0, asm, osPfsNumFiles] #Libultra
+      - [0x6DBA0, asm, osPfsNumFiles]
       - [0x6DCF0, asm]
       - [0x6DE40, asm]
       - [0x6DED0, asm]
@@ -176,7 +185,7 @@ segments:
       - [0x6FC40, asm]
       - [0x703F0, c, game_703F0] #No libultra 
       - [0x70750, asm]
-      - [0x707C0, asm, osViSetEvent] #Libultra
+      - [0x707C0, asm, osViSetEvent]
       - [0x70830, asm]
       - [0x70DC0, asm]
       - [0x70E70, asm]
@@ -184,12 +193,12 @@ segments:
       - [0x713F0, asm]
       - [0x71460, asm]
       - [0x714A0, asm]
-      - [0x71E40, asm, alSynDelete] #Libultra
+      - [0x71E40, asm, alSynDelete]
       - [0x71E50, asm]
       - [0x71EF0, asm]
-      - [0x71FB0, asm] #Libultra
+      - [0x71FB0, asm]
       - [0x72780, asm]
-      - [0x72820, asm] #Libultra
+      - [0x72820, asm]
       - [0x734C0, asm]
       - [0x737C0, asm]
       - [0x74420, asm]
@@ -203,7 +212,7 @@ segments:
       - [0x77920, asm]
       - [0x77E60, asm]
       - [0x781C0, asm]
-      - [0x786E0, asm] #Libultra
+      - [0x786E0, asm]
       - [0x78BC0, asm]
       - [0x78BD0, asm]
       - [0x78F50, asm]

@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80066060
+glabel alSeqpStop
 /* 66C60 80066060 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 66C64 80066064 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 66C68 80066068 240E0011 */  addiu      $t6, $zero, 0x11

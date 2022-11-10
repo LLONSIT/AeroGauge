@@ -20,7 +20,7 @@ ASM_DIRS  = asm asm/data
 BIN_DIRS  = assets
 SRC_DIR   = src
 
-SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os
+SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/audio
 
 TOOLS_DIR = tools
 
@@ -54,7 +54,8 @@ GCC      = gcc
 XGCC     = mips-linux-gnu-gcc
 
 GREP     = grep -rl
-CC       = $(TOOLS_DIR)/ido5.3_recomp/cc
+QEMU_IRIX = /usr/bin/qemu-irix
+CC       = $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
 IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
@@ -65,8 +66,7 @@ LOOP_UNROLL    =
 
 MIPSISET       = -mips2 -32
 
-INCLUDE_CFLAGS = -I . -I include -I include/2.0 -I include/2.0/PR -I include/libc -I assets \
-                 -I src.$(VERSION) -I src.$(VERSION)/libultra/audio
+INCLUDE_CFLAGS = -I . -I include -I include/2.0 -I include/2.0/PR -I include/libc -I assets
 
 ASFLAGS        = -EB -mtune=vr4300 -march=vr4300 -mabi=32 -I include
 OBJCOPYFLAGS   = -O binary
@@ -99,7 +99,7 @@ CFLAGS += $(DEFINES)
 CFLAGS += -woff 649,838
 CFLAGS += $(INCLUDE_CFLAGS)
 
-CHECK_WARNINGS := -Wall -Wextra -Wno-format-security -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-variable -Wno-missing-braces -Wno-int-conversion
+CHECK_WARNINGS := -Wall -Wextra -Wno-format-security -Wno-unknown-pragmas -Wunused-function -Wno-unused-parameter -Wno-unused-variable -Wno-missing-braces -Wno-int-conversion
 CC_CHECK := $(GCC) -fsyntax-only -fno-builtin -fsigned-char -std=gnu90 -m32 $(CHECK_WARNINGS) $(INCLUDE_CFLAGS) $(DEFINES)
 
 GCC_FLAGS := $(INCLUDE_CFLAGS) $(DEFINES)
@@ -124,8 +124,8 @@ ASM_PROCESSOR_DIR := $(TOOLS_DIR)/asm-processor
 ASM_PROCESSOR      = $(PYTHON) $(ASM_PROCESSOR_DIR)/asm_processor.py
 
 ### Optimisation Overrides
-#$(BUILD_DIR)/$(SRC_DIR)/os/osCreateThread.c.o: OPT_FLAGS := -O1
-#$(BUILD_DIR)/$(SRC_DIR)/core/string.c.o: OPT_FLAGS := -O2
+$(BUILD_DIR)/$(SRC_DIR)/os/%.c.o: OPT_FLAGS := -O1
+$(BUILD_DIR)/$(SRC_DIR)/os/audio/%.c.o: OPT_FLAGS := -O3
 # $(BUILD_DIR)/$(SRC_DIR)/core/eeprom.c.o: OPT_FLAGS := -O2
 
 #$(BUILD_DIR)/$(SRC_DIR)/overlay2_6AB090.c.o: LOOP_UNROLL := -Wo,-loopunroll,0
@@ -192,14 +192,10 @@ endif
 # non asm-processor recipe
 $(BUILD_DIR)/%.c.o: %.c
 	@$(CC_CHECK) $<
-	@printf "[$(YELLOW) syntax $(NO_COL)]  $<\n"
+	@printf "[$(YELLOW) check $(NO_COL)]  $<\n"
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $<
 	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
 
-# use modern gcc for data
-$(BUILD_DIR)/$(SRC_DIR)/data/%.c.o: $(SRC_DIR)/data/%.c
-	@$(XGCC) -c $(GCC_FLAGS) -o $@ $<
-	@printf "[$(GREEN) newgcc $(NO_COL)]  $<\n"
 
 $(BUILD_DIR)/%.s.o: %.s
 	@$(AS) $(ASFLAGS) -o $@ $<
@@ -207,11 +203,11 @@ $(BUILD_DIR)/%.s.o: %.s
 
 $(BUILD_DIR)/%.bin.o: %.bin
 	@$(LD) -r -b binary -o $@ $<
-	@printf "[$(PINK) linker $(NO_COL)]  $<\n"
+	@printf "[$(PINK) Linker $(NO_COL)]  $<\n"
 
 $(TARGET).bin: $(TARGET).elf
 	@$(OBJCOPY) $(OBJCOPYFLAGS) $< $@
-	@printf "[$(CYAN) objcpy $(NO_COL)]  $<\n"
+	@printf "[$(CYAN) Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
 	@cp $< $@
