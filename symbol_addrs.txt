@@ -33,10 +33,26 @@ alSeqpDelete = 0x80067E50;
 n_alSeqpDelete =  0x80007A70;
 alSeqpStop =  0x80066060;
 __osThreadTail  = 0x80094870;
+alCents2Ratio =  0x80066D00;
+sndplayer_text_008C = 0x80066F9C;
+alHeapDBAlloc =  0x80065B40;
+ alEvtqNew = 0x8006A42C;
+
+alSynAddPlayer =  0x8006A4A0;
+alEvtqNextEvent = 0x8006A3A0; 
+
+
+
+
+
+
+
 //os syms
+
 alCSPNew =  0x80004C50;
 alSndpNew = 0x800674E4;
 alSndpSetPitch = 0x80067800;
+alSeqpPlay = 0x80066CD0;
 
 osAppNmiBuffer =    0x8000031C;
   __osCleanupThread =  0x800711A0;
@@ -84,20 +100,20 @@ __osEepStatus =    0x800778B8;
 
 __osSetGlobalIntMask = 0x8007BBD0 ;
 
-   osYieldThread = 0x8007BC20;
-   lldiv = 0x8007BC70;
-  ldiv = 0x8007BD70;
-  __osCurrentTime =  0x8008C8E0;
-  alGlobals  = 0x80092E40;
-  aisetnextbuf_data_0000  = 0x80092E50;
-  __osContinitialized  = 0x80092E60;
-  __osMotorinitialized  = 0x80093670;
- osViModeTable   = 0x800936A0;
- osViClock   = 0x80094828;
-   __OSGlobalIntMask = 0x80094830;
-    __osPiDevMgr = 0x80094840;
-  player_bss_003C  = 0x80094848;
-   __osCurrentHandle = 0x80094860;
+osYieldThread = 0x8007BC20;
+lldiv = 0x8007BC70;
+ldiv = 0x8007BD70;
+__osCurrentTime =  0x8008C8E0;
+alGlobals  = 0x80092E40;
+aisetnextbuf_data_0000  = 0x80092E50;
+__osContinitialized  = 0x80092E60;
+__osMotorinitialized  = 0x80093670;
+osViModeTable   = 0x800936A0;
+osViClock   = 0x80094828;
+__OSGlobalIntMask = 0x80094830;
+__osPiDevMgr = 0x80094840;
+player_bss_003C  = 0x80094848;
+__osCurrentHandle = 0x80094860;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91; 
 alSndpSetPan = 0x80067740;
@@ -116,6 +132,14 @@ osPfsNumFiles =  0x8006CFA0;
 osGetCount =  0x80076D10;
 __osPfsGetInitData =  0x80077D50;
 osVirtualToPhysical =  0x80067EB0;
+__osCheckId = 0x80074E00;
+__osContRamRead = 0x80075290; 
+__osPfsSelectBank = 0x8007521C; 
+__sinf = 0x80066D50;
+osScRemoveClient = 0x80064B8C;
+osScAddClient = 0x80064B3C:
+__osProbeTLB = 0x800712F0;
+
 
 
 D_8008B7DC = 0x8008B7DC; //type:defined

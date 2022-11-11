@@ -19,7 +19,7 @@ glabel alSndpNew
 /* 68128 80067528 AFA8004C */  sw         $t0, 0x4C($sp)
 /* 6812C 8006752C 00002025 */  or         $a0, $zero, $zero
 /* 68130 80067530 00002825 */  or         $a1, $zero, $zero
-/* 68134 80067534 0C0196D0 */  jal        func_80065B40
+/* 68134 80067534 0C0196D0 */  jal        alHeapDBAlloc
 /* 68138 80067538 24070001 */   addiu     $a3, $zero, 0x1
 /* 6813C 8006753C 8FA8004C */  lw         $t0, 0x4C($sp)
 /* 68140 80067540 AE020040 */  sw         $v0, 0x40($s0)
@@ -45,23 +45,23 @@ glabel alSndpNew
 /* 68188 80067588 01AC6823 */  subu       $t5, $t5, $t4
 /* 6818C 8006758C 000D6880 */  sll        $t5, $t5, 2
 /* 68190 80067590 AFAD0010 */  sw         $t5, 0x10($sp)
-/* 68194 80067594 0C0196D0 */  jal        func_80065B40
+/* 68194 80067594 0C0196D0 */  jal        alHeapDBAlloc
 /* 68198 80067598 00002025 */   or        $a0, $zero, $zero
 /* 6819C 8006759C 8FA8004C */  lw         $t0, 0x4C($sp)
 /* 681A0 800675A0 26040014 */  addiu      $a0, $s0, 0x14
 /* 681A4 800675A4 00402825 */  or         $a1, $v0, $zero
 /* 681A8 800675A8 8D060004 */  lw         $a2, 0x4($t0)
-/* 681AC 800675AC 0C01A90B */  jal        func_8006A42C
+/* 681AC 800675AC 0C01A90B */  jal        alEvtqNew
 /* 681B0 800675B0 AFA40028 */   sw        $a0, 0x28($sp)
 /* 681B4 800675B4 3C0E8009 */  lui        $t6, %hi(alGlobals)
 /* 681B8 800675B8 8DC42E40 */  lw         $a0, %lo(alGlobals)($t6)
-/* 681BC 800675BC 3C0F8006 */  lui        $t7, %hi(func_80066F9C)
-/* 681C0 800675C0 25EF6F9C */  addiu      $t7, $t7, %lo(func_80066F9C)
+/* 681BC 800675BC 3C0F8006 */  lui        $t7, %hi(sndplayer_text_008C)
+/* 681C0 800675C0 25EF6F9C */  addiu      $t7, $t7, %lo(sndplayer_text_008C)
 /* 681C4 800675C4 AE000000 */  sw         $zero, 0x0($s0)
 /* 681C8 800675C8 AE0F0008 */  sw         $t7, 0x8($s0)
 /* 681CC 800675CC AE100004 */  sw         $s0, 0x4($s0)
 /* 681D0 800675D0 02002825 */  or         $a1, $s0, $zero
-/* 681D4 800675D4 0C01A928 */  jal        func_8006A4A0
+/* 681D4 800675D4 0C01A928 */  jal        alSynAddPlayer
 /* 681D8 800675D8 AE040038 */   sw        $a0, 0x38($s0)
 /* 681DC 800675DC 24180005 */  addiu      $t8, $zero, 0x5
 /* 681E0 800675E0 A7B80034 */  sh         $t8, 0x34($sp)
@@ -70,7 +70,7 @@ glabel alSndpNew
 /* 681EC 800675EC 0C01A89F */  jal        alEvtqPostEvent
 /* 681F0 800675F0 27A50034 */   addiu     $a1, $sp, 0x34
 /* 681F4 800675F4 8FA40028 */  lw         $a0, 0x28($sp)
-/* 681F8 800675F8 0C01A8E8 */  jal        func_8006A3A0
+/* 681F8 800675F8 0C01A8E8 */  jal        alEvtqNextEvent
 /* 681FC 800675FC 26050028 */   addiu     $a1, $s0, 0x28
 /* 68200 80067600 AE02004C */  sw         $v0, 0x4C($s0)
 /* 68204 80067604 8FBF0024 */  lw         $ra, 0x24($sp)

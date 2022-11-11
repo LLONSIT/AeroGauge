@@ -375,7 +375,7 @@ glabel L8001EA00
 /* 1F614 8001EA14 3C04801B */  lui        $a0, %hi(D_801A8868)
 /* 1F618 8001EA18 3C05801B */  lui        $a1, %hi(D_801AAAF8)
 /* 1F61C 8001EA1C 24A5AAF8 */  addiu      $a1, $a1, %lo(D_801AAAF8)
-/* 1F620 8001EA20 0C0192E3 */  jal        func_80064B8C
+/* 1F620 8001EA20 0C0192E3 */  jal        osScRemoveClient
 /* 1F624 8001EA24 24848868 */   addiu     $a0, $a0, %lo(D_801A8868)
 /* 1F628 8001EA28 3C05801A */  lui        $a1, %hi(D_8019F008)
 /* 1F62C 8001EA2C 24A5F008 */  addiu      $a1, $a1, %lo(D_8019F008)
@@ -387,7 +387,7 @@ glabel L8001EA00
 /* 1F644 8001EA44 3C06801B */  lui        $a2, %hi(D_801A8750)
 /* 1F648 8001EA48 24C68750 */  addiu      $a2, $a2, %lo(D_801A8750)
 /* 1F64C 8001EA4C 24A5AAF8 */  addiu      $a1, $a1, %lo(D_801AAAF8)
-/* 1F650 8001EA50 0C0192CF */  jal        func_80064B3C
+/* 1F650 8001EA50 0C0192CF */  jal        osScAddClient
 /* 1F654 8001EA54 24848868 */   addiu     $a0, $a0, %lo(D_801A8868)
 /* 1F658 8001EA58 10000022 */  b          L8001EAE4
 /* 1F65C 8001EA5C 00000000 */   nop

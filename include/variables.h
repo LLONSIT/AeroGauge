@@ -1,3 +1,5 @@
+#include <ultra64.h>
+#include <PR/sched.h>
 
 //0x8008B  asm symbols
 extern s16 D_8008B7DC;
@@ -76,3 +78,14 @@ extern s32 D_80394518;
 extern s32 D_80394A70;
 extern s32 D_80394A98;
 extern s32 D_80394DE8;
+
+//game_62900
+extern u8 D_80092D54;
+extern s32 D_8013FF84;
+extern s32 D_8019E0F0;
+extern u8 D_8019FFE8;
+extern OSMesgQueue D_801A8750;
+extern OSSched   D_801A8868;
+extern OSScClient D_801AAAF8;
+extern s32 D_8019FC18;
+

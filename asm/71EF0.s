@@ -8,7 +8,7 @@
 .section .text, "ax"
 
 # Handwritten function
-glabel func_800712F0
+glabel __osProbeTLB
 /* 71EF0 800712F0 40085000 */  mfc0       $t0, $10
 /* 71EF4 800712F4 310900FF */  andi       $t1, $t0, 0xFF
 /* 71EF8 800712F8 2401E000 */  addiu      $at, $zero, -0x2000

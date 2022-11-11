@@ -236,7 +236,7 @@ glabel func_800745F4
 /* 75218 80074618 11E0000A */  beqz       $t7, .L80074644
 /* 7521C 8007461C 00000000 */   nop
 /* 75220 80074620 A1C00065 */  sb         $zero, 0x65($t6)
-/* 75224 80074624 0C01D487 */  jal        func_8007521C
+/* 75224 80074624 0C01D487 */  jal        __osPfsSelectBank
 /* 75228 80074628 8FA40078 */   lw        $a0, 0x78($sp)
 /* 7522C 8007462C AFA20074 */  sw         $v0, 0x74($sp)
 /* 75230 80074630 8FB80074 */  lw         $t8, 0x74($sp)
@@ -268,7 +268,7 @@ glabel func_800745F4
 /* 75290 80074690 8FB90028 */  lw         $t9, 0x28($sp)
 /* 75294 80074694 8FA80078 */  lw         $t0, 0x78($sp)
 /* 75298 80074698 A1190065 */  sb         $t9, 0x65($t0)
-/* 7529C 8007469C 0C01D487 */  jal        func_8007521C
+/* 7529C 8007469C 0C01D487 */  jal        __osPfsSelectBank
 /* 752A0 800746A0 8FA40078 */   lw        $a0, 0x78($sp)
 /* 752A4 800746A4 AFA20074 */  sw         $v0, 0x74($sp)
 /* 752A8 800746A8 8FA90074 */  lw         $t1, 0x74($sp)
@@ -281,7 +281,7 @@ glabel func_800745F4
 /* 752C0 800746C0 00003025 */  or         $a2, $zero, $zero
 /* 752C4 800746C4 27A70054 */  addiu      $a3, $sp, 0x54
 /* 752C8 800746C8 8D440004 */  lw         $a0, 0x4($t2)
-/* 752CC 800746CC 0C01D4A4 */  jal        func_80075290
+/* 752CC 800746CC 0C01D4A4 */  jal        __osContRamRead
 /* 752D0 800746D0 8D450008 */   lw        $a1, 0x8($t2)
 /* 752D4 800746D4 AFA20074 */  sw         $v0, 0x74($sp)
 /* 752D8 800746D8 8FAC0074 */  lw         $t4, 0x74($sp)
@@ -326,7 +326,7 @@ glabel func_800745F4
 /* 75368 80074768 00003025 */  or         $a2, $zero, $zero
 /* 7536C 8007476C 27A70034 */  addiu      $a3, $sp, 0x34
 /* 75370 80074770 8DE40004 */  lw         $a0, 0x4($t7)
-/* 75374 80074774 0C01D4A4 */  jal        func_80075290
+/* 75374 80074774 0C01D4A4 */  jal        __osContRamRead
 /* 75378 80074778 8DE50008 */   lw        $a1, 0x8($t7)
 /* 7537C 8007477C AFA20074 */  sw         $v0, 0x74($sp)
 /* 75380 80074780 8FB80074 */  lw         $t8, 0x74($sp)
@@ -359,7 +359,7 @@ glabel func_800745F4
 /* 753E0 800747E0 00000000 */   nop
 /* 753E4 800747E4 8FAE0078 */  lw         $t6, 0x78($sp)
 /* 753E8 800747E8 A1C00065 */  sb         $zero, 0x65($t6)
-/* 753EC 800747EC 0C01D487 */  jal        func_8007521C
+/* 753EC 800747EC 0C01D487 */  jal        __osPfsSelectBank
 /* 753F0 800747F0 8FA40078 */   lw        $a0, 0x78($sp)
 /* 753F4 800747F4 AFA20074 */  sw         $v0, 0x74($sp)
 /* 753F8 800747F8 8FAF0074 */  lw         $t7, 0x74($sp)
@@ -372,7 +372,7 @@ glabel func_800745F4
 /* 75410 80074810 00003025 */  or         $a2, $zero, $zero
 /* 75414 80074814 27A70054 */  addiu      $a3, $sp, 0x54
 /* 75418 80074818 8F040004 */  lw         $a0, 0x4($t8)
-/* 7541C 8007481C 0C01D4A4 */  jal        func_80075290
+/* 7541C 8007481C 0C01D4A4 */  jal        __osContRamRead
 /* 75420 80074820 8F050008 */   lw        $a1, 0x8($t8)
 /* 75424 80074824 AFA20074 */  sw         $v0, 0x74($sp)
 /* 75428 80074828 8FB90074 */  lw         $t9, 0x74($sp)
@@ -397,7 +397,7 @@ glabel func_800745F4
 .L8007486C:
 /* 7546C 8007486C 8FAB0078 */  lw         $t3, 0x78($sp)
 /* 75470 80074870 A1600065 */  sb         $zero, 0x65($t3)
-/* 75474 80074874 0C01D487 */  jal        func_8007521C
+/* 75474 80074874 0C01D487 */  jal        __osPfsSelectBank
 /* 75478 80074878 8FA40078 */   lw        $a0, 0x78($sp)
 /* 7547C 8007487C AFA20074 */  sw         $v0, 0x74($sp)
 /* 75480 80074880 8FAE0074 */  lw         $t6, 0x74($sp)
@@ -475,7 +475,7 @@ glabel func_800745F4
 /* 7558C 8007498C 24060001 */  addiu      $a2, $zero, 0x1
 /* 75590 80074990 27A70054 */  addiu      $a3, $sp, 0x54
 /* 75594 80074994 8DC40004 */  lw         $a0, 0x4($t6)
-/* 75598 80074998 0C01D4A4 */  jal        func_80075290
+/* 75598 80074998 0C01D4A4 */  jal        __osContRamRead
 /* 7559C 8007499C 8DC50008 */   lw        $a1, 0x8($t6)
 /* 755A0 800749A0 AFA20074 */  sw         $v0, 0x74($sp)
 /* 755A4 800749A4 8FAF0074 */  lw         $t7, 0x74($sp)
@@ -520,7 +520,7 @@ glabel func_80074A0C
 /* 75628 80074A28 11E0000A */  beqz       $t7, .L80074A54
 /* 7562C 80074A2C 00000000 */   nop
 /* 75630 80074A30 A1C00065 */  sb         $zero, 0x65($t6)
-/* 75634 80074A34 0C01D487 */  jal        func_8007521C
+/* 75634 80074A34 0C01D487 */  jal        __osPfsSelectBank
 /* 75638 80074A38 8FA40038 */   lw        $a0, 0x38($sp)
 /* 7563C 80074A3C AFA2002C */  sw         $v0, 0x2C($sp)
 /* 75640 80074A40 8FB8002C */  lw         $t8, 0x2C($sp)
@@ -551,7 +551,7 @@ glabel func_80074A0C
 /* 7569C 80074A9C 03A83021 */  addu       $a2, $sp, $t0
 /* 756A0 80074AA0 94C60030 */  lhu        $a2, 0x30($a2)
 /* 756A4 80074AA4 8F040004 */  lw         $a0, 0x4($t8)
-/* 756A8 80074AA8 0C01D4A4 */  jal        func_80075290
+/* 756A8 80074AA8 0C01D4A4 */  jal        __osContRamRead
 /* 756AC 80074AAC 8F050008 */   lw        $a1, 0x8($t8)
 /* 756B0 80074AB0 AFA2002C */  sw         $v0, 0x2C($sp)
 /* 756B4 80074AB4 8FA9002C */  lw         $t1, 0x2C($sp)
@@ -631,7 +631,7 @@ glabel func_80074BA4
 /* 757B8 80074BB8 11E0000A */  beqz       $t7, .L80074BE4
 /* 757BC 80074BBC 00000000 */   nop
 /* 757C0 80074BC0 A1C00065 */  sb         $zero, 0x65($t6)
-/* 757C4 80074BC4 0C01D487 */  jal        func_8007521C
+/* 757C4 80074BC4 0C01D487 */  jal        __osPfsSelectBank
 /* 757C8 80074BC8 8FA40068 */   lw        $a0, 0x68($sp)
 /* 757CC 80074BCC AFA2001C */  sw         $v0, 0x1C($sp)
 /* 757D0 80074BD0 8FB8001C */  lw         $t8, 0x1C($sp)
@@ -644,7 +644,7 @@ glabel func_80074BA4
 /* 757E8 80074BE8 24060001 */  addiu      $a2, $zero, 0x1
 /* 757EC 80074BEC 27A70040 */  addiu      $a3, $sp, 0x40
 /* 757F0 80074BF0 8F240004 */  lw         $a0, 0x4($t9)
-/* 757F4 80074BF4 0C01D4A4 */  jal        func_80075290
+/* 757F4 80074BF4 0C01D4A4 */  jal        __osContRamRead
 /* 757F8 80074BF8 8F250008 */   lw        $a1, 0x8($t9)
 /* 757FC 80074BFC AFA2001C */  sw         $v0, 0x1C($sp)
 /* 75800 80074C00 8FA8001C */  lw         $t0, 0x1C($sp)
@@ -770,7 +770,7 @@ glabel func_80074BA4
 /* 759C0 80074DC0 8FB90068 */  lw         $t9, 0x68($sp)
 /* 759C4 80074DC4 8F240004 */  lw         $a0, 0x4($t9)
 /* 759C8 80074DC8 8F250008 */  lw         $a1, 0x8($t9)
-/* 759CC 80074DCC 0C01D4A4 */  jal        func_80075290
+/* 759CC 80074DCC 0C01D4A4 */  jal        __osContRamRead
 /* 759D0 80074DD0 2727002C */   addiu     $a3, $t9, 0x2C
 /* 759D4 80074DD4 AFA2001C */  sw         $v0, 0x1C($sp)
 /* 759D8 80074DD8 8FB8001C */  lw         $t8, 0x1C($sp)
@@ -786,7 +786,7 @@ glabel func_80074BA4
 /* 759F8 80074DF8 03E00008 */  jr         $ra
 /* 759FC 80074DFC 00000000 */   nop
 
-glabel func_80074E00
+glabel __osCheckId
 /* 75A00 80074E00 27BDFFC0 */  addiu      $sp, $sp, -0x40
 /* 75A04 80074E04 AFA40040 */  sw         $a0, 0x40($sp)
 /* 75A08 80074E08 8FAE0040 */  lw         $t6, 0x40($sp)
@@ -795,7 +795,7 @@ glabel func_80074E00
 /* 75A14 80074E14 11E0000A */  beqz       $t7, .L80074E40
 /* 75A18 80074E18 00000000 */   nop
 /* 75A1C 80074E1C A1C00065 */  sb         $zero, 0x65($t6)
-/* 75A20 80074E20 0C01D487 */  jal        func_8007521C
+/* 75A20 80074E20 0C01D487 */  jal        __osPfsSelectBank
 /* 75A24 80074E24 8FA40040 */   lw        $a0, 0x40($sp)
 /* 75A28 80074E28 AFA20018 */  sw         $v0, 0x18($sp)
 /* 75A2C 80074E2C 8FB80018 */  lw         $t8, 0x18($sp)
@@ -808,7 +808,7 @@ glabel func_80074E00
 /* 75A44 80074E44 24060001 */  addiu      $a2, $zero, 0x1
 /* 75A48 80074E48 27A7001C */  addiu      $a3, $sp, 0x1C
 /* 75A4C 80074E4C 8F240004 */  lw         $a0, 0x4($t9)
-/* 75A50 80074E50 0C01D4A4 */  jal        func_80075290
+/* 75A50 80074E50 0C01D4A4 */  jal        __osContRamRead
 /* 75A54 80074E54 8F250008 */   lw        $a1, 0x8($t9)
 /* 75A58 80074E58 AFA20018 */  sw         $v0, 0x18($sp)
 /* 75A5C 80074E5C 8FA80018 */  lw         $t0, 0x18($sp)
@@ -823,7 +823,7 @@ glabel func_80074E00
 /* 75A7C 80074E7C 24060001 */  addiu      $a2, $zero, 0x1
 /* 75A80 80074E80 27A7001C */  addiu      $a3, $sp, 0x1C
 /* 75A84 80074E84 8D240004 */  lw         $a0, 0x4($t1)
-/* 75A88 80074E88 0C01D4A4 */  jal        func_80075290
+/* 75A88 80074E88 0C01D4A4 */  jal        __osContRamRead
 /* 75A8C 80074E8C 8D250008 */   lw        $a1, 0x8($t1)
 /* 75A90 80074E90 AFA20018 */  sw         $v0, 0x18($sp)
 /* 75A94 80074E94 8FAA0018 */  lw         $t2, 0x18($sp)
@@ -869,7 +869,7 @@ glabel func_80074EFC
 /* 75B1C 80074F1C 11E0000A */  beqz       $t7, .L80074F48
 /* 75B20 80074F20 00000000 */   nop
 /* 75B24 80074F24 A1C00065 */  sb         $zero, 0x65($t6)
-/* 75B28 80074F28 0C01D487 */  jal        func_8007521C
+/* 75B28 80074F28 0C01D487 */  jal        __osPfsSelectBank
 /* 75B2C 80074F2C 8FA40038 */   lw        $a0, 0x38($sp)
 /* 75B30 80074F30 AFA2002C */  sw         $v0, 0x2C($sp)
 /* 75B34 80074F34 8FB8002C */  lw         $t8, 0x2C($sp)
@@ -951,7 +951,7 @@ glabel func_80074EFC
 /* 75C4C 8007504C 030AC821 */  addu       $t9, $t8, $t2
 /* 75C50 80075050 8DC40004 */  lw         $a0, 0x4($t6)
 /* 75C54 80075054 8DC50008 */  lw         $a1, 0x8($t6)
-/* 75C58 80075058 0C01D4A4 */  jal        func_80075290
+/* 75C58 80075058 0C01D4A4 */  jal        __osContRamRead
 /* 75C5C 8007505C 032B3021 */   addu      $a2, $t9, $t3
 /* 75C60 80075060 AFA2002C */  sw         $v0, 0x2C($sp)
 .L80075064:
@@ -999,7 +999,7 @@ glabel func_80074EFC
 /* 75D00 80075100 01195821 */  addu       $t3, $t0, $t9
 /* 75D04 80075104 016D3021 */  addu       $a2, $t3, $t5
 /* 75D08 80075108 8F050008 */  lw         $a1, 0x8($t8)
-/* 75D0C 8007510C 0C01D4A4 */  jal        func_80075290
+/* 75D0C 8007510C 0C01D4A4 */  jal        __osContRamRead
 /* 75D10 80075110 8F040004 */   lw        $a0, 0x4($t8)
 /* 75D14 80075114 8FA90030 */  lw         $t1, 0x30($sp)
 /* 75D18 80075118 AFA2002C */  sw         $v0, 0x2C($sp)
@@ -1074,7 +1074,7 @@ glabel func_80074EFC
 /* 75E14 80075214 03E00008 */  jr         $ra
 /* 75E18 80075218 00000000 */   nop
 
-glabel func_8007521C
+glabel __osPfsSelectBank
 /* 75E1C 8007521C 27BDFFB8 */  addiu      $sp, $sp, -0x48
 /* 75E20 80075220 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 75E24 80075224 AFA40048 */  sw         $a0, 0x48($sp)

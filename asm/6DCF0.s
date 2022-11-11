@@ -22,7 +22,7 @@ glabel func_8006D0F0
 /* 6DD1C 8006D11C 10000043 */  b          .L8006D22C
 /* 6DD20 8006D120 24020005 */   addiu     $v0, $zero, 0x5
 .L8006D124:
-/* 6DD24 8006D124 0C01D380 */  jal        func_80074E00
+/* 6DD24 8006D124 0C01D380 */  jal        __osCheckId
 /* 6DD28 8006D128 8FA40130 */   lw        $a0, 0x130($sp)
 /* 6DD2C 8006D12C 24010002 */  addiu      $at, $zero, 0x2
 /* 6DD30 8006D130 14410003 */  bne        $v0, $at, .L8006D140

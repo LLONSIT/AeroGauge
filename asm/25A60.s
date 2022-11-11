@@ -24,19 +24,19 @@ glabel func_80024E60
 /* 25A94 80024E94 F7B60020 */  sdc1       $f22, 0x20($sp)
 /* 25A98 80024E98 E7AC0054 */  swc1       $f12, 0x54($sp)
 /* 25A9C 80024E9C E7AE004C */  swc1       $f14, 0x4C($sp)
-/* 25AA0 80024EA0 0C019B54 */  jal        func_80066D50
+/* 25AA0 80024EA0 0C019B54 */  jal        __sinf
 /* 25AA4 80024EA4 E7B40050 */   swc1      $f20, 0x50($sp)
 /* 25AA8 80024EA8 C7AC0054 */  lwc1       $f12, 0x54($sp)
 /* 25AAC 80024EAC 0C01AB20 */  jal        func_8006AC80
 /* 25AB0 80024EB0 46000506 */   mov.s     $f20, $f0
 /* 25AB4 80024EB4 46000586 */  mov.s      $f22, $f0
-/* 25AB8 80024EB8 0C019B54 */  jal        func_80066D50
+/* 25AB8 80024EB8 0C019B54 */  jal        __sinf
 /* 25ABC 80024EBC C7AC004C */   lwc1      $f12, 0x4C($sp)
 /* 25AC0 80024EC0 E7A00040 */  swc1       $f0, 0x40($sp)
 /* 25AC4 80024EC4 0C01AB20 */  jal        func_8006AC80
 /* 25AC8 80024EC8 C7AC004C */   lwc1      $f12, 0x4C($sp)
 /* 25ACC 80024ECC C7AC0050 */  lwc1       $f12, 0x50($sp)
-/* 25AD0 80024ED0 0C019B54 */  jal        func_80066D50
+/* 25AD0 80024ED0 0C019B54 */  jal        __sinf
 /* 25AD4 80024ED4 E7A00034 */   swc1      $f0, 0x34($sp)
 /* 25AD8 80024ED8 C7AC0050 */  lwc1       $f12, 0x50($sp)
 /* 25ADC 80024EDC 0C01AB20 */  jal        func_8006AC80

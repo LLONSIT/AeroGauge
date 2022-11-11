@@ -85,7 +85,7 @@ glabel func_8000144C
 /* 20D0 800014D0 00002025 */  or         $a0, $zero, $zero
 /* 20D4 800014D4 00002825 */  or         $a1, $zero, $zero
 /* 20D8 800014D8 24070001 */  addiu      $a3, $zero, 0x1
-/* 20DC 800014DC 0C0196D0 */  jal        func_80065B40
+/* 20DC 800014DC 0C0196D0 */  jal        alHeapDBAlloc
 /* 20E0 800014E0 AC2B9C24 */   sw        $t3, %lo(D_80109C24)($at)
 /* 20E4 800014E4 00409025 */  or         $s2, $v0, $zero
 /* 20E8 800014E8 00402025 */  or         $a0, $v0, $zero

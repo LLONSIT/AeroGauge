@@ -84,7 +84,7 @@ glabel func_80064A10
 /* 65734 80064B34 03E00008 */  jr         $ra
 /* 65738 80064B38 27BD0028 */   addiu     $sp, $sp, 0x28
 
-glabel func_80064B3C
+glabel osScAddClient
 /* 6573C 80064B3C 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 65740 80064B40 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 65744 80064B44 AFA40018 */  sw         $a0, 0x18($sp)
@@ -106,7 +106,7 @@ glabel func_80064B3C
 /* 65784 80064B84 03E00008 */  jr         $ra
 /* 65788 80064B88 00000000 */   nop
 
-glabel func_80064B8C
+glabel osScRemoveClient
 /* 6578C 80064B8C 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 65790 80064B90 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 65794 80064B94 AFA40020 */  sw         $a0, 0x20($sp)

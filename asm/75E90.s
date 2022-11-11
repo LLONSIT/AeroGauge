@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80075290
+glabel __osContRamRead
 /* 75E90 80075290 27BDFFA0 */  addiu      $sp, $sp, -0x60
 /* 75E94 80075294 3C0E801B */  lui        $t6, %hi(D_801AD350)
 /* 75E98 80075298 AFBF001C */  sw         $ra, 0x1C($sp)

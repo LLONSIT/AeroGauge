@@ -11,11 +11,7 @@ options:
   symbol_addrs_path: symbol_addrs.txt
   compression: lzma
   migrate_rodata_to_functions: yes
-generate_c_preamble: |
-#include <ultra64.h>
-#include "structs.h"
-#include "variables.h"
-#include "functions.h"
+  generate_c_preamble: #include <ultra64.h>
 
 
 segments:
@@ -111,7 +107,7 @@ segments:
       - [0x5D350, asm]
       - [0x5F6B0, asm]
       - [0x61570, asm]
-      - [0x62900, asm]
+      - [0x62900, c, game_62900]
       - [0x63A60, asm]
       - [0x65610, asm]
       - [0x65FF0, asm]
@@ -126,9 +122,13 @@ segments:
       - [0x66B10, asm]
       - [0x66C20, asm]
       - [0x66C60, asm]
+   #   - [0x66CD0, c, os/audio/alSeqpPlay]
+    #  - [0x66D50, c, os/__sinf]
       - [0x66DD0, asm]
+#      - [0x66F9C, c, os/audio/sndplayer_text_008C]
+ #     - [0x674E4, c, os/audio/alSndpNew]
       - [0x67890, c, os/audio/alSeqpSetSeq]
-      - [0x678D0, c, os/libultra_temp_seg]
+      - [0x678D0, c, libultra_mix_seg]
 #      - [0x67BB0, c, os/osCreateThread]   
       - [0x68220, asm]
       - [0x682C0, asm]
@@ -140,8 +140,8 @@ segments:
       - [0x684B0, c, game_68B40]
       - [0x68590, asm, code_68590]
       - [0x68900, asm]
-      - [0x68A80, asm, alSndpDelete]
-      - [0x68AB0, asm, osVirtualToPhysical]
+      - [0x68A80, c, os/audio/alSndpDelete]
+      - [0x68AB0, c, os/osVirtualToPhysical]
       - [0x68B30, asm]
       - [0x68BE0, data]
       - [0x68BF0, asm]
@@ -173,7 +173,7 @@ segments:
       - [0x6D900, asm]
       - [0x6D940, asm]
       - [0x6D9E0, asm]
-      - [0x6DBA0, asm, osPfsNumFiles]
+      - [0x6DBA0, c, os/osPfsNumFiles]
       - [0x6DCF0, asm]
       - [0x6DE40, asm]
       - [0x6DED0, asm]

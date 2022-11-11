@@ -1,4 +1,4 @@
-glabel func_80066D00
+glabel alCents2Ratio
 /* 67900 80066D00 3C013F80 */  lui        $at, (0x3F800000 >> 16)
 /* 67904 80066D04 44811000 */  mtc1       $at, $f2
 /* 67908 80066D08 04800004 */  bltz       $a0, .L80066D1C

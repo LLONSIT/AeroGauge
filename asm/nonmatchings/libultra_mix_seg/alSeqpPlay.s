@@ -1,4 +1,4 @@
-glabel func_80066CD0
+glabel alSeqpPlay
 /* 678D0 80066CD0 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 678D4 80066CD4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 678D8 80066CD8 240E000F */  addiu      $t6, $zero, 0xF

@@ -61,7 +61,7 @@ SPLAT    = $(TOOLS_DIR)/splat/split.py
 IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
 # Flags
 
-OPT_FLAGS      = -O2 
+OPT_FLAGS      = -O2
 LOOP_UNROLL    =
 
 MIPSISET       = -mips2 -32
@@ -93,7 +93,7 @@ VERIFY = no_verify
 PROGRESS_NONMATCHING = --non-matching
 endif
 
-CFLAGS := -G 0 -Xfullwarn -Xcpluscomm -signed -nostdinc -non_shared -Wab,-r4300_mul
+CFLAGS := -G 0  -Xcpluscomm -signed -nostdinc -non_shared -Wab,-r4300_mul
 CFLAGS += $(DEFINES)
 # ignore compiler warnings about anonymous structs
 CFLAGS += -woff 649,838
@@ -126,6 +126,7 @@ ASM_PROCESSOR      = $(PYTHON) $(ASM_PROCESSOR_DIR)/asm_processor.py
 ### Optimisation Overrides
 $(BUILD_DIR)/$(SRC_DIR)/os/%.c.o: OPT_FLAGS := -O1
 $(BUILD_DIR)/$(SRC_DIR)/os/audio/%.c.o: OPT_FLAGS := -O3
+$(BUILD_DIR)/$(SRC_DIR)/os/audio/sndplayer_text_008C.c.o: OPT_FLAGS := -O2 #exception
 # $(BUILD_DIR)/$(SRC_DIR)/core/eeprom.c.o: OPT_FLAGS := -O2
 
 #$(BUILD_DIR)/$(SRC_DIR)/overlay2_6AB090.c.o: LOOP_UNROLL := -Wo,-loopunroll,0
@@ -176,7 +177,7 @@ distclean: clean
 
 $(TARGET).elf: dirs $(BASENAME).ld $(BUILD_DIR)/$(LIBULTRA) $(O_FILES) $(LANG_RNC_O_FILES) $(IMAGE_O_FILES)
 	@$(LD) $(LD_FLAGS) $(LD_FLAGS_EXTRA) -o $@
-	@printf "[$(PINK) linker $(NO_COL)]  $<\n"
+	@printf "[$(PINK) Linker $(NO_COL)]  $<\n"
 
 ifndef PERMUTER
 $(GLOBAL_ASM_O_FILES): $(BUILD_DIR)/%.c.o: %.c  include/variables.h include/structs.h

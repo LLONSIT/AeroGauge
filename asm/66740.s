@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80065B40
+glabel alHeapDBAlloc
 /* 66740 80065B40 8FAE0010 */  lw         $t6, 0x10($sp)
 /* 66744 80065B44 AFA40000 */  sw         $a0, 0x0($sp)
 /* 66748 80065B48 AFA50004 */  sw         $a1, 0x4($sp)

@@ -661,7 +661,7 @@ glabel L80069060
 /* 69D2C 8006912C 0019C880 */  sll        $t9, $t9, 2
 /* 69D30 80069130 032E2021 */  addu       $a0, $t9, $t6
 /* 69D34 80069134 00047C00 */  sll        $t7, $a0, 16
-/* 69D38 80069138 0C019B40 */  jal        func_80066D00
+/* 69D38 80069138 0C019B40 */  jal        alCents2Ratio
 /* 69D3C 8006913C 000F2403 */   sra       $a0, $t7, 16
 /* 69D40 80069140 E6000028 */  swc1       $f0, 0x28($s0)
 /* 69D44 80069144 8EF90000 */  lw         $t9, 0x0($s7)
@@ -1121,7 +1121,7 @@ glabel L8006978C
 /* 6A3B8 800697B8 24811FFF */  addiu      $at, $a0, 0x1FFF
 /* 6A3BC 800697BC 00017B43 */  sra        $t7, $at, 13
 .L800697C0:
-/* 6A3C0 800697C0 0C019B40 */  jal        func_80066D00
+/* 6A3C0 800697C0 0C019B40 */  jal        alCents2Ratio
 /* 6A3C4 800697C4 01E02025 */   or        $a0, $t7, $zero
 /* 6A3C8 800697C8 8E390060 */  lw         $t9, 0x60($s1)
 /* 6A3CC 800697CC 46000506 */  mov.s      $f20, $f0
@@ -1573,7 +1573,7 @@ glabel L80069DFC
 glabel L80069E0C
 /* 6AA0C 80069E0C 02A02025 */  or         $a0, $s5, $zero
 .L80069E10:
-/* 6AA10 80069E10 0C01A8E8 */  jal        func_8006A3A0
+/* 6AA10 80069E10 0C01A8E8 */  jal        alEvtqNextEvent
 /* 6AA14 80069E14 8FA50050 */   lw        $a1, 0x50($sp)
 /* 6AA18 80069E18 1040FE98 */  beqz       $v0, .L8006987C
 /* 6AA1C 80069E1C AE420028 */   sw        $v0, 0x28($s2)
@@ -1745,7 +1745,7 @@ glabel func_80069FD4
 /* 6AC74 8006A074 92270008 */  lbu        $a3, 0x8($s1)
 /* 6AC78 8006A078 AFAF0010 */  sw         $t7, 0x10($sp)
 /* 6AC7C 8006A07C 00002025 */  or         $a0, $zero, $zero
-/* 6AC80 8006A080 0C0196D0 */  jal        func_80065B40
+/* 6AC80 8006A080 0C0196D0 */  jal        alHeapDBAlloc
 /* 6AC84 8006A084 AFA6002C */   sw        $a2, 0x2C($sp)
 /* 6AC88 8006A088 AE020060 */  sw         $v0, 0x60($s0)
 /* 6AC8C 8006A08C 0C01A7D9 */  jal        func_80069F64
@@ -1755,7 +1755,7 @@ glabel func_80069FD4
 /* 6AC9C 8006A09C AFB80010 */  sw         $t8, 0x10($sp)
 /* 6ACA0 8006A0A0 00002025 */  or         $a0, $zero, $zero
 /* 6ACA4 8006A0A4 00002825 */  or         $a1, $zero, $zero
-/* 6ACA8 8006A0A8 0C0196D0 */  jal        func_80065B40
+/* 6ACA8 8006A0A8 0C0196D0 */  jal        alHeapDBAlloc
 /* 6ACAC 8006A0AC 8FA6002C */   lw        $a2, 0x2C($sp)
 /* 6ACB0 8006A0B0 AE00006C */  sw         $zero, 0x6C($s0)
 /* 6ACB4 8006A0B4 8E390000 */  lw         $t9, 0x0($s1)
@@ -1780,11 +1780,11 @@ glabel func_80069FD4
 /* 6ACF8 8006A0F8 8E270004 */  lw         $a3, 0x4($s1)
 /* 6ACFC 8006A0FC AFAA0010 */  sw         $t2, 0x10($sp)
 /* 6AD00 8006A100 8FA6002C */  lw         $a2, 0x2C($sp)
-/* 6AD04 8006A104 0C0196D0 */  jal        func_80065B40
+/* 6AD04 8006A104 0C0196D0 */  jal        alHeapDBAlloc
 /* 6AD08 8006A108 00002025 */   or        $a0, $zero, $zero
 /* 6AD0C 8006A10C 26040048 */  addiu      $a0, $s0, 0x48
 /* 6AD10 8006A110 00402825 */  or         $a1, $v0, $zero
-/* 6AD14 8006A114 0C01A90B */  jal        func_8006A42C
+/* 6AD14 8006A114 0C01A90B */  jal        alEvtqNew
 /* 6AD18 8006A118 8E260004 */   lw        $a2, 0x4($s1)
 /* 6AD1C 8006A11C 3C0B8007 */  lui        $t3, %hi(func_8006983C)
 /* 6AD20 8006A120 256B983C */  addiu      $t3, $t3, %lo(func_8006983C)
@@ -1793,7 +1793,7 @@ glabel func_80069FD4
 /* 6AD2C 8006A12C AE100004 */  sw         $s0, 0x4($s0)
 /* 6AD30 8006A130 3C048009 */  lui        $a0, %hi(alGlobals)
 /* 6AD34 8006A134 8C842E40 */  lw         $a0, %lo(alGlobals)($a0)
-/* 6AD38 8006A138 0C01A928 */  jal        func_8006A4A0
+/* 6AD38 8006A138 0C01A928 */  jal        alSynAddPlayer
 /* 6AD3C 8006A13C 02002825 */   or        $a1, $s0, $zero
 /* 6AD40 8006A140 8FBF0024 */  lw         $ra, 0x24($sp)
 /* 6AD44 8006A144 8FB0001C */  lw         $s0, 0x1C($sp)

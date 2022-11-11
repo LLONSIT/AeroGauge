@@ -185,7 +185,7 @@ glabel osPfsInitPak
 /* 6C0A0 8006B4A0 AD200000 */  sw         $zero, 0x0($t1)
 /* 6C0A4 8006B4A4 8FAA006C */  lw         $t2, 0x6C($sp)
 /* 6C0A8 8006B4A8 A1400065 */  sb         $zero, 0x65($t2)
-/* 6C0AC 8006B4AC 0C01D487 */  jal        func_8007521C
+/* 6C0AC 8006B4AC 0C01D487 */  jal        __osPfsSelectBank
 /* 6C0B0 8006B4B0 8FA4006C */   lw        $a0, 0x6C($sp)
 /* 6C0B4 8006B4B4 AFA20060 */  sw         $v0, 0x60($sp)
 /* 6C0B8 8006B4B8 8FAB0060 */  lw         $t3, 0x60($sp)
@@ -198,7 +198,7 @@ glabel osPfsInitPak
 /* 6C0D0 8006B4D0 24060001 */  addiu      $a2, $zero, 0x1
 /* 6C0D4 8006B4D4 27A7003C */  addiu      $a3, $sp, 0x3C
 /* 6C0D8 8006B4D8 8D840004 */  lw         $a0, 0x4($t4)
-/* 6C0DC 8006B4DC 0C01D4A4 */  jal        func_80075290
+/* 6C0DC 8006B4DC 0C01D4A4 */  jal        __osContRamRead
 /* 6C0E0 8006B4E0 8D850008 */   lw        $a1, 0x8($t4)
 /* 6C0E4 8006B4E4 AFA20060 */  sw         $v0, 0x60($sp)
 /* 6C0E8 8006B4E8 8FAD0060 */  lw         $t5, 0x60($sp)
@@ -311,7 +311,7 @@ glabel osPfsInitPak
 /* 6C278 8006B678 8FAA006C */  lw         $t2, 0x6C($sp)
 /* 6C27C 8006B67C 8D440004 */  lw         $a0, 0x4($t2)
 /* 6C280 8006B680 8D450008 */  lw         $a1, 0x8($t2)
-/* 6C284 8006B684 0C01D4A4 */  jal        func_80075290
+/* 6C284 8006B684 0C01D4A4 */  jal        __osContRamRead
 /* 6C288 8006B688 2547002C */   addiu     $a3, $t2, 0x2C
 /* 6C28C 8006B68C AFA20060 */  sw         $v0, 0x60($sp)
 /* 6C290 8006B690 8FA90060 */  lw         $t1, 0x60($sp)

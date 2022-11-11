@@ -118,7 +118,7 @@ SECTIONS
         build/asm/5D350.s.o(.text);
         build/asm/5F6B0.s.o(.text);
         build/asm/61570.s.o(.text);
-        build/asm/62900.s.o(.text);
+        build/src/game_62900.c.o(.text);
         build/asm/63A60.s.o(.text);
         build/asm/65610.s.o(.text);
         build/asm/65FF0.s.o(.text);
@@ -135,7 +135,7 @@ SECTIONS
         build/asm/66C60.s.o(.text);
         build/asm/66DD0.s.o(.text);
         build/src/os/audio/alSeqpSetSeq.c.o(.text);
-        build/src/os/libultra_temp_seg.c.o(.text);
+        build/src/libultra_mix_seg.c.o(.text);
         build/asm/68220.s.o(.text);
         build/asm/682C0.s.o(.text);
         build/asm/682E0.s.o(.text);
@@ -146,8 +146,8 @@ SECTIONS
         build/src/game_68B40.c.o(.text);
         build/asm/code_68590.s.o(.text);
         build/asm/68900.s.o(.text);
-        build/asm/alSndpDelete.s.o(.text);
-        build/asm/osVirtualToPhysical.s.o(.text);
+        build/src/os/audio/alSndpDelete.c.o(.text);
+        build/src/os/osVirtualToPhysical.c.o(.text);
         build/asm/68B30.s.o(.text);
         _68BE0_data__s = .;
         build/asm/data/68BE0.data.s.o(.data);
@@ -182,7 +182,7 @@ SECTIONS
         build/asm/6D900.s.o(.text);
         build/asm/6D940.s.o(.text);
         build/asm/6D9E0.s.o(.text);
-        build/asm/osPfsNumFiles.s.o(.text);
+        build/src/os/osPfsNumFiles.c.o(.text);
         build/asm/6DCF0.s.o(.text);
         build/asm/6DE40.s.o(.text);
         build/asm/6DED0.s.o(.text);
@@ -343,7 +343,7 @@ SECTIONS
         build/asm/5D350.s.o(.bss);
         build/asm/5F6B0.s.o(.bss);
         build/asm/61570.s.o(.bss);
-        build/asm/62900.s.o(.bss);
+        build/src/game_62900.c.o(.bss);
         build/asm/63A60.s.o(.bss);
         build/asm/65610.s.o(.bss);
         build/asm/65FF0.s.o(.bss);
@@ -359,7 +359,7 @@ SECTIONS
         build/asm/66C60.s.o(.bss);
         build/asm/66DD0.s.o(.bss);
         build/src/os/audio/alSeqpSetSeq.c.o(.bss);
-        build/src/os/libultra_temp_seg.c.o(.bss);
+        build/src/libultra_mix_seg.c.o(.bss);
         build/asm/68220.s.o(.bss);
         build/asm/682C0.s.o(.bss);
         build/asm/682E0.s.o(.bss);
@@ -370,8 +370,8 @@ SECTIONS
         build/src/game_68B40.c.o(.bss);
         build/asm/code_68590.s.o(.bss);
         build/asm/68900.s.o(.bss);
-        build/asm/alSndpDelete.s.o(.bss);
-        build/asm/osVirtualToPhysical.s.o(.bss);
+        build/src/os/audio/alSndpDelete.c.o(.bss);
+        build/src/os/osVirtualToPhysical.c.o(.bss);
         build/asm/68B30.s.o(.bss);
         build/asm/68BF0.s.o(.bss);
         build/asm/69420.s.o(.bss);
@@ -402,7 +402,7 @@ SECTIONS
         build/asm/6D900.s.o(.bss);
         build/asm/6D940.s.o(.bss);
         build/asm/6D9E0.s.o(.bss);
-        build/asm/osPfsNumFiles.s.o(.bss);
+        build/src/os/osPfsNumFiles.c.o(.bss);
         build/asm/6DCF0.s.o(.bss);
         build/asm/6DE40.s.o(.bss);
         build/asm/6DED0.s.o(.bss);

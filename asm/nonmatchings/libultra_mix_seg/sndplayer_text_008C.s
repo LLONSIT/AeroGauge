@@ -1,4 +1,4 @@
-glabel func_80066F9C
+glabel sndplayer_text_008C
 /* 67B9C 80066F9C 27BDFEF8 */  addiu      $sp, $sp, -0x108
 /* 67BA0 80066FA0 AFBE0040 */  sw         $fp, 0x40($sp)
 /* 67BA4 80066FA4 AFB7003C */  sw         $s7, 0x3C($sp)
@@ -341,7 +341,7 @@ glabel L80067460
 glabel L80067490
 /* 68090 80067490 02E02025 */  or         $a0, $s7, $zero
 .L80067494:
-/* 68094 80067494 0C01A8E8 */  jal        func_8006A3A0
+/* 68094 80067494 0C01A8E8 */  jal        alEvtqNextEvent
 /* 68098 80067498 02802825 */   or        $a1, $s4, $zero
 /* 6809C 8006749C 1040FED1 */  beqz       $v0, .L80066FE4
 /* 680A0 800674A0 AEC2004C */   sw        $v0, 0x4C($s6)

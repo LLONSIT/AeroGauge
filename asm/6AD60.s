@@ -171,7 +171,7 @@ glabel alEvtqPostEvent
 /* 6AF98 8006A398 03E00008 */  jr         $ra
 /* 6AF9C 8006A39C 00000000 */   nop
 
-glabel func_8006A3A0
+glabel alEvtqNextEvent
 /* 6AFA0 8006A3A0 27BDFFD0 */  addiu      $sp, $sp, -0x30
 /* 6AFA4 8006A3A4 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 6AFA8 8006A3A8 AFA40030 */  sw         $a0, 0x30($sp)
@@ -210,7 +210,7 @@ glabel func_8006A3A0
 /* 6B024 8006A424 03E00008 */  jr         $ra
 /* 6B028 8006A428 27BD0030 */   addiu     $sp, $sp, 0x30
 
-glabel func_8006A42C
+glabel alEvtqNew
 /* 6B02C 8006A42C 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 6B030 8006A430 AFB30020 */  sw         $s3, 0x20($sp)
 /* 6B034 8006A434 AFB2001C */  sw         $s2, 0x1C($sp)
@@ -243,7 +243,7 @@ glabel func_8006A42C
 /* 6B098 8006A498 03E00008 */  jr         $ra
 /* 6B09C 8006A49C 27BD0028 */   addiu     $sp, $sp, 0x28
 
-glabel func_8006A4A0
+glabel alSynAddPlayer
 /* 6B0A0 8006A4A0 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 6B0A4 8006A4A4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 6B0A8 8006A4A8 00803025 */  or         $a2, $a0, $zero

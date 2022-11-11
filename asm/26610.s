@@ -664,7 +664,7 @@ glabel func_80026384
 /* 26F94 80026394 3C05801B */  lui        $a1, %hi(D_801AAAF8)
 /* 26F98 80026398 AFA00084 */  sw         $zero, 0x84($sp)
 /* 26F9C 8002639C 24A5AAF8 */  addiu      $a1, $a1, %lo(D_801AAAF8)
-/* 26FA0 800263A0 0C0192E3 */  jal        func_80064B8C
+/* 26FA0 800263A0 0C0192E3 */  jal        osScRemoveClient
 /* 26FA4 800263A4 24848868 */   addiu     $a0, $a0, %lo(D_801A8868)
 /* 26FA8 800263A8 0C01825C */  jal        func_80060970
 /* 26FAC 800263AC 00000000 */   nop
@@ -720,7 +720,7 @@ glabel func_80026384
 /* 27064 80026464 3C06801B */  lui        $a2, %hi(D_801A8750)
 /* 27068 80026468 24C68750 */  addiu      $a2, $a2, %lo(D_801A8750)
 /* 2706C 8002646C 24A5AAF8 */  addiu      $a1, $a1, %lo(D_801AAAF8)
-/* 27070 80026470 0C0192CF */  jal        func_80064B3C
+/* 27070 80026470 0C0192CF */  jal        osScAddClient
 /* 27074 80026474 24848868 */   addiu     $a0, $a0, %lo(D_801A8868)
 /* 27078 80026478 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 2707C 8002647C 8FA20084 */  lw         $v0, 0x84($sp)
