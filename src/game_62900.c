@@ -11,7 +11,15 @@
 #pragma GLOBAL_ASM("asm/nonmatchings/game_62900/func_80062018.s")
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_62900/func_80062114.s")
+s32 func_80062114(void) {
+    u8 var_v1 = func_80062018(&D_8019FC18);
+
+    if (var_v1 == 0) {
+        var_v1 = func_8006299C(&D_8019FC18);
+    }
+    return var_v1 ;
+}
+
 
 void func_80062154(void) {
     switch (D_80092D54) {                           /* irregular */
