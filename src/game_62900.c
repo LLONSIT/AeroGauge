@@ -41,8 +41,6 @@ void func_80062154(void) {
 }
 
 
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_62900/func_80062154.s")
-
 #pragma GLOBAL_ASM("asm/nonmatchings/game_62900/func_80062210.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_62900/func_800623E8.s")

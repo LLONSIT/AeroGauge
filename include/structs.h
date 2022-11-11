@@ -34,8 +34,6 @@ struct struct_8001AB94 {
 
 struct  unk_struct_D801DD30 {
 
-
-
     s8 pad[0x56];
     s32 unk2CC;
     s32 unk2DC;
@@ -76,10 +74,10 @@ struct unk_struct_80024240 {
 
 struct unk_struct_8001BFE {
 
-s8 unk0;
-s8 unk1;
-s8 unk2;
-s8 unk3;
+    s8 unk0;
+    s8 unk1;
+    s8 unk2;
+    s8 unk3;
 
 };
 
@@ -95,12 +93,12 @@ s32 unk34;
 struct unk_struct_800061C4 {
 
 
-s8 pad[0xB0];
-f32 unkB0;
-f32 unkB4;
-f32 unkB8;
-f32 unkBC;
-f32 unkC0;
+    s8 pad[0xB0];
+    f32 unkB0;
+    f32 unkB4;
+    f32 unkB8;
+    f32 unkBC;
+    f32 unkC0;
 
 
 };

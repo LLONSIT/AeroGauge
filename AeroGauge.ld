@@ -94,7 +94,7 @@ SECTIONS
         build/asm/25D70.s.o(.text);
         build/asm/25F20.s.o(.text);
         build/asm/25FC0.s.o(.text);
-        build/asm/26440.s.o(.text);
+        build/src/game_26440.c.o(.text);
         build/asm/26520.s.o(.text);
         build/asm/265C0.s.o(.text);
         build/asm/26610.s.o(.text);
@@ -194,7 +194,7 @@ SECTIONS
         build/asm/6FC40.s.o(.text);
         build/src/game_703F0.c.o(.text);
         build/asm/70750.s.o(.text);
-        build/asm/osViSetEvent.s.o(.text);
+        build/src/os/osViSetEvent.c.o(.text);
         build/asm/70830.s.o(.text);
         build/asm/70DC0.s.o(.text);
         build/asm/70E70.s.o(.text);
@@ -202,7 +202,7 @@ SECTIONS
         build/asm/713F0.s.o(.text);
         build/asm/71460.s.o(.text);
         build/asm/714A0.s.o(.text);
-        build/asm/alSynDelete.s.o(.text);
+        build/src/os/audio/alSynDelete.c.o(.text);
         build/asm/71E50.s.o(.text);
         build/asm/71EF0.s.o(.text);
         build/asm/71FB0.s.o(.text);
@@ -230,7 +230,7 @@ SECTIONS
         build/asm/79300.s.o(.text);
         build/asm/79340.s.o(.text);
         build/asm/793D0.s.o(.text);
-        build/asm/osDpDeviceBusy.s.o(.text);
+        build/src/os/osDpDeviceBusy.c.o(.text);
         build/asm/79430.s.o(.text);
         build/asm/79450.s.o(.text);
         build/asm/79500.s.o(.text);
@@ -319,7 +319,7 @@ SECTIONS
         build/asm/25D70.s.o(.bss);
         build/asm/25F20.s.o(.bss);
         build/asm/25FC0.s.o(.bss);
-        build/asm/26440.s.o(.bss);
+        build/src/game_26440.c.o(.bss);
         build/asm/26520.s.o(.bss);
         build/asm/265C0.s.o(.bss);
         build/asm/26610.s.o(.bss);
@@ -414,7 +414,7 @@ SECTIONS
         build/asm/6FC40.s.o(.bss);
         build/src/game_703F0.c.o(.bss);
         build/asm/70750.s.o(.bss);
-        build/asm/osViSetEvent.s.o(.bss);
+        build/src/os/osViSetEvent.c.o(.bss);
         build/asm/70830.s.o(.bss);
         build/asm/70DC0.s.o(.bss);
         build/asm/70E70.s.o(.bss);
@@ -422,7 +422,7 @@ SECTIONS
         build/asm/713F0.s.o(.bss);
         build/asm/71460.s.o(.bss);
         build/asm/714A0.s.o(.bss);
-        build/asm/alSynDelete.s.o(.bss);
+        build/src/os/audio/alSynDelete.c.o(.bss);
         build/asm/71E50.s.o(.bss);
         build/asm/71EF0.s.o(.bss);
         build/asm/71FB0.s.o(.bss);
@@ -450,7 +450,7 @@ SECTIONS
         build/asm/79300.s.o(.bss);
         build/asm/79340.s.o(.bss);
         build/asm/793D0.s.o(.bss);
-        build/asm/osDpDeviceBusy.s.o(.bss);
+        build/src/os/osDpDeviceBusy.c.o(.bss);
         build/asm/79430.s.o(.bss);
         build/asm/79450.s.o(.bss);
         build/asm/79500.s.o(.bss);
