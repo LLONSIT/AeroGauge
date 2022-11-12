@@ -36,6 +36,9 @@ extern f32 D_8013F7D4;
 
 //game_1A230
 extern s8 gPlayerRacePos;
+extern s32 D_8008C8CC;
+extern const char D_80096C94;
+extern f64 D_80096CD0;
 
 //game_1CC30
 

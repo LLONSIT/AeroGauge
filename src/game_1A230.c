@@ -1,6 +1,6 @@
 #include <ultra64.h>
 #include "structs.h"
-#include <gbi.h> //for macros
+#include <PR/gbi.h> //for macros
 #include "functions.h"
 #include "variables.h"
 
@@ -14,27 +14,38 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001A020.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001A750.s")
+void func_8001A750(s32* arg0, struct unk_struct_8001A750 *arg1, s32 arg2) {
+    s32 sp24;
+    s8 *sp18;
+    short pad;
+    
+    sp24 = *arg0;
+    func_8001F75C(0xB5, 0x60, 0x14, 0xFF);
+    osSetTime(arg1->unk2 - 0x3C, arg1->unk4 + 0x13);
+    sprintf(&sp18 - 2, &D_80096C94, (s32) ((f64) arg1->unk10 * D_80096CD0));
+    func_8001F790(&sp24, &sp18 - 2, &D_8008C8CC);
+    *arg0 = sp24;
+}
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001A7FC.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001A9D4.s")
 
-//nothing to do with this function
 
 /*
-void func_8001AB94(Gfx** arg0, struct struct_8001AB94 *arg1) {
+void func_8001AB94(Gfx** arg0, struct struct_8001AB94   *arg1) {
 
-    if (arg1->unk10 != NULL ) {
+    if (arg1->unk10 != 0) {
 
-    gDPPipeSync((*arg0)++);
-    gDPSetRenderMode((*arg0)++, G_RM_XLU_SURF, G_RM_XLU_SURF2);
-    gDPSetCombineMode((*arg0)++, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
-    gDPSetPrimColor((*arg0)++, NULL, 0xFF, 0xFF, 0xFF, 0xFF, 0xDA);
-    func_80019D0C((*arg0)++, arg1->unk0, arg1->unk2, arg1->unk10, NULL);
-    return;
-    //arg0++;
-}
+    gDPPipeSync(arg0);
+    gDPSetRenderMode(arg0, G_RM_XLU_SURF, G_RM_XLU_SURF2);
+    gDPSetCombineMode(arg0, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
+    gDPSetPrimColor(arg0, 'x', 0xff, 0xFF, 0xFF, 0xFF, 0xFF);
+
+    func_80019D0C(&arg0, arg1->unk0, arg1->unk2, arg1->unk10, 0);
+    }
+    //*arg0 = sp3C;
 }
 */
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001AB94.s")

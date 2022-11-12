@@ -156,7 +156,7 @@ SECTIONS
         build/asm/68BF0.s.o(.text);
         build/asm/69420.s.o(.text);
         build/asm/6AD60.s.o(.text);
-        build/asm/code_6B170.s.o(.text);
+        build/src/os/audio/libaudio_temp_seg.c.o(.text);
         build/asm/6B2C0.s.o(.text);
         build/asm/6B350.s.o(.text);
         build/asm/6B580.s.o(.text);
@@ -376,7 +376,7 @@ SECTIONS
         build/asm/68BF0.s.o(.bss);
         build/asm/69420.s.o(.bss);
         build/asm/6AD60.s.o(.bss);
-        build/asm/code_6B170.s.o(.bss);
+        build/src/os/audio/libaudio_temp_seg.c.o(.bss);
         build/asm/6B2C0.s.o(.bss);
         build/asm/6B350.s.o(.bss);
         build/asm/6B580.s.o(.bss);
