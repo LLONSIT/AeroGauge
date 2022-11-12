@@ -111,9 +111,9 @@ glabel __sinf
 /* 67AEC 80066EEC 3C01800A */  lui        $at, %hi(D_800989A0)
 /* 67AF0 80066EF0 45010004 */  bc1t       .L80066F04
 /* 67AF4 80066EF4 00000000 */   nop
-/* 67AF8 80066EF8 3C01800A */  lui        $at, %hi(D_80098D90)
+/* 67AF8 80066EF8 3C01800A */  lui        $at, %hi(__libm_qnan_f)
 /* 67AFC 80066EFC 03E00008 */  jr         $ra
-/* 67B00 80066F00 C4208D90 */   lwc1      $f0, %lo(D_80098D90)($at)
+/* 67B00 80066F00 C4208D90 */   lwc1      $f0, %lo(__libm_qnan_f)($at)
 .L80066F04:
 /* 67B04 80066F04 C42089A0 */  lwc1       $f0, %lo(D_800989A0)($at)
 /* 67B08 80066F08 03E00008 */  jr         $ra

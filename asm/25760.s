@@ -27,19 +27,19 @@ glabel func_80024B60
 /* 257A0 80024BA0 0C019B54 */  jal        __sinf
 /* 257A4 80024BA4 E7B40050 */   swc1      $f20, 0x50($sp)
 /* 257A8 80024BA8 C7AC0054 */  lwc1       $f12, 0x54($sp)
-/* 257AC 80024BAC 0C01AB20 */  jal        func_8006AC80
+/* 257AC 80024BAC 0C01AB20 */  jal        __cosf
 /* 257B0 80024BB0 46000506 */   mov.s     $f20, $f0
 /* 257B4 80024BB4 46000586 */  mov.s      $f22, $f0
 /* 257B8 80024BB8 0C019B54 */  jal        __sinf
 /* 257BC 80024BBC C7AC004C */   lwc1      $f12, 0x4C($sp)
 /* 257C0 80024BC0 E7A00040 */  swc1       $f0, 0x40($sp)
-/* 257C4 80024BC4 0C01AB20 */  jal        func_8006AC80
+/* 257C4 80024BC4 0C01AB20 */  jal        __cosf
 /* 257C8 80024BC8 C7AC004C */   lwc1      $f12, 0x4C($sp)
 /* 257CC 80024BCC C7AC0050 */  lwc1       $f12, 0x50($sp)
 /* 257D0 80024BD0 0C019B54 */  jal        __sinf
 /* 257D4 80024BD4 E7A00034 */   swc1      $f0, 0x34($sp)
 /* 257D8 80024BD8 C7AC0050 */  lwc1       $f12, 0x50($sp)
-/* 257DC 80024BDC 0C01AB20 */  jal        func_8006AC80
+/* 257DC 80024BDC 0C01AB20 */  jal        __cosf
 /* 257E0 80024BE0 E7A0003C */   swc1      $f0, 0x3C($sp)
 /* 257E4 80024BE4 02002025 */  or         $a0, $s0, $zero
 /* 257E8 80024BE8 0C01B0CC */  jal        func_8006C330
@@ -127,19 +127,19 @@ glabel func_80024CE0
 /* 25920 80024D20 0C019B54 */  jal        __sinf
 /* 25924 80024D24 E7B40050 */   swc1      $f20, 0x50($sp)
 /* 25928 80024D28 C7AC0054 */  lwc1       $f12, 0x54($sp)
-/* 2592C 80024D2C 0C01AB20 */  jal        func_8006AC80
+/* 2592C 80024D2C 0C01AB20 */  jal        __cosf
 /* 25930 80024D30 E7A00044 */   swc1      $f0, 0x44($sp)
 /* 25934 80024D34 46000506 */  mov.s      $f20, $f0
 /* 25938 80024D38 0C019B54 */  jal        __sinf
 /* 2593C 80024D3C C7AC004C */   lwc1      $f12, 0x4C($sp)
 /* 25940 80024D40 46000586 */  mov.s      $f22, $f0
-/* 25944 80024D44 0C01AB20 */  jal        func_8006AC80
+/* 25944 80024D44 0C01AB20 */  jal        __cosf
 /* 25948 80024D48 C7AC004C */   lwc1      $f12, 0x4C($sp)
 /* 2594C 80024D4C C7AC0050 */  lwc1       $f12, 0x50($sp)
 /* 25950 80024D50 0C019B54 */  jal        __sinf
 /* 25954 80024D54 E7A00034 */   swc1      $f0, 0x34($sp)
 /* 25958 80024D58 C7AC0050 */  lwc1       $f12, 0x50($sp)
-/* 2595C 80024D5C 0C01AB20 */  jal        func_8006AC80
+/* 2595C 80024D5C 0C01AB20 */  jal        __cosf
 /* 25960 80024D60 E7A0003C */   swc1      $f0, 0x3C($sp)
 /* 25964 80024D64 02002025 */  or         $a0, $s0, $zero
 /* 25968 80024D68 0C01B0CC */  jal        func_8006C330

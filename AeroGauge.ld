@@ -145,6 +145,7 @@ SECTIONS
         build/src/os/audio/alSndpStop.c.o(.text);
         build/src/game_68B40.c.o(.text);
         build/asm/code_68590.s.o(.text);
+        build/src/os/osCreateThread.c.o(.text);
         build/asm/68900.s.o(.text);
         build/src/os/audio/alSndpDelete.c.o(.text);
         build/src/os/osVirtualToPhysical.c.o(.text);
@@ -162,7 +163,8 @@ SECTIONS
         build/asm/6B580.s.o(.text);
         build/asm/6B670.s.o(.text);
         build/asm/6B710.s.o(.text);
-        build/asm/6B850.s.o(.text);
+        build/src/os/gu/coss.c.o(.text);
+        build/src/os/gu/cosf.c.o(.text);
         build/asm/6B9F0.s.o(.text);
         build/asm/6BA00.s.o(.text);
         build/asm/6BA70.s.o(.text);
@@ -369,6 +371,7 @@ SECTIONS
         build/src/os/audio/alSndpStop.c.o(.bss);
         build/src/game_68B40.c.o(.bss);
         build/asm/code_68590.s.o(.bss);
+        build/src/os/osCreateThread.c.o(.bss);
         build/asm/68900.s.o(.bss);
         build/src/os/audio/alSndpDelete.c.o(.bss);
         build/src/os/osVirtualToPhysical.c.o(.bss);
@@ -382,7 +385,8 @@ SECTIONS
         build/asm/6B580.s.o(.bss);
         build/asm/6B670.s.o(.bss);
         build/asm/6B710.s.o(.bss);
-        build/asm/6B850.s.o(.bss);
+        build/src/os/gu/coss.c.o(.bss);
+        build/src/os/gu/cosf.c.o(.bss);
         build/asm/6B9F0.s.o(.bss);
         build/asm/6BA00.s.o(.bss);
         build/asm/6BA70.s.o(.bss);

@@ -22,7 +22,7 @@ glabel func_80025170
 /* 25D9C 8002519C 0C019B54 */  jal        __sinf
 /* 25DA0 800251A0 E7AC0054 */   swc1      $f12, 0x54($sp)
 /* 25DA4 800251A4 C7AC0054 */  lwc1       $f12, 0x54($sp)
-/* 25DA8 800251A8 0C01AB20 */  jal        func_8006AC80
+/* 25DA8 800251A8 0C01AB20 */  jal        __cosf
 /* 25DAC 800251AC E7A0004C */   swc1      $f0, 0x4C($sp)
 /* 25DB0 800251B0 4614A302 */  mul.s      $f12, $f20, $f20
 /* 25DB4 800251B4 3C013F80 */  lui        $at, (0x3F800000 >> 16)

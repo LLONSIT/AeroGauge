@@ -139,8 +139,10 @@ __sinf = 0x80066D50;
 osScRemoveClient = 0x80064B8C;
 osScAddClient = 0x80064B3C:
 __osProbeTLB = 0x800712F0;
-
-
+coss = 0x8006AC50;
+__cosf = 0x8006AC80;
+__libm_qnan_f = 0x80098D90;
+sins = 0x8006B6E0; 
 
 D_8008B7DC = 0x8008B7DC; //type:defined
 D_8008B7E0 = 0x8008B7E0; //type:defined

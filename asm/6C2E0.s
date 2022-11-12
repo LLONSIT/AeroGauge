@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_8006B6E0
+glabel sins
 /* 6C2E0 8006B6E0 308EFFFF */  andi       $t6, $a0, 0xFFFF
 /* 6C2E4 8006B6E4 000E7902 */  srl        $t7, $t6, 4
 /* 6C2E8 8006B6E8 31F8FFFF */  andi       $t8, $t7, 0xFFFF

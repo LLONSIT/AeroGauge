@@ -25,7 +25,7 @@ glabel func_8006BA60
 /* 6C698 8006BA98 44815000 */  mtc1       $at, $f10
 /* 6C69C 8006BA9C 462043A0 */  cvt.s.d    $f14, $f8
 /* 6C6A0 8006BAA0 460A7303 */  div.s      $f12, $f14, $f10
-/* 6C6A4 8006BAA4 0C01AB20 */  jal        func_8006AC80
+/* 6C6A4 8006BAA4 0C01AB20 */  jal        __cosf
 /* 6C6A8 8006BAA8 E7AC001C */   swc1      $f12, 0x1C($sp)
 /* 6C6AC 8006BAAC C7AC001C */  lwc1       $f12, 0x1C($sp)
 /* 6C6B0 8006BAB0 0C019B54 */  jal        __sinf
