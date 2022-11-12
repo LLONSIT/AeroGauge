@@ -60,7 +60,7 @@ segments:
       - [0x1A230, c, game_1A230]
       - [0x1CA50, c, game_1CA50]
       - [0x1CC30, c, game_1CC30]
-      - [0x1EDC0, asm]
+      - [0x1EDC0, c, game_1EDC0]
       - [0x1F0E0, asm]
       - [0x1FD50, asm]
       - [0x202A0, c, game_202A0]

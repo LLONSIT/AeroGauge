@@ -1,9 +1,6 @@
 #include <ultra64.h>
 #include "structs.h"
 #include "variables.h"
-extern s8 D_8013FF94;
-extern s32 D_8016C420;
-extern s32 D_8016C424;
 
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1CC30/func_8001C030.s")

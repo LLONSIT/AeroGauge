@@ -17,7 +17,6 @@ void func_8000D148(void) {
 }
 
 
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_DA40/func_8000D148.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_DA40/func_8000D188.s")
 
@@ -29,8 +28,6 @@ void func_8000D658(s32 arg0) {
 }
 
 
-
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_DA40/func_8000D658.s")
 
 void func_8000D660(void) {
 }

@@ -71,7 +71,7 @@ SECTIONS
         build/src/game_1A230.c.o(.text);
         build/src/game_1CA50.c.o(.text);
         build/src/game_1CC30.c.o(.text);
-        build/asm/1EDC0.s.o(.text);
+        build/src/game_1EDC0.c.o(.text);
         build/asm/1F0E0.s.o(.text);
         build/asm/1FD50.s.o(.text);
         build/src/game_202A0.c.o(.text);
@@ -296,7 +296,7 @@ SECTIONS
         build/src/game_1A230.c.o(.bss);
         build/src/game_1CA50.c.o(.bss);
         build/src/game_1CC30.c.o(.bss);
-        build/asm/1EDC0.s.o(.bss);
+        build/src/game_1EDC0.c.o(.bss);
         build/asm/1F0E0.s.o(.bss);
         build/asm/1FD50.s.o(.bss);
         build/src/game_202A0.c.o(.bss);

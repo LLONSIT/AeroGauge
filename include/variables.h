@@ -26,6 +26,9 @@ extern f32 gUnk_YPos;
 extern u8 D_8019E6A8;
 extern u16 D_8019EE02;
 
+extern s8 D_8013FF94;
+extern s32 D_8016C420;
+extern s32 D_8016C424;
 
 //game_DA40
 extern u8 D_8013FFB8;
@@ -46,6 +49,9 @@ extern s8 D_80096510;
 
 //game_1CA50
 extern s32 D_8008B7F0;
+
+//game_1EDC0
+extern s16 D_80109BDC;
 
 //game_202A0
 extern s32 D_8008C910;
@@ -91,4 +97,5 @@ extern OSMesgQueue D_801A8750;
 extern OSSched   D_801A8868;
 extern OSScClient D_801AAAF8;
 extern s32 D_8019FC18;
+
 
