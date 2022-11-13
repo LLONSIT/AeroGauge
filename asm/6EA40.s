@@ -131,7 +131,7 @@ glabel func_8006DEE0
 /* 6EBE8 8006DFE8 93A4004F */   lbu       $a0, 0x4F($sp)
 /* 6EBEC 8006DFEC 3C05801B */  lui        $a1, %hi(D_801AAC30)
 /* 6EBF0 8006DFF0 24A5AC30 */  addiu      $a1, $a1, %lo(D_801AAC30)
-/* 6EBF4 8006DFF4 0C01D090 */  jal        func_80074240
+/* 6EBF4 8006DFF4 0C01D090 */  jal        __osSiRawStartDma
 /* 6EBF8 8006DFF8 24040001 */   addiu     $a0, $zero, 0x1
 /* 6EBFC 8006DFFC AFA20044 */  sw         $v0, 0x44($sp)
 /* 6EC00 8006E000 8FA40048 */  lw         $a0, 0x48($sp)
@@ -140,7 +140,7 @@ glabel func_8006DEE0
 /* 6EC0C 8006E00C 24060001 */   addiu     $a2, $zero, 0x1
 /* 6EC10 8006E010 3C05801B */  lui        $a1, %hi(D_801AAC30)
 /* 6EC14 8006E014 24A5AC30 */  addiu      $a1, $a1, %lo(D_801AAC30)
-/* 6EC18 8006E018 0C01D090 */  jal        func_80074240
+/* 6EC18 8006E018 0C01D090 */  jal        __osSiRawStartDma
 /* 6EC1C 8006E01C 00002025 */   or        $a0, $zero, $zero
 /* 6EC20 8006E020 240E0004 */  addiu      $t6, $zero, 0x4
 /* 6EC24 8006E024 3C01801B */  lui        $at, %hi(D_801AABD0)
@@ -317,7 +317,7 @@ glabel func_8006E200
 /* 6EE9C 8006E29C 2484ABD8 */  addiu      $a0, $a0, %lo(D_801AABD8)
 /* 6EEA0 8006E2A0 AFAE0018 */  sw         $t6, 0x18($sp)
 /* 6EEA4 8006E2A4 AFAF001C */  sw         $t7, 0x1C($sp)
-/* 6EEA8 8006E2A8 0C01D058 */  jal        func_80074160
+/* 6EEA8 8006E2A8 0C01D058 */  jal        osSetTimer
 /* 6EEAC 8006E2AC 24060000 */   addiu     $a2, $zero, 0x0
 /* 6EEB0 8006E2B0 3C04801B */  lui        $a0, %hi(D_801AABF8)
 /* 6EEB4 8006E2B4 2484ABF8 */  addiu      $a0, $a0, %lo(D_801AABF8)

@@ -20,7 +20,7 @@ ASM_DIRS  = asm asm/data
 BIN_DIRS  = assets
 SRC_DIR   = src
 			#Libultra
-SRC_DIRS  = $(SRC_DIR) 	$(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu
+SRC_DIRS  = $(SRC_DIR) 	$(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc
 
 TOOLS_DIR = tools
 
@@ -127,7 +127,9 @@ ASM_PROCESSOR      = $(PYTHON) $(ASM_PROCESSOR_DIR)/asm_processor.py
 $(BUILD_DIR)/$(SRC_DIR)/os/%.c.o: OPT_FLAGS := -O1
 $(BUILD_DIR)/$(SRC_DIR)/os/audio/%.c.o: OPT_FLAGS := -O3
 $(BUILD_DIR)/$(SRC_DIR)/os/audio/libaudio_temp_seg.c.o: OPT_FLAGS := -O2
-$(BUILD_DIR)/$(SRC_DIR)/os/gu/coss.c.o: OPT_FLAGS := -O3 #TEMP
+$(BUILD_DIR)/$(SRC_DIR)/os/gu/%.c.o: OPT_FLAGS := -O3
+$(BUILD_DIR)/$(SRC_DIR)/os/gu/cosf.c.o: OPT_FLAGS := -O1
+$(BUILD_DIR)/$(SRC_DIR)/os/libc/%.c.o: OPT_FLAGS := -O3
 #$(BUILD_DIR)/$(SRC_DIR)/os/audio/sndplayer_text_008C.c.o: OPT_FLAGS := -O2 #exception
 # $(BUILD_DIR)/$(SRC_DIR)/core/eeprom.c.o: OPT_FLAGS := -O2
 
@@ -194,7 +196,7 @@ endif
 
 # non asm-processor recipe
 $(BUILD_DIR)/%.c.o: %.c
-	@$(CC_CHECK) $<
+#	@$(CC_CHECK) $<
 	@printf "[$(YELLOW) check $(NO_COL)]  $<\n"
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $<
 	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"

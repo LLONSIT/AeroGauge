@@ -215,7 +215,7 @@ glabel func_8006C7D4
 /* 6D3F8 8006C7F8 03E00008 */  jr         $ra
 /* 6D3FC 8006C7FC 0002103F */   dsra32    $v0, $v0, 0
 
-glabel func_8006C800
+glabel osGetTime
 /* 6D400 8006C800 27BDFFC8 */  addiu      $sp, $sp, -0x38
 /* 6D404 8006C804 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 6D408 8006C808 0C01C218 */  jal        __osDisableInt

@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80074240
+glabel __osSiRawStartDma
 /* 74E40 80074240 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 74E44 80074244 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 74E48 80074248 AFA40018 */  sw         $a0, 0x18($sp)

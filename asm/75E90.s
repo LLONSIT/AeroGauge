@@ -30,7 +30,7 @@ glabel __osContRamRead
 /* 75EDC 800752DC 97A5006A */   lhu       $a1, 0x6A($sp)
 /* 75EE0 800752E0 3C05801B */  lui        $a1, %hi(D_801AD350)
 /* 75EE4 800752E4 24A5D350 */  addiu      $a1, $a1, %lo(D_801AD350)
-/* 75EE8 800752E8 0C01D090 */  jal        func_80074240
+/* 75EE8 800752E8 0C01D090 */  jal        __osSiRawStartDma
 /* 75EEC 800752EC 24040001 */   addiu     $a0, $zero, 0x1
 /* 75EF0 800752F0 AFA2005C */  sw         $v0, 0x5C($sp)
 /* 75EF4 800752F4 8FA40060 */  lw         $a0, 0x60($sp)
@@ -40,7 +40,7 @@ glabel __osContRamRead
 .L80075304:
 /* 75F04 80075304 3C05801B */  lui        $a1, %hi(D_801AD350)
 /* 75F08 80075308 24A5D350 */  addiu      $a1, $a1, %lo(D_801AD350)
-/* 75F0C 8007530C 0C01D090 */  jal        func_80074240
+/* 75F0C 8007530C 0C01D090 */  jal        __osSiRawStartDma
 /* 75F10 80075310 00002025 */   or        $a0, $zero, $zero
 /* 75F14 80075314 AFA2005C */  sw         $v0, 0x5C($sp)
 /* 75F18 80075318 8FA40060 */  lw         $a0, 0x60($sp)

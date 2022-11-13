@@ -1,3 +1,3 @@
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/cosf/__cosf.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/os/gu/cosf/__cosf.s")

@@ -159,7 +159,7 @@ glabel _Litob
 /* 7B8E0 8007ACE0 01903023 */  subu       $a2, $t4, $s0
 /* 7B8E4 8007ACE4 AE260014 */  sw         $a2, 0x14($s1)
 /* 7B8E8 8007ACE8 8E240008 */  lw         $a0, 0x8($s1)
-/* 7B8EC 8007ACEC 0C01B350 */  jal        func_8006CD40
+/* 7B8EC 8007ACEC 0C01B350 */  jal        memcpy
 /* 7B8F0 8007ACF0 02502821 */   addu      $a1, $s2, $s0
 /* 7B8F4 8007ACF4 8E250014 */  lw         $a1, 0x14($s1)
 /* 7B8F8 8007ACF8 8E240024 */  lw         $a0, 0x24($s1)

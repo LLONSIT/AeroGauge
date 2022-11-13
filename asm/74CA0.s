@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_800740A0
+glabel __osSiCreateAccessQueue
 /* 74CA0 800740A0 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 74CA4 800740A4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 74CA8 800740A8 240E0001 */  addiu      $t6, $zero, 0x1
@@ -36,7 +36,7 @@ glabel func_800740F0
 /* 74CFC 800740FC AFBF0014 */  sw         $ra, 0x14($sp)
 /* 74D00 80074100 15C00003 */  bnez       $t6, .L80074110
 /* 74D04 80074104 00000000 */   nop
-/* 74D08 80074108 0C01D028 */  jal        func_800740A0
+/* 74D08 80074108 0C01D028 */  jal        __osSiCreateAccessQueue
 /* 74D0C 8007410C 00000000 */   nop
 .L80074110:
 /* 74D10 80074110 3C04801B */  lui        $a0, %hi(D_801AD2F8)
@@ -62,7 +62,7 @@ glabel func_80074134
 /* 74D58 80074158 03E00008 */  jr         $ra
 /* 74D5C 8007415C 00000000 */   nop
 
-glabel func_80074160
+glabel osSetTimer
 /* 74D60 80074160 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 74D64 80074164 AFA40020 */  sw         $a0, 0x20($sp)
 /* 74D68 80074168 8FAE0020 */  lw         $t6, 0x20($sp)

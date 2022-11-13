@@ -110,7 +110,7 @@ glabel func_8007AD70
 /* 7BAD4 8007AED4 8E190014 */  lw         $t9, 0x14($s0)
 /* 7BAD8 8007AED8 AE13001C */  sw         $s3, 0x1C($s0)
 /* 7BADC 8007AEDC 02603025 */  or         $a2, $s3, $zero
-/* 7BAE0 8007AEE0 0C01B350 */  jal        func_8006CD40
+/* 7BAE0 8007AEE0 0C01B350 */  jal        memcpy
 /* 7BAE4 8007AEE4 01F92021 */   addu      $a0, $t7, $t9
 /* 7BAE8 8007AEE8 8E180024 */  lw         $t8, 0x24($s0)
 /* 7BAEC 8007AEEC 03137023 */  subu       $t6, $t8, $s3
@@ -123,7 +123,7 @@ glabel func_8007AD70
 /* 7BB04 8007AF04 8E190014 */  lw         $t9, 0x14($s0)
 /* 7BB08 8007AF08 02202825 */  or         $a1, $s1, $zero
 /* 7BB0C 8007AF0C 02603025 */  or         $a2, $s3, $zero
-/* 7BB10 8007AF10 0C01B350 */  jal        func_8006CD40
+/* 7BB10 8007AF10 0C01B350 */  jal        memcpy
 /* 7BB14 8007AF14 01F92021 */   addu      $a0, $t7, $t9
 /* 7BB18 8007AF18 8E180014 */  lw         $t8, 0x14($s0)
 /* 7BB1C 8007AF1C 8E020024 */  lw         $v0, 0x24($s0)
@@ -153,7 +153,7 @@ glabel func_8007AD70
 /* 7BB70 8007AF70 8E0E0008 */  lw         $t6, 0x8($s0)
 /* 7BB74 8007AF74 8E180014 */  lw         $t8, 0x14($s0)
 /* 7BB78 8007AF78 02403025 */  or         $a2, $s2, $zero
-/* 7BB7C 8007AF7C 0C01B350 */  jal        func_8006CD40
+/* 7BB7C 8007AF7C 0C01B350 */  jal        memcpy
 /* 7BB80 8007AF80 01D82021 */   addu      $a0, $t6, $t8
 /* 7BB84 8007AF84 8E0F0014 */  lw         $t7, 0x14($s0)
 /* 7BB88 8007AF88 8E020024 */  lw         $v0, 0x24($s0)
@@ -188,7 +188,7 @@ glabel func_8007AD70
 /* 7BBF0 8007AFF0 8E190008 */  lw         $t9, 0x8($s0)
 /* 7BBF4 8007AFF4 8E180014 */  lw         $t8, 0x14($s0)
 /* 7BBF8 8007AFF8 02603025 */  or         $a2, $s3, $zero
-/* 7BBFC 8007AFFC 0C01B350 */  jal        func_8006CD40
+/* 7BBFC 8007AFFC 0C01B350 */  jal        memcpy
 /* 7BC00 8007B000 03382021 */   addu      $a0, $t9, $t8
 /* 7BC04 8007B004 8E0F0014 */  lw         $t7, 0x14($s0)
 /* 7BC08 8007B008 8E190024 */  lw         $t9, 0x24($s0)
@@ -263,7 +263,7 @@ glabel func_8007AD70
 /* 7BCF8 8007B0F8 8E190008 */  lw         $t9, 0x8($s0)
 /* 7BCFC 8007B0FC 8E180014 */  lw         $t8, 0x14($s0)
 /* 7BD00 8007B100 02603025 */  or         $a2, $s3, $zero
-/* 7BD04 8007B104 0C01B350 */  jal        func_8006CD40
+/* 7BD04 8007B104 0C01B350 */  jal        memcpy
 /* 7BD08 8007B108 03382021 */   addu      $a0, $t9, $t8
 /* 7BD0C 8007B10C 8E0E0014 */  lw         $t6, 0x14($s0)
 /* 7BD10 8007B110 8E190024 */  lw         $t9, 0x24($s0)
@@ -502,7 +502,7 @@ glabel _Ldtob
 /* 7C03C 8007B43C 240F0003 */  addiu      $t7, $zero, 0x3
 /* 7C040 8007B440 AF2F0014 */  sw         $t7, 0x14($t9)
 /* 7C044 8007B444 8F240008 */  lw         $a0, 0x8($t9)
-/* 7C048 8007B448 0C01B350 */  jal        func_8006CD40
+/* 7C048 8007B448 0C01B350 */  jal        memcpy
 /* 7C04C 8007B44C 24060003 */   addiu     $a2, $zero, 0x3
 /* 7C050 8007B450 100000ED */  b          .L8007B808
 /* 7C054 8007B454 8FBF003C */   lw        $ra, 0x3C($sp)

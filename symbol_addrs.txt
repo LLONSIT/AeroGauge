@@ -95,11 +95,8 @@ __osEepStatus =    0x800778B8;
  alFxPull  =  0x8007A75C;
   _Litob =  0x8007AAD0;
   _Ldtob =  0x8007B2E0;
-
     bzero = 0x8006C4A0;
-
 __osSetGlobalIntMask = 0x8007BBD0 ;
-
 osYieldThread = 0x8007BC20;
 lldiv = 0x8007BC70;
 ldiv = 0x8007BD70;
@@ -143,6 +140,19 @@ coss = 0x8006AC50;
 __cosf = 0x8006AC80;
 __libm_qnan_f = 0x80098D90;
 sins = 0x8006B6E0; 
+osContInit = 0x8006AEE0;
+__osContGetInitData =  0x8006B050;
+__osPackRequestData = 0x8006B120;
+osGetTime = 0x8006C800;
+__osSiRawStartDma = 0x80074240; 
+__osSiCreateAccessQueue = 0x800740A0;
+osSetTimer = 0x80074160;
+__osContPifRam = 0x801AAB90;
+__osMaxControllers = 0x801AABD1;
+alSynSetPitch = 0x8006A6C0;
+memcpy = 0x8006CD40;
+sprintf_text_0000 = 0x8006B9E0;
+
 
 D_8008B7DC = 0x8008B7DC; //type:defined
 D_8008B7E0 = 0x8008B7E0; //type:defined

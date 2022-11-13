@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_8006CD40
+glabel memcpy
 /* 6D940 8006CD40 00801025 */  or         $v0, $a0, $zero
 /* 6D944 8006CD44 10C00007 */  beqz       $a2, .L8006CD64
 /* 6D948 8006CD48 00A01825 */   or        $v1, $a1, $zero

@@ -25,7 +25,7 @@ glabel func_80009150
 /* 9D88 80009188 3C068011 */  lui        $a2, %hi(D_8010CA90)
 /* 9D8C 8000918C 24C6CA90 */  addiu      $a2, $a2, %lo(D_8010CA90)
 /* 9D90 80009190 24A51FD0 */  addiu      $a1, $a1, %lo(D_80081FD0)
-/* 9D94 80009194 0C01ABB8 */  jal        func_8006AEE0
+/* 9D94 80009194 0C01ABB8 */  jal        osContInit
 /* 9D98 80009198 27A40024 */   addiu     $a0, $sp, 0x24
 /* 9D9C 8000919C 3C048008 */  lui        $a0, %hi(D_80081FD0)
 /* 9DA0 800091A0 3C038008 */  lui        $v1, %hi(D_80081FD4)

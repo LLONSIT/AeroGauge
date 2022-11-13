@@ -88,7 +88,7 @@ glabel osEepromWrite
 /* 782D8 800776D8 8FA50050 */   lw        $a1, 0x50($sp)
 /* 782DC 800776DC 3C05801B */  lui        $a1, %hi(D_801AAC30)
 /* 782E0 800776E0 24A5AC30 */  addiu      $a1, $a1, %lo(D_801AAC30)
-/* 782E4 800776E4 0C01D090 */  jal        func_80074240
+/* 782E4 800776E4 0C01D090 */  jal        __osSiRawStartDma
 /* 782E8 800776E8 24040001 */   addiu     $a0, $zero, 0x1
 /* 782EC 800776EC AFA20044 */  sw         $v0, 0x44($sp)
 /* 782F0 800776F0 8FA40048 */  lw         $a0, 0x48($sp)
@@ -97,7 +97,7 @@ glabel osEepromWrite
 /* 782FC 800776FC 24060001 */   addiu     $a2, $zero, 0x1
 /* 78300 80077700 3C05801B */  lui        $a1, %hi(D_801AAC30)
 /* 78304 80077704 24A5AC30 */  addiu      $a1, $a1, %lo(D_801AAC30)
-/* 78308 80077708 0C01D090 */  jal        func_80074240
+/* 78308 80077708 0C01D090 */  jal        __osSiRawStartDma
 /* 7830C 8007770C 00002025 */   or        $a0, $zero, $zero
 /* 78310 80077710 240E0005 */  addiu      $t6, $zero, 0x5
 /* 78314 80077714 3C01801B */  lui        $at, %hi(D_801AABD0)
@@ -282,7 +282,7 @@ glabel __osEepStatus
 /* 785B4 800779B4 8FA80024 */  lw         $t0, 0x24($sp)
 /* 785B8 800779B8 25090008 */  addiu      $t1, $t0, 0x8
 /* 785BC 800779BC AFA90024 */  sw         $t1, 0x24($sp)
-/* 785C0 800779C0 0C01D090 */  jal        func_80074240
+/* 785C0 800779C0 0C01D090 */  jal        __osSiRawStartDma
 /* 785C4 800779C4 A12A0000 */   sb        $t2, 0x0($t1)
 /* 785C8 800779C8 AFA2002C */  sw         $v0, 0x2C($sp)
 /* 785CC 800779CC 8FA40030 */  lw         $a0, 0x30($sp)
@@ -293,7 +293,7 @@ glabel __osEepStatus
 /* 785E0 800779E0 3C05801B */  lui        $a1, %hi(D_801AAC30)
 /* 785E4 800779E4 A020ABD0 */  sb         $zero, %lo(D_801AABD0)($at)
 /* 785E8 800779E8 24A5AC30 */  addiu      $a1, $a1, %lo(D_801AAC30)
-/* 785EC 800779EC 0C01D090 */  jal        func_80074240
+/* 785EC 800779EC 0C01D090 */  jal        __osSiRawStartDma
 /* 785F0 800779F0 00002025 */   or        $a0, $zero, $zero
 /* 785F4 800779F4 AFA2002C */  sw         $v0, 0x2C($sp)
 /* 785F8 800779F8 8FA40030 */  lw         $a0, 0x30($sp)

@@ -4,7 +4,7 @@
 
 #include <os.h>
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/audio/libaudio_temp_seg/alSynFreeVoice.s")
+//#pragma GLOBAL_ASM("asm/nonmatchings/os/audio/libaudio_temp_seg/alSynFreeVoice.s")
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/audio/libaudio_temp_seg/alSynSetVol.s")
+//#pragma GLOBAL_ASM("asm/nonmatchings/os/audio/libaudio_temp_seg/alSynSetVol.s")

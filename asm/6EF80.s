@@ -36,7 +36,7 @@ glabel func_8006E380
 /* 6EFE0 8006E3E0 25ADAC70 */  addiu      $t5, $t5, %lo(D_801AAC70)
 /* 6EFE4 8006E3E4 000B6180 */  sll        $t4, $t3, 6
 /* 6EFE8 8006E3E8 018D2821 */  addu       $a1, $t4, $t5
-/* 6EFEC 8006E3EC 0C01D090 */  jal        func_80074240
+/* 6EFEC 8006E3EC 0C01D090 */  jal        __osSiRawStartDma
 /* 6EFF0 8006E3F0 24040001 */   addiu     $a0, $zero, 0x1
 /* 6EFF4 8006E3F4 8FAE0050 */  lw         $t6, 0x50($sp)
 /* 6EFF8 8006E3F8 00002825 */  or         $a1, $zero, $zero
@@ -45,7 +45,7 @@ glabel func_8006E380
 /* 6F004 8006E404 8DC40004 */   lw        $a0, 0x4($t6)
 /* 6F008 8006E408 3C05801B */  lui        $a1, %hi(D_801AD350)
 /* 6F00C 8006E40C 24A5D350 */  addiu      $a1, $a1, %lo(D_801AD350)
-/* 6F010 8006E410 0C01D090 */  jal        func_80074240
+/* 6F010 8006E410 0C01D090 */  jal        __osSiRawStartDma
 /* 6F014 8006E414 00002025 */   or        $a0, $zero, $zero
 /* 6F018 8006E418 8FAF0050 */  lw         $t7, 0x50($sp)
 /* 6F01C 8006E41C AFA20048 */  sw         $v0, 0x48($sp)
@@ -148,7 +148,7 @@ glabel func_8006E520
 /* 6F180 8006E580 25ADAD70 */  addiu      $t5, $t5, %lo(D_801AAD70)
 /* 6F184 8006E584 000B6180 */  sll        $t4, $t3, 6
 /* 6F188 8006E588 018D2821 */  addu       $a1, $t4, $t5
-/* 6F18C 8006E58C 0C01D090 */  jal        func_80074240
+/* 6F18C 8006E58C 0C01D090 */  jal        __osSiRawStartDma
 /* 6F190 8006E590 24040001 */   addiu     $a0, $zero, 0x1
 /* 6F194 8006E594 8FAE0050 */  lw         $t6, 0x50($sp)
 /* 6F198 8006E598 00002825 */  or         $a1, $zero, $zero
@@ -157,7 +157,7 @@ glabel func_8006E520
 /* 6F1A4 8006E5A4 8DC40004 */   lw        $a0, 0x4($t6)
 /* 6F1A8 8006E5A8 3C05801B */  lui        $a1, %hi(D_801AD350)
 /* 6F1AC 8006E5AC 24A5D350 */  addiu      $a1, $a1, %lo(D_801AD350)
-/* 6F1B0 8006E5B0 0C01D090 */  jal        func_80074240
+/* 6F1B0 8006E5B0 0C01D090 */  jal        __osSiRawStartDma
 /* 6F1B4 8006E5B4 00002025 */   or        $a0, $zero, $zero
 /* 6F1B8 8006E5B8 8FAF0050 */  lw         $t7, 0x50($sp)
 /* 6F1BC 8006E5BC AFA20048 */  sw         $v0, 0x48($sp)

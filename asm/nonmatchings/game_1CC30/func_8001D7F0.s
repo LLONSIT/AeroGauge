@@ -1,7 +1,7 @@
 glabel func_8001D7F0
 /* 1E3F0 8001D7F0 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 1E3F4 8001D7F4 AFBF0014 */  sw         $ra, 0x14($sp)
-/* 1E3F8 8001D7F8 0C01B200 */  jal        func_8006C800
+/* 1E3F8 8001D7F8 0C01B200 */  jal        osGetTime
 /* 1E3FC 8001D7FC 00000000 */   nop
 /* 1E400 8001D800 3C0E8014 */  lui        $t6, %hi(D_8013FF88)
 /* 1E404 8001D804 8DCEFF88 */  lw         $t6, %lo(D_8013FF88)($t6)
