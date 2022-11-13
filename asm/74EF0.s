@@ -73,8 +73,8 @@ glabel func_800742F0
 
 glabel func_800743D4
 /* 74FD4 800743D4 27BDFFF0 */  addiu      $sp, $sp, -0x10
-/* 74FD8 800743D8 3C01801B */  lui        $at, %hi(D_801AABD0)
-/* 74FDC 800743DC A020ABD0 */  sb         $zero, %lo(D_801AABD0)($at)
+/* 74FD8 800743D8 3C01801B */  lui        $at, %hi(__osContLastCmd)
+/* 74FDC 800743DC A020ABD0 */  sb         $zero, %lo(__osContLastCmd)($at)
 /* 74FE0 800743E0 3C0F801B */  lui        $t7, %hi(D_801AD350)
 /* 74FE4 800743E4 3C01801B */  lui        $at, %hi(D_801AD38C)
 /* 74FE8 800743E8 240E0001 */  addiu      $t6, $zero, 0x1

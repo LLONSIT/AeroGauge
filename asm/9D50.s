@@ -19,7 +19,7 @@ glabel func_80009150
 /* 9D70 80009170 27A50024 */  addiu      $a1, $sp, 0x24
 /* 9D74 80009174 0C01AB80 */  jal        osSetEventMesg
 /* 9D78 80009178 24060001 */   addiu     $a2, $zero, 0x1
-/* 9D7C 8000917C 0C01AB9C */  jal        func_8006AE70
+/* 9D7C 8000917C 0C01AB9C */  jal        osContSetCh
 /* 9D80 80009180 24040002 */   addiu     $a0, $zero, 0x2
 /* 9D84 80009184 3C058008 */  lui        $a1, %hi(D_80081FD0)
 /* 9D88 80009188 3C068011 */  lui        $a2, %hi(D_8010CA90)

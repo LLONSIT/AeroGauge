@@ -17,7 +17,7 @@ glabel osEepromWrite
 /* 781D8 800775D8 AFA60050 */  sw         $a2, 0x50($sp)
 /* 781DC 800775DC AFB00018 */  sw         $s0, 0x18($sp)
 /* 781E0 800775E0 AFA00044 */  sw         $zero, 0x44($sp)
-/* 781E4 800775E4 0C01D03C */  jal        func_800740F0
+/* 781E4 800775E4 0C01D03C */  jal        __osSiGetAccess
 /* 781E8 800775E8 AFAE0038 */   sw        $t6, 0x38($sp)
 /* 781EC 800775EC 8FA40048 */  lw         $a0, 0x48($sp)
 /* 781F0 800775F0 0C01DE2E */  jal        __osEepStatus
@@ -33,7 +33,7 @@ glabel osEepromWrite
 /* 78218 80077618 A7B8003E */  sh         $t8, 0x3E($sp)
 /* 7821C 8007761C 13200005 */  beqz       $t9, .L80077634
 /* 78220 80077620 00000000 */   nop
-/* 78224 80077624 0C01D04D */  jal        func_80074134
+/* 78224 80077624 0C01D04D */  jal        __osSiRelAccess
 /* 78228 80077628 00000000 */   nop
 /* 7822C 8007762C 1000005A */  b          .L80077798
 /* 78230 80077630 24020008 */   addiu     $v0, $zero, 0x8
@@ -51,7 +51,7 @@ glabel osEepromWrite
 /* 78258 80077658 29010041 */  slti       $at, $t0, 0x41
 /* 7825C 8007765C 14200011 */  bnez       $at, .L800776A4
 /* 78260 80077660 00000000 */   nop
-/* 78264 80077664 0C01D04D */  jal        func_80074134
+/* 78264 80077664 0C01D04D */  jal        __osSiRelAccess
 /* 78268 80077668 00000000 */   nop
 /* 7826C 8007766C 1000004A */  b          .L80077798
 /* 78270 80077670 2402FFFF */   addiu     $v0, $zero, -0x1
@@ -60,12 +60,12 @@ glabel osEepromWrite
 /* 78278 80077678 29210101 */  slti       $at, $t1, 0x101
 /* 7827C 8007767C 14200009 */  bnez       $at, .L800776A4
 /* 78280 80077680 00000000 */   nop
-/* 78284 80077684 0C01D04D */  jal        func_80074134
+/* 78284 80077684 0C01D04D */  jal        __osSiRelAccess
 /* 78288 80077688 00000000 */   nop
 /* 7828C 8007768C 10000042 */  b          .L80077798
 /* 78290 80077690 2402FFFF */   addiu     $v0, $zero, -0x1
 .L80077694:
-/* 78294 80077694 0C01D04D */  jal        func_80074134
+/* 78294 80077694 0C01D04D */  jal        __osSiRelAccess
 /* 78298 80077698 00000000 */   nop
 /* 7829C 8007769C 1000003E */  b          .L80077798
 /* 782A0 800776A0 24020008 */   addiu     $v0, $zero, 0x8
@@ -100,9 +100,9 @@ glabel osEepromWrite
 /* 78308 80077708 0C01D090 */  jal        __osSiRawStartDma
 /* 7830C 8007770C 00002025 */   or        $a0, $zero, $zero
 /* 78310 80077710 240E0005 */  addiu      $t6, $zero, 0x5
-/* 78314 80077714 3C01801B */  lui        $at, %hi(D_801AABD0)
+/* 78314 80077714 3C01801B */  lui        $at, %hi(__osContLastCmd)
 /* 78318 80077718 AFA20044 */  sw         $v0, 0x44($sp)
-/* 7831C 8007771C A02EABD0 */  sb         $t6, %lo(D_801AABD0)($at)
+/* 7831C 8007771C A02EABD0 */  sb         $t6, %lo(__osContLastCmd)($at)
 /* 78320 80077720 8FA40048 */  lw         $a0, 0x48($sp)
 /* 78324 80077724 00002825 */  or         $a1, $zero, $zero
 /* 78328 80077728 0C019824 */  jal        osRecvMesg
@@ -131,7 +131,7 @@ glabel osEepromWrite
 /* 78380 80077780 93AD002D */  lbu        $t5, 0x2D($sp)
 /* 78384 80077784 31AE00C0 */  andi       $t6, $t5, 0xC0
 /* 78388 80077788 000E7903 */  sra        $t7, $t6, 4
-/* 7838C 8007778C 0C01D04D */  jal        func_80074134
+/* 7838C 8007778C 0C01D04D */  jal        __osSiRelAccess
 /* 78390 80077790 AFAF0044 */   sw        $t7, 0x44($sp)
 /* 78394 80077794 8FA20044 */  lw         $v0, 0x44($sp)
 .L80077798:
@@ -289,9 +289,9 @@ glabel __osEepStatus
 /* 785D0 800779D0 00002825 */  or         $a1, $zero, $zero
 /* 785D4 800779D4 0C019824 */  jal        osRecvMesg
 /* 785D8 800779D8 24060001 */   addiu     $a2, $zero, 0x1
-/* 785DC 800779DC 3C01801B */  lui        $at, %hi(D_801AABD0)
+/* 785DC 800779DC 3C01801B */  lui        $at, %hi(__osContLastCmd)
 /* 785E0 800779E0 3C05801B */  lui        $a1, %hi(D_801AAC30)
-/* 785E4 800779E4 A020ABD0 */  sb         $zero, %lo(D_801AABD0)($at)
+/* 785E4 800779E4 A020ABD0 */  sb         $zero, %lo(__osContLastCmd)($at)
 /* 785E8 800779E8 24A5AC30 */  addiu      $a1, $a1, %lo(D_801AAC30)
 /* 785EC 800779EC 0C01D090 */  jal        __osSiRawStartDma
 /* 785F0 800779F0 00002025 */   or        $a0, $zero, $zero

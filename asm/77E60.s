@@ -33,11 +33,11 @@ glabel __osContRamWrite
 /* 77EB8 800772B8 10000065 */  b          .L80077450
 /* 77EBC 800772BC 00001025 */   or        $v0, $zero, $zero
 .L800772C0:
-/* 77EC0 800772C0 0C01D03C */  jal        func_800740F0
+/* 77EC0 800772C0 0C01D03C */  jal        __osSiGetAccess
 /* 77EC4 800772C4 00000000 */   nop
 /* 77EC8 800772C8 24080003 */  addiu      $t0, $zero, 0x3
-/* 77ECC 800772CC 3C01801B */  lui        $at, %hi(D_801AABD0)
-/* 77ED0 800772D0 A028ABD0 */  sb         $t0, %lo(D_801AABD0)($at)
+/* 77ECC 800772CC 3C01801B */  lui        $at, %hi(__osContLastCmd)
+/* 77ED0 800772D0 A028ABD0 */  sb         $t0, %lo(__osContLastCmd)($at)
 /* 77ED4 800772D4 8FA40064 */  lw         $a0, 0x64($sp)
 /* 77ED8 800772D8 97A5006A */  lhu        $a1, 0x6A($sp)
 /* 77EDC 800772DC 0C01DD19 */  jal        func_80077464
@@ -115,7 +115,7 @@ glabel __osContRamWrite
 /* 77FEC 800773EC 8FAE005C */  lw         $t6, 0x5C($sp)
 /* 77FF0 800773F0 11C00005 */  beqz       $t6, .L80077408
 /* 77FF4 800773F4 00000000 */   nop
-/* 77FF8 800773F8 0C01D04D */  jal        func_80074134
+/* 77FF8 800773F8 0C01D04D */  jal        __osSiRelAccess
 /* 77FFC 800773FC 00000000 */   nop
 /* 78000 80077400 10000013 */  b          .L80077450
 /* 78004 80077404 8FA2005C */   lw        $v0, 0x5C($sp)
@@ -138,7 +138,7 @@ glabel __osContRamWrite
 /* 7803C 8007743C 1600FFB2 */  bnez       $s0, .L80077308
 /* 78040 80077440 AFB80028 */   sw        $t8, 0x28($sp)
 .L80077444:
-/* 78044 80077444 0C01D04D */  jal        func_80074134
+/* 78044 80077444 0C01D04D */  jal        __osSiRelAccess
 /* 78048 80077448 00000000 */   nop
 /* 7804C 8007744C 8FA2005C */  lw         $v0, 0x5C($sp)
 .L80077450:

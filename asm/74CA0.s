@@ -29,7 +29,7 @@ glabel __osSiCreateAccessQueue
 /* 74CE8 800740E8 03E00008 */  jr         $ra
 /* 74CEC 800740EC 00000000 */   nop
 
-glabel func_800740F0
+glabel __osSiGetAccess
 /* 74CF0 800740F0 3C0E8009 */  lui        $t6, %hi(D_80094B80)
 /* 74CF4 800740F4 8DCE4B80 */  lw         $t6, %lo(D_80094B80)($t6)
 /* 74CF8 800740F8 27BDFFE0 */  addiu      $sp, $sp, -0x20
@@ -49,7 +49,7 @@ glabel func_800740F0
 /* 74D2C 8007412C 03E00008 */  jr         $ra
 /* 74D30 80074130 00000000 */   nop
 
-glabel func_80074134
+glabel __osSiRelAccess
 /* 74D34 80074134 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 74D38 80074138 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 74D3C 8007413C 3C04801B */  lui        $a0, %hi(D_801AD2F8)

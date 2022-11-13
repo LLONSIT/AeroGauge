@@ -131,3 +131,29 @@ struct unk_struct_8001583C {
     s8 unk4CF;
     s8 unk4CE;
 };
+
+
+struct unk_struct_80010C14{
+
+    s8 pad[0xFC];
+    s16 unkFC;
+    s16 unkFE;
+    s16 unk100;
+    s16 unk102;
+    s16 unk104;
+    s16 unk106;
+    s8 unk108;
+    s32 unk10C;
+
+
+};
+
+
+struct unk_struct_800114A0{
+    s16 unk0;
+    s16 unk2;
+    s16 unk4;
+    f32 unk8;
+    f32 unk10;
+    f32 unkC;
+};

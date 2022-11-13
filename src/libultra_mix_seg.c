@@ -1,4 +1,5 @@
-    
+//TODO remove this segment
+
 #pragma GLOBAL_ASM("asm/nonmatchings/libultra_mix_seg/alSeqpPlay.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/libultra_mix_seg/alCents2Ratio.s")

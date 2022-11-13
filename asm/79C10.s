@@ -892,12 +892,12 @@ glabel func_80079C2C
 /* 7A8DC 80079CDC 8DE90000 */  lw         $t1, 0x0($t7)
 /* 7A8E0 80079CE0 11200008 */  beqz       $t1, .L80079D04
 /* 7A8E4 80079CE4 00000000 */   nop
-/* 7A8E8 80079CE8 0C01C405 */  jal        func_80071014
+/* 7A8E8 80079CE8 0C01C405 */  jal        __osPopThread
 /* 7A8EC 80079CEC 01C02025 */   or        $a0, $t6, $zero
 /* 7A8F0 80079CF0 00408025 */  or         $s0, $v0, $zero
-/* 7A8F4 80079CF4 3C048009 */  lui        $a0, %hi(D_80094878)
-/* 7A8F8 80079CF8 24844878 */  addiu      $a0, $a0, %lo(D_80094878)
-/* 7A8FC 80079CFC 0C01C3F3 */  jal        func_80070FCC
+/* 7A8F4 80079CF4 3C048009 */  lui        $a0, %hi(__osRunQueue)
+/* 7A8F8 80079CF8 24844878 */  addiu      $a0, $a0, %lo(__osRunQueue)
+/* 7A8FC 80079CFC 0C01C3F3 */  jal        __osEnqueueThread
 /* 7A900 80079D00 02002825 */   or        $a1, $s0, $zero
 .L80079D04:
 /* 7A904 80079D04 8FBF001C */  lw         $ra, 0x1C($sp)

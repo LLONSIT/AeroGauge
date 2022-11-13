@@ -19,8 +19,8 @@ glabel osDestroyThread
 /* 7A940 80079D40 00408025 */  or         $s0, $v0, $zero
 /* 7A944 80079D44 15C00005 */  bnez       $t6, .L80079D5C
 /* 7A948 80079D48 00000000 */   nop
-/* 7A94C 80079D4C 3C0F8009 */  lui        $t7, %hi(D_80094880)
-/* 7A950 80079D50 8DEF4880 */  lw         $t7, %lo(D_80094880)($t7)
+/* 7A94C 80079D4C 3C0F8009 */  lui        $t7, %hi(__osRunningThread)
+/* 7A950 80079D50 8DEF4880 */  lw         $t7, %lo(__osRunningThread)($t7)
 /* 7A954 80079D54 10000009 */  b          .L80079D7C
 /* 7A958 80079D58 AFAF0038 */   sw        $t7, 0x38($sp)
 .L80079D5C:
@@ -64,12 +64,12 @@ glabel osDestroyThread
 /* 7A9E0 80079DE0 15C1FFF5 */  bne        $t6, $at, .L80079DB8
 /* 7A9E4 80079DE4 00000000 */   nop
 .L80079DE8:
-/* 7A9E8 80079DE8 3C198009 */  lui        $t9, %hi(D_80094880)
-/* 7A9EC 80079DEC 8F394880 */  lw         $t9, %lo(D_80094880)($t9)
+/* 7A9E8 80079DE8 3C198009 */  lui        $t9, %hi(__osRunningThread)
+/* 7A9EC 80079DEC 8F394880 */  lw         $t9, %lo(__osRunningThread)($t9)
 /* 7A9F0 80079DF0 8FAF0038 */  lw         $t7, 0x38($sp)
 /* 7A9F4 80079DF4 15F90003 */  bne        $t7, $t9, .L80079E04
 /* 7A9F8 80079DF8 00000000 */   nop
-/* 7A9FC 80079DFC 0C01C409 */  jal        func_80071024
+/* 7A9FC 80079DFC 0C01C409 */  jal        __osDispatchThread
 /* 7AA00 80079E00 00000000 */   nop
 .L80079E04:
 /* 7AA04 80079E04 0C01C220 */  jal        __osRestoreInt

@@ -15,7 +15,7 @@ glabel osPfsIsPlug
 /* 786F0 80077AF0 AFA50044 */  sw         $a1, 0x44($sp)
 /* 786F4 80077AF4 AFA0003C */  sw         $zero, 0x3C($sp)
 /* 786F8 80077AF8 A3A0001F */  sb         $zero, 0x1F($sp)
-/* 786FC 80077AFC 0C01D03C */  jal        func_800740F0
+/* 786FC 80077AFC 0C01D03C */  jal        __osSiGetAccess
 /* 78700 80077B00 AFAE0018 */   sw        $t6, 0x18($sp)
 .L80077B04:
 /* 78704 80077B04 0C01DF20 */  jal        __osPfsRequestData
@@ -110,7 +110,7 @@ glabel osPfsIsPlug
 /* 78850 80077C50 1420FFE9 */  bnez       $at, .L80077BF8
 /* 78854 80077C54 00000000 */   nop
 .L80077C58:
-/* 78858 80077C58 0C01D04D */  jal        func_80074134
+/* 78858 80077C58 0C01D04D */  jal        __osSiRelAccess
 /* 7885C 80077C5C 00000000 */   nop
 /* 78860 80077C60 93AE001F */  lbu        $t6, 0x1F($sp)
 /* 78864 80077C64 8FAF0044 */  lw         $t7, 0x44($sp)
@@ -126,9 +126,9 @@ glabel __osPfsRequestData
 /* 78884 80077C84 3C0D801B */  lui        $t5, %hi(__osMaxControllers)
 /* 78888 80077C88 91ADABD1 */  lbu        $t5, %lo(__osMaxControllers)($t5)
 /* 7888C 80077C8C 308400FF */  andi       $a0, $a0, 0xFF
-/* 78890 80077C90 3C01801B */  lui        $at, %hi(D_801AABD0)
+/* 78890 80077C90 3C01801B */  lui        $at, %hi(__osContLastCmd)
 /* 78894 80077C94 3C0E801B */  lui        $t6, %hi(D_801AD350)
-/* 78898 80077C98 A024ABD0 */  sb         $a0, %lo(D_801AABD0)($at)
+/* 78898 80077C98 A024ABD0 */  sb         $a0, %lo(__osContLastCmd)($at)
 /* 7889C 80077C9C 25CED350 */  addiu      $t6, $t6, %lo(D_801AD350)
 /* 788A0 80077CA0 3C01801B */  lui        $at, %hi(D_801AD38C)
 /* 788A4 80077CA4 240F0001 */  addiu      $t7, $zero, 0x1
@@ -350,8 +350,8 @@ glabel __osContDataCrc
 glabel osGetThreadPri
 /* 78BA0 80077FA0 14800003 */  bnez       $a0, .L80077FB0
 /* 78BA4 80077FA4 00000000 */   nop
-/* 78BA8 80077FA8 3C048009 */  lui        $a0, %hi(D_80094880)
-/* 78BAC 80077FAC 8C844880 */  lw         $a0, %lo(D_80094880)($a0)
+/* 78BA8 80077FA8 3C048009 */  lui        $a0, %hi(__osRunningThread)
+/* 78BAC 80077FAC 8C844880 */  lw         $a0, %lo(__osRunningThread)($a0)
 .L80077FB0:
 /* 78BB0 80077FB0 03E00008 */  jr         $ra
 /* 78BB4 80077FB4 8C820004 */   lw        $v0, 0x4($a0)

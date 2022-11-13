@@ -55,7 +55,7 @@ SECTIONS
         build/asm/10520.s.o(.text);
         build/asm/10640.s.o(.text);
         build/asm/108F0.s.o(.text);
-        build/asm/10D60.s.o(.text);
+        build/src/game_10D60.c.o(.text);
         build/asm/12760.s.o(.text);
         build/src/game_14060.c.o(.text);
         build/src/game_14720.c.o(.text);
@@ -146,7 +146,8 @@ SECTIONS
         build/src/game_68B40.c.o(.text);
         build/asm/code_68590.s.o(.text);
         build/src/os/osCreateThread.c.o(.text);
-        build/asm/68900.s.o(.text);
+        build/src/os/osStartThread.c.o(.text);
+        build/src/os/audio/alSeqpDelete.c.o(.text);
         build/src/os/audio/alSndpDelete.c.o(.text);
         build/src/os/osVirtualToPhysical.c.o(.text);
         build/asm/68B30.s.o(.text);
@@ -168,7 +169,7 @@ SECTIONS
         build/src/os/gu/cosf.c.o(.text);
         build/asm/6B9F0.s.o(.text);
         build/asm/6BA00.s.o(.text);
-        build/src/os/contsetch.c.o(.text);
+        build/src/os/osContsetch.c.o(.text);
         build/src/os/controller.c.o(.text);
         build/asm/6BE20.s.o(.text);
         build/asm/6C2E0.s.o(.text);
@@ -286,7 +287,7 @@ SECTIONS
         build/asm/10520.s.o(.bss);
         build/asm/10640.s.o(.bss);
         build/asm/108F0.s.o(.bss);
-        build/asm/10D60.s.o(.bss);
+        build/src/game_10D60.c.o(.bss);
         build/asm/12760.s.o(.bss);
         build/src/game_14060.c.o(.bss);
         build/src/game_14720.c.o(.bss);
@@ -373,7 +374,8 @@ SECTIONS
         build/src/game_68B40.c.o(.bss);
         build/asm/code_68590.s.o(.bss);
         build/src/os/osCreateThread.c.o(.bss);
-        build/asm/68900.s.o(.bss);
+        build/src/os/osStartThread.c.o(.bss);
+        build/src/os/audio/alSeqpDelete.c.o(.bss);
         build/src/os/audio/alSndpDelete.c.o(.bss);
         build/src/os/osVirtualToPhysical.c.o(.bss);
         build/asm/68B30.s.o(.bss);
@@ -391,7 +393,7 @@ SECTIONS
         build/src/os/gu/cosf.c.o(.bss);
         build/asm/6B9F0.s.o(.bss);
         build/asm/6BA00.s.o(.bss);
-        build/src/os/contsetch.c.o(.bss);
+        build/src/os/osContsetch.c.o(.bss);
         build/src/os/controller.c.o(.bss);
         build/asm/6BE20.s.o(.bss);
         build/asm/6C2E0.s.o(.bss);

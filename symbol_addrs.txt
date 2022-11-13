@@ -152,6 +152,16 @@ __osMaxControllers = 0x801AABD1;
 alSynSetPitch = 0x8006A6C0;
 memcpy = 0x8006CD40;
 sprintf_text_0000 = 0x8006B9E0;
+osContSetCh = 0x8006AE70;
+__osContLastCmd = 0x801AABD0;
+__osSiGetAccess = 0x800740F0;
+__osSiRelAccess = 0x80074134; 
+__osRunQueue = 0x80094878; 
+__osRunningThread = 0x80094880;
+__osEnqueueThread = 0x80070FCC;
+__osPopThread = 0x80071014; 
+__osEnqueueAndYield = 0x80070ECC;
+__osDispatchThread = 0x80071024;
 
 
 D_8008B7DC = 0x8008B7DC; //type:defined

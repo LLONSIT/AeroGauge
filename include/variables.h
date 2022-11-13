@@ -21,7 +21,6 @@ extern s32 D_801AB060;
 extern s32 D_80093690;
 extern  u8 D_801AC092;
 extern s8 gPlayerLapCount;
-extern f32 gUnk_YPos;
 
 extern u8 D_8019E6A8;
 extern u16 D_8019EE02;
@@ -42,6 +41,11 @@ extern s8 gPlayerRacePos;
 extern s32 D_8008C8CC;
 extern const char D_80096C94;
 extern f64 D_80096CD0;
+
+//game_10D60
+extern float gUnk_YPos;
+extern f32 D_800962D0;
+extern f32 D_800962D4;
 
 //game_1CC30
 

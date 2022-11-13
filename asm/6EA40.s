@@ -12,7 +12,7 @@ glabel func_8006DE40
 /* 6EA44 8006DE44 AFBF001C */  sw         $ra, 0x1C($sp)
 /* 6EA48 8006DE48 AFA40030 */  sw         $a0, 0x30($sp)
 /* 6EA4C 8006DE4C AFB00018 */  sw         $s0, 0x18($sp)
-/* 6EA50 8006DE50 0C01D03C */  jal        func_800740F0
+/* 6EA50 8006DE50 0C01D03C */  jal        __osSiGetAccess
 /* 6EA54 8006DE54 AFA0002C */   sw        $zero, 0x2C($sp)
 /* 6EA58 8006DE58 8FA40030 */  lw         $a0, 0x30($sp)
 /* 6EA5C 8006DE5C 0C01DE2E */  jal        __osEepStatus
@@ -46,7 +46,7 @@ glabel func_8006DE40
 .L8006DEC0:
 /* 6EAC0 8006DEC0 AFA0002C */  sw         $zero, 0x2C($sp)
 .L8006DEC4:
-/* 6EAC4 8006DEC4 0C01D04D */  jal        func_80074134
+/* 6EAC4 8006DEC4 0C01D04D */  jal        __osSiRelAccess
 /* 6EAC8 8006DEC8 00000000 */   nop
 /* 6EACC 8006DECC 8FBF001C */  lw         $ra, 0x1C($sp)
 /* 6EAD0 8006DED0 8FA2002C */  lw         $v0, 0x2C($sp)
@@ -65,7 +65,7 @@ glabel func_8006DEE0
 /* 6EAFC 8006DEFC AFB00018 */  sw         $s0, 0x18($sp)
 /* 6EB00 8006DF00 AFA00044 */  sw         $zero, 0x44($sp)
 /* 6EB04 8006DF04 AFA00040 */  sw         $zero, 0x40($sp)
-/* 6EB08 8006DF08 0C01D03C */  jal        func_800740F0
+/* 6EB08 8006DF08 0C01D03C */  jal        __osSiGetAccess
 /* 6EB0C 8006DF0C AFAE0038 */   sw        $t6, 0x38($sp)
 /* 6EB10 8006DF10 8FA40048 */  lw         $a0, 0x48($sp)
 /* 6EB14 8006DF14 0C01DE2E */  jal        __osEepStatus
@@ -77,7 +77,7 @@ glabel func_8006DEE0
 /* 6EB2C 8006DF2C A7B8003E */  sh         $t8, 0x3E($sp)
 /* 6EB30 8006DF30 13200005 */  beqz       $t9, .L8006DF48
 /* 6EB34 8006DF34 00000000 */   nop
-/* 6EB38 8006DF38 0C01D04D */  jal        func_80074134
+/* 6EB38 8006DF38 0C01D04D */  jal        __osSiRelAccess
 /* 6EB3C 8006DF3C 00000000 */   nop
 /* 6EB40 8006DF40 10000069 */  b          .L8006E0E8
 /* 6EB44 8006DF44 24020008 */   addiu     $v0, $zero, 0x8
@@ -95,7 +95,7 @@ glabel func_8006DEE0
 /* 6EB6C 8006DF6C 29010041 */  slti       $at, $t0, 0x41
 /* 6EB70 8006DF70 14200011 */  bnez       $at, .L8006DFB8
 /* 6EB74 8006DF74 00000000 */   nop
-/* 6EB78 8006DF78 0C01D04D */  jal        func_80074134
+/* 6EB78 8006DF78 0C01D04D */  jal        __osSiRelAccess
 /* 6EB7C 8006DF7C 00000000 */   nop
 /* 6EB80 8006DF80 10000059 */  b          .L8006E0E8
 /* 6EB84 8006DF84 2402FFFF */   addiu     $v0, $zero, -0x1
@@ -104,12 +104,12 @@ glabel func_8006DEE0
 /* 6EB8C 8006DF8C 29210101 */  slti       $at, $t1, 0x101
 /* 6EB90 8006DF90 14200009 */  bnez       $at, .L8006DFB8
 /* 6EB94 8006DF94 00000000 */   nop
-/* 6EB98 8006DF98 0C01D04D */  jal        func_80074134
+/* 6EB98 8006DF98 0C01D04D */  jal        __osSiRelAccess
 /* 6EB9C 8006DF9C 00000000 */   nop
 /* 6EBA0 8006DFA0 10000051 */  b          .L8006E0E8
 /* 6EBA4 8006DFA4 2402FFFF */   addiu     $v0, $zero, -0x1
 .L8006DFA8:
-/* 6EBA8 8006DFA8 0C01D04D */  jal        func_80074134
+/* 6EBA8 8006DFA8 0C01D04D */  jal        __osSiRelAccess
 /* 6EBAC 8006DFAC 00000000 */   nop
 /* 6EBB0 8006DFB0 1000004D */  b          .L8006E0E8
 /* 6EBB4 8006DFB4 24020008 */   addiu     $v0, $zero, 0x8
@@ -143,9 +143,9 @@ glabel func_8006DEE0
 /* 6EC18 8006E018 0C01D090 */  jal        __osSiRawStartDma
 /* 6EC1C 8006E01C 00002025 */   or        $a0, $zero, $zero
 /* 6EC20 8006E020 240E0004 */  addiu      $t6, $zero, 0x4
-/* 6EC24 8006E024 3C01801B */  lui        $at, %hi(D_801AABD0)
+/* 6EC24 8006E024 3C01801B */  lui        $at, %hi(__osContLastCmd)
 /* 6EC28 8006E028 AFA20044 */  sw         $v0, 0x44($sp)
-/* 6EC2C 8006E02C A02EABD0 */  sb         $t6, %lo(D_801AABD0)($at)
+/* 6EC2C 8006E02C A02EABD0 */  sb         $t6, %lo(__osContLastCmd)($at)
 /* 6EC30 8006E030 8FA40048 */  lw         $a0, 0x48($sp)
 /* 6EC34 8006E034 00002825 */  or         $a1, $zero, $zero
 /* 6EC38 8006E038 0C019824 */  jal        osRecvMesg
@@ -192,7 +192,7 @@ glabel func_8006DEE0
 /* 6ECD4 8006E0D4 1420FFF4 */  bnez       $at, .L8006E0A8
 /* 6ECD8 8006E0D8 AFA90050 */   sw        $t1, 0x50($sp)
 .L8006E0DC:
-/* 6ECDC 8006E0DC 0C01D04D */  jal        func_80074134
+/* 6ECDC 8006E0DC 0C01D04D */  jal        __osSiRelAccess
 /* 6ECE0 8006E0E0 00000000 */   nop
 /* 6ECE4 8006E0E4 8FA20044 */  lw         $v0, 0x44($sp)
 .L8006E0E8:

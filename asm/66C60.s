@@ -44,11 +44,11 @@ glabel osRecvMesg
 /* 66CD8 800660D8 10000036 */  b          .L800661B4
 /* 66CDC 800660DC 2402FFFF */   addiu     $v0, $zero, -0x1
 .L800660E0:
-/* 66CE0 800660E0 3C088009 */  lui        $t0, %hi(D_80094880)
-/* 66CE4 800660E4 8D084880 */  lw         $t0, %lo(D_80094880)($t0)
+/* 66CE0 800660E0 3C088009 */  lui        $t0, %hi(__osRunningThread)
+/* 66CE4 800660E4 8D084880 */  lw         $t0, %lo(__osRunningThread)($t0)
 /* 66CE8 800660E8 24190008 */  addiu      $t9, $zero, 0x8
 /* 66CEC 800660EC A5190010 */  sh         $t9, 0x10($t0)
-/* 66CF0 800660F0 0C01C3B3 */  jal        func_80070ECC
+/* 66CF0 800660F0 0C01C3B3 */  jal        __osEnqueueAndYield
 /* 66CF4 800660F4 8FA40028 */   lw        $a0, 0x28($sp)
 /* 66CF8 800660F8 8FA90028 */  lw         $t1, 0x28($sp)
 /* 66CFC 800660FC 8D2A0008 */  lw         $t2, 0x8($t1)
@@ -93,7 +93,7 @@ glabel osRecvMesg
 /* 66D88 80066188 8D690000 */  lw         $t1, 0x0($t3)
 /* 66D8C 8006618C 11200006 */  beqz       $t1, .L800661A8
 /* 66D90 80066190 00000000 */   nop
-/* 66D94 80066194 0C01C405 */  jal        func_80071014
+/* 66D94 80066194 0C01C405 */  jal        __osPopThread
 /* 66D98 80066198 27240004 */   addiu     $a0, $t9, 0x4
 /* 66D9C 8006619C 00408825 */  or         $s1, $v0, $zero
 /* 66DA0 800661A0 0C019F40 */  jal        osStartThread

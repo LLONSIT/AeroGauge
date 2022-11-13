@@ -101,12 +101,12 @@ glabel func_8006FD30
 /* 70970 8006FD70 24010001 */  addiu      $at, $zero, 0x1
 /* 70974 8006FD74 1721000A */  bne        $t9, $at, .L8006FDA0
 /* 70978 8006FD78 00000000 */   nop
-/* 7097C 8006FD7C 3C098009 */  lui        $t1, %hi(D_80094880)
-/* 70980 8006FD80 8D294880 */  lw         $t1, %lo(D_80094880)($t1)
+/* 7097C 8006FD7C 3C098009 */  lui        $t1, %hi(__osRunningThread)
+/* 70980 8006FD80 8D294880 */  lw         $t1, %lo(__osRunningThread)($t1)
 /* 70984 8006FD84 24080008 */  addiu      $t0, $zero, 0x8
 /* 70988 8006FD88 A5280010 */  sh         $t0, 0x10($t1)
 /* 7098C 8006FD8C 8FA40028 */  lw         $a0, 0x28($sp)
-/* 70990 8006FD90 0C01C3B3 */  jal        func_80070ECC
+/* 70990 8006FD90 0C01C3B3 */  jal        __osEnqueueAndYield
 /* 70994 8006FD94 24840004 */   addiu     $a0, $a0, 0x4
 /* 70998 8006FD98 10000005 */  b          .L8006FDB0
 /* 7099C 8006FD9C 00000000 */   nop
@@ -158,7 +158,7 @@ glabel func_8006FD30
 /* 70A40 8006FE40 8D4C0000 */  lw         $t4, 0x0($t2)
 /* 70A44 8006FE44 11800006 */  beqz       $t4, .L8006FE60
 /* 70A48 8006FE48 00000000 */   nop
-/* 70A4C 8006FE4C 0C01C405 */  jal        func_80071014
+/* 70A4C 8006FE4C 0C01C405 */  jal        __osPopThread
 /* 70A50 8006FE50 01A02025 */   or        $a0, $t5, $zero
 /* 70A54 8006FE54 00408825 */  or         $s1, $v0, $zero
 /* 70A58 8006FE58 0C019F40 */  jal        osStartThread
