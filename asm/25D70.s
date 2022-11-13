@@ -111,7 +111,7 @@ glabel func_800252D0
 /* 25EF8 800252F8 0C00945C */  jal        func_80025170
 /* 25EFC 800252FC E7A40010 */   swc1      $f4, 0x10($sp)
 /* 25F00 80025300 27A40020 */  addiu      $a0, $sp, 0x20
-/* 25F04 80025304 0C01B08C */  jal        func_8006C230
+/* 25F04 80025304 0C01B08C */  jal        guMtxF2L
 /* 25F08 80025308 8FA50060 */   lw        $a1, 0x60($sp)
 /* 25F0C 8002530C 8FBF001C */  lw         $ra, 0x1C($sp)
 /* 25F10 80025310 27BD0060 */  addiu      $sp, $sp, 0x60

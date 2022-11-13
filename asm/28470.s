@@ -2842,14 +2842,14 @@ glabel func_8002A0D0
 /* 2AE24 8002A224 E7A00018 */  swc1       $f0, 0x18($sp)
 /* 2AE28 8002A228 E7A0001C */  swc1       $f0, 0x1C($sp)
 /* 2AE2C 8002A22C E7A00024 */  swc1       $f0, 0x24($sp)
-/* 2AE30 8002A230 0C01AF3C */  jal        func_8006BCF0
+/* 2AE30 8002A230 0C01AF3C */  jal        guLookAtF
 /* 2AE34 8002A234 E7AA0020 */   swc1      $f10, 0x20($sp)
 /* 2AE38 8002A238 27A40114 */  addiu      $a0, $sp, 0x114
 /* 2AE3C 8002A23C 27A500D4 */  addiu      $a1, $sp, 0xD4
-/* 2AE40 8002A240 0C01B030 */  jal        func_8006C0C0
+/* 2AE40 8002A240 0C01B030 */  jal        guMtxCatF
 /* 2AE44 8002A244 27A60094 */   addiu     $a2, $sp, 0x94
 /* 2AE48 8002A248 27A40094 */  addiu      $a0, $sp, 0x94
-/* 2AE4C 8002A24C 0C01B08C */  jal        func_8006C230
+/* 2AE4C 8002A24C 0C01B08C */  jal        guMtxF2L
 /* 2AE50 8002A250 8FA50158 */   lw        $a1, 0x158($sp)
 /* 2AE54 8002A254 8FB8015C */  lw         $t8, 0x15C($sp)
 /* 2AE58 8002A258 3C0FBC00 */  lui        $t7, (0xBC00000E >> 16)

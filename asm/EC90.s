@@ -1114,14 +1114,14 @@ glabel func_8000E428
 /* FCBC 8000F0BC E7A20018 */  swc1       $f2, 0x18($sp)
 /* FCC0 8000F0C0 E7A2001C */  swc1       $f2, 0x1C($sp)
 /* FCC4 8000F0C4 E7A20024 */  swc1       $f2, 0x24($sp)
-/* FCC8 8000F0C8 0C01AF3C */  jal        func_8006BCF0
+/* FCC8 8000F0C8 0C01AF3C */  jal        guLookAtF
 /* FCCC 8000F0CC E7B00020 */   swc1      $f16, 0x20($sp)
 /* FCD0 8000F0D0 27A400FC */  addiu      $a0, $sp, 0xFC
 /* FCD4 8000F0D4 27A500BC */  addiu      $a1, $sp, 0xBC
-/* FCD8 8000F0D8 0C01B030 */  jal        func_8006C0C0
+/* FCD8 8000F0D8 0C01B030 */  jal        guMtxCatF
 /* FCDC 8000F0DC 27A6007C */   addiu     $a2, $sp, 0x7C
 /* FCE0 8000F0E0 27A4007C */  addiu      $a0, $sp, 0x7C
-/* FCE4 8000F0E4 0C01B08C */  jal        func_8006C230
+/* FCE4 8000F0E4 0C01B08C */  jal        guMtxF2L
 /* FCE8 8000F0E8 8FA50140 */   lw        $a1, 0x140($sp)
 /* FCEC 8000F0EC 8FAF0144 */  lw         $t7, 0x144($sp)
 /* FCF0 8000F0F0 3C0CBC00 */  lui        $t4, (0xBC00000E >> 16)

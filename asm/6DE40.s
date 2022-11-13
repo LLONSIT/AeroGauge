@@ -20,7 +20,7 @@ glabel func_8006D240
 /* 6DE64 8006D264 AFA40018 */  sw         $a0, 0x18($sp)
 /* 6DE68 8006D268 46000282 */  mul.s      $f10, $f0, $f0
 /* 6DE6C 8006D26C 46062200 */  add.s      $f8, $f4, $f6
-/* 6DE70 8006D270 0C01AB7C */  jal        func_8006ADF0
+/* 6DE70 8006D270 0C01AB7C */  jal        sqrtf
 /* 6DE74 8006D274 46085300 */   add.s     $f12, $f10, $f8
 /* 6DE78 8006D278 3C013F80 */  lui        $at, (0x3F800000 >> 16)
 /* 6DE7C 8006D27C 44818000 */  mtc1       $at, $f16

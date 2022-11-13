@@ -2287,7 +2287,7 @@ glabel func_80008330
 /* 8FD8 800083D8 46021182 */  mul.s      $f6, $f2, $f2
 /* 8FDC 800083DC 46062200 */  add.s      $f8, $f4, $f6
 /* 8FE0 800083E0 460E7282 */  mul.s      $f10, $f14, $f14
-/* 8FE4 800083E4 0C01AB7C */  jal        func_8006ADF0
+/* 8FE4 800083E4 0C01AB7C */  jal        sqrtf
 /* 8FE8 800083E8 460A4300 */   add.s     $f12, $f8, $f10
 /* 8FEC 800083EC 44801000 */  mtc1       $zero, $f2
 /* 8FF0 800083F0 26040024 */  addiu      $a0, $s0, 0x24

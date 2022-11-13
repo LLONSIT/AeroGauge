@@ -130,6 +130,7 @@ $(BUILD_DIR)/$(SRC_DIR)/os/audio/libaudio_temp_seg.c.o: OPT_FLAGS := -O2
 $(BUILD_DIR)/$(SRC_DIR)/os/gu/%.c.o: OPT_FLAGS := -O3
 $(BUILD_DIR)/$(SRC_DIR)/os/gu/cosf.c.o: OPT_FLAGS := -O1
 $(BUILD_DIR)/$(SRC_DIR)/os/libc/%.c.o: OPT_FLAGS := -O3
+$(BUILD_DIR)/$(SRC_DIR)/os/audio/alSndPlayer.c.o: OPT_FLAGS := -O1
 #$(BUILD_DIR)/$(SRC_DIR)/os/audio/sndplayer_text_008C.c.o: OPT_FLAGS := -O2 #exception
 # $(BUILD_DIR)/$(SRC_DIR)/core/eeprom.c.o: OPT_FLAGS := -O2
 

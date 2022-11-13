@@ -100,14 +100,14 @@ glabel func_8003F98C
 /* 40710 8003FB10 E7A0001C */  swc1       $f0, 0x1C($sp)
 /* 40714 8003FB14 E7A00024 */  swc1       $f0, 0x24($sp)
 /* 40718 8003FB18 E7A40014 */  swc1       $f4, 0x14($sp)
-/* 4071C 8003FB1C 0C01AF3C */  jal        func_8006BCF0
+/* 4071C 8003FB1C 0C01AF3C */  jal        guLookAtF
 /* 40720 8003FB20 E7B20020 */   swc1      $f18, 0x20($sp)
 /* 40724 8003FB24 27A400DC */  addiu      $a0, $sp, 0xDC
 /* 40728 8003FB28 27A5009C */  addiu      $a1, $sp, 0x9C
-/* 4072C 8003FB2C 0C01B030 */  jal        func_8006C0C0
+/* 4072C 8003FB2C 0C01B030 */  jal        guMtxCatF
 /* 40730 8003FB30 27A6005C */   addiu     $a2, $sp, 0x5C
 /* 40734 8003FB34 27A4005C */  addiu      $a0, $sp, 0x5C
-/* 40738 8003FB38 0C01B08C */  jal        func_8006C230
+/* 40738 8003FB38 0C01B08C */  jal        guMtxF2L
 /* 4073C 8003FB3C 8FA50120 */   lw        $a1, 0x120($sp)
 /* 40740 8003FB40 8FAD0124 */  lw         $t5, 0x124($sp)
 /* 40744 8003FB44 3C18BC00 */  lui        $t8, (0xBC00000E >> 16)

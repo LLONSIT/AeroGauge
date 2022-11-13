@@ -3332,14 +3332,14 @@ glabel func_80035BA4
 /* 369E4 80035DE4 E7A00018 */  swc1       $f0, 0x18($sp)
 /* 369E8 80035DE8 E7A0001C */  swc1       $f0, 0x1C($sp)
 /* 369EC 80035DEC E7A00024 */  swc1       $f0, 0x24($sp)
-/* 369F0 80035DF0 0C01AF3C */  jal        func_8006BCF0
+/* 369F0 80035DF0 0C01AF3C */  jal        guLookAtF
 /* 369F4 80035DF4 E7AA0020 */   swc1      $f10, 0x20($sp)
 /* 369F8 80035DF8 27A400EC */  addiu      $a0, $sp, 0xEC
 /* 369FC 80035DFC 27A500AC */  addiu      $a1, $sp, 0xAC
-/* 36A00 80035E00 0C01B030 */  jal        func_8006C0C0
+/* 36A00 80035E00 0C01B030 */  jal        guMtxCatF
 /* 36A04 80035E04 27A6006C */   addiu     $a2, $sp, 0x6C
 /* 36A08 80035E08 27A4006C */  addiu      $a0, $sp, 0x6C
-/* 36A0C 80035E0C 0C01B08C */  jal        func_8006C230
+/* 36A0C 80035E0C 0C01B08C */  jal        guMtxF2L
 /* 36A10 80035E10 8FA50130 */   lw        $a1, 0x130($sp)
 /* 36A14 80035E14 8FAA0134 */  lw         $t2, 0x134($sp)
 /* 36A18 80035E18 3C18BC00 */  lui        $t8, (0xBC00000E >> 16)

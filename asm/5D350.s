@@ -2356,7 +2356,7 @@ glabel func_8005E820
 /* 5F4C8 8005E8C8 AFA60034 */  sw         $a2, 0x34($sp)
 /* 5F4CC 8005E8CC AFA40050 */  sw         $a0, 0x50($sp)
 /* 5F4D0 8005E8D0 460E7182 */  mul.s      $f6, $f14, $f14
-/* 5F4D4 8005E8D4 0C01AB7C */  jal        func_8006ADF0
+/* 5F4D4 8005E8D4 0C01AB7C */  jal        sqrtf
 /* 5F4D8 8005E8D8 46062300 */   add.s     $f12, $f4, $f6
 /* 5F4DC 8005E8DC 44804800 */  mtc1       $zero, $f9
 /* 5F4E0 8005E8E0 44804000 */  mtc1       $zero, $f8

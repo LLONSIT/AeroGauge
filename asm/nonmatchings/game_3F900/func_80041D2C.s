@@ -101,15 +101,15 @@ glabel func_80041D2C
 /* 42AB4 80041EB4 E7B4001C */  swc1       $f20, 0x1C($sp)
 /* 42AB8 80041EB8 E7B40024 */  swc1       $f20, 0x24($sp)
 /* 42ABC 80041EBC E7AA0014 */  swc1       $f10, 0x14($sp)
-/* 42AC0 80041EC0 0C01AF3C */  jal        func_8006BCF0
+/* 42AC0 80041EC0 0C01AF3C */  jal        guLookAtF
 /* 42AC4 80041EC4 E7B00020 */   swc1      $f16, 0x20($sp)
 /* 42AC8 80041EC8 27B200B4 */  addiu      $s2, $sp, 0xB4
 /* 42ACC 80041ECC 02403025 */  or         $a2, $s2, $zero
 /* 42AD0 80041ED0 02202025 */  or         $a0, $s1, $zero
-/* 42AD4 80041ED4 0C01B030 */  jal        func_8006C0C0
+/* 42AD4 80041ED4 0C01B030 */  jal        guMtxCatF
 /* 42AD8 80041ED8 02002825 */   or        $a1, $s0, $zero
 /* 42ADC 80041EDC 02402025 */  or         $a0, $s2, $zero
-/* 42AE0 80041EE0 0C01B08C */  jal        func_8006C230
+/* 42AE0 80041EE0 0C01B08C */  jal        guMtxF2L
 /* 42AE4 80041EE4 8FA50178 */   lw        $a1, 0x178($sp)
 /* 42AE8 80041EE8 8FA9017C */  lw         $t1, 0x17C($sp)
 /* 42AEC 80041EEC 3C0BBC00 */  lui        $t3, (0xBC00000E >> 16)

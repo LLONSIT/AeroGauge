@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_8006ADF0
+glabel sqrtf
 /* 6B9F0 8006ADF0 03E00008 */  jr         $ra
 /* 6B9F4 8006ADF4 46006004 */   sqrt.s    $f0, $f12
 /* 6B9F8 8006ADF8 00000000 */  nop

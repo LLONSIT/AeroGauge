@@ -4,16 +4,16 @@
 #include "structs.h"
 
 //Nice ASCII developer
-void func_8001E1C0(void) {
-    func_80000610(0);
-    func_80001418(0);
-    func_80001418(1);
-    func_80001418(2);
-    func_80001418(3);
-    func_80001418(4);
-    func_80001418(5);
-    func_80001418(6);
-}
+ void func_8001E1C0(void) {
+        func_80000610(0);
+        func_80001418(0);
+        func_80001418(1);
+        func_80001418(2);
+        func_80001418(3);
+        func_80001418(4);
+        func_80001418(5);
+        func_80001418(6);
+    }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1EDC0/func_8001E218.s")
 

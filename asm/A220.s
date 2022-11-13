@@ -109,7 +109,7 @@ glabel func_8000970C
 /* A398 80009798 4614A282 */  mul.s      $f10, $f20, $f20
 /* A39C 8000979C 460A2180 */  add.s      $f6, $f4, $f10
 /* A3A0 800097A0 4616B202 */  mul.s      $f8, $f22, $f22
-/* A3A4 800097A4 0C01AB7C */  jal        func_8006ADF0
+/* A3A4 800097A4 0C01AB7C */  jal        sqrtf
 /* A3A8 800097A8 46083300 */   add.s     $f12, $f6, $f8
 /* A3AC 800097AC 44802000 */  mtc1       $zero, $f4
 /* A3B0 800097B0 8FA40060 */  lw         $a0, 0x60($sp)
@@ -297,7 +297,7 @@ glabel func_8000991C
 /* A670 80009A70 E7B20064 */  swc1       $f18, 0x64($sp)
 /* A674 80009A74 46042282 */  mul.s      $f10, $f4, $f4
 /* A678 80009A78 46104480 */  add.s      $f18, $f8, $f16
-/* A67C 80009A7C 0C01AB7C */  jal        func_8006ADF0
+/* A67C 80009A7C 0C01AB7C */  jal        sqrtf
 /* A680 80009A80 460A9300 */   add.s     $f12, $f18, $f10
 /* A684 80009A84 46160032 */  c.eq.s     $f0, $f22
 /* A688 80009A88 C7A00068 */  lwc1       $f0, 0x68($sp)
@@ -309,7 +309,7 @@ glabel func_8000991C
 /* A6A0 80009AA0 C7AE0070 */  lwc1       $f14, 0x70($sp)
 /* A6A4 80009AA4 460E7102 */  mul.s      $f4, $f14, $f14
 /* A6A8 80009AA8 46083400 */  add.s      $f16, $f6, $f8
-/* A6AC 80009AAC 0C01AB7C */  jal        func_8006ADF0
+/* A6AC 80009AAC 0C01AB7C */  jal        sqrtf
 /* A6B0 80009AB0 46048300 */   add.s     $f12, $f16, $f4
 /* A6B4 80009AB4 46160032 */  c.eq.s     $f0, $f22
 /* A6B8 80009AB8 C7A0005C */  lwc1       $f0, 0x5C($sp)
@@ -321,7 +321,7 @@ glabel func_8000991C
 /* A6D0 80009AD0 C7AE0064 */  lwc1       $f14, 0x64($sp)
 /* A6D4 80009AD4 460E7202 */  mul.s      $f8, $f14, $f14
 /* A6D8 80009AD8 460A9180 */  add.s      $f6, $f18, $f10
-/* A6DC 80009ADC 0C01AB7C */  jal        func_8006ADF0
+/* A6DC 80009ADC 0C01AB7C */  jal        sqrtf
 /* A6E0 80009AE0 46083300 */   add.s     $f12, $f6, $f8
 /* A6E4 80009AE4 46160032 */  c.eq.s     $f0, $f22
 /* A6E8 80009AE8 00000000 */  nop
@@ -416,7 +416,7 @@ glabel func_80009B94
 /* A838 80009C38 46082280 */  add.s      $f10, $f4, $f8
 /* A83C 80009C3C C7A4005C */  lwc1       $f4, 0x5C($sp)
 /* A840 80009C40 46043202 */  mul.s      $f8, $f6, $f4
-/* A844 80009C44 0C01AB7C */  jal        func_8006ADF0
+/* A844 80009C44 0C01AB7C */  jal        sqrtf
 /* A848 80009C48 46085300 */   add.s     $f12, $f10, $f8
 /* A84C 80009C4C 44803000 */  mtc1       $zero, $f6
 /* A850 80009C50 8FA20060 */  lw         $v0, 0x60($sp)

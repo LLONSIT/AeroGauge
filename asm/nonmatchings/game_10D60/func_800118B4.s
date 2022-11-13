@@ -131,7 +131,7 @@ glabel func_800118B4
 /* 1269C 80011A9C 462042A0 */  cvt.s.d    $f10, $f8
 /* 126A0 80011AA0 46128301 */  sub.s      $f12, $f16, $f18
 /* 126A4 80011AA4 E60A0048 */  swc1       $f10, 0x48($s0)
-/* 126A8 80011AA8 0C01AB7C */  jal        func_8006ADF0
+/* 126A8 80011AA8 0C01AB7C */  jal        sqrtf
 /* 126AC 80011AAC E7AE0024 */   swc1      $f14, 0x24($sp)
 /* 126B0 80011AB0 C7AE0024 */  lwc1       $f14, 0x24($sp)
 /* 126B4 80011AB4 0C008F24 */  jal        func_80023C90

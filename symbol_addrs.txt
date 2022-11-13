@@ -162,8 +162,17 @@ __osEnqueueThread = 0x80070FCC;
 __osPopThread = 0x80071014; 
 __osEnqueueAndYield = 0x80070ECC;
 __osDispatchThread = 0x80071024;
-
-
+guLookAtF =  0x8006BCF0;
+guLookAt = 0x8006BFA8;
+guMtxXFMF = 0x8006C020; 
+guMtxCatF = 0x8006C0C0;
+guMtxF2L = 0x8006C230;
+guMtxIdentF = 0x8006C330;
+guMtxIdent = 0x8006C3B8;
+guMtxL2F = 0x8006C3E8;
+sqrtf = 0x8006ADF0;
+alSndpSetSound = 0x800676C0;
+alSndpAllocate = 0x80067620;
 D_8008B7DC = 0x8008B7DC; //type:defined
 D_8008B7E0 = 0x8008B7E0; //type:defined
 D_8008B7E4 = 0x8008B7E4; //type:defined

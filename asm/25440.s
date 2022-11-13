@@ -43,7 +43,7 @@ glabel func_80024840
 /* 254C0 800248C0 0C01AB20 */  jal        __cosf
 /* 254C4 800248C4 E7A00044 */   swc1      $f0, 0x44($sp)
 /* 254C8 800248C8 02002025 */  or         $a0, $s0, $zero
-/* 254CC 800248CC 0C01B0CC */  jal        func_8006C330
+/* 254CC 800248CC 0C01B0CC */  jal        guMtxIdentF
 /* 254D0 800248D0 E7A00038 */   swc1      $f0, 0x38($sp)
 /* 254D4 800248D4 C7AC0038 */  lwc1       $f12, 0x38($sp)
 /* 254D8 800248D8 C7AE0044 */  lwc1       $f14, 0x44($sp)
@@ -103,7 +103,7 @@ glabel func_80024988
 /* 255A8 800249A8 0C009210 */  jal        func_80024840
 /* 255AC 800249AC 27A40018 */   addiu     $a0, $sp, 0x18
 /* 255B0 800249B0 27A40018 */  addiu      $a0, $sp, 0x18
-/* 255B4 800249B4 0C01B08C */  jal        func_8006C230
+/* 255B4 800249B4 0C01B08C */  jal        guMtxF2L
 /* 255B8 800249B8 8FA50058 */   lw        $a1, 0x58($sp)
 /* 255BC 800249BC 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 255C0 800249C0 27BD0058 */  addiu      $sp, $sp, 0x58
