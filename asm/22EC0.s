@@ -913,7 +913,7 @@ glabel func_80022FD0
 /* 23BE0 80022FE0 8E070058 */  lw         $a3, 0x58($s0)
 /* 23BE4 80022FE4 8E060054 */  lw         $a2, 0x54($s0)
 /* 23BE8 80022FE8 8E050050 */  lw         $a1, 0x50($s0)
-/* 23BEC 80022FEC 0C01AAEC */  jal        func_8006ABB0
+/* 23BEC 80022FEC 0C01AAEC */  jal        guScaleF
 /* 23BF0 80022FF0 27A40068 */   addiu     $a0, $sp, 0x68
 /* 23BF4 80022FF4 92020008 */  lbu        $v0, 0x8($s0)
 /* 23BF8 80022FF8 24010001 */  addiu      $at, $zero, 0x1

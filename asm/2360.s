@@ -385,10 +385,10 @@ glabel func_80001CA0
 /* 28D0 80001CD0 84650004 */  lh         $a1, 0x4($v1)
 /* 28D4 80001CD4 8C640000 */  lw         $a0, 0x0($v1)
 /* 28D8 80001CD8 00057080 */  sll        $t6, $a1, 2
-/* 28DC 80001CDC 0C019FCC */  jal        func_80067F30
+/* 28DC 80001CDC 0C019FCC */  jal        osAiSetNextBuffer
 /* 28E0 80001CE0 01C02825 */   or        $a1, $t6, $zero
 .L80001CE4:
-/* 28E4 80001CE4 0C019FF8 */  jal        func_80067FE0
+/* 28E4 80001CE4 0C019FF8 */  jal        osAiGetLength
 /* 28E8 80001CE8 00000000 */   nop
 /* 28EC 80001CEC 3C0F8011 */  lui        $t7, %hi(D_8010C75C)
 /* 28F0 80001CF0 8DEFC75C */  lw         $t7, %lo(D_8010C75C)($t7)
@@ -486,7 +486,7 @@ glabel func_80001CA0
 glabel func_80001E50
 /* 2A50 80001E50 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 2A54 80001E54 AFBF0014 */  sw         $ra, 0x14($sp)
-/* 2A58 80001E58 0C019FF8 */  jal        func_80067FE0
+/* 2A58 80001E58 0C019FF8 */  jal        osAiGetLength
 /* 2A5C 80001E5C AFA40018 */   sw        $a0, 0x18($sp)
 /* 2A60 80001E60 00027082 */  srl        $t6, $v0, 2
 /* 2A64 80001E64 15C00006 */  bnez       $t6, .L80001E80

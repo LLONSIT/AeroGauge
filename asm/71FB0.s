@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_800713B0
+glabel __osAiDeviceBusy
 /* 71FB0 800713B0 3C0EA450 */  lui        $t6, %hi(D_A450000C)
 /* 71FB4 800713B4 8DC4000C */  lw         $a0, %lo(D_A450000C)($t6)
 /* 71FB8 800713B8 3C018000 */  lui        $at, (0x80000000 >> 16)

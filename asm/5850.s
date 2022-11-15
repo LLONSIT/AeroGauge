@@ -146,7 +146,7 @@ glabel L80004E30
 glabel L80004E50
 /* 5A50 80004E50 8E50003C */  lw         $s0, 0x3C($s2)
 /* 5A54 80004E54 8E440014 */  lw         $a0, 0x14($s2)
-/* 5A58 80004E58 0C01A93C */  jal        func_8006A4F0
+/* 5A58 80004E58 0C01A93C */  jal        alSynStopVoice
 /* 5A5C 80004E5C 02002825 */   or        $a1, $s0, $zero
 /* 5A60 80004E60 8E440014 */  lw         $a0, 0x14($s2)
 /* 5A64 80004E64 0C01A95C */  jal        alSynFreeVoice
@@ -356,7 +356,7 @@ glabel L80005140
 /* 5D5C 8000515C 26300004 */  addiu      $s0, $s1, 0x4
 .L80005160:
 /* 5D60 80005160 02002825 */  or         $a1, $s0, $zero
-/* 5D64 80005164 0C01A93C */  jal        func_8006A4F0
+/* 5D64 80005164 0C01A93C */  jal        alSynStopVoice
 /* 5D68 80005168 8E440014 */   lw        $a0, 0x14($s2)
 /* 5D6C 8000516C 8E440014 */  lw         $a0, 0x14($s2)
 /* 5D70 80005170 0C01A95C */  jal        alSynFreeVoice
@@ -382,13 +382,13 @@ glabel L800051B0
 /* 5DB4 800051B4 02A02025 */  or         $a0, $s5, $zero
 /* 5DB8 800051B8 56E9003D */  bnel       $s7, $t1, .L800052B0
 /* 5DBC 800051BC 02A02025 */   or        $a0, $s5, $zero
-/* 5DC0 800051C0 0C01A858 */  jal        func_8006A160
+/* 5DC0 800051C0 0C01A858 */  jal        alEvtqFlushType
 /* 5DC4 800051C4 00002825 */   or        $a1, $zero, $zero
 /* 5DC8 800051C8 02A02025 */  or         $a0, $s5, $zero
-/* 5DCC 800051CC 0C01A858 */  jal        func_8006A160
+/* 5DCC 800051CC 0C01A858 */  jal        alEvtqFlushType
 /* 5DD0 800051D0 24050015 */   addiu     $a1, $zero, 0x15
 /* 5DD4 800051D4 02A02025 */  or         $a0, $s5, $zero
-/* 5DD8 800051D8 0C01A858 */  jal        func_8006A160
+/* 5DD8 800051D8 0C01A858 */  jal        alEvtqFlushType
 /* 5DDC 800051DC 24050002 */   addiu     $a1, $zero, 0x2
 /* 5DE0 800051E0 8E510064 */  lw         $s1, 0x64($s2)
 /* 5DE4 800051E4 5220000F */  beql       $s1, $zero, .L80005224
@@ -618,7 +618,7 @@ glabel L80005494
 /* 6108 80005508 8E240014 */  lw         $a0, 0x14($s1)
 /* 610C 8000550C 24450004 */  addiu      $a1, $v0, 0x4
 /* 6110 80005510 AFA50048 */  sw         $a1, 0x48($sp)
-/* 6114 80005514 0C01AA0E */  jal        func_8006A838
+/* 6114 80005514 0C01AA0E */  jal        alSynAllocVoice
 /* 6118 80005518 27A60084 */   addiu     $a2, $sp, 0x84
 /* 611C 8000551C 8FA30080 */  lw         $v1, 0x80($sp)
 /* 6120 80005520 A2000034 */  sb         $zero, 0x34($s0)
@@ -809,7 +809,7 @@ glabel L80005494
 /* 63E4 800057E4 8FA50048 */  lw         $a1, 0x48($sp)
 /* 63E8 800057E8 8FA70078 */  lw         $a3, 0x78($sp)
 /* 63EC 800057EC AFAB0014 */  sw         $t3, 0x14($sp)
-/* 63F0 800057F0 0C01AA60 */  jal        func_8006A980
+/* 63F0 800057F0 0C01AA60 */  jal        alSynStartVoiceParams
 /* 63F4 800057F4 AFAC0018 */   sw        $t4, 0x18($sp)
 /* 63F8 800057F8 1000000F */  b          .L80005838
 /* 63FC 800057FC 8FA90080 */   lw        $t1, 0x80($sp)
@@ -825,7 +825,7 @@ glabel L80005494
 /* 6420 80005820 AFB2001C */  sw         $s2, 0x1C($sp)
 /* 6424 80005824 AFA80010 */  sw         $t0, 0x10($sp)
 /* 6428 80005828 8FA70078 */  lw         $a3, 0x78($sp)
-/* 642C 8000582C 0C01AA60 */  jal        func_8006A980
+/* 642C 8000582C 0C01AA60 */  jal        alSynStartVoiceParams
 /* 6430 80005830 AFAF0018 */   sw        $t7, 0x18($sp)
 /* 6434 80005834 8FA90080 */  lw         $t1, 0x80($sp)
 .L80005838:
@@ -1120,7 +1120,7 @@ glabel L800059E0
 /* 6848 80005C48 93A600B9 */  lbu        $a2, 0xB9($sp)
 /* 684C 80005C4C 564C0004 */  bnel       $s2, $t4, .L80005C60
 /* 6850 80005C50 8E100000 */   lw        $s0, 0x0($s0)
-/* 6854 80005C54 0C01AA9C */  jal        func_8006AA70
+/* 6854 80005C54 0C01AA9C */  jal        alSynSetFXMix
 /* 6858 80005C58 8E240014 */   lw        $a0, 0x14($s1)
 /* 685C 80005C5C 8E100000 */  lw         $s0, 0x0($s0)
 .L80005C60:
@@ -1317,7 +1317,7 @@ glabel func_80005EFC
 /* 6B00 80005F00 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 6B04 80005F04 AFA40020 */  sw         $a0, 0x20($sp)
 /* 6B08 80005F08 24040001 */  addiu      $a0, $zero, 0x1
-/* 6B0C 80005F0C 0C01AAC4 */  jal        func_8006AB10
+/* 6B0C 80005F0C 0C01AAC4 */  jal        osSetIntMask
 /* 6B10 80005F10 AFA50024 */   sw        $a1, 0x24($sp)
 /* 6B14 80005F14 8FA30020 */  lw         $v1, 0x20($sp)
 /* 6B18 80005F18 2401FFF8 */  addiu      $at, $zero, -0x8
@@ -1351,7 +1351,7 @@ glabel func_80005EFC
 /* 6B7C 80005F7C 54A0FFEC */  bnel       $a1, $zero, .L80005F30
 /* 6B80 80005F80 8CA40000 */   lw        $a0, 0x0($a1)
 .L80005F84:
-/* 6B84 80005F84 0C01AAC4 */  jal        func_8006AB10
+/* 6B84 80005F84 0C01AAC4 */  jal        osSetIntMask
 /* 6B88 80005F88 8FA4001C */   lw        $a0, 0x1C($sp)
 /* 6B8C 80005F8C 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 6B90 80005F90 27BD0020 */  addiu      $sp, $sp, 0x20

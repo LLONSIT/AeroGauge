@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_8006A160
+glabel alEvtqFlushType
 /* 6AD60 8006A160 27BDFFC0 */  addiu      $sp, $sp, -0x40
 /* 6AD64 8006A164 AFB30020 */  sw         $s3, 0x20($sp)
 /* 6AD68 8006A168 00059C00 */  sll        $s3, $a1, 16
@@ -19,7 +19,7 @@ glabel func_8006A160
 /* 6AD80 8006A180 AFB10018 */  sw         $s1, 0x18($sp)
 /* 6AD84 8006A184 AFB00014 */  sw         $s0, 0x14($sp)
 /* 6AD88 8006A188 AFA50044 */  sw         $a1, 0x44($sp)
-/* 6AD8C 8006A18C 0C01AAC4 */  jal        func_8006AB10
+/* 6AD8C 8006A18C 0C01AAC4 */  jal        osSetIntMask
 /* 6AD90 8006A190 24040001 */   addiu     $a0, $zero, 0x1
 /* 6AD94 8006A194 AFA2002C */  sw         $v0, 0x2C($sp)
 /* 6AD98 8006A198 8E500008 */  lw         $s0, 0x8($s2)
@@ -46,7 +46,7 @@ glabel func_8006A160
 /* 6ADE0 8006A1E0 1620FFF0 */  bnez       $s1, .L8006A1A4
 /* 6ADE4 8006A1E4 02208025 */   or        $s0, $s1, $zero
 .L8006A1E8:
-/* 6ADE8 8006A1E8 0C01AAC4 */  jal        func_8006AB10
+/* 6ADE8 8006A1E8 0C01AAC4 */  jal        osSetIntMask
 /* 6ADEC 8006A1EC 8FA4002C */   lw        $a0, 0x2C($sp)
 /* 6ADF0 8006A1F0 8FBF0024 */  lw         $ra, 0x24($sp)
 /* 6ADF4 8006A1F4 8FB00014 */  lw         $s0, 0x14($sp)
@@ -56,14 +56,14 @@ glabel func_8006A160
 /* 6AE04 8006A204 03E00008 */  jr         $ra
 /* 6AE08 8006A208 27BD0040 */   addiu     $sp, $sp, 0x40
 
-glabel func_8006A20C
+glabel alEvtqFlush
 /* 6AE0C 8006A20C 27BDFFC8 */  addiu      $sp, $sp, -0x38
 /* 6AE10 8006A210 AFB20020 */  sw         $s2, 0x20($sp)
 /* 6AE14 8006A214 00809025 */  or         $s2, $a0, $zero
 /* 6AE18 8006A218 AFBF0024 */  sw         $ra, 0x24($sp)
 /* 6AE1C 8006A21C AFB1001C */  sw         $s1, 0x1C($sp)
 /* 6AE20 8006A220 AFB00018 */  sw         $s0, 0x18($sp)
-/* 6AE24 8006A224 0C01AAC4 */  jal        func_8006AB10
+/* 6AE24 8006A224 0C01AAC4 */  jal        osSetIntMask
 /* 6AE28 8006A228 24040001 */   addiu     $a0, $zero, 0x1
 /* 6AE2C 8006A22C AFA2002C */  sw         $v0, 0x2C($sp)
 /* 6AE30 8006A230 8E500008 */  lw         $s0, 0x8($s2)
@@ -79,7 +79,7 @@ glabel func_8006A20C
 /* 6AE54 8006A254 1620FFF9 */  bnez       $s1, .L8006A23C
 /* 6AE58 8006A258 02208025 */   or        $s0, $s1, $zero
 .L8006A25C:
-/* 6AE5C 8006A25C 0C01AAC4 */  jal        func_8006AB10
+/* 6AE5C 8006A25C 0C01AAC4 */  jal        osSetIntMask
 /* 6AE60 8006A260 8FA4002C */   lw        $a0, 0x2C($sp)
 /* 6AE64 8006A264 8FBF0024 */  lw         $ra, 0x24($sp)
 /* 6AE68 8006A268 8FB00018 */  lw         $s0, 0x18($sp)
@@ -95,7 +95,7 @@ glabel alEvtqPostEvent
 /* 6AE88 8006A288 AFA50034 */  sw         $a1, 0x34($sp)
 /* 6AE8C 8006A28C AFA00020 */  sw         $zero, 0x20($sp)
 /* 6AE90 8006A290 24040001 */  addiu      $a0, $zero, 0x1
-/* 6AE94 8006A294 0C01AAC4 */  jal        func_8006AB10
+/* 6AE94 8006A294 0C01AAC4 */  jal        osSetIntMask
 /* 6AE98 8006A298 AFA60038 */   sw        $a2, 0x38($sp)
 /* 6AE9C 8006A29C 8FAE0030 */  lw         $t6, 0x30($sp)
 /* 6AEA0 8006A2A0 8FA70038 */  lw         $a3, 0x38($sp)
@@ -103,7 +103,7 @@ glabel alEvtqPostEvent
 /* 6AEA8 8006A2A8 8DC80000 */  lw         $t0, 0x0($t6)
 /* 6AEAC 8006A2AC 15000005 */  bnez       $t0, .L8006A2C4
 /* 6AEB0 8006A2B0 01002025 */   or        $a0, $t0, $zero
-/* 6AEB4 8006A2B4 0C01AAC4 */  jal        func_8006AB10
+/* 6AEB4 8006A2B4 0C01AAC4 */  jal        osSetIntMask
 /* 6AEB8 8006A2B8 00402025 */   or        $a0, $v0, $zero
 /* 6AEBC 8006A2BC 10000035 */  b          .L8006A394
 /* 6AEC0 8006A2C0 8FBF0014 */   lw        $ra, 0x14($sp)
@@ -163,7 +163,7 @@ glabel alEvtqPostEvent
 /* 6AF80 8006A380 1440FFE5 */  bnez       $v0, .L8006A318
 /* 6AF84 8006A384 00E33823 */   subu      $a3, $a3, $v1
 .L8006A388:
-/* 6AF88 8006A388 0C01AAC4 */  jal        func_8006AB10
+/* 6AF88 8006A388 0C01AAC4 */  jal        osSetIntMask
 /* 6AF8C 8006A38C 8FA4001C */   lw        $a0, 0x1C($sp)
 /* 6AF90 8006A390 8FBF0014 */  lw         $ra, 0x14($sp)
 .L8006A394:
@@ -177,7 +177,7 @@ glabel alEvtqNextEvent
 /* 6AFA8 8006A3A8 AFA40030 */  sw         $a0, 0x30($sp)
 /* 6AFAC 8006A3AC AFB00018 */  sw         $s0, 0x18($sp)
 /* 6AFB0 8006A3B0 AFA50034 */  sw         $a1, 0x34($sp)
-/* 6AFB4 8006A3B4 0C01AAC4 */  jal        func_8006AB10
+/* 6AFB4 8006A3B4 0C01AAC4 */  jal        osSetIntMask
 /* 6AFB8 8006A3B8 24040001 */   addiu     $a0, $zero, 0x1
 /* 6AFBC 8006A3BC 8FAE0030 */  lw         $t6, 0x30($sp)
 /* 6AFC0 8006A3C0 AFA20024 */  sw         $v0, 0x24($sp)
@@ -202,7 +202,7 @@ glabel alEvtqNextEvent
 /* 6B008 8006A408 A70F0000 */  sh         $t7, 0x0($t8)
 .L8006A40C:
 /* 6B00C 8006A40C 8FA40024 */  lw         $a0, 0x24($sp)
-/* 6B010 8006A410 0C01AAC4 */  jal        func_8006AB10
+/* 6B010 8006A410 0C01AAC4 */  jal        osSetIntMask
 /* 6B014 8006A414 AFA30028 */   sw        $v1, 0x28($sp)
 /* 6B018 8006A418 8FBF001C */  lw         $ra, 0x1C($sp)
 /* 6B01C 8006A41C 8FA20028 */  lw         $v0, 0x28($sp)
@@ -249,7 +249,7 @@ glabel alSynAddPlayer
 /* 6B0A8 8006A4A8 00803025 */  or         $a2, $a0, $zero
 /* 6B0AC 8006A4AC AFA60018 */  sw         $a2, 0x18($sp)
 /* 6B0B0 8006A4B0 24040001 */  addiu      $a0, $zero, 0x1
-/* 6B0B4 8006A4B4 0C01AAC4 */  jal        func_8006AB10
+/* 6B0B4 8006A4B4 0C01AAC4 */  jal        osSetIntMask
 /* 6B0B8 8006A4B8 AFA5001C */   sw        $a1, 0x1C($sp)
 /* 6B0BC 8006A4BC 8FA60018 */  lw         $a2, 0x18($sp)
 /* 6B0C0 8006A4C0 8FA5001C */  lw         $a1, 0x1C($sp)
@@ -258,14 +258,14 @@ glabel alSynAddPlayer
 /* 6B0CC 8006A4CC ACAE0010 */  sw         $t6, 0x10($a1)
 /* 6B0D0 8006A4D0 8CCF0000 */  lw         $t7, 0x0($a2)
 /* 6B0D4 8006A4D4 ACAF0000 */  sw         $t7, 0x0($a1)
-/* 6B0D8 8006A4D8 0C01AAC4 */  jal        func_8006AB10
+/* 6B0D8 8006A4D8 0C01AAC4 */  jal        osSetIntMask
 /* 6B0DC 8006A4DC ACC50000 */   sw        $a1, 0x0($a2)
 /* 6B0E0 8006A4E0 8FBF0014 */  lw         $ra, 0x14($sp)
 /* 6B0E4 8006A4E4 27BD0018 */  addiu      $sp, $sp, 0x18
 /* 6B0E8 8006A4E8 03E00008 */  jr         $ra
 /* 6B0EC 8006A4EC 00000000 */   nop
 
-glabel func_8006A4F0
+glabel alSynStopVoice
 /* 6B0F0 8006A4F0 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 6B0F4 8006A4F4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 6B0F8 8006A4F8 AFA40018 */  sw         $a0, 0x18($sp)

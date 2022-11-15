@@ -3,9 +3,6 @@ alSeqpSetSeq = 0x80066C90; //type:function
 alSndpSetFXMix = 0x800677A0;
 __osDisableInt = 0x80070860; 
 alSndpDelete =  0x80067E80;
-gScreen_var1 = 0x80096ABC; 
-gScreen_var2 = 0x80096AC0;
-gScreen_var3 = 0x80096AC4;
   alSndpStop = 0x80067860;
 alClose  =  0x80067B44; //function:true
 alSynDelete =  0x80071240;
@@ -37,14 +34,13 @@ alCents2Ratio =  0x80066D00;
 sndplayer_text_008C = 0x80066F9C;
 alHeapDBAlloc =  0x80065B40;
  alEvtqNew = 0x8006A42C;
-
 alSynAddPlayer =  0x8006A4A0;
 alEvtqNextEvent = 0x8006A3A0; 
-
-
-
-
-
+_allocatePVoice = 0x8006A750;
+alSynAllocVoice = 0x8006A838;
+alSynSetFXMix = 0x8006AA70;
+alSynStartVoiceParams = 0x8006A980;
+alSynStopVoice = 0x8006A4F0;
 
 
 //os syms
@@ -181,11 +177,27 @@ osSyncPrintf = 0x8006CD00;
 rmonPrintf = 0x8006CD1C;
 strlen = 0x8006CD6C;
 strchr = 0x8006CD94;
+guScaleF = 0x8006ABB0; 
+guRotateRPY = 0x8006AC04;
+alEvtqFlushType = 0x8006A160;
+osAiGetLength = 0x80067FE0;
+alEvtqFlush = 0x8006A20C;
+osAiSetNextBuffer = 0x80067F30;
+osSetIntMask = 0x8006AB10;
+__osAiDeviceBusy = 0x800713B0;
 
+//Irregular
+guRotateRPYF = 0x80024840;
+//guRotateRPYF =  0x8006ABB0;
 
 //Game Symbols
 
 gUnk_YPos = 0x8013f898;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91; 
+
+//not usable
+gScreen_var1 = 0x80096ABC; 
+gScreen_var2 = 0x80096AC0;
+gScreen_var3 = 0x80096AC4;
 

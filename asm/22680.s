@@ -308,7 +308,7 @@ glabel func_80021B38
 /* 22B10 80021F10 4405A000 */  mfc1       $a1, $f20
 /* 22B14 80021F14 4406A000 */  mfc1       $a2, $f20
 /* 22B18 80021F18 4407A000 */  mfc1       $a3, $f20
-/* 22B1C 80021F1C 0C01AAEC */  jal        func_8006ABB0
+/* 22B1C 80021F1C 0C01AAEC */  jal        guScaleF
 /* 22B20 80021F20 02802025 */   or        $a0, $s4, $zero
 /* 22B24 80021F24 10000007 */  b          .L80021F44
 /* 22B28 80021F28 02802025 */   or        $a0, $s4, $zero
@@ -316,7 +316,7 @@ glabel func_80021B38
 .L80021F30:
 /* 22B30 80021F30 4406B000 */  mfc1       $a2, $f22
 /* 22B34 80021F34 4407B000 */  mfc1       $a3, $f22
-/* 22B38 80021F38 0C01AAEC */  jal        func_8006ABB0
+/* 22B38 80021F38 0C01AAEC */  jal        guScaleF
 /* 22B3C 80021F3C 02802025 */   or        $a0, $s4, $zero
 /* 22B40 80021F40 02802025 */  or         $a0, $s4, $zero
 .L80021F44:
@@ -479,7 +479,7 @@ glabel func_80021B38
 /* 22DA0 800221A0 4405A000 */  mfc1       $a1, $f20
 /* 22DA4 800221A4 4406A000 */  mfc1       $a2, $f20
 /* 22DA8 800221A8 4407A000 */  mfc1       $a3, $f20
-/* 22DAC 800221AC 0C01AAEC */  jal        func_8006ABB0
+/* 22DAC 800221AC 0C01AAEC */  jal        guScaleF
 /* 22DB0 800221B0 02802025 */   or        $a0, $s4, $zero
 /* 22DB4 800221B4 10000007 */  b          .L800221D4
 /* 22DB8 800221B8 02802025 */   or        $a0, $s4, $zero
@@ -487,7 +487,7 @@ glabel func_80021B38
 .L800221C0:
 /* 22DC0 800221C0 4406B000 */  mfc1       $a2, $f22
 /* 22DC4 800221C4 4407B000 */  mfc1       $a3, $f22
-/* 22DC8 800221C8 0C01AAEC */  jal        func_8006ABB0
+/* 22DC8 800221C8 0C01AAEC */  jal        guScaleF
 /* 22DCC 800221CC 02802025 */   or        $a0, $s4, $zero
 /* 22DD0 800221D0 02802025 */  or         $a0, $s4, $zero
 .L800221D4:

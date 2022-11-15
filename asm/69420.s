@@ -635,7 +635,7 @@ glabel L80069060
 /* 69CC8 800690C8 8E240014 */  lw         $a0, 0x14($s1)
 /* 69CCC 800690CC 24450004 */  addiu      $a1, $v0, 0x4
 /* 69CD0 800690D0 AFA50034 */  sw         $a1, 0x34($sp)
-/* 69CD4 800690D4 0C01AA0E */  jal        func_8006A838
+/* 69CD4 800690D4 0C01AA0E */  jal        alSynAllocVoice
 /* 69CD8 800690D8 27A6009C */   addiu     $a2, $sp, 0x9C
 /* 69CDC 800690DC AE170020 */  sw         $s7, 0x20($s0)
 /* 69CE0 800690E0 A2000034 */  sb         $zero, 0x34($s0)
@@ -807,7 +807,7 @@ glabel L80069060
 /* 69F58 80069358 AFB40014 */  sw         $s4, 0x14($sp)
 /* 69F5C 8006935C AFA20010 */  sw         $v0, 0x10($sp)
 /* 69F60 80069360 8FA50034 */  lw         $a1, 0x34($sp)
-/* 69F64 80069364 0C01AA60 */  jal        func_8006A980
+/* 69F64 80069364 0C01AA60 */  jal        alSynStartVoiceParams
 /* 69F68 80069368 AFB3001C */   sw        $s3, 0x1C($sp)
 /* 69F6C 8006936C 8FAE0034 */  lw         $t6, 0x34($sp)
 /* 69F70 80069370 24190006 */  addiu      $t9, $zero, 0x6
@@ -1084,7 +1084,7 @@ glabel L80069644
 /* 6A330 80069730 328600FF */  andi       $a2, $s4, 0xFF
 /* 6A334 80069734 56590004 */  bnel       $s2, $t9, .L80069748
 /* 6A338 80069738 8E100000 */   lw        $s0, 0x0($s0)
-/* 6A33C 8006973C 0C01AA9C */  jal        func_8006AA70
+/* 6A33C 8006973C 0C01AA9C */  jal        alSynSetFXMix
 /* 6A340 80069740 8E240014 */   lw        $a0, 0x14($s1)
 /* 6A344 80069744 8E100000 */  lw         $s0, 0x0($s0)
 .L80069748:
@@ -1245,7 +1245,7 @@ glabel L8006994C
 glabel L8006996C
 /* 6A56C 8006996C 8E50003C */  lw         $s0, 0x3C($s2)
 /* 6A570 80069970 8E440014 */  lw         $a0, 0x14($s2)
-/* 6A574 80069974 0C01A93C */  jal        func_8006A4F0
+/* 6A574 80069974 0C01A93C */  jal        alSynStopVoice
 /* 6A578 80069978 02002825 */   or        $a1, $s0, $zero
 /* 6A57C 8006997C 8E440014 */  lw         $a0, 0x14($s2)
 /* 6A580 80069980 0C01A95C */  jal        alSynFreeVoice
@@ -1434,7 +1434,7 @@ glabel L80069C0C
 /* 6A824 80069C24 26300004 */   addiu     $s0, $s1, 0x4
 .L80069C28:
 /* 6A828 80069C28 02002825 */  or         $a1, $s0, $zero
-/* 6A82C 80069C2C 0C01A93C */  jal        func_8006A4F0
+/* 6A82C 80069C2C 0C01A93C */  jal        alSynStopVoice
 /* 6A830 80069C30 8E440014 */   lw        $a0, 0x14($s2)
 /* 6A834 80069C34 8E440014 */  lw         $a0, 0x14($s2)
 /* 6A838 80069C38 0C01A95C */  jal        alSynFreeVoice
@@ -1462,10 +1462,10 @@ glabel L80069C7C
 /* 6A884 80069C84 02A02025 */  or         $a0, $s5, $zero
 /* 6A888 80069C88 55E10061 */  bnel       $t7, $at, .L80069E10
 /* 6A88C 80069C8C 02A02025 */   or        $a0, $s5, $zero
-/* 6A890 80069C90 0C01A858 */  jal        func_8006A160
+/* 6A890 80069C90 0C01A858 */  jal        alEvtqFlushType
 /* 6A894 80069C94 00002825 */   or        $a1, $zero, $zero
 /* 6A898 80069C98 02A02025 */  or         $a0, $s5, $zero
-/* 6A89C 80069C9C 0C01A858 */  jal        func_8006A160
+/* 6A89C 80069C9C 0C01A858 */  jal        alEvtqFlushType
 /* 6A8A0 80069CA0 24050002 */   addiu     $a1, $zero, 0x2
 /* 6A8A4 80069CA4 8E510064 */  lw         $s1, 0x64($s2)
 /* 6A8A8 80069CA8 1220000D */  beqz       $s1, .L80069CE0

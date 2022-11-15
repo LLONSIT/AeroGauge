@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80067F30
+glabel osAiSetNextBuffer
 /* 68B30 80067F30 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 68B34 80067F34 3C0F8009 */  lui        $t7, %hi(aisetnextbuf_data_0000)
 /* 68B38 80067F38 91EF2E50 */  lbu        $t7, %lo(aisetnextbuf_data_0000)($t7)
@@ -34,7 +34,7 @@ glabel func_80067F30
 /* 68B84 80067F84 3C018009 */  lui        $at, %hi(aisetnextbuf_data_0000)
 /* 68B88 80067F88 A0202E50 */  sb         $zero, %lo(aisetnextbuf_data_0000)($at)
 .L80067F8C:
-/* 68B8C 80067F8C 0C01C4EC */  jal        func_800713B0
+/* 68B8C 80067F8C 0C01C4EC */  jal        __osAiDeviceBusy
 /* 68B90 80067F90 00000000 */   nop
 /* 68B94 80067F94 10400003 */  beqz       $v0, .L80067FA4
 /* 68B98 80067F98 00000000 */   nop

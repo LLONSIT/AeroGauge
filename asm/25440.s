@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80024840
+glabel guRotateRPYF
 /* 25440 80024840 3C018009 */  lui        $at, %hi(D_8008CDD0)
 /* 25444 80024844 C420CDD0 */  lwc1       $f0, %lo(D_8008CDD0)($at)
 /* 25448 80024848 44876000 */  mtc1       $a3, $f12
@@ -100,7 +100,7 @@ glabel func_80024988
 /* 2559C 8002499C 44056000 */  mfc1       $a1, $f12
 /* 255A0 800249A0 44067000 */  mfc1       $a2, $f14
 /* 255A4 800249A4 AFA70064 */  sw         $a3, 0x64($sp)
-/* 255A8 800249A8 0C009210 */  jal        func_80024840
+/* 255A8 800249A8 0C009210 */  jal        guRotateRPYF
 /* 255AC 800249AC 27A40018 */   addiu     $a0, $sp, 0x18
 /* 255B0 800249B0 27A40018 */  addiu      $a0, $sp, 0x18
 /* 255B4 800249B4 0C01B08C */  jal        guMtxF2L

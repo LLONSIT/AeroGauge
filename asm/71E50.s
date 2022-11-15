@@ -17,7 +17,7 @@ glabel alSynRemovePlayer
 /* 71E68 80071268 8FBF0014 */   lw        $ra, 0x14($sp)
 /* 71E6C 8007126C AFA50024 */  sw         $a1, 0x24($sp)
 /* 71E70 80071270 AFA00018 */  sw         $zero, 0x18($sp)
-/* 71E74 80071274 0C01AAC4 */  jal        func_8006AB10
+/* 71E74 80071274 0C01AAC4 */  jal        osSetIntMask
 /* 71E78 80071278 AFA70020 */   sw        $a3, 0x20($sp)
 /* 71E7C 8007127C 8FA70020 */  lw         $a3, 0x20($sp)
 /* 71E80 80071280 8FA50024 */  lw         $a1, 0x24($sp)
@@ -46,7 +46,7 @@ glabel alSynRemovePlayer
 /* 71ECC 800712CC 1460FFF2 */  bnez       $v1, .L80071298
 /* 71ED0 800712D0 00000000 */   nop
 .L800712D4:
-/* 71ED4 800712D4 0C01AAC4 */  jal        func_8006AB10
+/* 71ED4 800712D4 0C01AAC4 */  jal        osSetIntMask
 /* 71ED8 800712D8 00000000 */   nop
 /* 71EDC 800712DC 8FBF0014 */  lw         $ra, 0x14($sp)
 .L800712E0:
