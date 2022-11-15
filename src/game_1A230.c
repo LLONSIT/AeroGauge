@@ -18,7 +18,7 @@ void func_8001A750(s32* arg0, struct unk_struct_8001A750 *arg1, s32 arg2) {
     s32 sp24;
     s8 *sp18;
     short pad;
-    
+
     sp24 = *arg0;
     func_8001F75C(0xB5, 0x60, 0x14, 0xFF);
     osSetTime(arg1->unk2 - 0x3C, arg1->unk4 + 0x13);
@@ -32,22 +32,23 @@ void func_8001A750(s32* arg0, struct unk_struct_8001A750 *arg1, s32 arg2) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001A9D4.s")
 
-
 /*
-void func_8001AB94(Gfx** arg0, struct struct_8001AB94   *arg1) {
-
+void func_8001AB94(Gfx** gDisplayList, struct struct_8001AB94   *arg1) {
+    Gfx** sp3C;
+    sp3C = gDisplayList;
     if (arg1->unk10 != 0) {
-
-    gDPPipeSync(arg0);
-    gDPSetRenderMode(arg0, G_RM_XLU_SURF, G_RM_XLU_SURF2);
-    gDPSetCombineMode(arg0, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
-    gDPSetPrimColor(arg0, 'x', 0xff, 0xFF, 0xFF, 0xFF, 0xFF);
-
-    func_80019D0C(&arg0, arg1->unk0, arg1->unk2, arg1->unk10, 0);
-    }
-    //*arg0 = sp3C;
+    
+    gDPPipeSync(*(sp3C)++);
+    gDPSetRenderMode((*sp3C)++, G_RM_XLU_SURF, G_RM_XLU_SURF2);
+    gDPSetCombineMode((*gDisplayList)++, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
+    gDPSetPrimColor((*gDisplayList)++, NULL, NULL, NULL, 0xFF, 0xFF, 0xFF);
+    func_80019D0C(&sp3C, arg1->unk0, arg1->unk2, arg1->unk10, 0);
+    return;
+        }
+ //   *arg0 = sp3C;
 }
 */
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001AB94.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001AC64.s")
@@ -71,7 +72,7 @@ struct unk_struct_8013FC *D_8013FC80;
 void func_8001BAD4(void) {
     D_8008B7DC = 0x7F;
     D_8008B7E0 = 0xFF;
-    D_8008B7E4 = 0x141 - D_8013FC80->unkFC; 
+    D_8008B7E4 = 0x141 - D_8013FC80->unkFC;
     D_8008B7E8 = 0;
     D_8008B7EC = 0x140;
     }

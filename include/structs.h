@@ -149,11 +149,24 @@ struct unk_struct_80010C14{
 };
 
 
-struct unk_struct_800114A0{
+struct unk_struct_800114A0 {
     s16 unk0;
     s16 unk2;
     s16 unk4;
     f32 unk8;
     f32 unk10;
     f32 unkC;
+};
+
+struct unk_struct_8005E1DC {
+    s8 pad[0x6];
+    s8 unk6;
+    s8 unk7;
+    s8 unk8;
+};
+
+struct unk_struct_80018944 {
+    s8 pad[0x1B8];
+    s32 unk1B8;
+
 };

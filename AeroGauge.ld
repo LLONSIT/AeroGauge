@@ -62,9 +62,7 @@ SECTIONS
         build/asm/15020.s.o(.text);
         build/src/game_15D60.c.o(.text);
         build/asm/16840.s.o(.text);
-        main_DATA_START = .;
-        _16BD0_data__s = .;
-        build/asm/data/16BD0.data.s.o(.data);
+        build/src/game_16BD0.c.o(.text);
         build/asm/198F0.s.o(.text);
         build/asm/19A90.s.o(.text);
         build/asm/19AA0.s.o(.text);
@@ -112,10 +110,10 @@ SECTIONS
         build/asm/4FA50.s.o(.text);
         build/asm/53A60.s.o(.text);
         build/asm/57E00.s.o(.text);
-        build/asm/58530.s.o(.text);
+        build/src/game_58530.c.o(.text);
         build/asm/58710.s.o(.text);
         build/asm/5D0C0.s.o(.text);
-        build/asm/5D350.s.o(.text);
+        build/src/game_5D350.c.o(.text);
         build/asm/5F6B0.s.o(.text);
         build/asm/61570.s.o(.text);
         build/src/game_62900.c.o(.text);
@@ -154,6 +152,7 @@ SECTIONS
         build/src/os/audio/alSndpDelete.c.o(.text);
         build/src/os/osVirtualToPhysical.c.o(.text);
         build/asm/68B30.s.o(.text);
+        main_DATA_START = .;
         _68BE0_data__s = .;
         build/asm/data/68BE0.data.s.o(.data);
         main_DATA_END = .;
@@ -177,7 +176,7 @@ SECTIONS
         build/asm/6BE20.s.o(.text);
         build/asm/6C2E0.s.o(.text);
         build/asm/6C3F0.s.o(.text);
-        build/src/os/libc/sprintf.c.o(.text);
+        build/src/os/libc/Sprintf.c.o(.text);
         build/asm/6C660.s.o(.text);
         build/src/os/gu/guLookat.c.o(.text);
         build/src/os/gu/guMtxcatf.c.o(.text);
@@ -187,8 +186,8 @@ SECTIONS
         build/asm/6D490.s.o(.text);
         build/asm/6D6A0.s.o(.text);
         build/asm/6D860.s.o(.text);
-        build/asm/6D900.s.o(.text);
-        build/asm/6D940.s.o(.text);
+        build/src/os/libc/osSyncPrintf.c.o(.text);
+        build/src/os/libc/String.c.o(.text);
         build/asm/6D9E0.s.o(.text);
         build/src/os/osPfsNumFiles.c.o(.text);
         build/asm/6DCF0.s.o(.text);
@@ -298,6 +297,7 @@ SECTIONS
         build/asm/15020.s.o(.bss);
         build/src/game_15D60.c.o(.bss);
         build/asm/16840.s.o(.bss);
+        build/src/game_16BD0.c.o(.bss);
         build/asm/198F0.s.o(.bss);
         build/asm/19A90.s.o(.bss);
         build/asm/19AA0.s.o(.bss);
@@ -345,10 +345,10 @@ SECTIONS
         build/asm/4FA50.s.o(.bss);
         build/asm/53A60.s.o(.bss);
         build/asm/57E00.s.o(.bss);
-        build/asm/58530.s.o(.bss);
+        build/src/game_58530.c.o(.bss);
         build/asm/58710.s.o(.bss);
         build/asm/5D0C0.s.o(.bss);
-        build/asm/5D350.s.o(.bss);
+        build/src/game_5D350.c.o(.bss);
         build/asm/5F6B0.s.o(.bss);
         build/asm/61570.s.o(.bss);
         build/src/game_62900.c.o(.bss);
@@ -405,7 +405,7 @@ SECTIONS
         build/asm/6BE20.s.o(.bss);
         build/asm/6C2E0.s.o(.bss);
         build/asm/6C3F0.s.o(.bss);
-        build/src/os/libc/sprintf.c.o(.bss);
+        build/src/os/libc/Sprintf.c.o(.bss);
         build/asm/6C660.s.o(.bss);
         build/src/os/gu/guLookat.c.o(.bss);
         build/src/os/gu/guMtxcatf.c.o(.bss);
@@ -415,8 +415,8 @@ SECTIONS
         build/asm/6D490.s.o(.bss);
         build/asm/6D6A0.s.o(.bss);
         build/asm/6D860.s.o(.bss);
-        build/asm/6D900.s.o(.bss);
-        build/asm/6D940.s.o(.bss);
+        build/src/os/libc/osSyncPrintf.c.o(.bss);
+        build/src/os/libc/String.c.o(.bss);
         build/asm/6D9E0.s.o(.bss);
         build/src/os/osPfsNumFiles.c.o(.bss);
         build/asm/6DCF0.s.o(.bss);

@@ -12,7 +12,7 @@ glabel func_8001F998
 /* 205C0 8001F9C0 8C830000 */  lw         $v1, 0x0($a0)
 /* 205C4 8001F9C4 8F040000 */  lw         $a0, 0x0($t8)
 /* 205C8 8001F9C8 30E500FF */  andi       $a1, $a3, 0xFF
-/* 205CC 8001F9CC 0C01B365 */  jal        func_8006CD94
+/* 205CC 8001F9CC 0C01B365 */  jal        strchr
 /* 205D0 8001F9D0 AFA300DC */   sw        $v1, 0xDC($sp)
 /* 205D4 8001F9D4 8FA300DC */  lw         $v1, 0xDC($sp)
 /* 205D8 8001F9D8 14400003 */  bnez       $v0, .L8001F9E8

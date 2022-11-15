@@ -23,7 +23,6 @@ extern  u8 D_801AC092;
 extern s8 gPlayerLapCount;
 
 extern u8 D_8019E6A8;
-extern u16 D_8019EE02;
 
 extern s8 D_8013FF94;
 extern s32 D_8016C420;
@@ -46,6 +45,21 @@ extern f64 D_80096CD0;
 extern float gUnk_YPos;
 extern f32 D_800962D0;
 extern f32 D_800962D4;
+extern s8 D_8008F640;
+extern s8 D_8008F644;
+extern s8 D_8019EE00;
+extern s8 D_8019EE01;
+extern s8 D_8008F640;
+extern s8 D_8008F644;
+extern u16 D_8019EE02;
+extern s16 D_8019EE04;
+extern s32 D_8019EE08;
+extern s32 D_8019EE0C;
+extern s32 D_8019EE10;
+extern s32 D_8019EE14;
+
+//game_16BD0
+extern s32 D_8013FC84;
 
 //game_1CC30
 

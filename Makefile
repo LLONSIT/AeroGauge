@@ -92,8 +92,7 @@ DEFINES += -DNON_MATCHING
 VERIFY = no_verify
 PROGRESS_NONMATCHING = --non-matching
 endif
-
-CFLAGS := -G 0  -Xcpluscomm -signed -nostdinc -non_shared -Wab,-r4300_mul
+CFLAGS := -Wab,-r4300_mul -non_shared -G 0 -Xcpluscomm -fullwarn  -nostdinc -g0
 CFLAGS += $(DEFINES)
 # ignore compiler warnings about anonymous structs
 CFLAGS += -woff 649,838

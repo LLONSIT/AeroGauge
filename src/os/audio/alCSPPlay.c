@@ -9,4 +9,3 @@ void alCSPPlay(ALCSPlayer *seqp)
 
     alEvtqPostEvent(&seqp->evtq, &evt, 0);
 }
-

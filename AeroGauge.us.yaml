@@ -26,6 +26,9 @@ segments:
     start: 0x1000
     vram: 0x80000400
     subsegments:
+
+
+      #Game Segments
       - [0x1000, hasm, entrypoint]
       - [0x11C0, asm]
       - [0x1FC0, asm]
@@ -53,7 +56,7 @@ segments:
       - [0x15020, asm]
       - [0x15D60, c, game_15D60]
       - [0x16840, asm]
-      - [0x16BD0, data]
+      - [0x16BD0, c, game_16BD0]
       - [0x198F0, asm]
       - [0x19A90, asm]
       - [0x19AA0, asm]
@@ -101,10 +104,10 @@ segments:
       - [0x4FA50, asm]
       - [0x53A60, asm]
       - [0x57E00, asm]
-      - [0x58530, asm]
+      - [0x58530, c, game_58530]
       - [0x58710, asm]
       - [0x5D0C0, asm]
-      - [0x5D350, asm]
+      - [0x5D350, c, game_5D350]
       - [0x5F6B0, asm]
       - [0x61570, asm]
       - [0x62900, c, game_62900]
@@ -113,6 +116,8 @@ segments:
       - [0x65FF0, asm]
       - [0x66230, asm]
       - [0x66340, asm]
+
+      #Libultra Starts
       - [0x66740, asm]
       - [0x66740, asm]
       - [0x667A0, asm]
@@ -151,7 +156,7 @@ segments:
       - [0x68BF0, asm]
       - [0x69420, asm]
 
-      #Libultra Segs
+    #Libultra Segs start from here
       - [0x6AD60, asm]
       - [0x6B170, c, os/audio/alSynFreeVoice]
       - [0x6B220, c, os/audio/alSynSetVol]
@@ -169,7 +174,7 @@ segments:
       - [0x6BE20, asm]
       - [0x6C2E0, asm]
       - [0x6C3F0, asm]
-      - [0x6C5E0, c, os/libc/sprintf]
+      - [0x6C5E0, c, os/libc/Sprintf]
       - [0x6C660, asm]
       - [0x6C8F0, c, os/gu/guLookat]
       - [0x6CC20, c, os/gu/guMtxcatf]
@@ -179,8 +184,8 @@ segments:
       - [0x6D490, asm]
       - [0x6D6A0, asm]
       - [0x6D860, asm]
-      - [0x6D900, asm]
-      - [0x6D940, asm]
+      - [0x6D900, c, os/libc/osSyncPrintf]
+      - [0x6D940, c, os/libc/String]
       - [0x6D9E0, asm]
       - [0x6DBA0, c, os/osPfsNumFiles]
       - [0x6DCF0, asm]

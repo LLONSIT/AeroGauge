@@ -5,6 +5,7 @@
 
 //Nice ASCII developer
  void func_8001E1C0(void) {
+       
         func_80000610(0);
         func_80001418(0);
         func_80001418(1);

@@ -31,7 +31,7 @@ extern s32 func_800113A0();
 extern f32 func_80011468(s32 arg0);
 extern f32 func_80011484(s32 arg0);
 extern void func_80010C14(void * arg0, s32 arg1, s32 arg2);
-
+extern s32 func_80009488();
 
 //game_1CC30
 extern void func_8001C268(void);
@@ -63,6 +63,9 @@ extern void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3);
 extern void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3) ;                  /* extern */
 extern void func_8001F790(void **arg0, u8 *arg1, s32 arg2);
 extern void func_80000610(s32 arg0);
+
+//game_5D350
+extern void func_8005E1DC(s32 arg0);
 
 
 //game_62900
