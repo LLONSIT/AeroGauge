@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80073820
+glabel alAuxBusParam
 /* 74420 80073820 24010002 */  addiu      $at, $zero, 0x2
 /* 74424 80073824 14A10008 */  bne        $a1, $at, .L80073848
 /* 74428 80073828 8C82001C */   lw        $v0, 0x1C($a0)

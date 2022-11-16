@@ -16,7 +16,7 @@ CYAN    := \033[0;36m
 # Directories
 
 BUILD_DIR = build
-ASM_DIRS  = asm asm/data
+ASM_DIRS  = asm asm/data asm/data/os asm/os
 BIN_DIRS  = assets
 SRC_DIR   = src
 			#Libultra
@@ -60,6 +60,8 @@ SPLAT    = $(TOOLS_DIR)/splat/split.py
 
 IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
 # Flags
+
+LIBULTRA = lib/libultra_rom.a
 
 OPT_FLAGS      = -O2
 LOOP_UNROLL    =
@@ -131,18 +133,12 @@ $(BUILD_DIR)/$(SRC_DIR)/os/gu/%.c.o: OPT_FLAGS := -O3
 $(BUILD_DIR)/$(SRC_DIR)/os/gu/cosf.c.o: OPT_FLAGS := -O1
 $(BUILD_DIR)/$(SRC_DIR)/os/libc/%.c.o: OPT_FLAGS := -O3
 $(BUILD_DIR)/$(SRC_DIR)/os/audio/alSndPlayer.c.o: OPT_FLAGS := -O1
-#$(BUILD_DIR)/$(SRC_DIR)/os/audio/sndplayer_text_008C.c.o: OPT_FLAGS := -O2 #exception
-# $(BUILD_DIR)/$(SRC_DIR)/core/eeprom.c.o: OPT_FLAGS := -O2
-
-#$(BUILD_DIR)/$(SRC_DIR)/overlay2_6AB090.c.o: LOOP_UNROLL := -Wo,-loopunroll,0
-
-#$(BUILD_DIR)/src.eu/overlay1%.c.o: OPT_FLAGS := -g
 
 ### Targets
 
 default: all
 
-all: dirs $(VERIFY)
+all: $(VERIFY)
 
 dirs:
 	$(foreach dir,$(SRC_DIRS) $(ASM_DIRS) $(BIN_DIRS),$(shell mkdir -p $(BUILD_DIR)/$(dir)))
@@ -201,6 +197,14 @@ $(BUILD_DIR)/%.c.o: %.c
 	@printf "[$(YELLOW) check $(NO_COL)]  $<\n"
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $<
 	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
+
+
+
+$(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
+	@mkdir -p $$(dirname $@)
+	@cp $< $@
+	@$(PYTHON) $(TOOLS_DIR)/set_o32abi_bit.py $@
+
 
 
 $(BUILD_DIR)/%.s.o: %.s

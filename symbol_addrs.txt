@@ -41,6 +41,20 @@ alSynAllocVoice = 0x8006A838;
 alSynSetFXMix = 0x8006AA70;
 alSynStartVoiceParams = 0x8006A980;
 alSynStopVoice = 0x8006A4F0;
+_collectPVoices = 0x80068088;
+__freeParam = 0x800680E8;
+alAudioFrame = 0x80068138;
+alSynNew = 0x800683D0;
+alAuxBusNew = 0x80071478;
+alMainBusNew = 0x80071424;
+alSaveNew = 0x800713E0;
+alSynAllocFX = 0x80071B80;
+alLoadNew = 0x80071554;
+alResampleNew = 0x800714CC;
+alEnvmixerNew = 0x800715FC;
+alEnvmixerParam = 0x80072CD4;
+alAuxBusParam = 0x80073820;
+alSaveParam = 0x80073930;
 
 
 //os syms
@@ -98,7 +112,7 @@ lldiv = 0x8007BC70;
 ldiv = 0x8007BD70;
 __osCurrentTime =  0x8008C8E0;
 alGlobals  = 0x80092E40;
-aisetnextbuf_data_0000  = 0x80092E50;
+//aisetnextbuf_data_0000  = 0x80092E50; nop :)
 __osContinitialized  = 0x80092E60;
 __osMotorinitialized  = 0x80093670;
 osViModeTable   = 0x800936A0;

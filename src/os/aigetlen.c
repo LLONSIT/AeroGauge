@@ -1,6 +1,2 @@
-#include <rcp.h>
 
-u32 osAiGetLength(void)
-{
-    return IO_READ(AI_LEN_REG);
-}
+#pragma GLOBAL_ASM("asm/nonmatchings/os/aigetlen/osAiGetLength.s")

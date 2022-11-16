@@ -12,7 +12,7 @@ options:
   compression: lzma
   migrate_rodata_to_functions: yes
   generate_c_preamble: #include <ultra64.h>
-
+  lib_path: build/lib
 
 segments:
   - name: header
@@ -26,7 +26,6 @@ segments:
     start: 0x1000
     vram: 0x80000400
     subsegments:
-
 
       #Game Segments
       - [0x1000, hasm, entrypoint]
@@ -84,7 +83,7 @@ segments:
       - [0x25A60, asm]
       - [0x25BE0, asm]
       - [0x25D70, asm]
-      - [0x25F20, asm]
+      - [0x25F20, c, game_25F0]
       - [0x25FC0, asm]
       - [0x26440, c, game_26440]
       - [0x26520, asm]
@@ -119,7 +118,6 @@ segments:
 
       #Libultra Starts
       - [0x66740, asm]
-      - [0x66740, asm]
       - [0x667A0, asm]
       - [0x669F0, asm]
       - [0x66A30, c, os/osCreateMesgQueue]
@@ -147,9 +145,10 @@ segments:
       - [0x68A50, c, os/audio/alSeqpDelete]
       - [0x68A80, c, os/audio/alSndpDelete]
       - [0x68AB0, c, os/osVirtualToPhysical]
-      - [0x68B30, asm]
-      - [0x68BE0, data]
-      - [0x68BF0, asm]
+      - [0x68B30, c, os/aisetnextbuf]
+      - [0x68BE0, c, os/aigetlen]
+      - [0x68BF0, asm, alSynTheSizer]
+      - [0x692D0, c, os/osSendMesg]
       - [0x69420, asm]
 
     #The other Libultra Segs start from here

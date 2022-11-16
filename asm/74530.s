@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80073930
+glabel alSaveParam
 /* 74530 80073930 24010001 */  addiu      $at, $zero, 0x1
 /* 74534 80073934 10A10006 */  beq        $a1, $at, .L80073950
 /* 74538 80073938 00001025 */   or        $v0, $zero, $zero

@@ -11,7 +11,7 @@
 #include <vector>
 #include <string>
 
-#include <capstone/capstone.h>
+#include <capstone.h>
 
 #include "elf.h"
 

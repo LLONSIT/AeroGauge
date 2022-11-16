@@ -158,7 +158,7 @@ glabel func_80067B7C
 /* 6878C 80067B8C AFBF0014 */  sw         $ra, 0x14($sp)
 /* 68790 80067B90 55C00004 */  bnel       $t6, $zero, .L80067BA4
 /* 68794 80067B94 8FBF0014 */   lw        $ra, 0x14($sp)
-/* 68798 80067B98 0C01A0F4 */  jal        func_800683D0
+/* 68798 80067B98 0C01A0F4 */  jal        alSynNew
 /* 6879C 80067B9C AC440000 */   sw        $a0, 0x0($v0)
 /* 687A0 80067BA0 8FBF0014 */  lw         $ra, 0x14($sp)
 .L80067BA4:

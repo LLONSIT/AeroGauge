@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_80071B80
+glabel alSynAllocFX
 /* 72780 80071B80 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 72784 80071B84 00054400 */  sll        $t0, $a1, 16
 /* 72788 80071B88 00087403 */  sra        $t6, $t0, 16

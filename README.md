@@ -1,5 +1,5 @@
 # AeroGauge
-AeroGauge is a fzero style game, but it has different and special mechanics!
+AeroGauge is a Fzero style game, but it has different and special mechanics!
 
 ## Dependencies
 

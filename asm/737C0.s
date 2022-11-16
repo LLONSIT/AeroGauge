@@ -88,7 +88,7 @@ glabel func_80072BE8
 /* 738CC 80072CCC 03E00008 */  jr         $ra
 /* 738D0 80072CD0 00000000 */   nop
 
-glabel func_80072CD4
+glabel alEnvmixerParam
 /* 738D4 80072CD4 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 738D8 80072CD8 24020001 */  addiu      $v0, $zero, 0x1
 /* 738DC 80072CDC AFBF0014 */  sw         $ra, 0x14($sp)
@@ -829,7 +829,7 @@ glabel L80073718
 /* 74380 80073780 AFD9003C */   sw        $t9, 0x3C($fp)
 /* 74384 80073784 AFC00040 */  sw         $zero, 0x40($fp)
 .L80073788:
-/* 74388 80073788 0C01A03A */  jal        func_800680E8
+/* 74388 80073788 0C01A03A */  jal        __freeParam
 /* 7438C 8007378C 00000000 */   nop
 /* 74390 80073790 8FB800A0 */  lw         $t8, 0xA0($sp)
 /* 74394 80073794 8F0F003C */  lw         $t7, 0x3C($t8)
