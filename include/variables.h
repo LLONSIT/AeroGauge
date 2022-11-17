@@ -1,12 +1,15 @@
 #include <ultra64.h>
 #include <PR/sched.h>
 
+//game_1FC0
+
 //0x8008B  asm symbols
 extern s16 D_8008B7DC;
 extern s16 D_8008B7E0;
 extern s16 D_8008B7E4;
 extern s16 D_8008B7E8;
 extern s16 D_8008B7EC;
+
 
 //not clasified yet
 extern OSMesgQueue D_801AC060;

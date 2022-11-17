@@ -37,7 +37,7 @@ SECTIONS
         main_TEXT_START = .;
         build/asm/entrypoint.s.o(.text);
         build/asm/11C0.s.o(.text);
-        build/asm/1FC0.s.o(.text);
+        build/src/game_1FC0.c.o(.text);
         build/asm/2360.s.o(.text);
         build/asm/2D80.s.o(.text);
         build/asm/5850.s.o(.text);
@@ -302,8 +302,8 @@ SECTIONS
         build/asm/entrypoint.s.o(.data);
         _11C0_s = .;
         build/asm/11C0.s.o(.data);
-        _1FC0_s = .;
-        build/asm/1FC0.s.o(.data);
+        game_1FC0_c = .;
+        build/src/game_1FC0.c.o(.data);
         _2360_s = .;
         build/asm/2360.s.o(.data);
         _2D80_s = .;
@@ -817,7 +817,7 @@ SECTIONS
         main_BSS_START = .;
         build/asm/entrypoint.s.o(.bss);
         build/asm/11C0.s.o(.bss);
-        build/asm/1FC0.s.o(.bss);
+        build/src/game_1FC0.c.o(.bss);
         build/asm/2360.s.o(.bss);
         build/asm/2D80.s.o(.bss);
         build/asm/5850.s.o(.bss);

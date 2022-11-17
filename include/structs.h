@@ -77,10 +77,6 @@ struct unk_struct_8001BFE {
 
 };
 
-struct unk_struct_80013F40 {
-	s8 pad[0x33];
-	s32 unk34;
-};
 
 
 struct unk_struct_800061C4 {
@@ -170,3 +166,23 @@ struct unk_struct_80018944 {
     s32 unk1B8;
 
 };
+
+typedef struct {
+    s32 unk0;
+    u8 pad[0x14];
+} struct_80109C30; // size 0x18
+
+
+struct unk_struct_80013F40 {
+
+
+s8 pad[0x34];
+struct {
+    s32 a : 14;
+    s32 b : 1;
+    
+} unk34;
+
+
+};
+

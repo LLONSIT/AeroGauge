@@ -24,7 +24,7 @@ extern void func_800135A0(void *);
 extern void func_80013C8C(void *);
 extern void func_8001412C(void *);
 extern void func_80014534(void *);
-extern void func_80013F40(void* arg0);
+extern void func_80013F40(struct unk_struct_80013F40* arg0);
 
 //game_10D60
 extern s32 func_800113A0();

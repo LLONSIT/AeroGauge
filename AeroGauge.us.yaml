@@ -28,7 +28,7 @@ segments:
     subsegments:
       - [0x1000, hasm, entrypoint]
       - [0x11C0, asm]
-      - [0x1FC0, asm]
+      - [0x1FC0, c, game_1FC0]
       - [0x2360, asm]
       - [0x2D80, asm]
       - [0x5850, asm] 
