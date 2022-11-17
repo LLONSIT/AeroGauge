@@ -111,7 +111,7 @@ GCC_FLAGS += -Wall -Wextra -Wno-missing-braces
 TARGET     = $(BUILD_DIR)/$(BASENAME).$(VERSION)
 LD_SCRIPT  = $(BASENAME).ld
 
-LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt -T undefined_syms.$(VERSION).txt -T undefined_syms_auto.txt
+LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt -T undefined_syms.$(VERSION).txt -T undefined_syms_auto.txt -Lbuild/lib/ -lultra_rom
 LD_FLAGS  += -Map $(TARGET).map --no-check-sections
 
 ifeq ($(VERSION),us)

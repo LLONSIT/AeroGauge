@@ -9,8 +9,8 @@
 
 glabel osAiSetNextBuffer
 /* 68B30 80067F30 27BDFFE0 */  addiu      $sp, $sp, -0x20
-/* 68B34 80067F34 3C0F8009 */  lui        $t7, %hi(aisetnextbuf_data_0000)
-/* 68B38 80067F38 91EF2E50 */  lbu        $t7, %lo(aisetnextbuf_data_0000)($t7)
+/* 68B34 80067F34 3C0F8009 */  lui        $t7, %hi(D_80092E50)
+/* 68B38 80067F38 91EF2E50 */  lbu        $t7, %lo(D_80092E50)($t7)
 /* 68B3C 80067F3C AFA40020 */  sw         $a0, 0x20($sp)
 /* 68B40 80067F40 8FAE0020 */  lw         $t6, 0x20($sp)
 /* 68B44 80067F44 AFBF0014 */  sw         $ra, 0x14($sp)
@@ -27,12 +27,12 @@ glabel osAiSetNextBuffer
 /* 68B6C 80067F6C 15400005 */  bnez       $t2, .L80067F84
 /* 68B70 80067F70 00000000 */   nop
 /* 68B74 80067F74 240B0001 */  addiu      $t3, $zero, 0x1
-/* 68B78 80067F78 3C018009 */  lui        $at, %hi(aisetnextbuf_data_0000)
+/* 68B78 80067F78 3C018009 */  lui        $at, %hi(D_80092E50)
 /* 68B7C 80067F7C 10000003 */  b          .L80067F8C
-/* 68B80 80067F80 A02B2E50 */   sb        $t3, %lo(aisetnextbuf_data_0000)($at)
+/* 68B80 80067F80 A02B2E50 */   sb        $t3, %lo(D_80092E50)($at)
 .L80067F84:
-/* 68B84 80067F84 3C018009 */  lui        $at, %hi(aisetnextbuf_data_0000)
-/* 68B88 80067F88 A0202E50 */  sb         $zero, %lo(aisetnextbuf_data_0000)($at)
+/* 68B84 80067F84 3C018009 */  lui        $at, %hi(D_80092E50)
+/* 68B88 80067F88 A0202E50 */  sb         $zero, %lo(D_80092E50)($at)
 .L80067F8C:
 /* 68B8C 80067F8C 0C01C4EC */  jal        __osAiDeviceBusy
 /* 68B90 80067F90 00000000 */   nop
