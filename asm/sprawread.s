@@ -11,7 +11,7 @@ glabel __osSiRawReadIo
 /* 79460 80078860 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 79464 80078864 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 79468 80078868 AFA40018 */  sw         $a0, 0x18($sp)
-/* 7946C 8007886C 0C01EAA8 */  jal        func_8007AAA0
+/* 7946C 8007886C 0C01EAA8 */  jal        __osSiDeviceBusy
 /* 79470 80078870 AFA5001C */   sw        $a1, 0x1C($sp)
 /* 79474 80078874 10400003 */  beqz       $v0, .L80078884
 /* 79478 80078878 00000000 */   nop

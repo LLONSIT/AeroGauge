@@ -11,7 +11,7 @@ glabel func_8001D660
 /* 1E284 8001D684 8CA5C4E4 */  lw         $a1, %lo(D_8016C4E4)($a1)
 /* 1E288 8001D688 8C84C4E0 */  lw         $a0, %lo(D_8016C4E0)($a0)
 /* 1E28C 8001D68C 24060000 */  addiu      $a2, $zero, 0x0
-/* 1E290 8001D690 0C01B1AA */  jal        func_8006C6A8
+/* 1E290 8001D690 0C01B1AA */  jal        __ll_mul
 /* 1E294 8001D694 24070040 */   addiu     $a3, $zero, 0x40
 /* 1E298 8001D698 00402025 */  or         $a0, $v0, $zero
 /* 1E29C 8001D69C 00602825 */  or         $a1, $v1, $zero

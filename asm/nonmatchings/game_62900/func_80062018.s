@@ -7,7 +7,7 @@ glabel func_80062018
 /* 62C2C 8006202C 8FA60040 */  lw         $a2, 0x40($sp)
 /* 62C30 80062030 A3A0003F */  sb         $zero, 0x3F($sp)
 /* 62C34 80062034 24050003 */  addiu      $a1, $zero, 0x3
-/* 62C38 80062038 0C01B8BC */  jal        func_8006E2F0
+/* 62C38 80062038 0C01B8BC */  jal        osEepromLongRead
 /* 62C3C 8006203C 240701E8 */   addiu     $a3, $zero, 0x1E8
 /* 62C40 80062040 1440002E */  bnez       $v0, .L800620FC
 /* 62C44 80062044 93A8003F */   lbu       $t0, 0x3F($sp)
@@ -16,7 +16,7 @@ glabel func_80062018
 /* 62C50 80062050 24050001 */  addiu      $a1, $zero, 0x1
 /* 62C54 80062054 27A60028 */  addiu      $a2, $sp, 0x28
 /* 62C58 80062058 24070010 */  addiu      $a3, $zero, 0x10
-/* 62C5C 8006205C 0C01B8BC */  jal        func_8006E2F0
+/* 62C5C 8006205C 0C01B8BC */  jal        osEepromLongRead
 /* 62C60 80062060 A3A8003F */   sb        $t0, 0x3F($sp)
 /* 62C64 80062064 14400023 */  bnez       $v0, .L800620F4
 /* 62C68 80062068 93A8003F */   lbu       $t0, 0x3F($sp)

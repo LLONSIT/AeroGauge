@@ -33,7 +33,7 @@ glabel func_8001D7F0
 /* 1E464 8001D864 8CA5C4E4 */  lw         $a1, %lo(D_8016C4E4)($a1)
 /* 1E468 8001D868 8C84C4E0 */  lw         $a0, %lo(D_8016C4E0)($a0)
 /* 1E46C 8001D86C 24060000 */  addiu      $a2, $zero, 0x0
-/* 1E470 8001D870 0C01B1AA */  jal        func_8006C6A8
+/* 1E470 8001D870 0C01B1AA */  jal        __ll_mul
 /* 1E474 8001D874 24070040 */   addiu     $a3, $zero, 0x40
 /* 1E478 8001D878 00402025 */  or         $a0, $v0, $zero
 /* 1E47C 8001D87C 00602825 */  or         $a1, $v1, $zero

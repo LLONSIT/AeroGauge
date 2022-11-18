@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel func_800707F0
+glabel __osDequeueThread
 /* 713F0 800707F0 00803025 */  or         $a2, $a0, $zero
 /* 713F4 800707F4 8CC70000 */  lw         $a3, 0x0($a2)
 /* 713F8 800707F8 27BDFFF8 */  addiu      $sp, $sp, -0x8

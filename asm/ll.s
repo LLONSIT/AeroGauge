@@ -87,7 +87,7 @@ glabel func_8006C610
 /* 6D244 8006C644 03E00008 */  jr         $ra
 /* 6D248 8006C648 0002103F */   dsra32    $v0, $v0, 0
 
-glabel func_8006C64C
+glabel __ll_div
 /* 6D24C 8006C64C AFA40000 */  sw         $a0, 0x0($sp)
 /* 6D250 8006C650 AFA50004 */  sw         $a1, 0x4($sp)
 /* 6D254 8006C654 AFA60008 */  sw         $a2, 0x8($sp)
@@ -114,7 +114,7 @@ glabel func_8006C64C
 /* 6D2A0 8006C6A0 03E00008 */  jr         $ra
 /* 6D2A4 8006C6A4 0002103F */   dsra32    $v0, $v0, 0
 
-glabel func_8006C6A8
+glabel __ll_mul
 /* 6D2A8 8006C6A8 AFA40000 */  sw         $a0, 0x0($sp)
 /* 6D2AC 8006C6AC AFA50004 */  sw         $a1, 0x4($sp)
 /* 6D2B0 8006C6B0 AFA60008 */  sw         $a2, 0x8($sp)

@@ -35,7 +35,7 @@ glabel func_8001D8D0
 /* 1E548 8001D948 8C84C4E0 */  lw         $a0, %lo(D_8016C4E0)($a0)
 /* 1E54C 8001D94C 8CA5C4E4 */  lw         $a1, %lo(D_8016C4E4)($a1)
 /* 1E550 8001D950 24070040 */  addiu      $a3, $zero, 0x40
-/* 1E554 8001D954 0C01B1AA */  jal        func_8006C6A8
+/* 1E554 8001D954 0C01B1AA */  jal        __ll_mul
 /* 1E558 8001D958 AFA8002C */   sw        $t0, 0x2C($sp)
 /* 1E55C 8001D95C 00402025 */  or         $a0, $v0, $zero
 /* 1E560 8001D960 00602825 */  or         $a1, $v1, $zero

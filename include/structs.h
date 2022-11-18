@@ -1,3 +1,6 @@
+#ifndef STRUCTS_H
+#define STRUCTS_H
+
 
 struct unk_8001DF40 {
 
@@ -22,9 +25,11 @@ struct unk_struct_8006B {
 };
 
 struct struct_8001AB94 {
-    s16 unk0;
-    s16 unk2;
-    s8 pad[0x8];
+    u16 unk0;
+    u16 unk2;
+    s32 unk4;
+    s32 unk8;
+    s32 unkC;
     s32 unk10;
 };
 
@@ -186,3 +191,19 @@ struct {
 
 };
 
+
+typedef struct {
+u8 unk0;
+s32 unk4;
+s32 unk8;
+
+}struct_8010C428;
+
+
+typedef struct {
+    s32 unk0;
+    s8 pad[0x19];
+    } struct_80109BCC;
+
+
+#endif 

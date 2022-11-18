@@ -60,7 +60,16 @@ alSndpPlay = 0x80067920;
 alInit = 0x80067B7C;
 osAiSetFrequency = 0x80067990;
 __osSiRawReadIo = 0x80078860;
-
+alFilterNew = 0x80079E30;
+__osSiDeviceBusy =  0x8007AAA0;
+alSeqGetLoc = 0x800739F0;
+alSeqSetLoc = 0x80073A0C;
+alSeqSecToTicks = 0x80073D28;
+alSeqGetTicks = 0x80073A28;
+osEepromLongRead = 0x8006E2F0;
+osClockRate = 0x80099044;
+__osDequeueThread = 0x800707F0;
+alFxNew = 0x80071740;
 
 
 //os syms
@@ -205,6 +214,11 @@ alEvtqFlush = 0x8006A20C;
 osAiSetNextBuffer = 0x80067F30;
 osSetIntMask = 0x8006AB10;
 __osAiDeviceBusy = 0x800713B0;
+__ll_div =  0x8006C64C;
+__ll_mul =  0x8006C6A8;
+__osFinalrom = 0x801AC110;
+
+
 
 //Irregular
 guRotateRPYF = 0x80024840;

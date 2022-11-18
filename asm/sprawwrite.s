@@ -11,7 +11,7 @@ glabel __osSpRawWriteIo
 /* 794B0 800788B0 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 794B4 800788B4 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 794B8 800788B8 AFA40018 */  sw         $a0, 0x18($sp)
-/* 794BC 800788BC 0C01EAA8 */  jal        func_8007AAA0
+/* 794BC 800788BC 0C01EAA8 */  jal        __osSiDeviceBusy
 /* 794C0 800788C0 AFA5001C */   sw        $a1, 0x1C($sp)
 /* 794C4 800788C4 10400003 */  beqz       $v0, .L800788D4
 /* 794C8 800788C8 00000000 */   nop

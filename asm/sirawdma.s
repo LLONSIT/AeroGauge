@@ -11,7 +11,7 @@ glabel __osSiRawStartDma
 /* 74E40 80074240 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 74E44 80074244 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 74E48 80074248 AFA40018 */  sw         $a0, 0x18($sp)
-/* 74E4C 8007424C 0C01EAA8 */  jal        func_8007AAA0
+/* 74E4C 8007424C 0C01EAA8 */  jal        __osSiDeviceBusy
 /* 74E50 80074250 AFA5001C */   sw        $a1, 0x1C($sp)
 /* 74E54 80074254 10400003 */  beqz       $v0, .L80074264
 /* 74E58 80074258 00000000 */   nop

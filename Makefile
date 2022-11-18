@@ -19,8 +19,8 @@ BUILD_DIR = build
 ASM_DIRS  = asm asm/data asm/data/os asm/os
 BIN_DIRS  = assets
 SRC_DIR   = src
-			#Libultra
-SRC_DIRS  = $(SRC_DIR) 	$(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc
+			
+SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/audio
 
 TOOLS_DIR = tools
 
@@ -111,7 +111,7 @@ GCC_FLAGS += -Wall -Wextra -Wno-missing-braces
 TARGET     = $(BUILD_DIR)/$(BASENAME).$(VERSION)
 LD_SCRIPT  = $(BASENAME).ld
 
-LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt -T undefined_syms.$(VERSION).txt -T undefined_syms_auto.txt -Lbuild/lib/ -lultra_rom
+LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt -T undefined_syms.$(VERSION).txt -T undefined_syms_auto.txt 
 LD_FLAGS  += -Map $(TARGET).map --no-check-sections
 
 ifeq ($(VERSION),us)
@@ -203,7 +203,7 @@ $(BUILD_DIR)/%.c.o: %.c
 $(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
 	@mkdir -p $$(dirname $@)
 	@cp $< $@
-	@$(PYTHON) $(TOOLS_DIR)/set_o32abi_bit.py $@
+#	@$(PYTHON) $(TOOLS_DIR)/set_o32abi_bit.py $@
 
 
 

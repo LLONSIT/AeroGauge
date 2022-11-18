@@ -355,7 +355,7 @@ glabel func_80068CA0
 /* 698E8 80068CE8 51E00018 */  beql       $t7, $zero, .L80068D4C
 /* 698EC 80068CEC A7A00028 */   sh        $zero, 0x28($sp)
 /* 698F0 80068CF0 AFA60020 */  sw         $a2, 0x20($sp)
-/* 698F4 80068CF4 0C01CE8A */  jal        func_80073A28
+/* 698F4 80068CF4 0C01CE8A */  jal        alSeqGetTicks
 /* 698F8 80068CF8 AFA70038 */   sw        $a3, 0x38($sp)
 /* 698FC 80068CFC 8FA70038 */  lw         $a3, 0x38($sp)
 /* 69900 80068D00 8FB80024 */  lw         $t8, 0x24($sp)
@@ -368,7 +368,7 @@ glabel func_80068CA0
 /* 6991C 80068D1C 5420000B */  bnel       $at, $zero, .L80068D4C
 /* 69920 80068D20 A7A00028 */   sh        $zero, 0x28($sp)
 /* 69924 80068D24 8CE5007C */  lw         $a1, 0x7C($a3)
-/* 69928 80068D28 0C01CE83 */  jal        func_80073A0C
+/* 69928 80068D28 0C01CE83 */  jal        alSeqSetLoc
 /* 6992C 80068D2C AFA70038 */   sw        $a3, 0x38($sp)
 /* 69930 80068D30 8FA70038 */  lw         $a3, 0x38($sp)
 /* 69934 80068D34 2401FFFF */  addiu      $at, $zero, -0x1

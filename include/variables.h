@@ -91,6 +91,10 @@ extern s8 D_8008C8EC;
 extern s8 D_8008C8F0;
 
 
+//game_2360
+extern s32 D_8010C438;
+
+
 //game_24890
 
 extern f32 func_80023C90(f32);
