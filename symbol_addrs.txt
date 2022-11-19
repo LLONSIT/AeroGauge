@@ -70,6 +70,9 @@ osEepromLongRead = 0x8006E2F0;
 osClockRate = 0x80099044;
 __osDequeueThread = 0x800707F0;
 alFxNew = 0x80071740;
+alAuxBusPull = 0x80073850;
+guPerspectiveF = 0x8006BA60;
+guPerspective = 0x8006BC90;
 
 
 //os syms
@@ -155,12 +158,12 @@ osVirtualToPhysical =  0x80067EB0;
 __osCheckId = 0x80074E00;
 __osContRamRead = 0x80075290; 
 __osPfsSelectBank = 0x8007521C; 
-__sinf = 0x80066D50;
+sinf = 0x80066D50;
 osScRemoveClient = 0x80064B8C;
 osScAddClient = 0x80064B3C:
 __osProbeTLB = 0x800712F0;
 coss = 0x8006AC50;
-__cosf = 0x8006AC80;
+cosf = 0x8006AC80;
 __libm_qnan_f = 0x80098D90;
 sins = 0x8006B6E0; 
 osContInit = 0x8006AEE0;
@@ -217,6 +220,7 @@ __osAiDeviceBusy = 0x800713B0;
 __ll_div =  0x8006C64C;
 __ll_mul =  0x8006C6A8;
 __osFinalrom = 0x801AC110;
+guNormalize = 0x8006D240;
 
 
 

@@ -1098,7 +1098,7 @@ glabel func_8000E428
 /* FC7C 8000F07C 3C06425C */  lui        $a2, (0x425C0000 >> 16)
 /* FC80 8000F080 E7A80010 */  swc1       $f8, 0x10($sp)
 /* FC84 8000F084 E7AA0014 */  swc1       $f10, 0x14($sp)
-/* FC88 8000F088 0C01AE98 */  jal        func_8006BA60
+/* FC88 8000F088 0C01AE98 */  jal        guPerspectiveF
 /* FC8C 8000F08C E7B20018 */   swc1      $f18, 0x18($sp)
 /* FC90 8000F090 44801000 */  mtc1       $zero, $f2
 /* FC94 8000F094 3C018008 */  lui        $at, %hi(D_80082188)

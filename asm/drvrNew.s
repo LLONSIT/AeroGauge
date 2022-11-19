@@ -55,8 +55,8 @@ glabel alAuxBusNew
 /* 72080 80071480 AFA60020 */  sw         $a2, 0x20($sp)
 /* 72084 80071484 AFBF0014 */  sw         $ra, 0x14($sp)
 /* 72088 80071488 3C068007 */  lui        $a2, %hi(alAuxBusParam)
-/* 7208C 8007148C 3C058007 */  lui        $a1, %hi(func_80073850)
-/* 72090 80071490 24A53850 */  addiu      $a1, $a1, %lo(func_80073850)
+/* 7208C 8007148C 3C058007 */  lui        $a1, %hi(alAuxBusPull)
+/* 72090 80071490 24A53850 */  addiu      $a1, $a1, %lo(alAuxBusPull)
 /* 72094 80071494 24C63820 */  addiu      $a2, $a2, %lo(alAuxBusParam)
 /* 72098 80071498 AFA40018 */  sw         $a0, 0x18($sp)
 /* 7209C 8007149C 0C01E78C */  jal        alFilterNew

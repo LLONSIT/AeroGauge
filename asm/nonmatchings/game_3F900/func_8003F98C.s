@@ -84,7 +84,7 @@ glabel func_8003F98C
 /* 406D0 8003FAD0 C43076A8 */  lwc1       $f16, %lo(D_800976A8)($at)
 /* 406D4 8003FAD4 E7A80010 */  swc1       $f8, 0x10($sp)
 /* 406D8 8003FAD8 E7AA0014 */  swc1       $f10, 0x14($sp)
-/* 406DC 8003FADC 0C01AE98 */  jal        func_8006BA60
+/* 406DC 8003FADC 0C01AE98 */  jal        guPerspectiveF
 /* 406E0 8003FAE0 E7B00018 */   swc1      $f16, 0x18($sp)
 /* 406E4 8003FAE4 44800000 */  mtc1       $zero, $f0
 /* 406E8 8003FAE8 3C01C040 */  lui        $at, (0xC0400000 >> 16)

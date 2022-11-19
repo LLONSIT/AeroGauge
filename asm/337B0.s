@@ -3202,7 +3202,7 @@ glabel func_80035BA4
 /* 367EC 80035BEC D4327558 */  ldc1       $f18, %lo(D_80097558)($at)
 /* 367F0 80035BF0 462A3402 */  mul.d      $f16, $f6, $f10
 /* 367F4 80035BF4 46328103 */  div.d      $f4, $f16, $f18
-/* 367F8 80035BF8 0C019B54 */  jal        __sinf
+/* 367F8 80035BF8 0C019B54 */  jal        sinf
 /* 367FC 80035BFC 46202320 */   cvt.s.d   $f12, $f4
 /* 36800 80035C00 3C0142C8 */  lui        $at, (0x42C80000 >> 16)
 /* 36804 80035C04 44814000 */  mtc1       $at, $f8
@@ -3318,7 +3318,7 @@ glabel func_80035BA4
 /* 369AC 80035DAC AD6D0000 */  sw         $t5, 0x0($t3)
 /* 369B0 80035DB0 E7A40010 */  swc1       $f4, 0x10($sp)
 /* 369B4 80035DB4 E7A80014 */  swc1       $f8, 0x14($sp)
-/* 369B8 80035DB8 0C01AE98 */  jal        func_8006BA60
+/* 369B8 80035DB8 0C01AE98 */  jal        guPerspectiveF
 /* 369BC 80035DBC E7A60018 */   swc1      $f6, 0x18($sp)
 /* 369C0 80035DC0 44800000 */  mtc1       $zero, $f0
 /* 369C4 80035DC4 3C013F80 */  lui        $at, (0x3F800000 >> 16)

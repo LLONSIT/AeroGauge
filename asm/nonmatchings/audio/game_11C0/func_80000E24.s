@@ -59,7 +59,7 @@ glabel func_80000E24
 /* 1AF8 80000EF8 AFA60028 */  sw         $a2, 0x28($sp)
 /* 1AFC 80000EFC 46001121 */  cvt.d.s    $f4, $f2
 /* 1B00 80000F00 46282282 */  mul.d      $f10, $f4, $f8
-/* 1B04 80000F04 0C019B54 */  jal        __sinf
+/* 1B04 80000F04 0C019B54 */  jal        sinf
 /* 1B08 80000F08 46205320 */   cvt.s.d   $f12, $f10
 /* 1B0C 80000F0C 8FA60028 */  lw         $a2, 0x28($sp)
 /* 1B10 80000F10 8FA5002C */  lw         $a1, 0x2C($sp)
@@ -260,7 +260,7 @@ glabel func_80000E24
 /* 1DC0 800011C0 AFA60028 */  sw         $a2, 0x28($sp)
 /* 1DC4 800011C4 460014A1 */  cvt.d.s    $f18, $f2
 /* 1DC8 800011C8 46309102 */  mul.d      $f4, $f18, $f16
-/* 1DCC 800011CC 0C019B54 */  jal        __sinf
+/* 1DCC 800011CC 0C019B54 */  jal        sinf
 /* 1DD0 800011D0 46202320 */   cvt.s.d   $f12, $f4
 /* 1DD4 800011D4 8FA60028 */  lw         $a2, 0x28($sp)
 /* 1DD8 800011D8 C4CA000C */  lwc1       $f10, 0xC($a2)

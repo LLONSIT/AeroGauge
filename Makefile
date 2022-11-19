@@ -193,8 +193,6 @@ endif
 
 # non asm-processor recipe
 $(BUILD_DIR)/%.c.o: %.c
-#	@$(CC_CHECK) $<
-	@printf "[$(YELLOW) check $(NO_COL)]  $<\n"
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $<
 	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
 

@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel __cosf
+glabel cosf
 /* 6B880 8006AC80 E7AC0000 */  swc1       $f12, 0x0($sp)
 /* 6B884 8006AC84 8FA20000 */  lw         $v0, 0x0($sp)
 /* 6B888 8006AC88 C7A60000 */  lwc1       $f6, 0x0($sp)

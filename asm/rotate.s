@@ -21,16 +21,16 @@ glabel func_8006B7F0
 /* 6C418 8006B818 27A60048 */  addiu      $a2, $sp, 0x48
 /* 6C41C 8006B81C 27A50044 */  addiu      $a1, $sp, 0x44
 /* 6C420 8006B820 27A40040 */  addiu      $a0, $sp, 0x40
-/* 6C424 8006B824 0C01B490 */  jal        func_8006D240
+/* 6C424 8006B824 0C01B490 */  jal        guNormalize
 /* 6C428 8006B828 E424AC20 */   swc1      $f4, %lo(D_801AAC20)($at)
 /* 6C42C 8006B82C 3C01801B */  lui        $at, %hi(D_801AAC20)
 /* 6C430 8006B830 C7AC003C */  lwc1       $f12, 0x3C($sp)
 /* 6C434 8006B834 C426AC20 */  lwc1       $f6, %lo(D_801AAC20)($at)
 /* 6C438 8006B838 46066302 */  mul.s      $f12, $f12, $f6
-/* 6C43C 8006B83C 0C019B54 */  jal        __sinf
+/* 6C43C 8006B83C 0C019B54 */  jal        sinf
 /* 6C440 8006B840 E7AC003C */   swc1      $f12, 0x3C($sp)
 /* 6C444 8006B844 C7AC003C */  lwc1       $f12, 0x3C($sp)
-/* 6C448 8006B848 0C01AB20 */  jal        __cosf
+/* 6C448 8006B848 0C01AB20 */  jal        cosf
 /* 6C44C 8006B84C E7A00034 */   swc1      $f0, 0x34($sp)
 /* 6C450 8006B850 C7AA0040 */  lwc1       $f10, 0x40($sp)
 /* 6C454 8006B854 C7A40044 */  lwc1       $f4, 0x44($sp)

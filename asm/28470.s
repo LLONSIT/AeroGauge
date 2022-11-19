@@ -2828,7 +2828,7 @@ glabel func_8002A0D0
 /* 2ADEC 8002A1EC 27A400D4 */  addiu      $a0, $sp, 0xD4
 /* 2ADF0 8002A1F0 E7A40010 */  swc1       $f4, 0x10($sp)
 /* 2ADF4 8002A1F4 E7A60014 */  swc1       $f6, 0x14($sp)
-/* 2ADF8 8002A1F8 0C01AE98 */  jal        func_8006BA60
+/* 2ADF8 8002A1F8 0C01AE98 */  jal        guPerspectiveF
 /* 2ADFC 8002A1FC E7A80018 */   swc1      $f8, 0x18($sp)
 /* 2AE00 8002A200 44800000 */  mtc1       $zero, $f0
 /* 2AE04 8002A204 3C013F80 */  lui        $at, (0x3F800000 >> 16)

@@ -178,8 +178,8 @@ SECTIONS
         build/asm/translate.s.o(.text);
         build/asm/rotate.s.o(.text);
         build/asm/sprintf.s.o(.text);
-        build/asm/perspective.s.o(.text);
-        build/asm/lookat.s.o(.text);
+        build/asm/guPerspective.s.o(.text);
+        build/src/os/gu/guLookat.c.o(.text);
         build/asm/mtxcatf.s.o(.text);
         build/asm/mtxutil.s.o(.text);
         build/asm/bzero.s.o(.text);
@@ -194,7 +194,7 @@ SECTIONS
         build/asm/pfssearchfile.s.o(.text);
         build/asm/osPfsNumFiles.s.o(.text);
         build/asm/pfsfreeblocks.s.o(.text);
-        build/asm/normalize.s.o(.text);
+        build/src/os/gu/guNormalize.c.o(.text);
         build/asm/pfsfilestate.s.o(.text);
         build/asm/pfsrepairid.s.o(.text);
         build/asm/pfsdeletefile.s.o(.text);
@@ -233,7 +233,7 @@ SECTIONS
         build/asm/load.s.o(.text);
         build/asm/resample.s.o(.text);
         build/asm/env.s.o(.text);
-        build/asm/auxbus.s.o(.text);
+        build/src/os/audio/auxbus.c.o(.text);
         build/asm/save.s.o(.text);
         build/src/os/seq.c.o(.text);
         build/asm/synsetpriority.s.o(.text);
@@ -584,10 +584,10 @@ SECTIONS
         build/asm/rotate.s.o(.data);
         sprintf_s = .;
         build/asm/sprintf.s.o(.data);
-        perspective_s = .;
-        build/asm/perspective.s.o(.data);
-        lookat_s = .;
-        build/asm/lookat.s.o(.data);
+        guPerspective_s = .;
+        build/asm/guPerspective.s.o(.data);
+        os_gu_guLookat_c = .;
+        build/src/os/gu/guLookat.c.o(.data);
         mtxcatf_s = .;
         build/asm/mtxcatf.s.o(.data);
         mtxutil_s = .;
@@ -616,8 +616,8 @@ SECTIONS
         build/asm/osPfsNumFiles.s.o(.data);
         pfsfreeblocks_s = .;
         build/asm/pfsfreeblocks.s.o(.data);
-        normalize_s = .;
-        build/asm/normalize.s.o(.data);
+        os_gu_guNormalize_c = .;
+        build/src/os/gu/guNormalize.c.o(.data);
         pfsfilestate_s = .;
         build/asm/pfsfilestate.s.o(.data);
         pfsrepairid_s = .;
@@ -694,8 +694,8 @@ SECTIONS
         build/asm/resample.s.o(.data);
         env_s = .;
         build/asm/env.s.o(.data);
-        auxbus_s = .;
-        build/asm/auxbus.s.o(.data);
+        os_audio_auxbus_c = .;
+        build/src/os/audio/auxbus.c.o(.data);
         save_s = .;
         build/asm/save.s.o(.data);
         os_seq_c = .;
@@ -958,8 +958,8 @@ SECTIONS
         build/asm/translate.s.o(.bss);
         build/asm/rotate.s.o(.bss);
         build/asm/sprintf.s.o(.bss);
-        build/asm/perspective.s.o(.bss);
-        build/asm/lookat.s.o(.bss);
+        build/asm/guPerspective.s.o(.bss);
+        build/src/os/gu/guLookat.c.o(.bss);
         build/asm/mtxcatf.s.o(.bss);
         build/asm/mtxutil.s.o(.bss);
         build/asm/bzero.s.o(.bss);
@@ -974,7 +974,7 @@ SECTIONS
         build/asm/pfssearchfile.s.o(.bss);
         build/asm/osPfsNumFiles.s.o(.bss);
         build/asm/pfsfreeblocks.s.o(.bss);
-        build/asm/normalize.s.o(.bss);
+        build/src/os/gu/guNormalize.c.o(.bss);
         build/asm/pfsfilestate.s.o(.bss);
         build/asm/pfsrepairid.s.o(.bss);
         build/asm/pfsdeletefile.s.o(.bss);
@@ -1013,7 +1013,7 @@ SECTIONS
         build/asm/load.s.o(.bss);
         build/asm/resample.s.o(.bss);
         build/asm/env.s.o(.bss);
-        build/asm/auxbus.s.o(.bss);
+        build/src/os/audio/auxbus.c.o(.bss);
         build/asm/save.s.o(.bss);
         build/src/os/seq.c.o(.bss);
         build/asm/synsetpriority.s.o(.bss);

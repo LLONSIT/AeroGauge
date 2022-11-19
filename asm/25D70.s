@@ -19,10 +19,10 @@ glabel func_80025170
 /* 25D90 80025190 4487B000 */  mtc1       $a3, $f22
 /* 25D94 80025194 AFBF0024 */  sw         $ra, 0x24($sp)
 /* 25D98 80025198 AFA40050 */  sw         $a0, 0x50($sp)
-/* 25D9C 8002519C 0C019B54 */  jal        __sinf
+/* 25D9C 8002519C 0C019B54 */  jal        sinf
 /* 25DA0 800251A0 E7AC0054 */   swc1      $f12, 0x54($sp)
 /* 25DA4 800251A4 C7AC0054 */  lwc1       $f12, 0x54($sp)
-/* 25DA8 800251A8 0C01AB20 */  jal        __cosf
+/* 25DA8 800251A8 0C01AB20 */  jal        cosf
 /* 25DAC 800251AC E7A0004C */   swc1      $f0, 0x4C($sp)
 /* 25DB0 800251B0 4614A302 */  mul.s      $f12, $f20, $f20
 /* 25DB4 800251B4 3C013F80 */  lui        $at, (0x3F800000 >> 16)

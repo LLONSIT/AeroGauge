@@ -26,7 +26,7 @@ glabel func_8005DE48
 /* 5EAA4 8005DEA4 AFA40018 */  sw         $a0, 0x18($sp)
 /* 5EAA8 8005DEA8 46328103 */  div.d      $f4, $f16, $f18
 /* 5EAAC 8005DEAC 46282182 */  mul.d      $f6, $f4, $f8
-/* 5EAB0 8005DEB0 0C01AB20 */  jal        __cosf
+/* 5EAB0 8005DEB0 0C01AB20 */  jal        cosf
 /* 5EAB4 8005DEB4 46203320 */   cvt.s.d   $f12, $f6
 /* 5EAB8 8005DEB8 3C0142B4 */  lui        $at, (0x42B40000 >> 16)
 /* 5EABC 8005DEBC 44815000 */  mtc1       $at, $f10

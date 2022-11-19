@@ -7,7 +7,7 @@
 
 .section .text, "ax"
 
-glabel __sinf
+glabel sinf
 /* 67950 80066D50 E7AC0000 */  swc1       $f12, 0x0($sp)
 /* 67954 80066D54 8FA20000 */  lw         $v0, 0x0($sp)
 /* 67958 80066D58 C7A40000 */  lwc1       $f4, 0x0($sp)

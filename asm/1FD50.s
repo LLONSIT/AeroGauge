@@ -317,7 +317,7 @@ glabel func_8001F59C
 /* 201CC 8001F5CC 27A400C0 */  addiu      $a0, $sp, 0xC0
 /* 201D0 8001F5D0 E7A60014 */  swc1       $f6, 0x14($sp)
 /* 201D4 8001F5D4 C6080014 */  lwc1       $f8, 0x14($s0)
-/* 201D8 8001F5D8 0C01AE98 */  jal        func_8006BA60
+/* 201D8 8001F5D8 0C01AE98 */  jal        guPerspectiveF
 /* 201DC 8001F5DC E7A80018 */   swc1      $f8, 0x18($sp)
 /* 201E0 8001F5E0 C60A0024 */  lwc1       $f10, 0x24($s0)
 /* 201E4 8001F5E4 8E050018 */  lw         $a1, 0x18($s0)
