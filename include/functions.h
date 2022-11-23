@@ -17,6 +17,7 @@ extern void func_80012848(s32);
 extern void func_80013460(s32);
 extern void func_80013B20(s32);
 extern void func_80014420(s32);
+extern void func_80011B60(void);
 
 extern void func_80011DCC();
 extern void func_800128BC(void *);
@@ -58,11 +59,12 @@ extern void func_80006188(void (**arg0)());
 extern void func_800061C4(void* arg0, u32 arg1, f32 arg2);
 
 //not clasified yet
-extern void func_80019D0C(void **arg0, s32 arg1, s32 arg2, void *arg3, s32 arg4);
+extern void func_80019D0C(Gfx **arg0, s32 arg1, s32 arg2, void *arg3, s32 arg4);
 extern void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3);
 extern void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3) ;                  /* extern */
 extern void func_8001F790(void **arg0, u8 *arg1, s32 arg2);
 extern void func_80000610(s32 arg0);
+extern void func_80010548(s32 arg0);
 
 //game_5D350
 extern void func_8005E1DC(s32 arg0);
@@ -73,3 +75,4 @@ extern u8 func_80062210();
 extern u8 func_800623E8(s32 arg0);
 extern u8 func_80062018(s32 *arg0);
 extern s32 func_8006299C(s32 *arg0);
+

@@ -2,6 +2,7 @@
 #include "structs.h"
 #include "variables.h"
 #include "functions.h"
+#include "macros.h"
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_DA40/func_8000CE40.s")
 
@@ -22,12 +23,12 @@ void func_8000D148(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_DA40/func_8000D2B8.s")
 
-
-void func_8000D658(s32 arg0) {
+                     /*  Unused arg0   */
+UNUSED func_8000D658(s32 arg0) {
 
 }
 
 
 
-void func_8000D660(void) {
+UNUSED func_8000D660(void) {
 }

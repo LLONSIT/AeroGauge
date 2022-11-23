@@ -3,6 +3,7 @@
 #include <PR/gbi.h> //for macros
 #include "functions.h"
 #include "variables.h"
+#include "macros.h" //for another macros
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_80019630.s")
 
@@ -21,7 +22,7 @@ void func_8001A750(s32* arg0, struct unk_struct_8001A750 *arg1, s32 arg2) {
 
     sp24 = *arg0;
     func_8001F75C(0xB5, 0x60, 0x14, 0xFF);
-    osSetTime(arg1->unk2 - 0x3C, arg1->unk4 + 0x13);
+    osSetTime(arg1->unk2 - 0x3C, arg1->unk4 + 0x13); //TODO, maybe this structure is OSTime and maybe, is divided in two parts?
     sprintf(&sp18 - 2, &D_80096C94, (s32) ((f64) arg1->unk10 * D_80096CD0));
     func_8001F790(&sp24, &sp18 - 2, &D_8008C8CC);
     *arg0 = sp24;
@@ -53,7 +54,7 @@ void func_8001AB94(Gfx** arg0, struct struct_8001AB94* arg1) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001ADC4.s")
 
-void func_8001AFFC(void) {
+UNUSED func_8001AFFC(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001B004.s")

@@ -2,6 +2,7 @@
 #include "variables.h"
 #include "functions.h"
 #include "structs.h"
+#include "macros.h"
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_10D60/func_80010160.s")
 
@@ -31,7 +32,7 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_10D60/func_80010D08.s")
 
-void func_80010D80(void) {
+UNUSED func_80010D80(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_10D60/func_80010D88.s")

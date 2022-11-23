@@ -1,7 +1,9 @@
 #include <ultra64.h>
 #include "variables.h"
 #include "structs.h"
+#include "functions.h"
 
+#define UNUSED
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_16BD0/func_80015FD0.s")
 
@@ -23,7 +25,7 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_16BD0/func_8001728C.s")
 
-void func_80017454(void) {
+UNUSED func_80017454(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_16BD0/func_8001745C.s")
