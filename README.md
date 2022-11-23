@@ -26,3 +26,7 @@ base is everything that will have to do with, the libultra segments, the extract
 ## Code
 
 It will be all the part that will have to do with the logical part of the game such as the physical ones, such as the subsequent classification of variables, functions and structures
+
+# Progress
+Functions : 30/831
+Libultra : 10.2% //aprox
