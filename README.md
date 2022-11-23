@@ -15,9 +15,6 @@ Copy the Aerogauge rom to ``baserom.z64``
 
 Run ``make split ; make``
 
-# Project layout 
-
-I have classified what will be done with the project
 
 # Progress
 Functions : 30/831
