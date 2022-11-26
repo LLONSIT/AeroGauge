@@ -15,10 +15,12 @@ Copy the Aerogauge rom to ``baserom.z64``
 
 Run ``make split ; make``
 
-# Project layout 
-
-I have classified what will be done with the project
 
 # Progress
 Functions : 30/831
 Libultra : 10.2% //aprox
+
+# Some info
+
+AeroGauge us version has a LZMA compression
+For now I don't know how to decompress the lazma compression which prevents the extraction of textures or models for now
