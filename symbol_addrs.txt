@@ -71,8 +71,8 @@ osClockRate = 0x80099044;
 __osDequeueThread = 0x800707F0;
 alFxNew = 0x80071740;
 alAuxBusPull = 0x80073850;
-guPerspectiveF = 0x8006BA60;
-guPerspective = 0x8006BC90;
+guPerspectiveF = 0x8006BA60; //defined:true
+guPerspective = 0x8006BC90; //defined:true
 
 
 //os syms
@@ -82,7 +82,7 @@ alSndpNew = 0x800674E4; //defined:true
 alSndpSetPitch = 0x80067800; //defined:true
 alSeqpPlay = 0x80066CD0; //defined:true
 
-osAppNmiBuffer =    0x8000031C;
+osAppNmiBuffer =    0x8000031C; 
   __osCleanupThread =  0x800711A0;
     __osRestoreInt = 0x80070880;
 __osActiveQueue = 0x8009487C;
@@ -187,10 +187,10 @@ __osEnqueueThread = 0x80070FCC;
 __osPopThread = 0x80071014; 
 __osEnqueueAndYield = 0x80070ECC;
 __osDispatchThread = 0x80071024;
-guLookAtF =  0x8006BCF0;
-guLookAt = 0x8006BFA8;
-guMtxXFMF = 0x8006C020; 
-guMtxCatF = 0x8006C0C0;
+guLookAtF =  0x8006BCF0; //defined:true
+guLookAt = 0x8006BFA8; //defined:true
+guMtxXFMF = 0x8006C020; //defined:true
+guMtxCatF = 0x8006C0C0; //defined:true
 guMtxF2L = 0x8006C230; //defined:true
 guMtxIdentF = 0x8006C330; //defined:true
 guMtxIdent = 0x8006C3B8; //defined:true
@@ -220,18 +220,19 @@ __ll_div =  0x8006C64C;
 __ll_mul =  0x8006C6A8;
 __osFinalrom = 0x801AC110;
 guNormalize = 0x8006D240;
-
-
+ osCreateViManager = 0x8006F7F0;
+__osPiCreateAccessQueue = 0x80078C40;
+__osViSwapContext = 0x80077FD0;
 
 //Irregular
-guRotateRPYF = 0x80024840;
-//guRotateRPYF =  0x8006ABB0;
+//guRotateRPYF = 0x80024840; UNUSED
+guRotateRPYF =  0x8006ABB0;
 
 //Game Symbols
 
 gUnk_YPos = 0x8013f898;
 gPlayerLapCount = 0x8013FC98;
-gPlayerRacePos = 0x8013FC91; 
+gPlayerRacePos = 0x8013FC91;
 
 //not usable
 gScreen_var1 = 0x80096ABC; 
