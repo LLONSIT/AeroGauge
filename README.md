@@ -8,14 +8,18 @@ Install ``mips64-elf-binutils`` and ``Qemu Irix``
 ```diff
 + Some info
 
-This project is very early so for now you can't make any kind of modification, well maybe I'll focus on it soon ;)
+This project is very early so for now you can't make any kind of modification, well maybe I'll focus on it soon ;).
+
+Obviously you need the original rom of the USA Version of AeroGauge, I am not responsible for which methods you get it.
 
 ```
 
-## Building the rom !
-run ``git submodule init ; git submodule update`` (for tools)
 
-Copy the Aerogauge rom to ``baserom.z64``
+
+## Building the rom!
+run ``git clone --recursive https://github.com/LLONSIT/AeroGauge.git``
+
+Copy the Aerogauge USA Rom to ``baserom.z64``
 
 Run ``make split ; make``
 
@@ -35,9 +39,4 @@ Run ``make split ; make``
 	│   ├── libultra_nn: Libultra WIP files
 	│   ├── os: Done libultra files!
 	└── tools: tools like asm differ or the compiler, are here
-
-# Progress
-Functions : 30/831
-Libultra : 10.2% //aprox
-
 
