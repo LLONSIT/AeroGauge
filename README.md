@@ -7,6 +7,9 @@ Install ``mips64-elf-binutils`` and ``Qemu Irix``
 
 ```diff
 + Some info
+
+This project is very early so for now you can't make any kind of modification, well maybe I'll focus on it soon ;)
+
 ```
 
 ## Building the rom !
@@ -37,7 +40,4 @@ Run ``make split ; make``
 Functions : 30/831
 Libultra : 10.2% //aprox
 
-# Some info
 
-AeroGauge us version has a LZMA compression
-For now I don't know how to decompress the lazma compression which prevents the extraction of textures or models for now
