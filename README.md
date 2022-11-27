@@ -6,7 +6,7 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 Install ``mips64-elf-binutils`` and ``Qemu Irix``
 
 ```diff
-+ Some info
++ Some info +
 
 This project is very early so for now you can't make any kind of modification, well maybe I'll focus on it soon ;).
 
