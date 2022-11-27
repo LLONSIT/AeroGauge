@@ -1,13 +1,6 @@
 # AeroGauge
 AeroGauge is a Fzero style game, but it has different and special mechanics!
 
-## Dependencies
-
-Install ``mips64-elf-binutils`` and ``Qemu Irix``
-
-
-
-
 
 
 ```diff
@@ -20,6 +13,11 @@ Install ``mips64-elf-binutils`` and ``Qemu Irix``
 ```
 
 
+## Dependencies
+
+With a little patience I think you can get this to work on Msys2 to ;)
+
+Install ``mips64-elf-binutils`` and ``Qemu Irix`` (for now)
 
 ## Building the rom!
 run ``git clone --recursive https://github.com/LLONSIT/AeroGauge.git``
