@@ -20,11 +20,11 @@ With a little patience I think you can get this to work on Msys2 to ;)
 Install ``mips64-elf-binutils`` and ``Qemu Irix`` (for now)
 
 ## Building the rom!
-run ``git clone --recursive https://github.com/LLONSIT/AeroGauge.git``
+- Run ``git clone --recursive https://github.com/LLONSIT/AeroGauge.git``
 
-Copy the Aerogauge USA Rom to ``baserom.z64``
+- Copy the Aerogauge USA Rom to ``baserom.z64``
 
-Run ``make split ; make``
+- Run ``make split ; make``
 
 
 ## Project Structure
