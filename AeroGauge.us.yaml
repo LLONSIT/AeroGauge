@@ -58,7 +58,7 @@ segments:
       - [0x198F0, c, game_198F0]
       - [0x19A90, c, game_19A90]
       - [0x19AA0, c, game_19AA0]
-      - [0x1A230, c, game_1A230] #Related to GFX
+      - [0x1A230, c, game_1A230] #Related to GFX 
       - [0x1CA50, c, game_1CA50]
       - [0x1CC30, c, game_1CC30]
       - [0x1EDC0, c, game_1EDC0]

@@ -61,7 +61,7 @@ SPLAT    = $(TOOLS_DIR)/splat/split.py
 IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
 # Flags
 
-LIBULTRA = lib/libultra_rom.a
+LIBULTRA = lib/libultra_rom.a #Checking the symbols
 
 OPT_FLAGS      = -O2
 LOOP_UNROLL    =
@@ -157,8 +157,13 @@ progress: dirs $(VERIFY) progress.csv
 
 splat: $(SPLAT)
 
-extract: splat tools
+extract: splat
 	$(PYTHON) $(SPLAT) $(BASENAME).$(VERSION).yaml
+
+dependencies: tools
+	@make -C tools
+	@$(PYTHON) -m pip install -r tools/splat/requirements.txt #Installing the splat dependencies
+
 
 
 clean:
@@ -200,7 +205,7 @@ $(BUILD_DIR)/%.c.o: %.c
 
 $(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
 	@mkdir -p $$(dirname $@)
-	@cp $< $@
+#	@cp $< $@
 #	@$(PYTHON) $(TOOLS_DIR)/set_o32abi_bit.py $@
 
 
@@ -218,7 +223,7 @@ $(TARGET).bin: $(TARGET).elf
 	@printf "[$(CYAN) Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
-	@cp $< $@
+	@tools/CopyRom $< $@ #mask
 
 
 # fake targets for better error handling
