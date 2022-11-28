@@ -12,7 +12,6 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 
 ```
 
-
 ## Dependencies
 
 - With a little patience I think you can get this to work on Msys2 to ;)
