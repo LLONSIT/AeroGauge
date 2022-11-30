@@ -43,4 +43,10 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 	│   ├── libultra_nn: Libultra WIP files
 	│   ├── os: Done libultra files!
 	└── tools: tools like asm differ or the compiler, are here
+	
+# Progress
+
+Libultra: 0,3%
+
+
 
