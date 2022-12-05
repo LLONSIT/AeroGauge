@@ -229,6 +229,9 @@ osInitialize =  0x80070290;
 guRotateRPYF =  0x8006ABB0;
 osEepromLongWrite = 0x8006E200;
 __osEepromTimer = 0x801AABD8;
+__osSpDeviceBusy = 0x800787D0; 
+alSavePull = 0x80073964;
+osJamMesg = 0x8006FD30;
 
 //Game Symbols
 
