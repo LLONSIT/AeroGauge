@@ -223,10 +223,12 @@ guNormalize = 0x8006D240;
  osCreateViManager = 0x8006F7F0;
 __osPiCreateAccessQueue = 0x80078C40;
 __osViSwapContext = 0x80077FD0;
-
+osInitialize =  0x80070290;
 //Irregular
 //guRotateRPYF = 0x80024840; UNUSED
 guRotateRPYF =  0x8006ABB0;
+osEepromLongWrite = 0x8006E200;
+__osEepromTimer = 0x801AABD8;
 
 //Game Symbols
 

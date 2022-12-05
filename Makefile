@@ -19,8 +19,8 @@ BUILD_DIR = build
 ASM_DIRS  = asm asm/data asm/libultra asm/w_seg #Weird segment
 BIN_DIRS  = assets
 SRC_DIR   = src
-			
-SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/audio $(SRC_DIR)/libultra_nn
+
+SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/audio $(SRC_DIR)/libultra_nn $(SRC_DIR)/Eeprom
 
 TOOLS_DIR = tools
 
