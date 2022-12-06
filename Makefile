@@ -224,7 +224,7 @@ $(TARGET).bin: $(TARGET).elf
 
 $(TARGET).z64: $(TARGET).bin
 	@tools/CopyRom $< $@ #mask
-	@$(QEMU_IRIX) tools/nrdc -b -c build/AeroGauge.us.z64
+	@$(QEMU_IRIX) tools/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
 
 # fake targets for better error handling
 $(SPLAT):
