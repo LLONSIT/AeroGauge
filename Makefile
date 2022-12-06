@@ -163,8 +163,8 @@ extract: splat
 dependencies: tools
 	@make -C tools
 	@$(PYTHON) -m pip install -r tools/splat/requirements.txt #Installing the splat dependencies
-
-
+	@which $(PYTHON) >/dev/null
+	$(Hmm, repo without submodules, do make extract and then make dependencies!)
 
 clean:
 	rm -rf build
@@ -224,7 +224,7 @@ $(TARGET).bin: $(TARGET).elf
 
 $(TARGET).z64: $(TARGET).bin
 	@tools/CopyRom $< $@ #mask
-
+	@qemu-irix tools/nrdc -b -c build/AeroGauge.us.z64
 
 # fake targets for better error handling
 $(SPLAT):
