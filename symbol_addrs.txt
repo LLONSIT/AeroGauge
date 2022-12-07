@@ -232,6 +232,9 @@ __osEepromTimer = 0x801AABD8;
 __osSpDeviceBusy = 0x800787D0; 
 alSavePull = 0x80073964;
 osJamMesg = 0x8006FD30;
+osPfsFileState = 0x8006D2D0;
+__osPfsRWInode = 0x80074EFC;
+osViBlack = 0x8006CC60;
 
 //Game Symbols
 
