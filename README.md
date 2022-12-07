@@ -35,7 +35,7 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 	│   ├── data: rodata, data files
 	│   ├── libultra: Hand Written Assembly files of libultra
 	│   ├── w_segs: Weird segments, for now is just a "nop only segment"	    
-        │    └── non_matchings: non matchings assembler files
+          └── non_matchings: non matchings assembler files
 	├── assets: Binary blobs of this game (TODO)
 	├── include: header files
 	├── src: C source code for game
