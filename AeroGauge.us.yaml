@@ -260,7 +260,7 @@ segments:
       - [0x79430, hasm, libultra/setsr]
       - [0x79440, hasm, libultra/getsr]
       - [0x79450, hasm, libultra/setfpccsr]
-      - [0x79460, c, libultra_nn/sprawread] #sirawread to
+      - [0x79460, c, os/__osSiRawReadIo] #sirawread to
       - [0x794B0, c, libultra_nn/sprawwrite]
       - [0x79500, hasm, libultra/invalicache]
       - [0x79580, hasm, libultra/maptlbrdb]
