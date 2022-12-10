@@ -121,7 +121,7 @@ segments:
       - [0x66740, c, libultra_nn/heapalloc] #Heapinit to
       - [0x667A0, c, libultra_nn/bnkf]
       - [0x669F0, c, libultra_nn/seqpsetbank] #cspsetbank to
-      - [0x66A30, c, libultra_nn/osCreateMesgQueue]
+      - [0x66A30, c, os/osCreateMesgQueue]
       - [0x66A60, hasm, libultra/invaldcache]
       - [0x66B10, c, libultra_nn/pidma]
       - [0x66C20, c, libultra_nn/seqpsetvol] #cspsetvol to
@@ -168,7 +168,7 @@ segments:
       - [0x6BA70, c, os/osContSetCh]
       - [0x6BAE0, c, libultra_nn/controller]
       - [0x6BE20, c, libultra_nn/contreaddata]
-      - [0x6C040, c, libultra_nn/pfsinitpak]
+      - [0x6C040, c, os/osPfsInitPak]
       - [0x6C2E0, c, libultra_nn/sins]
       - [0x6C350, c, libultra_nn/translate]
       - [0x6C3F0, c, libultra_nn/rotate]
@@ -200,7 +200,7 @@ segments:
       - [0x6EF80, c, libultra_nn/motor]
       - [0x6F720, c, libultra_nn/pfsreadwritefile]
       - [0x6FC40, c, libultra_nn/pfsallocatefile]
-      - [0x703F0, c, libultra_nn/vimgr] #TODO
+      - [0x703F0, c, libultra_nn/vimgr]
       - [0x70750, c, libultra_nn/visetmode]
       - [0x707C0, c, libultra_nn/osViSetEvent]
       - [0x70830, c, libultra_nn/sptaskyielded]

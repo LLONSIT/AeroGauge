@@ -235,6 +235,7 @@ osJamMesg = 0x8006FD30; //defined:true
 osPfsFileState = 0x8006D2D0; //defined:true
 __osPfsRWInode = 0x80074EFC;
 osViBlack = 0x8006CC60; //defined:true
+viMgrMain = 0x8006F980; //defined:true
 
 //Game Symbols
 
