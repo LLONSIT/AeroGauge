@@ -46,7 +46,7 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 	
 # Progress
 
-Libultra: 0,3%
+Libultra: 0,3% (Badges soon!)
 
 
 
