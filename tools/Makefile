@@ -6,12 +6,12 @@
 #
 #*************************************************************
 
-CC = gcc
+
 
 
 default:
-	@gcc CopyRom.c -o CopyRom
+	@$(CC) CopyRom.c -o CopyRom
 	@printf "done\n"
 
 clean:
-	rm copymask
+	rm CopyRom

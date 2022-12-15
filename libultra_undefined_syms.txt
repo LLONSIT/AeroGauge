@@ -1,6 +1,0 @@
-__osPfsRWInode = 0x80074EFC;
-__osCheckPackId =  0x80074A0C;
-__osPfsGetStatus = 0x800742F0;
-__osIdCheckSum = 0x8007458C;
-__osRepairPackId = 0x800745F4;
-osPfsChecker = 0x800755F0;

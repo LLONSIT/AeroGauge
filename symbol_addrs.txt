@@ -237,6 +237,7 @@ __osPfsRWInode = 0x80074EFC;
 osViBlack = 0x8006CC60; //defined:true
 viMgrMain = 0x8006F980; //defined:true
 
+
 //Game Symbols
 
 gUnk_YPos = 0x8013f898;
