@@ -18,9 +18,13 @@ CYAN    := \033[0;36m
 BUILD_DIR = build
 ASM_DIRS  = asm asm/data asm/libultra asm/w_seg #Weird segment
 BIN_DIRS  = assets
-SRC_DIR   = src
 
-SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/audio $(SRC_DIR)/libultra_nn $(SRC_DIR)/Eeprom
+#TODO: Too many rules
+SRC_DIR	  = src
+LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/libultra_nn
+DEFINE_SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/core $(SRC_DIR)/race $(LIBULTRA_SRC_DIRS)
+
+SRC_DIRS = $(DEFINE_SRC_DIRS)
 
 TOOLS_DIR = tools
 
@@ -42,11 +46,17 @@ O_FILES := $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file).o) \
 
 # Tools
 
-CROSS    = mips64-elf-
+QEMU_IRIX32 = qemu-irixn32
 
-AS       = $(CROSS)as
+CROSS	 = mips64-elf-
+
+#ROOT	 = $(QEMU_IRIX32) ~/root/gcc463/opt/gcc-4.6.3/bin
+#AS       = $(ROOT)/as
+
 CPP      = cpp
 LD       = $(CROSS)ld
+AS       = $(CROSS)as
+#OBJCOPY  = $(ROOT)/objcopy
 OBJCOPY  = $(CROSS)objcopy
 PYTHON   = python3
 GCC      = gcc

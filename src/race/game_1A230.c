@@ -15,17 +15,17 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001A020.s")
 
-void func_8001A750(s32* arg0, struct unk_struct_8001A750 *arg1, s32 arg2) {
+void func_8001A750(s32* gDisplayList, struct unk_struct_8001A750 *arg1, s32 arg2) {
     s32 sp24;
     s8 *sp18;
     short pad;
 
-    sp24 = *arg0;
+    sp24 = *gDisplayList;
     func_8001F75C(0xB5, 0x60, 0x14, 0xFF);
     osSetTime(arg1->unk2 - 0x3C, arg1->unk4 + 0x13); //TODO, maybe this structure is OSTime and maybe, is divided in two parts?
     sprintf(&sp18 - 2, &D_80096C94, (s32) ((f64) arg1->unk10 * D_80096CD0));
     func_8001F790(&sp24, &sp18 - 2, &D_8008C8CC);
-    *arg0 = sp24;
+    *gDisplayList = sp24;
 }
 
 
@@ -33,19 +33,19 @@ void func_8001A750(s32* arg0, struct unk_struct_8001A750 *arg1, s32 arg2) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001A9D4.s")
 
-void func_8001AB94(Gfx** arg0, struct struct_8001AB94* arg1) {
-    Gfx* sp3C;
+void col_init(Gfx** gDisplayList, struct struct_8001AB94* arg1) {
+    Gfx* gDisplayListHead;
     s32 pad[2];
 
-    sp3C = *arg0;
+    gDisplayListHead = *gDisplayList;
     if (arg1->unk10 != 0) {
-        gDPPipeSync(sp3C++);
-        gDPSetRenderMode(sp3C++, G_RM_XLU_SURF, G_RM_XLU_SURF2);
-        gDPSetCombineMode(sp3C++, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
-        gDPSetPrimColor(sp3C++, 0, 0, 255, 255, 255, 200);
-        func_80019D0C(&sp3C, arg1->unk0, arg1->unk2, arg1->unk10, 0);
+        gDPPipeSync(gDisplayListHead++);
+        gDPSetRenderMode(gDisplayListHead++, G_RM_XLU_SURF, G_RM_XLU_SURF2);
+        gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
+        gDPSetPrimColor(gDisplayListHead++, 0, 0, 255, 255, 255, 200);
+        func_80019D0C(&gDisplayListHead, arg1->unk0, arg1->unk2, arg1->unk10, 0);
     }
-    *arg0 = sp3C;
+    *gDisplayList = gDisplayListHead;
 }
 
 //#pragma GLOBAL_ASM("asm/nonmatchings/game_1A230/func_8001AB94.s")

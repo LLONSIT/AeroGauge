@@ -138,17 +138,17 @@ __OSGlobalIntMask = 0x80094830;
 __osPiDevMgr = 0x80094840;
 player_bss_003C  = 0x80094848;
 __osCurrentHandle = 0x80094860;
-alSndpSetPan = 0x80067740;
-osSetThreadPri  =  0x80070520;
-osSetEventMesg =  0x8006AE00;
-osCreateMesgQueue =  0x80065E30;
-osStartThread = 0x80067D00;
-sprintf = 0x8006BA04; //defined:true
-osSetTime =  0x8001F6B4; 
+alSndpSetPan = 0x80067740; //defined:true
+osSetThreadPri  =  0x80070520; //defined:true
+osSetEventMesg =  0x8006AE00; //defined:true
+osCreateMesgQueue =  0x80065E30; //defined:true
+osStartThread = 0x80067D00; //defined:true
+sprintf = 0x8006BA04; //defined:true 
+osSetTime =  0x8001F6B4;  //defined:true
 __osSetSR = 0x80078830:
 osPfsInitPak =  0x8006B440;
-osRecvMesg = 0x80066090;
-osSendMesg = 0x800686D0;
+osRecvMesg = 0x80066090; //defined:true
+osSendMesg = 0x800686D0; //defined:true
 osPfsNumFiles =  0x8006CFA0;
 __osDpDeviceBusy =  0x80078800; //defined:true
 osGetCount =  0x80076D10;
@@ -223,7 +223,7 @@ guNormalize = 0x8006D240;
  osCreateViManager = 0x8006F7F0;
 __osPiCreateAccessQueue = 0x80078C40;
 __osViSwapContext = 0x80077FD0;
-osInitialize =  0x80070290;
+osInitialize =  0x80070290; //defined:true
 //Irregular
 //guRotateRPYF = 0x80024840; UNUSED
 guRotateRPYF =  0x8006ABB0;
@@ -236,13 +236,14 @@ osPfsFileState = 0x8006D2D0; //defined:true
 __osPfsRWInode = 0x80074EFC;
 osViBlack = 0x8006CC60; //defined:true
 viMgrMain = 0x8006F980; //defined:true
-
+osPiStartDma = 0x80065F10; //defined_true
 
 //Game Symbols
 
 gUnk_YPos = 0x8013f898;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91;
+col_init = 0x8001AB94;
 
 //not usable
 gScreen_var1 = 0x80096ABC; 

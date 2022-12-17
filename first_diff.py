@@ -55,7 +55,7 @@ if len(mybin) != len(basebin):
     exit(1)
 
 if mybin == basebin:
-    print("No differences!")
+    print("Nice!!, No differences!")
     exit(0)
 
 
