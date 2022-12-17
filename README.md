@@ -10,6 +10,8 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 
 * Obviously you need the original rom of the USA Version of AeroGauge, I am not responsible for which methods you get it.
 
+* The documented code for now could become speculative, this means that in the future it can be modified
+
 ```
 
 ## Dependencies
