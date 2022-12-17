@@ -38,7 +38,7 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
           └── non_matchings: non matchings assembler files
 	├── assets: Binary blobs of this game (TODO)
 	├── include: header files
-	├── src: C source code for game
+	├── src: C source code for the game
 	│   ├── core: Audio and DMA code
 	│   ├── libultra_nn: Libultra WIP files
 	│   ├── os: Done libultra files!
