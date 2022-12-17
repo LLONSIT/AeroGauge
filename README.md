@@ -25,7 +25,7 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 
 - Copy the Aerogauge USA Rom to ``baserom.z64``
 
-- Run ``make split ; make``
+- Run ``make extract ; make``
 
 
 ## Project Structure
