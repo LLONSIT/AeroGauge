@@ -10,6 +10,8 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 
 * Obviously you need the original rom of the USA Version of AeroGauge, I am not responsible for which methods you get it.
 
+* The documented code for now could become speculative, this means that in the future it can be modified
+
 ```
 
 ## Dependencies
@@ -25,7 +27,7 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 
 - Copy the Aerogauge USA Rom to ``baserom.z64``
 
-- Run ``make split ; make``
+- Run ``make extract ; make``
 
 
 ## Project Structure
@@ -38,7 +40,7 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
           └── non_matchings: non matchings assembler files
 	├── assets: Binary blobs of this game (TODO)
 	├── include: header files
-	├── src: C source code for game
+	├── src: C source code for the game
 	│   ├── core: Audio and DMA code
 	│   ├── libultra_nn: Libultra WIP files
 	│   ├── os: Done libultra files!
