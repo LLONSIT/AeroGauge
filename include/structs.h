@@ -96,15 +96,15 @@ struct unk_struct_800061C4 {
 };
 
 
-struct unk_struct_8001A750 {
+struct race_unk {
 
-    short pad;
-    unsigned short unk2;
-    unsigned short unk4;
-    short fill[0x5];
+    u16 unk0;
+    u16 unk2;
+    u16 unk4;
+    s32 unk8;
+    s32 unkC;
     f32 unk10;
 };
-
 
 struct unk_struct_8001516 {
 
@@ -204,6 +204,17 @@ typedef struct {
     s32 unk0;
     s8 pad[0x19];
     } struct_80109BCC;
+
+
+typedef struct {
+
+    char unk0;
+    s32 unk4;
+    s32 unk8;
+
+
+}c_struct;  //Core struct
+
 
 
 #endif 

@@ -4,7 +4,7 @@
 
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/audio/game_11C0/func_800005C0.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/game_11C0/func_800005C0.s")
 
 //Only in this Scope
 extern struct_80109BCC D_80109BCC[];
@@ -16,17 +16,17 @@ void func_80000610(u8 arg0) {
 }
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/audio/game_11C0/func_80000638.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/game_11C0/func_80000638.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/audio/game_11C0/func_800008D0.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/game_11C0/func_800008D0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/audio/game_11C0/func_80000978.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/game_11C0/func_80000978.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/audio/game_11C0/func_80000AFC.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/game_11C0/func_80000AFC.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/audio/game_11C0/func_80000B4C.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/game_11C0/func_80000B4C.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/audio/game_11C0/func_80000E24.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/game_11C0/func_80000E24.s")
 
 extern s32 D_80109CD0;
 

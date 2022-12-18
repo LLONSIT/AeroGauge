@@ -245,6 +245,7 @@ gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91;
 col_init = 0x8001AB94;
 
+
 //not usable
 gScreen_var1 = 0x80096ABC; 
 gScreen_var2 = 0x80096AC0;
