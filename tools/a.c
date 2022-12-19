@@ -1,5 +1,0 @@
-int main() {
-
-fputc();
-
-}
