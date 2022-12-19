@@ -7,14 +7,12 @@
 
 void func_8001C268(void) {
     if (D_8013FF94 == 0) {
-        D_8016C420 = 4;
+        D_8016C420 = 4; //Bad aligned?
     } else {
         D_8016C420 = 5;
     }
     D_8016C424 = 0;
 }
-
-
 
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1CC30/func_8001C29C.s")

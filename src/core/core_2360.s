@@ -6,15 +6,15 @@
 //Only in this scope
 extern c_struct D_8010C428;
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/game_2360/func_80001760.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/core_2360/func_80001760.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/game_2360/func_80001A54.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/core_2360/func_80001A54.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/game_2360/func_80001CA0.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/core_2360/func_80001CA0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/game_2360/func_80001E50.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/core_2360/func_80001E50.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/game_2360/func_80001E90.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/core_2360/func_80001E90.s")
 
 
 extern void* func_80001E90; //Only in this scope
@@ -29,4 +29,4 @@ void* func_80002028(void** arg0) {
 }
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/game_2360/func_80002060.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/core_2360/func_80002060.s")

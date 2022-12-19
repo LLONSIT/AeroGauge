@@ -113,6 +113,17 @@ extern s32 D_80394A70;
 extern s32 D_80394A98;
 extern s32 D_80394DE8;
 
+//game_53A60
+extern u8 D_8008F270;
+extern u8 D_8033D0A0;
+extern u8 D_8033E9B0;
+extern u8 race_tex; //yakuza kaza
+extern u8 D_803402C0;
+extern u8 D_803416D0;
+extern u8 D_803420D8;
+extern u8 D_8034A840;
+
+
 //game_62900
 extern u8 D_80092D54;
 extern s32 D_8013FF84;

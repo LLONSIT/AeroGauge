@@ -237,6 +237,12 @@ __osPfsRWInode = 0x80074EFC;
 osViBlack = 0x8006CC60; //defined:true
 viMgrMain = 0x8006F980; //defined:true
 osPiStartDma = 0x80065F10; //defined_true
+osScGetCmdQ = 0x80064C14; //defined:true
+
+//TODO:
+sched_text_0554 = 0x80064C1C; //defined:true
+
+osCreateScheduler = 0x80064A10;
 
 //Game Symbols
 
@@ -244,8 +250,7 @@ gUnk_YPos = 0x8013f898;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91;
 col_init = 0x8001AB94;
-
-
+race_text = 0x8033F3B8;
 //not usable
 gScreen_var1 = 0x80096ABC; 
 gScreen_var2 = 0x80096AC0;
