@@ -7,6 +7,8 @@
 #pragma GLOBAL_ASM("asm/nonmatchings/game_6C90/func_80006090.s")
 
 
+
+//Why use n_libaudio?
 void func_80006188(void (**arg0)()) {
     void (*temp_v0)();
 

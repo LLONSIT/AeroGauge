@@ -13,7 +13,7 @@ options:
   migrate_rodata_to_functions: yes
   generate_c_preamble: #include <ultra64.h>
   lib_path: build/lib
-
+  shiftable: False # For making the game a little shiftable
 
 segments:
   - name: header
@@ -35,12 +35,12 @@ segments:
       - [0x1FC0, c, game_1FC0]
       - [0x2360, c, core/core_2360] #Some DMA funcs
       - [0x2D80, c, game_2D80]
-      - [0x5850, c, game_5850]
+      - [0x5850, c, libultra_nn/csplayer] #Irregular
       - [0x6BE0, c, game_6BE0]
       - [0x6C90, c, game_6C90]
       - [0x6EA0, c, game_6EA0]
       - [0x9D50, c, game_9D50]
-      - [0xA160, c, game_A160] 
+      - [0xA160, c, game_A160]
       - [0xA220, c, game_A220]
       - [0xA910, c, game_A910]
       - [0xDA40, c, game_DA40]
@@ -56,8 +56,8 @@ segments:
       - [0x14720, c, game_14720]
       - [0x15020, c, game_15020]
       - [0x15D60, c, game_15D60]
-      - [0x16840, c, game_16840]
-      - [0x16BD0, c, game_16BD0]
+      - [0x16840, c, thread1] #maybe
+      - [0x16BD0, c, core/core_16BD0] #Screen functions
       - [0x198F0, c, game_198F0]
       - [0x19A90, c, game_19A90]
       - [0x19AA0, c, game_19AA0]
@@ -117,7 +117,7 @@ segments:
       - [0x65FF0, c, game_65FF0]
       - [0x66230, c, core/core_66230]
       - [0x66340, c, game_66340] #End of the game code
-      
+
       #Libultra Segment Starts!
       - [0x66700, c, libultra_nn/heapinit]
       - [0x66740, c, libultra_nn/heapalloc] #Heapinit to
@@ -294,8 +294,14 @@ segments:
 
 
 
-  - name: data.lzma #Soon!
+  - name: seg_7CC30
     type: bin
     start: 0x7CC30
-  
+    #subsegments:
+    # - [0x7DA30, bin]
+     #- [0x7DA90, bin]
+
+
   - [0x800000]
+
+

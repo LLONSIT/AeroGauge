@@ -1,6 +1,5 @@
-#include "stdio.h"
-#include "stdlib.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 void write_characters(FILE* __stream, int value) {
    while (value-- > 0) {
