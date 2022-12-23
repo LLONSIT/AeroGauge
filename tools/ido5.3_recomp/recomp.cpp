@@ -11,7 +11,7 @@
 #include <vector>
 #include <string>
 
-#include <capstone.h>
+#include <capstone/capstone.h>
 
 #include "elf.h"
 
@@ -1263,7 +1263,7 @@ static void pass4(void) {
                         fprintf(stderr, "missing extern function: %s\n", name.c_str());
                     }
                 }
-                assert(is_extern_function);
+//                assert(is_extern_function);
                 auto& fn = extern_functions[extern_function_id];
                 char ret_type = fn.params[0];
                 new_live &= ~(map_reg(MIPS_REG_V0) | map_reg(MIPS_REG_A0) | map_reg(MIPS_REG_A1) |
@@ -1416,7 +1416,7 @@ static void pass5(void) {
                         }
                     }
                 }
-                assert(is_extern_function);
+//                assert(is_extern_function);
                 auto& fn = extern_functions[extern_function_id];
                 uint64_t args = 1U;
                 if (fn.flags & FLAG_VARARG) {

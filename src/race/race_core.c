@@ -15,15 +15,15 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001A020.s")
 
-void func_8001A750(s32* arg0, struct race_unk *arg1, s32 arg2) {
+void func_8001A750(s32* arg0, struct race_unk *r, s32 arg2) {
     s32 sp24;
     s8 *dest;
     short pad;
 
     sp24 = *arg0;
     func_8001F75C(0xB5, 0x60, 0x14, 0xFF);
-    osSetTime(arg1->unk2 - 0x3C, arg1->unk4 + 0x13); //TODO, maybe this structure is OSTime and maybe, is divided in two parts?
-    sprintf(&dest - 2, &D_80096C94, (s32) ((f64) arg1->unk10 * D_80096CD0));
+    osSetTime(r->unk2 - 0x3C, r->unk4 + 0x13); //TODO, maybe this structure is OSTime and maybe, is divided in two parts?
+    sprintf(&dest - 2, &D_80096C94, (s32) ((f64) r->unk10 * D_80096CD0));
     func_8001F790(&sp24, &dest - 2, &D_8008C8CC);
     *arg0 = sp24;
 }

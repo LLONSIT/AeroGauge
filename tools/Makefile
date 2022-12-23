@@ -11,6 +11,7 @@
 
 default:
 	@$(CC) CopyRom.c -o CopyRom
+	@make  -C  ido5.3_recomp
 	@printf "done\n"
 
 clean:

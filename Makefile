@@ -15,6 +15,11 @@ CYAN    := \033[0;36m
 
 # Directories
 
+
+find-command = $(shell which $(1) 2>/dev/null)
+
+
+
 BUILD_DIR = build
 ASM_DIRS  = asm asm/data asm/libultra asm/w_seg #Weird segment
 BIN_DIRS  = assets
@@ -64,8 +69,28 @@ GCC      = gcc
 XGCC     = mips-linux-gnu-gcc
 
 GREP     = grep -rl
-QEMU_IRIX = /usr/bin/qemu-irix
-CC       = $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc 
+
+USE_QEMU_IRIX ?= 0
+$(eval $(call validate-option,USE_QEMU_IRIX,0 1))
+
+
+ifeq ($(USE_QEMU_IRIX),1)
+  # Verify that qemu-irix exists
+  QEMU_IRIX := $(call find-command,qemu-irix)
+  ifeq (,$(QEMU_IRIX))
+    $(error Using the IDO compiler requires qemu-irix. Please install qemu-irix package or set the QEMU_IRIX environment variable to the full qemu-irix binary path)
+  endif
+endif
+
+
+
+ifeq ($(USE_QEMU_IRIX),1)
+	CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc
+	else
+	CC	 := $(TOOLS_DIR)/ido5.3_recomp/cc
+	endif
+
+
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
 IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
@@ -173,8 +198,7 @@ extract: splat
 dependencies: tools
 	@make -C tools
 	@$(PYTHON) -m pip install -r tools/splat/requirements.txt #Installing the splat dependencies
-	@which $(PYTHON) >/dev/null
-	$(Hmm, repo without submodules, do make extract and then make dependencies!)
+
 
 clean:
 	rm -rf build
@@ -234,7 +258,10 @@ $(TARGET).bin: $(TARGET).elf
 
 $(TARGET).z64: $(TARGET).bin
 	@tools/CopyRom $< $@ #mask
-	@$(QEMU_IRIX) tools/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
+	@printf "[$(PINK) CopyRom $(NO_COL)]  $<\n"
+
+	@qemu-irix -L tools/ido5.3_compiler tools/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
+	@printf "[$(PINK) nrdc $(NO_COL)]  $<\n"
 
 # fake targets for better error handling
 $(SPLAT):

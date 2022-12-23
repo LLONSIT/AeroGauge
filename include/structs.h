@@ -191,19 +191,21 @@ struct {
 
 };
 
+typedef struct {
+
+ u8 unk0;
+ s32 unk4;
+ s32 unk8;
+
+} struct_8010C428;
+
 
 typedef struct {
-u8 unk0;
-s32 unk4;
-s32 unk8;
 
-}struct_8010C428;
-
-
-typedef struct {
     s32 unk0;
     s8 pad[0x19];
-    } struct_80109BCC;
+
+} struct_80109BCC;
 
 
 typedef struct {
@@ -215,6 +217,22 @@ typedef struct {
 
 }c_struct;  //Core struct
 
+typedef struct var_S {
+
+ s8 pad[0x23C];
+ s32 unk23C;
+ s32 unk240;
+
+} unk_struct_80020684_1;
+
+typedef struct  {
+
+    s8 pad[0xA8];
+    s32 unkA8;
+    s8 ALIGNn[0x200-19]; 
+    s32 unk29C;
+
+} unk_struct_80020684_2;
 
 
 #endif 

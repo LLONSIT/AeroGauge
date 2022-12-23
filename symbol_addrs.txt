@@ -238,6 +238,7 @@ osViBlack = 0x8006CC60; //defined:true
 viMgrMain = 0x8006F980; //defined:true
 osPiStartDma = 0x80065F10; //defined_true
 osScGetCmdQ = 0x80064C14; //defined:true
+__osExceptionPreamble =  0x800708A0;
 
 //TODO:
 sched_text_0554 = 0x80064C1C; //defined:true
