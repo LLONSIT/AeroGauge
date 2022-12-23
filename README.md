@@ -1,6 +1,6 @@
 </p>
 <p align="left">
-    <a href="https://img.shields.io/badge/Remaining%20functions-32%2F36-green" alt="Libultra">
+    <a href="" alt="Libultra">
         <img src="https://img.shields.io/badge/Libultra-0.3%25-green" /></a>
   
 </p>
