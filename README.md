@@ -1,3 +1,12 @@
+</p>
+<p align="left">
+    <a href="https://img.shields.io/badge/Remaining%20functions-32%2F36-green" alt="Libultra">
+        <img src="https://img.shields.io/badge/Libultra-0.3%25-green" /></a>
+  
+</p>
+
+
+
 # AeroGauge
 AeroGauge is a Fzero style game, but it has different and special mechanics!
 
@@ -57,9 +66,6 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 	│   ├── race: Race logic related funcs
 	└── tools: tools like asm differ or the compiler, are here
 	
-# Progress
-
-Libultra: 0,3% (Badges soon!)
 
 
 
