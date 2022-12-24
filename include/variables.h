@@ -136,7 +136,7 @@ extern s32 D_8019FC18;
 
 
 //thread1
-extern u8 D_C88D0[]; //?
+extern u8 SegmentUnkStart[]; //?
 extern u8 D_183B90[]; //?
 extern s32 D_8008B1F8;
 extern s32 D_80270800[];

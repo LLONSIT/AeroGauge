@@ -257,3 +257,5 @@ gScreen_var1 = 0x80096ABC;
 gScreen_var2 = 0x80096AC0;
 gScreen_var3 = 0x80096AC4;
 
+//Text or bss?
+SegmentUnkStart = 0xC88D0;

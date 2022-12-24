@@ -51,6 +51,7 @@ O_FILES := $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file).o) \
 
 # Tools
 
+#Soon, weird qemu-irix environment, sgi support soon ;)
 QEMU_IRIX32 = qemu-irixn32
 
 CROSS	 = mips64-elf-
@@ -70,6 +71,13 @@ XGCC     = mips-linux-gnu-gcc
 
 GREP     = grep -rl
 
+#****************************
+#
+#
+#	Options
+#
+#
+#****************************
 USE_QEMU_IRIX ?= 0
 $(eval $(call validate-option,USE_QEMU_IRIX,0 1))
 
@@ -90,6 +98,26 @@ ifeq ($(USE_QEMU_IRIX),1)
 	CC	 := $(TOOLS_DIR)/ido5.3_recomp/cc
 	endif
 
+# 1: use the nrdc for crc calculation (requires qemu-irix)
+# 0: default, use n64crc to calculate the checksum
+
+NRDC ?= 0
+$(eval $(call validate-option,NRDC,0 1))
+
+
+ifeq ($(NRDC),1)
+  # Verify that qemu-irix exists
+  QEMU_IRIX := $(call find-command,qemu-irix)
+  ifeq (,$(QEMU_IRIX))
+    $(error Using the Nintendo Master Data Utility requires qemu-irix. Please install qemu-irix package or set the QEMU_IRIX environment variable to the full qemu-irix binary path)
+  endif
+endif
+
+ifeq ($(NRDC),1)
+	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
+	else
+	CRC := @tools/n64crc build/$(BASENAME).us.z64
+	endif
 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
@@ -212,8 +240,8 @@ distclean: clean
 ### Recipes
 
 .baserom.$(VERSION).ok: baserom.$(VERSION).z64
-	@echo "$$(cat $(BASENAME).$(VERSION).sha1)  $<" | sha1sum --check
-	@touch $@
+	echo "$$(cat $(BASENAME).$(VERSION).sha1)  $<" | sha1sum --check
+	touch $@
 
 $(TARGET).elf: dirs $(BASENAME).ld $(BUILD_DIR)/$(LIBULTRA) $(O_FILES) $(LANG_RNC_O_FILES) $(IMAGE_O_FILES)
 	@$(LD) $(LD_FLAGS) $(LD_FLAGS_EXTRA) -o $@
@@ -227,7 +255,7 @@ $(GLOBAL_ASM_O_FILES): $(BUILD_DIR)/%.c.o: %.c  include/variables.h include/stru
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $(BUILD_DIR)/$<
 	@$(ASM_PROCESSOR) $(OPT_FLAGS) $< --post-process $@ \
 		--assembler "$(AS) $(ASFLAGS)" --asm-prelude $(ASM_PROCESSOR_DIR)/prelude.inc
-	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
+#	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
 endif
 
 # non asm-processor recipe
@@ -257,11 +285,13 @@ $(TARGET).bin: $(TARGET).elf
 	@printf "[$(CYAN) Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
-	@tools/CopyRom $< $@ #mask
 	@printf "[$(PINK) CopyRom $(NO_COL)]  $<\n"
+	@tools/CopyRom $< $@ #mask
+	@printf "[$(GREEN) crc $(NO_COL)]  $<\n"
+	@$(CRC)
 
-	@qemu-irix -L tools/ido5.3_compiler tools/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
-	@printf "[$(PINK) nrdc $(NO_COL)]  $<\n"
+
+
 
 # fake targets for better error handling
 $(SPLAT):
