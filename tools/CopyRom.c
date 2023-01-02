@@ -1,66 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void write_characters(FILE* __stream, int value) {
-   while (value-- > 0) {
-        fputc(0xff, __stream);
-    }
-}
+#define NBYTES 0x120000
 
-// Write in to the specified files
-int get_files(FILE *__stream, FILE *__stream1) {
-
+int get_files(FILE *rom_file, FILE *mask_file) {
     int total;
     int value;
 
-    for (value = 0; (total = fgetc(__stream)) != -1; value++) {
-            fputc(total, __stream1);
+    for (value = 0; (total = fgetc(rom_file)) != EOF; value++) {
+            fputc(total, mask_file);
     }
     return value;
 }
 
-int main(int argc, char *argv[]) {
-
-    int total;
-
-	/* Program Init */
-    if (argc != 3) {
-        fprintf(stderr, "CopyRom ROM_file OUT_file\n");
-        exit(1);
+int WriteDummyBytes(FILE *out_file, int n) {
+    while (n-- > 0) {
+        fputc(0xff, out_file);
     }
-
-/*********************************************
-
-	opening files provided by the argv
-
-*********************************************/
-
-    argv++; //increment
-
-   FILE *__stream = fopen(*argv,"r");
-
-    if (__stream == 0) {
-        perror(*argv);
-        exit(1);
-    }
-
-    argv++; //increment
-
-  FILE *__stream1 = fopen(*argv,"w");
-
-   if (__stream1 == 0) {
-        perror(*argv);
-        exit(1);
-    }
-
-    //Getting the files and writting!
-    total = get_files(__stream, __stream1);
-
-    if (total < 0x120000) {
-        write_characters(__stream1, 0x120000 - total);
-    }
-
-    fclose(__stream);
-    fclose(__stream1);
     return 0;
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        fprintf(stderr, "CopyRom ROM_FILE MASK_FILE\n");
+        exit(1);
+    }
+    FILE *rom_file = fopen(argv[1], "r");
+    if (!rom_file) {
+        perror(argv[1]);
+        exit(1);
+    }
+    FILE *mask_file = fopen(argv[2], "w");
+    if (!mask_file) {
+        perror(argv[2]);
+        exit(1);
+    }
+    int total = get_files(rom_file, mask_file);
+    if (total < NBYTES) {
+        WriteDummyBytes(mask_file, NBYTES - total);
+        exit(1);
+    }
+    fclose(rom_file);
+    fclose(mask_file);
+    exit(0);
 }
