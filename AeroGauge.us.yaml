@@ -119,8 +119,8 @@ segments:
       - [0x66340, c, game_66340] #End of the game code
 
       #Libultra Segment Starts!
-      - [0x66700, c, libultra_nn/heapinit]
-      - [0x66740, c, libultra_nn/heapalloc] #Heapinit to
+      - [0x66700, c, os/audio/alHeapInit]
+      - [0x66740, c, os/audio/alHeapDBAlloc] #Heapinit to
       - [0x667A0, c, libultra_nn/bnkf]
       - [0x669F0, c, libultra_nn/seqpsetbank] #cspsetbank to
       - [0x66A30, c, os/osCreateMesgQueue]
@@ -189,7 +189,7 @@ segments:
       - [0x6D900, c, os/libc/osSyncPrintf]
       - [0x6D940, c, os/libc/String]
       - [0x6D9E0, c, libultra_nn/pfssearchfile]
-      - [0x6DBA0, c, libultra_nn/osPfsNumFiles]
+      - [0x6DBA0, c, os/osPfsNumFiles]
       - [0x6DCF0, c, libultra_nn/pfsfreeblocks]
       - [0x6DE40, c, os/gu/guNormalize]
       - [0x6DED0, c, os/osPfsFileState]
@@ -205,7 +205,7 @@ segments:
       - [0x703F0, c, libultra_nn/vimgr]
       - [0x70750, c, libultra_nn/visetmode]
       - [0x707C0, c, libultra_nn/osViSetEvent]
-      - [0x70830, c, libultra_nn/sptaskyielded]
+      - [0x70830, c, os/osSpTaskYielded]
       - [0x708B0, c, libultra_nn/vigetcurrframebuf] #TODO
       - [0x70930, c, os/osJamMesg]
       - [0x70A80, c, libultra_nn/viswapbuf]
@@ -255,7 +255,7 @@ segments:
       - [0x78F60, hasm, libultra/bcopy]
       - [0x79270, hasm, libultra/writebackdcache]
       - [0x792F0, c, libultra_nn/spsetstat]
-      - [0x79300, c, libultra_nn/spsetpc]
+      - [0x79300, c, os/__osSpSetPc]
       - [0x79340, c, libultra_nn/sprawdma]
       - [0x793D0, c, os/__osSpDeviceBusy]
       - [0x79400, c, libultra_nn/osDpDeviceBusy]

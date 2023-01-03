@@ -239,7 +239,11 @@ viMgrMain = 0x8006F980; //defined:true
 osPiStartDma = 0x80065F10; //defined_true
 osScGetCmdQ = 0x80064C14; //defined:true
 __osExceptionPreamble =  0x800708A0;
-
+alHeapInit = 0x80065B00;
+__osSpSetPc = 0x80078700;
+osSpTaskYield = 0x80070270;
+osSpTaskYielded = 0x8006FC30;
+__osSpGetStatus = 0x80078350;
 //TODO:
 sched_text_0554 = 0x80064C1C; //defined:true
 

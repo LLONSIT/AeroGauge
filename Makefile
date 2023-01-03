@@ -114,7 +114,7 @@ ifeq ($(NRDC),1)
 endif
 
 ifeq ($(NRDC),1)
-	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
+	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c -iNAGE -t"AEROGAUGE" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
 	else
 	CRC := @tools/n64crc build/$(BASENAME).us.z64
 	endif

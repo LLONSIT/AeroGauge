@@ -5,3 +5,4 @@ __osIdCheckSum   = 0x8007458C;
 __osRepairPackId = 0x800745F4;
 osPfsChecker	 = 0x800755F0;
 __osExceptionPreamble =  0x800708A0;
+__osSpGetStatus = 0x80078350;
