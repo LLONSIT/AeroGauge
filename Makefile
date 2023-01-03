@@ -101,7 +101,7 @@ ifeq ($(USE_QEMU_IRIX),1)
 # 1: use the nrdc for crc calculation (requires qemu-irix)
 # 0: default, use n64crc to calculate the checksum
 
-NRDC ?= 0
+NRDC ?= 1
 $(eval $(call validate-option,NRDC,0 1))
 
 

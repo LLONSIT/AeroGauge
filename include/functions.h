@@ -8,6 +8,8 @@ extern void func_8000D2B8();
 //debug_A160
 extern void func_80009298(OSMesgQueue *);
 
+//game_A910
+void func_8000C6B4(void *arg0, void *arg1, s32 *arg2, s32 arg3);
 
 //game_14720
 extern void func_80011B60();

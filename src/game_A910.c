@@ -1,4 +1,10 @@
-#include "common.h"
+#include <ultra64.h>
+#include "variables.h"
+#include "functions.h"
+#include "structs.h"
+#include "macros.h"
+
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_80009D10.s")
 
@@ -76,7 +82,10 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C040.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C060.s")
+void func_8000C060(void) {
+    func_80009D10();
+}
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C080.s")
 
@@ -84,7 +93,9 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C0C0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C0E0.s")
+void func_8000C0E0(void) {
+    func_80009D10();
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C100.s")
 
@@ -94,7 +105,12 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C3D0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C4AC.s")
+void func_8000C4AC(void *arg0, void *arg1, s32 *arg2) {
+
+
+  func_8000C6B4(arg0, arg1, arg2, CONSTANT_RETURN_VALUE); 
+
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C4CC.s")
 
