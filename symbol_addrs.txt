@@ -254,7 +254,7 @@ osCreateScheduler = 0x80064A10;
 gUnk_YPos = 0x8013f898;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91;
-col_init = 0x8001AB94;
+set_col_render = 0x8001AB94;
 race_text = 0x8033F3B8;
 //not usable
 gScreen_var1 = 0x80096ABC; 
