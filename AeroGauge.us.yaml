@@ -116,7 +116,7 @@ segments:
       - [0x65610, c, os/sched]
       - [0x65FF0, c, game_65FF0]
       - [0x66230, c, core/core_66230]
-      - [0x66340, c, game_66340] #End of the game code
+      - [0x66340, c, final_thread] #The second thread?
 
       #Libultra Segment Starts!
       - [0x66700, c, os/audio/alHeapInit]

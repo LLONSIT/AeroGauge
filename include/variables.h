@@ -143,3 +143,11 @@ extern s32 D_80270800[];
 
 //core
 extern s32 ai_data;
+
+//final_thread
+extern s32 D_80092E3C;
+extern s32 osTvType;
+extern OSThread D_801A45A0; //second_thread?
+extern u8 D_80092E3F;
+extern OSMesgQueue* D_801AAAF0;
+extern void* D_801A8768;
