@@ -256,7 +256,12 @@ gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91;
 set_col_render = 0x8001AB94;
 race_text = 0x8033F3B8;
-//not usable
+
+//DMA
+ai_update = 0x80001E50;
+ai_data   =   0x8007F560;
+
+//Screen
 gScreen_var1 = 0x80096ABC; 
 gScreen_var2 = 0x80096AC0;
 gScreen_var3 = 0x80096AC4;

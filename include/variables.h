@@ -140,3 +140,6 @@ extern u8 SegmentUnkStart[]; //?
 extern u8 D_183B90[]; //?
 extern s32 D_8008B1F8;
 extern s32 D_80270800[];
+
+//core
+extern s32 ai_data;
