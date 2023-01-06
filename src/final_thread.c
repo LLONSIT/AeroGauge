@@ -21,8 +21,6 @@ void func_8006578C(void) {
 
 
 
-
-
 /*
 static void *func_800657B0(s32 arg0) {
     

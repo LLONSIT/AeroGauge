@@ -234,5 +234,18 @@ typedef struct  {
 
 } unk_struct_80020684_2;
 
+typedef struct {
+  s8 pad[0x26];
+  s32 unk26;
+  s32 unk28;
+  s32 unk34;
+  s32 unk38;
+  s32 unk40;
+  s32 unk42;
+  u16 unk48;
+  s32 unkF0;
+}unk_struct_80010E40;
+
+
 
 #endif 

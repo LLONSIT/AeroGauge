@@ -11,3 +11,6 @@
 [submodule "tools/n64sym"]
 	path = tools/n64sym
 	url = https://github.com/shygoo/n64sym
+[submodule "tools/asm-differ"]
+	path = tools/asm-differ
+	url = https://github.com/simonlindholm/asm-differ

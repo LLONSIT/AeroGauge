@@ -26,7 +26,7 @@ BIN_DIRS  = assets
 
 #TODO: Too many rules
 SRC_DIR	  = src
-LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/libultra_nn
+LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/libultra_nm
 DEFINE_SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/core $(SRC_DIR)/race $(LIBULTRA_SRC_DIRS)
 
 SRC_DIRS = $(DEFINE_SRC_DIRS)

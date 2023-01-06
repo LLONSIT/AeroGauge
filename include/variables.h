@@ -45,7 +45,7 @@ extern const char D_80096C94;
 extern f64 D_80096CD0;
 
 //game_10D60
-extern float gUnk_YPos;
+extern f32 gUnk_YPos; //it stores the player car position value
 extern f32 D_800962D0;
 extern f32 D_800962D4;
 extern s8 D_8008F640;
@@ -151,3 +151,13 @@ extern OSThread D_801A45A0; //second_thread?
 extern u8 D_80092E3F;
 extern OSMesgQueue* D_801AAAF0;
 extern void* D_801A8768;
+
+//game_10D60
+extern f32 D_800828B8;
+extern f32 D_800828C0;
+extern f32 D_800962A8;
+extern f32 D_800995C0;
+extern f32 D_8013F880;
+extern f32 D_8013F888;
+extern f32 D_8013F890;
+extern u16 D_8013FC8C;
