@@ -33,6 +33,15 @@ void func_8001A750(s32* arg0, struct race_unk *r, s32 arg2) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001A9D4.s")
 
+/**************************************************
+
+
+ Initialize the color and set the render mode
+
+
+
+
+**************************************************/
 void set_col_render(Gfx** gDisplayList, struct struct_8001AB94* arg1) {
     Gfx* gDisplayListHead;
     s32 pad[2];
@@ -48,7 +57,6 @@ void set_col_render(Gfx** gDisplayList, struct struct_8001AB94* arg1) {
     *gDisplayList = gDisplayListHead;
 }
 
-//#pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001AB94.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001AC64.s")
 

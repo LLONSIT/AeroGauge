@@ -161,3 +161,6 @@ extern f32 D_8013F880;
 extern f32 D_8013F888;
 extern f32 D_8013F890;
 extern u16 D_8013FC8C;
+
+//game_9D50
+extern u8 D_80081FD4;

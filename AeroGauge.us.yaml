@@ -13,7 +13,10 @@ options:
   migrate_rodata_to_functions: yes
   generate_c_preamble: #include <ultra64.h>
   lib_path: build/lib
+  gfx_ucode: f3dex
   shiftable: False # For making the game a little shiftable
+  extensions_path: tools/splat_extension #Soon LZMA
+
 
 segments:
   - name: header
@@ -124,7 +127,7 @@ segments:
       - [0x667A0, c, libultra_nm/bnkf]
       - [0x669F0, c, libultra_nm/seqpsetbank] #cspsetbank to
       - [0x66A30, c, os/osCreateMesgQueue]
-      - [0x66A60, hasm, libultra/invaldcache]
+      - [0x66A60, hasm, ../src/os/handwritten/invaldcache]
       - [0x66B10, c, libultra_nm/pidma]
       - [0x66C20, c, libultra_nm/seqpsetvol] #cspsetvol to
       - [0x66C60, c, libultra_nm/seqpstop] #cspstop to 
@@ -161,11 +164,11 @@ segments:
       - [0x6B350, c, os/audio/alSynAllocVoice]
       - [0x6B580, c, os/audio/alSynStartVoiceParam]
       - [0x6B670, c, os/audio/alSynSetFXMix]
-      - [0x6B710, hasm, libultra/osSetintMask]
+      - [0x6B710, hasm, ../src/os/handwritten/osSetintMask]
       - [0x6B7B0, c, libultra_nm/scale]
       - [0x6B850, c, libultra_nm/coss]
       - [0x6B880, c, libultra_nm/cosf]
-      - [0x6B9F0, hasm, libultra/sqrtf]
+      - [0x6B9F0, hasm, ../src/os/handwritten/sqrtf]
       - [0x6BA00, c, libultra_nm/seteventmesg]
       - [0x6BA70, c, os/osContSetCh]
       - [0x6BAE0, c, libultra_nm/controller]
@@ -179,13 +182,13 @@ segments:
       - [0x6C8F0, c, os/gu/guLookat]
       - [0x6CC20, c, libultra_nm/mtxcatf]
       - [0x6CE30, c, libultra_nm/mtxutil]
-      - [0x6D0A0, hasm, libultra/bzero]
+      - [0x6D0A0, hasm, ../src/os/handwritten/bzero]
       - [0x6D140, c, libultra_nm/ll]
       - [0x6D400, c, libultra_nm/gettime]
       - [0x6D490, c, libultra_nm/llcvt]
       - [0x6D6A0, c, libultra_nm/visetspecial]
       - [0x6D860, c, os/osViBlack]
-      - [0x6D8D0, hasm, libultra/writebackdcacheall]
+      - [0x6D8D0, hasm, ../src/os/handwritten/writebackdcacheall]
       - [0x6D900, c, os/libc/osSyncPrintf]
       - [0x6D940, c, os/libc/String]
       - [0x6D9E0, c, libultra_nm/pfssearchfile]
@@ -218,11 +221,11 @@ segments:
       - [0x71390, bin, noppad_71390] #Nop
       - [0x713F0, c, os/__osDequeueThread]
       - [0x71430, c, libultra_nm/pigetcmdq]
-      - [0x71460, hasm, libultra/interrupt]
-      - [0x714A0, hasm, libultra/exceptc]
+      - [0x71460, hasm, ../src/os/handwritten/interrupt]
+      - [0x714A0, hasm, ../src/os/handwritten/exceptc]
       - [0x71E40, c, os/audio/alSynDelete]
-      - [0x71E50, c, libultra_nm/synremoveplayer]
-      - [0x71EF0, hasm, libultra/probetlb]
+      - [0x71E50, c, os/audio/alSynRemovePlayer]
+      - [0x71EF0, hasm, ../src/os/handwritten/probetlb]
       - [0x71FB0, c, os/__osAiDeviceBusy]
       - [0x71FE0, c, libultra_nm/drvrNew]
       - [0x72780, c, os/audio/alSynallocfx]
@@ -252,20 +255,20 @@ segments:
       - [0x78BC0, c, libultra_nm/getactivequeue]
       - [0x78BD0, c, libultra_nm/__osViSwapContext] #TODO
       - [0x78F50, c, libultra_nm/spgetstat]
-      - [0x78F60, hasm, libultra/bcopy]
-      - [0x79270, hasm, libultra/writebackdcache]
+      - [0x78F60, hasm, ../src/os/handwritten/bcopy]
+      - [0x79270, hasm, ../src/os/handwritten/writebackdcache]
       - [0x792F0, c, libultra_nm/spsetstat]
       - [0x79300, c, os/__osSpSetPc]
       - [0x79340, c, libultra_nm/sprawdma]
       - [0x793D0, c, os/__osSpDeviceBusy]
       - [0x79400, c, libultra_nm/osDpDeviceBusy]
-      - [0x79430, hasm, libultra/setsr]
-      - [0x79440, hasm, libultra/getsr]
-      - [0x79450, hasm, libultra/setfpccsr]
+      - [0x79430, hasm, ../src/os/handwritten/setsr]
+      - [0x79440, hasm, ../src/os/handwritten//getsr]
+      - [0x79450, hasm, ../src/os/handwritten/setfpccsr]
       - [0x79460, c, os/__osSiRawReadIo] #sirawread to
       - [0x794B0, c, libultra_nm/sprawwrite]
-      - [0x79500, hasm, libultra/invalicache]
-      - [0x79580, hasm, libultra/maptlbrdb]
+      - [0x79500, hasm, ../src/os/handwritten/invalicache]
+      - [0x79580, hasm, ../src/os/handwritten/maptlbrdb]
       - [0x795E0, c, libultra_nm/pirawread]
       - [0x79640, c, libultra_nm/cartrominit]
       - [0x79740, c, os/osLeoDiskInit]
@@ -280,7 +283,7 @@ segments:
       - [0x7B6A0, c, os/__osSiDeviceBusy]
       - [0x7B6D0, c, libultra_nm/xlitob]
       - [0x7B970, c, libultra_nm/xldtob]
-      - [0x7C430, hasm, libultra/setcompare]
+      - [0x7C430, hasm, ../src/os/handwritten/setcompare]
       - [0x7C440, c, libultra_nm/resetglobalintmask]
       - [0x7C4A0, c, libultra_nm/epirawwrite]
       - [0x7C630, c, libultra_nm/epirawread]

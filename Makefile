@@ -21,12 +21,12 @@ find-command = $(shell which $(1) 2>/dev/null)
 
 
 BUILD_DIR = build
-ASM_DIRS  = asm asm/data asm/libultra asm/w_seg #Weird segment
+ASM_DIRS  = asm asm/data asm/libultra src/os/handwritten
 BIN_DIRS  = assets
 
 #TODO: Too many rules
 SRC_DIR	  = src
-LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/libultra_nm
+LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/libultra_nm 
 DEFINE_SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/core $(SRC_DIR)/race $(LIBULTRA_SRC_DIRS)
 
 SRC_DIRS = $(DEFINE_SRC_DIRS)
@@ -41,8 +41,8 @@ BIN_FILES       = $(foreach dir,$(BIN_DIRS),$(wildcard $(dir)/*.bin))
 
 O_FILES := $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file).o) \
            $(foreach file,$(C_FILES),$(BUILD_DIR)/$(file).o) \
-           $(foreach file,$(BIN_FILES),$(BUILD_DIR)/$(file).o)
-
+           $(foreach file,$(BIN_FILES),$(BUILD_DIR)/$(file).o)\
+           $(foreach file,$(HASM_FILES),$(BUILD_DIR)/$(file).o)
 
 
 
@@ -53,6 +53,7 @@ O_FILES := $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file).o) \
 
 #Soon, weird qemu-irix environment, sgi support soon ;)
 QEMU_IRIX32 = qemu-irixn32
+QEMU_IRIX   = /usr/bin/qemu-irix
 
 CROSS	 = mips64-elf-
 
@@ -264,7 +265,6 @@ $(BUILD_DIR)/%.c.o: %.c
 	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
 
 
-
 $(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
 	@mkdir -p $$(dirname $@)
 #	@cp $< $@
@@ -275,6 +275,7 @@ $(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
 $(BUILD_DIR)/%.s.o: %.s
 	@$(AS) $(ASFLAGS) -o $@ $<
 	@printf "[$(GREEN)  ASSEMBLER   $(NO_COL)]  $<\n"
+
 
 $(BUILD_DIR)/%.bin.o: %.bin
 	@$(LD) -r -b binary -o $@ $<

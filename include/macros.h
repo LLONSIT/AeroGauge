@@ -1,7 +1,10 @@
 
 //for the unused functions
-#define UNUSED
+#define UNUSED s32 //default type
 
 //game_A190
 
 #define CONSTANT_RETURN_VALUE 0
+
+//game_10D60
+#define UNK_FLAG 2 //most likely whit that if( & 2)

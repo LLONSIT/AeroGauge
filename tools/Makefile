@@ -17,3 +17,4 @@ default:
 
 clean:
 	rm CopyRom
+	rm n64crc

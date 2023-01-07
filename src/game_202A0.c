@@ -3,7 +3,7 @@
 #include "functions.h"
 #include "structs.h"
 
-
+//TODO: should be u64 or s64
 void func_8001F6A0(s32 arg0, s32 arg1) {
     D_8008C8F4 = arg0;
     D_8008C8F8 = arg1;

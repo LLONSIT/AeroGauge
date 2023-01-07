@@ -38,7 +38,9 @@ extern s32 func_800113A0();
 extern f32 func_80011468(s32 arg0);
 extern f32 func_80011484(s32 arg0);
 extern void func_80010C14(void * arg0, s32 arg1, s32 arg2);
-extern s32 func_80009488();
+
+//game_9D50
+extern u8 func_80009488();
 
 //game_1CC30
 extern void func_8001C268(void);

@@ -1,0 +1,526 @@
+# Rationales for an official so_locations file:
+# 1) to save kernel space reserved for page table -- each active
+# 4Meg of user virtual space requires 4K of kernel page table space;
+# 2) to save kernel virtual space (tlb) required to map each page of
+# page tables.
+# 
+# Weigh the benefits and disadvantages of the followings when adding
+# a library to the so_locations file.
+# 1) Put all libraries that you think are likely to be linked by the same
+# program in the same 4Meg segment. This saves kernel page table space
+# and can potentially speed up the program.
+#
+# 2) Allow adequate space between 4Meg segments of non-related libraries
+# so that redistribution of one ISM type does not mess up other ISMs.
+#
+# 3) The re-quickstart tool uses this file to help it determine
+#	where to move the re-quickstarted library to (if it needs to)
+#
+# This file, without any sizes, gets used during a build. ld(1) will fill
+# in the sizes and sections. That output of the build (so_locations) is used
+# as the input to a manual process that converts to so_locations.ship.
+# That process needs to remove all libraries in so_locations that aren't
+# in so_locations.master, and check in so_locations.ship.
+#
+# The range 0x0f800000-0x0fc00000 is reserved for system related libraries.
+# rld heap (128K max) at 0x0fbe0000 (rld heap can grow beyond 0x0fc00000).
+rld.heap \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .data 0x0fbe0000, 0x00020000:\
+
+# rld text (384 K max) at 0x0ff60000, data (128 K max) at 0x5ffe0000
+# this is so that we can reserve this slot for rld.
+rld \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0fb60000, 0x00060000:\
+		:st = .data 0x0fbc0000, 0x00020000:\
+
+libc.so.1 \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0fa90000, 0x000c0000:\
+		:st = .data 0x0fb50000, 0x00010000:\
+
+libcurses.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0fa50000, 0x00030000:\
+		:st = .data 0x0fa80000, 0x00010000:\
+
+librpcsvc.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f920000, 0x00010000:\
+		:st = .data 0x0f930000, 0x00010000:\
+
+libgen.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f9a0000, 0x00010000:\
+		:st = .data 0x0f9b0000, 0x00010000:\
+
+libmalloc.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f960000, 0x00010000:\
+		:st = .data 0x0f970000, 0x00010000:\
+
+libw.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f8e0000, 0x00010000:\
+		:st = .data 0x0f8f0000, 0x00010000:\
+
+libdl.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f9c0000, 0x00010000:\
+		:st = .data 0x0f9d0000, 0x00010000:\
+
+libmutex.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f940000, 0x00010000:\
+		:st = .data 0x0f950000, 0x00010000:\
+
+libadm.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0fa20000, 0x00020000:\
+		:st = .data 0x0fa40000, 0x00010000:\
+
+libcmd.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0fa00000, 0x00010000:\
+		:st = .data 0x0fa10000, 0x00010000:\
+
+libcrypt.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f9e0000, 0x00010000:\
+		:st = .data 0x0f9f0000, 0x00010000:\
+
+libiaf.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f980000, 0x00010000:\
+		:st = .data 0x0f990000, 0x00010000:\
+
+libC.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f890000, 0x00020000:\
+		:st = .data 0x0f8b0000, 0x00010000:\
+
+libm.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f870000, 0x00010000:\
+		:st = .data 0x0f880000, 0x00010000:\
+
+libm43.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f850000, 0x00010000:\
+		:st = .data 0x0f860000, 0x00010000:\
+
+libsun.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f900000, 0x00010000:\
+		:st = .data 0x0f910000, 0x00010000:\
+
+liby.so \
+		:st = $range 0x0f800000, 0x00400000:\
+		:st = .text 0x0f8c0000, 0x00010000:\
+		:st = .data 0x0f8d0000, 0x00010000:\
+
+# The range 0x0f400000-0x0f800000 is reserved for X libraries
+libX11.so.1 \
+		:st = $range 0x0f400000, 0x00400000:\
+		:st = .text 0x0f740000, 0x000b0000:\
+		:st = .data 0x0f7f0000, 0x00010000:\
+
+libXt.so \
+		:st = $range 0x0f400000, 0x00400000:\
+		:st = .text 0x0f6b0000, 0x00050000:\
+		:st = .data 0x0f700000, 0x00010000:\
+
+libXaw.so \
+		:st = $range 0x0f400000, 0x00400000:\
+		:st = .text 0x0f630000, 0x00040000:\
+		:st = .data 0x0f670000, 0x00010000:\
+
+libXmu.so \
+		:st = $range 0x0f400000, 0x00400000:\
+		:st = .text 0x0f680000, 0x00020000:\
+		:st = .data 0x0f6a0000, 0x00010000:\
+
+libXext.so \
+		:st = $range 0x0f400000, 0x00400000:\
+		:st = .text 0x0f710000, 0x00020000:\
+		:st = .data 0x0f730000, 0x00010000:\
+
+libXi.so \
+		:st = $range 0x0f400000, 0x00400000:\
+		:st = .text 0x0f610000, 0x00010000:\
+		:st = .data 0x0f620000, 0x00010000:\
+
+libXpm.so \
+		:st = $range 0x0f400000, 0x00400000:\
+		:st = .text 0x0f5f0000, 0x00010000:\
+		:st = .data 0x0f600000, 0x00010000:\
+
+# The range 0x0e800000-0x0ec00000 is currently reserved for future expansion
+# of the above X libraries.
+reserv1 \
+		:st = $range 0x0e800000, 0x00400000:\
+
+# The range 0x0f000000-0x0f400000 is reserved for libgl,ligfm
+libgltrace.so \
+		:st = $range 0x0f000000, 0x00200000:\
+		:st = .text 0x0f130000, 0x00080000:\
+		:st = .data 0x0f1f0000, 0x00010000:\
+
+libgl.so \
+		:st = $range 0x0f000000, 0x00200000:\
+		:st = .text 0x0f0b0000, 0x00040000:\
+		:st = .data 0x0f1b0000, 0x00010000:\
+
+libfm.so \
+		:st = $range 0x0f200000, 0x00200000:\
+		:st = .text 0x0f390000, 0x00050000:\
+		:st = .data 0x0f3e0000, 0x00020000:\
+
+# The range 0x0ec00000-0x0f000000 is currently reserved for future expansion
+# of the above gl and font manager libraries.
+reserve2 \
+		:st = $range 0x0ec00000, 0x00400000:\
+
+# The range 0x0e400000 - 0x0e800000 is reserved for libraires used by toto
+libil.so \
+		:st = $range 0x0e400000, 0x00400000:\
+		:st = .text 0x0e610000, 0x001d0000:\
+		:st = .data 0x0e7e0000, 0x00020000:\
+
+libCadmin.so \
+		:st = $range 0x0e400000, 0x00400000:\
+		:st = .text 0x0e5d0000, 0x00030000:\
+		:st = .data 0x0e600000, 0x00010000:\
+
+# The range 0x0e000000 - 0x0e400000 is reserved for motif libraries
+libXm.so.1 \
+		:st = $range 0x0e000000, 0x00400000:\
+		:st = .text 0x0e230000, 0x001a0000:\
+		:st = .data 0x0e3d0000, 0x00030000:\
+
+libSgt.so.1 \
+		:st = $range 0x0e000000, 0x00400000:\
+		:st = .text 0x0e160000, 0x00020000:\
+		:st = .data 0x0e180000, 0x00010000:\
+
+libSgm.so.1 \
+		:st = $range 0x0e000000, 0x00400000:\
+		:st = .text 0x0e190000, 0x00090000:\
+		:st = .data 0x0e220000, 0x00010000:\
+
+# The range 0x0dc00000 - 0x0e000000 is reserved for image libraries
+libilFIT.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0dfe0000, 0x00010000:\
+		:st = .data 0x0dff0000, 0x00010000:\
+
+libilTIFF.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0df80000, 0x00030000:\
+		:st = .data 0x0dfb0000, 0x00030000:\
+
+libilSGI.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0df60000, 0x00010000:\
+		:st = .data 0x0df70000, 0x00010000:\
+
+libilPhotoCD.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0df40000, 0x00010000:\
+		:st = .data 0x0df50000, 0x00010000:\
+
+libilGIF.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0df20000, 0x00010000:\
+		:st = .data 0x0df30000, 0x00010000:\
+
+libilMon.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0de70000, 0x00070000:\
+		:st = .data 0x0df00000, 0x00010000:\
+
+libcil.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0dee0000, 0x00020000:\
+		:st = .data 0x0df10000, 0x00010000:\
+
+libfil.so \
+		:st = $range 0x0dc00000, 0x00400000:\
+		:st = .text 0x0de30000, 0x00030000:\
+		:st = .data 0x0de60000, 0x00010000:\
+
+# The range 0x0d800000 - 0x0dc00000 is reserved for opengl/gl libraires
+# see also 0x0a800000
+libGL.so \
+		:st = $range 0x0d800000, 0x00400000:\
+
+libGLcore.so \
+		:st = $range 0x0d800000, 0x00400000:\
+
+libGLU.so \
+		:st = $range 0x0d800000, 0x00400000:\
+
+libFL.so \
+		:st = $range 0x0d800000, 0x00400000:\
+		:st = .text 0x0dba0000, 0x00040000:\
+		:st = .data 0x0dbe0000, 0x00020000:\
+
+# The range 0x0d400000 - 0x0d800000 is reserved for libraries used by toto
+libvk.so.1 \
+		:st = $range 0x0d400000, 0x00400000:\
+		:st = .text 0x0d650000, 0x00080000:\
+		:st = .data 0x0d6d0000, 0x00010000:\
+
+libvkmsg.so.1 \
+		:st = $range 0x0d400000, 0x00400000:\
+		:st = .text 0x0d630000, 0x00020000:\
+		:st = .data 0x0d7b0000, 0x00010000:\
+
+libdesktopUtil.so \
+		:st = $range 0x0d400000, 0x00400000:\
+		:st = .text 0x0d5f0000, 0x00020000:\
+		:st = .data 0x0d610000, 0x00010000:\
+
+libdesktopIcon.so \
+		:st = $range 0x0d400000, 0x00400000:\
+		:st = .text 0x0d510000, 0x000b0000:\
+		:st = .data 0x0d5d0000, 0x00020000:\
+
+libdesktopFileicon.so \
+		:st = $range 0x0d400000, 0x00400000:\
+		:st = .text 0x0d7d0000, 0x00020000:\
+		:st = .data 0x0d7f0000, 0x00010000:\
+
+libdesktopGallery.so \
+		:st = $range 0x0d400000, 0x00400000:\
+		:st = .text 0x0d620000, 0x00010000:\
+		:st = .data 0x0d6e0000, 0x00010000:\
+
+# tooltalk
+libtt.so \
+		:st = $range 0x0d400000, 0x00400000:\
+		:st = .text 0x0d6f0000, 0x000c0000:\
+		:st = .data 0x0d7c0000, 0x00010000:\
+
+# The range 0x0d000000 - 0x0d400000 is reserved for dmedia libraries
+libaudiofile.so \
+		:st = $range 0x0d000000, 0x00400000:\
+		:st = .text 0x0d2a0000, 0x00020000:\
+		:st = .data 0x0d2c0000, 0x00010000:\
+
+libaudioutil.so \
+		:st = $range 0x0d000000, 0x00400000:\
+		:st = .text 0x0d2d0000, 0x00050000:\
+		:st = .data 0x0d320000, 0x00020000:\
+
+libmidi.so \
+		:st = $range 0x0d000000, 0x00400000:\
+		:st = .text 0x0d280000, 0x00010000:\
+		:st = .data 0x0d290000, 0x00010000:\
+
+libawareaudio.so \
+		:st = $range 0x0d000000, 0x00400000:\
+		:st = .text 0x0d340000, 0x00070000:\
+		:st = .data 0x0d3b0000, 0x00030000:\
+
+libdmedia.so \
+		:st = $range 0x0d000000, 0x00400000:\
+		:st = .text 0x0d3e0000, 0x00010000:\
+		:st = .data 0x0d3f0000, 0x00010000:\
+
+# The range 0x0cc00000 - 0x0d000000 is reserved for il8n libraries
+libwnn.so \
+		:st = $range 0x0cc00000, 0x00400000:\
+		:st = .text 0x0cf80000, 0x00030000:\
+		:st = .data 0x0cfb0000, 0x00030000:\
+
+libjgl.so \
+		:st = $range 0x0cc00000, 0x00400000:\
+		:st = .text 0x0cfe0000, 0x00010000:\
+		:st = .data 0x0cff0000, 0x00010000:\
+
+libXawI18n.so \
+		:st = $range 0x0cc00000, 0x00400000:\
+		:st = .text 0x0cf20000, 0x00050000:\
+		:st = .data 0x0cf70000, 0x00010000:\
+
+# The range 0x0c800000 - 0x0cc00000 is reserved for debug libraries
+libSgm_d.so.1 \
+		:st = $range 0x0c800000, 0x00400000:\
+		:st = .text 0x0ca30000, 0x000c0000:\
+		:st = .data 0x0caf0000, 0x00010000:\
+
+libSgt_d.so.1 \
+		:st = $range 0x0c800000, 0x00400000:\
+		:st = .text 0x0cb00000, 0x00020000:\
+		:st = .data 0x0cbe0000, 0x00010000:\
+
+libgd.so \
+		:st = $range 0x0c800000, 0x00400000:\
+		:st = .text 0x0c960000, 0x000c0000:\
+		:st = .data 0x0cbf0000, 0x00010000:\
+
+# The range 0x0c400000-0x0c800000 is currently reserved debug libraries
+libXm_d.so.1 \
+		:st = $range 0x0c400000, 0x00400000:\
+		:st = .text 0x0c590000, 0x00240000:\
+		:st = .data 0x0c7d0000, 0x00030000:\
+
+# The range 0x0c000000 - 0x0c400000 is reserved for lesser used system libs
+libudma.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c240000, 0x00010000:\
+		:st = .data 0x0c250000, 0x00010000:\
+
+libexc.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c320000, 0x00010000:\
+		:st = .data 0x0c330000, 0x00010000:\
+
+libl.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c3c0000, 0x00010000:\
+		:st = .data 0x0c3d0000, 0x00010000:\
+
+libmediad.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c3a0000, 0x00010000:\
+		:st = .data 0x0c3b0000, 0x00010000:\
+
+libpkg.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c340000, 0x00030000:\
+		:st = .data 0x0c370000, 0x00010000:\
+
+libnls.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c380000, 0x00010000:\
+		:st = .data 0x0c390000, 0x00010000:\
+
+libftn.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c290000, 0x00060000:\
+		:st = .data 0x0c2f0000, 0x00030000:\
+
+libmx.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c260000, 0x00020000:\
+		:st = .data 0x0c280000, 0x00010000:\
+
+libcursesBSD.so \
+		:st = $range 0x0c000000, 0x00400000:\
+		:st = .text 0x0c3e0000, 0x00010000:\
+		:st = .data 0x0c3f0000, 0x00010000:\
+
+# The range 0x0bc00000 - 0x0c000000 is reserved for video libraries
+libvl.so \
+		:st = $range 0x0bc00000, 0x00400000:\
+		:st = .text 0x0bfe0000, 0x00010000:\
+		:st = .data 0x0bff0000, 0x00010000:\
+
+Sirius.so \
+		:st = $range 0x0bc00000, 0x00400000:\
+		:st = .text 0x0bf50000, 0x00030000:\
+		:st = .data 0x0bf80000, 0x00010000:\
+
+SiriusVL.so \
+		:st = $range 0x0bc00000, 0x00400000:\
+
+vino.so \
+		:st = $range 0x0bc00000, 0x00400000:\
+		:st = .text 0x0bfc0000, 0x00010000:\
+		:st = .data 0x0bfd0000, 0x00010000:\
+
+ev1.so \
+		:st = $range 0x0bc00000, 0x00400000:\
+		:st = .text 0x0bf90000, 0x00020000:\
+		:st = .data 0x0bfb0000, 0x00010000:\
+
+sv1.so \
+		:st = $range 0x0bc00000, 0x00400000:\
+		:st = .text 0x0bf30000, 0x00010000:\
+		:st = .data 0x0bf40000, 0x00010000:\
+
+# The range 0x0b800000 - 0x0bc00000 is reserved for less-used Motif librairies
+libMrm.so.1 \
+		:st = $range 0x0b800000, 0x00400000:\
+		:st = .text 0x0bbd0000, 0x00020000:\
+		:st = .data 0x0bbf0000, 0x00010000:\
+
+libUil.so.1 \
+		:st = $range 0x0b800000, 0x00400000:\
+		:st = .text 0x0bb60000, 0x00030000:\
+		:st = .data 0x0bba0000, 0x00030000:\
+
+# The range 0x0b400000 - 0x0b800000 is reserved for SVR4 net libraries
+libnsl.so \
+		:st = $range 0x0b400000, 0x00400000:\
+		:st = .text 0x0b7c0000, 0x00030000:\
+		:st = .data 0x0b7f0000, 0x00010000:\
+
+libsocket.so \
+		:st = $range 0x0b400000, 0x00400000:\
+		:st = .text 0x0b790000, 0x00010000:\
+		:st = .data 0x0b7b0000, 0x00010000:\
+
+nis.so \
+		:st = $range 0x0b400000, 0x00400000:\
+		:st = .text 0x0b780000, 0x00010000:\
+		:st = .data 0x0b7a0000, 0x00010000:\
+
+resolv.so \
+		:st = $range 0x0b400000, 0x00400000:\
+		:st = .text 0x0b760000, 0x00010000:\
+		:st = .data 0x0b770000, 0x00010000:\
+
+straddr.so \
+		:st = $range 0x0b400000, 0x00400000:\
+		:st = .text 0x0b740000, 0x00010000:\
+		:st = .data 0x0b750000, 0x00010000:\
+
+tcpip.so \
+		:st = $range 0x0b400000, 0x00400000:\
+		:st = .text 0x0b720000, 0x00010000:\
+		:st = .data 0x0b730000, 0x00010000:\
+
+# The range 0x0b000000 - 0x0b400000 is reserved for Inventor libraries
+libInventor.so \
+		:st = $range 0x0b000000, 0x00400000:\
+		:st = .text 0x0b120000, 0x002a0000:\
+		:st = .data 0x0b3c0000, 0x00040000:\
+
+libInventorXt.so \
+		:st = $range 0x0b000000, 0x00400000:\
+		:st = .text 0x0b0a0000, 0x00070000:\
+		:st = .data 0x0b110000, 0x00010000:\
+
+# The range 0x0ac00000 - 0x0b000000 is NOT reserved!
+forrent.so \
+		:st = $range 0x0ac00000, 0x400000:
+
+# The range 0x0a800000 - 0x0ac00000 is reserved for other OpenGL libraries
+libGLF.so \
+		:st = $range 0x0a800000, 0x00400000:\
+		:st = .text 0x0ab10000, 0x000b0000:\
+		:st = .data 0x0abc0000, 0x00020000:\
+
+libGLFexec.so \
+		:st = $range 0x0a800000, 0x00400000:\
+		:st = .text 0x0aae0000, 0x00020000:\
+		:st = .data 0x0ab00000, 0x00010000:\
+
+libOK.so \
+		:st = $range 0x0a800000, 0x00400000:\
+		:st = .text 0x0abe0000, 0x00010000:\
+		:st = .data 0x0abf0000, 0x00010000:\
+
+# SGI libraries that are not specified above should start below 0x60000000
+# During a build, we comment out the line $start_address=0x40000000 and
+# enable $start_address=0x60000000. We ship the so_locations file with
+# the line $start_address=0x40000000 enabled. The idea is to force SGI
+# so libraries to be specified above with the $range directive or just
+# start them all below 0x60000000
+# Other libraries to follow
+# Do not change the following line
+# Non SGI libraries should be below 0x40000000
