@@ -198,6 +198,7 @@ $(BUILD_DIR)/$(SRC_DIR)/os/gu/cosf.c.o: OPT_FLAGS := -O1
 $(BUILD_DIR)/$(SRC_DIR)/os/libc/%.c.o: OPT_FLAGS := -O3
 $(BUILD_DIR)/$(SRC_DIR)/os/audio/alSndPlayer.c.o: OPT_FLAGS := -O1
 
+
 ### Targets
 
 default: all
@@ -273,8 +274,8 @@ $(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
 
 
 $(BUILD_DIR)/%.s.o: %.s
-	@$(AS) $(ASFLAGS) -o $@ $<
-	@printf "[$(GREEN)  ASSEMBLER   $(NO_COL)]  $<\n"
+	$(AS) $(ASFLAGS) -o $@ $<
+	#printf "[$(GREEN)  ASSEMBLER   $(NO_COL)]  $<\n"
 
 
 $(BUILD_DIR)/%.bin.o: %.bin
