@@ -247,5 +247,14 @@ typedef struct {
 }unk_struct_80010E40;
 
 
-
+typedef struct {
+  s8 pad[0x4];
+  u16 unk4;
+  s8 fill[0x30-2];
+  u8 unk34;
+  u8 unk35;
+  u8 unk36;
+  u8 unk37;
+  u8 pad38[0x5C - 0x38];
+}struct_80009EE0;
 #endif 

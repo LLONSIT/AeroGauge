@@ -1,4 +1,4 @@
-#include <ultra64.h>
+    #include <ultra64.h>
 #include "functions.h"
 #include "variables.h"
 #include "structs.h"
@@ -59,6 +59,17 @@ UNUSED func_80017454(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/core/core_16BD0/func_80018BA0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/core_16BD0/func_80018C40.s")
+//TODO: clarify this scope vars
+extern s8 D_8013FF90;
+extern s32 D_8013FC80;
+extern s32 D_8013FC84;
+
+void func_80018C40(void) {
+    func_80010548(D_8013FC80);
+    if (D_8013FF90 == 5) {
+        func_80010548(D_8013FC84);
+    }
+}
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/core/core_16BD0/func_80018C84.s")

@@ -176,7 +176,7 @@ __osContPifRam = 0x801AAB90;
 __osMaxControllers = 0x801AABD1;
 alSynSetPitch = 0x8006A6C0;
 memcpy = 0x8006CD40;
-sprintf_text_0000 = 0x8006B9E0;
+proutSprintf = 0x8006B9E0;
 osContSetCh = 0x8006AE70;
 __osContLastCmd = 0x801AABD0;
 __osSiGetAccess = 0x800740F0;
@@ -244,11 +244,12 @@ __osSpSetPc = 0x80078700;
 osSpTaskYield = 0x80070270;
 osSpTaskYielded = 0x8006FC30;
 __osSpGetStatus = 0x80078350;
+
 //TODO:
 sched_text_0554 = 0x80064C1C; //defined:true
 
 osCreateScheduler = 0x80064A10;
-
+osMotorStop = 0x8006E380; //defined:true
 //Game Symbols
 
 gUnk_YPos = 0x8013f898;

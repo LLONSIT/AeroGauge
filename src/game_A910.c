@@ -14,9 +14,30 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_80009DD8.s")
 
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_80009E5C.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_80009EE0.s")
+//some nice expressions, can be simplified
+void func_80009EE0(struct_80009EE0* arg0, s32 arg1, s32* arg2) {
+    s32 Pad[0x12-2];
+    s32 sp2C;
+    s32 var_v1;
+
+    func_80020D1C(&sp2C, arg1 + 8, arg1 + 0x14, 0, 4);
+    arg0->unk4 = (u16) (arg0->unk4 | 2);
+    func_800241F0(&sp2C, arg0 + 1  );
+
+    var_v1 =  *arg2 & 0x7F;
+    if (var_v1 >= 0x40) {
+        var_v1 = 0x7F - var_v1;
+    }
+
+    arg0->unk35 = var_v1 * 4;
+    arg0->unk4 = (u16) (arg0->unk4 | 0x10);
+    arg0->unk36 = var_v1 * 4;
+    arg0->unk34 = 0xFF;
+    arg0->unk37 = 0xFF;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_80009F88.s")
 
@@ -24,7 +45,20 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000A164.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000A2C8.s")
+
+void func_8000A2C8(struct_80009EE0* arg0, s32 arg1, s32 arg2) {
+    s8 stackPad[0x39];
+    s32 sp28;
+
+    func_80020D1C(&sp28, arg1 + 8, arg1 + 0x14, 0, 4);
+    arg0->unk4 = (u16) (arg0->unk4 | 2);
+    func_800241F0(&sp28, arg0 + 1);
+    arg0->unk4 = (u16) (arg0->unk4 | 0x10);
+    arg0->unk37 = 0xB4;
+    arg0->unk34 = 0xFF;
+    arg0->unk35 = 0xFF;
+    arg0->unk36 = 0xFF;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000A350.s")
 
@@ -76,8 +110,9 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000BEDC.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C000.s")
-
+void func_8000C000(void) {
+    func_80009D10();
+}
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C020.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000C040.s")

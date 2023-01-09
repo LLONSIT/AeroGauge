@@ -164,3 +164,7 @@ extern u16 D_8013FC8C;
 
 //game_9D50
 extern u8 D_80081FD4;
+
+//core_16BD0
+
+

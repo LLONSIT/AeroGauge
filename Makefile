@@ -55,7 +55,7 @@ O_FILES := $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file).o) \
 QEMU_IRIX32 = qemu-irixn32
 QEMU_IRIX   = /usr/bin/qemu-irix
 
-CROSS	 = mips64-elf-
+CROSS	 = mips-linux-gnu-
 
 #ROOT	 = $(QEMU_IRIX32) ~/root/gcc463/opt/gcc-4.6.3/bin
 #AS       = $(ROOT)/as
@@ -113,6 +113,10 @@ ifeq ($(NRDC),1)
     $(error Using the Nintendo Master Data Utility requires qemu-irix. Please install qemu-irix package or set the QEMU_IRIX environment variable to the full qemu-irix binary path)
   endif
 endif
+
+#
+#Initial code for AeroGauge: NAGE
+#
 
 ifeq ($(NRDC),1)
 	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c -iNAGE -t"AEROGAUGE" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
@@ -274,8 +278,8 @@ $(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
 
 
 $(BUILD_DIR)/%.s.o: %.s
-	$(AS) $(ASFLAGS) -o $@ $<
-	#printf "[$(GREEN)  ASSEMBLER   $(NO_COL)]  $<\n"
+	@$(AS) $(ASFLAGS) -o $@ $<
+	@printf "[$(GREEN)  ASSEMBLER   $(NO_COL)]  $<\n"
 
 
 $(BUILD_DIR)/%.bin.o: %.bin
