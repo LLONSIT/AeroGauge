@@ -32,6 +32,9 @@ segments:
     start: 0x1000
     vram: 0x80000400
     subsegments:
+
+     #TODO:
+     #Layout: game_seg->libultra_seg->LZMA_compressed?
       - [0x1000, hasm, entrypoint]
       - [0x1050, c, core/core_1050]
       - [0x11C0, c, core/core_11C0]
@@ -121,16 +124,16 @@ segments:
       - [0x66230, c, core/core_66230]
       - [0x66340, c, final_thread] #The second thread?
 
-      #Libultra Segment Starts!
+      #Libultra Starts!
       - [0x66700, c, os/audio/alHeapInit]
       - [0x66740, c, os/audio/alHeapDBAlloc] #Heapinit to
       - [0x667A0, c, libultra_nm/bnkf]
-      - [0x669F0, c, libultra_nm/seqpsetbank] #cspsetbank to
+      - [0x669F0, c, os/audio/alSeqpSetBank] #cspsetbank to
       - [0x66A30, c, os/osCreateMesgQueue]
       - [0x66A60, hasm, ../src/os/handwritten/invaldcache]
       - [0x66B10, c, libultra_nm/pidma]
-      - [0x66C20, c, libultra_nm/seqpsetvol] #cspsetvol to
-      - [0x66C60, c, libultra_nm/seqpstop] #cspstop to 
+      - [0x66C20, c, os/audio/alSeqpSetVol] #cspsetvol to
+      - [0x66C60, c, os/audio/alSeqpStop] #cspstop to
       - [0x66C90, c, os/osRecvMesg]
       - [0x66DD0, c, libultra_nm/cseq]
       - [0x67890, c, os/audio/alSeqpSetSeq]
@@ -138,14 +141,14 @@ segments:
       - [0x67900, c, os/audio/alCents2Ratio]
       - [0x67950, c, libultra_nm/sinf]
       - [0x68220, c, os/audio/alSndpAllocate]
-      - [0x682C0, c, libultra_nm/sndpsetsound]
-      - [0x682E0, c, libultra_nm/sndpsetvol]
+      - [0x682C0, c, os/audio/alSndpSetSound]
+      - [0x682E0, c, os/audio/alSndpSetVol]
       - [0x68340, c, os/audio/alSndpSetPan]
       - [0x683A0, c, os/audio/alSndpSetFXMix]
       - [0x68400, c, os/audio/alSndpSetPitch]
       - [0x68460, c, os/audio/alSndpStop]
       - [0x684B0, c, libultra_nm/sndpgetstate]
-      - [0x68590, c, libultra_nm/aisetfreq]
+      - [0x68590, c, os/osAisetFrequency]
       - [0x686F0, c, libultra_nm/sl]
       - [0x687B0, c, os/osCreateThread]
       - [0x68900, c, os/osStartThread]
@@ -193,7 +196,7 @@ segments:
       - [0x6D940, c, os/libc/String]
       - [0x6D9E0, c, libultra_nm/pfssearchfile]
       - [0x6DBA0, c, os/osPfsNumFiles]
-      - [0x6DCF0, c, libultra_nm/pfsfreeblocks]
+      - [0x6DCF0, c, os/osPfsFreeBlocks]
       - [0x6DE40, c, os/gu/guNormalize]
       - [0x6DED0, c, os/osPfsFileState]
       - [0x6E1C0, c, libultra_nm/pfsrepairid]

@@ -244,15 +244,21 @@ __osSpSetPc = 0x80078700;
 osSpTaskYield = 0x80070270;
 osSpTaskYielded = 0x8006FC30;
 __osSpGetStatus = 0x80078350;
-
+__osLeoAbnormalResume = 0x80079B44; //defined:true
+__osLeoResume  = 0x80079C2C; //defined:true
 //TODO:
 sched_text_0554 = 0x80064C1C; //defined:true
-
 osCreateScheduler = 0x80064A10;
 osMotorStop = 0x8006E380; //defined:true
-//Game Symbols
+osPfsFreeBlocks = 0x8006D0F0; //defined:true
+alSeqpSetBank = 0x80065DF0;
+alSeqpSetVol = 0x80066020;
+__osDiskHandle = 0x801AD484;
+__osEventStateTab = 0x801AAB10;
+alSndpSetVol = 0x800676E0;
 
-gUnk_YPos = 0x8013f898;
+//Game Symbols
+gSavePlayerYPos = 0x8013f898;
 gPlayerLapCount = 0x8013FC98;
 gPlayerRacePos = 0x8013FC91;
 set_col_render = 0x8001AB94;
