@@ -256,6 +256,11 @@ alSeqpSetVol = 0x80066020;
 __osDiskHandle = 0x801AD484;
 __osEventStateTab = 0x801AAB10;
 alSndpSetVol = 0x800676E0;
+osViSetMode = 0x8006FB50;
+osViSwapBuffer = 0x8006FE80;
+osViSetSpecialFeatures = 0x8006CAA0;
+osViGetCurrentFramebuffer = 0x8006FCB0;
+__osViCurr = 0x80094C50;
 
 //Game Symbols
 gSavePlayerYPos = 0x8013f898;
