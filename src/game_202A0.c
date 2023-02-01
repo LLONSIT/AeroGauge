@@ -46,6 +46,6 @@ void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3) {
 }
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_202A0/func_8001F790.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/game_202A0/Print_text.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_202A0/func_8001F998.s")

@@ -96,14 +96,14 @@ struct unk_struct_800061C4 {
 };
 
 
-struct race_unk {
+struct race_a {
 
     u16 unk0;
     u16 unk2;
     u16 unk4;
     s32 unk8;
     s32 unkC;
-    f32 unk10;
+    f32 PlayerPos;
 };
 
 struct unk_struct_8001516 {

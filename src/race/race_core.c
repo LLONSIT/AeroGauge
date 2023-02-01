@@ -5,6 +5,15 @@
 #include "variables.h"
 #include "macros.h" //for another macros
 
+/*
+
+  AeroGauge Printf scheme:
+
+  sprintf->dest->Print_text
+
+
+*/
+
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_80019630.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_800199A0.s")
@@ -15,17 +24,18 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001A020.s")
 
-void func_8001A750(s32* arg0, struct race_unk *r, s32 arg2) {
-    s32 sp24;
+//D_80096C94 = WRONG WAY
+void Render_WRONG_WAY(Gfx** gDisplayList, struct race_a *in_race, s32 unused_arg2) {
+    Gfx *gDisplayListHead;
     s8 *dest;
-    short pad;
+    short filler;
 
-    sp24 = *arg0;
+    gDisplayListHead = *gDisplayList;
     func_8001F75C(0xB5, 0x60, 0x14, 0xFF);
-    osSetTime(r->unk2 - 0x3C, r->unk4 + 0x13); //TODO, maybe this structure is OSTime and maybe, is divided in two parts?
-    sprintf(&dest - 2, &D_80096C94, (s32) ((f64) r->unk10 * D_80096CD0));
-    func_8001F790(&sp24, &dest - 2, &D_8008C8CC);
-    *arg0 = sp24;
+    osSetTime(in_race->unk2 - 0x3C, in_race->unk4 + 0x13);
+    sprintf(&dest - 2, &D_80096C94, (s32) ((f64) in_race->PlayerPos * D_80096CD0));
+    Print_text(&gDisplayListHead, &dest - 2, &D_8008C8CC);
+    *gDisplayList = gDisplayListHead;
 }
 
 
