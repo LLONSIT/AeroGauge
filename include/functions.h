@@ -70,7 +70,7 @@ extern void func_800061C4(void* arg0, u32 arg1, f32 arg2);
 extern void func_80019D0C(Gfx **arg0, s32 arg1, s32 arg2, void *arg3, s32 arg4);
 extern void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3);
 extern void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3) ;                  /* extern */
-extern void Print_text(void **arg0, u8 *arg1, s32 arg2); //ignoring the void for now
+//extern void Print_text(void **arg0, u8 *arg1, s32 arg2); //ignoring the void for now
 extern void func_80000610(s32 arg0);
 extern void func_80010548(s32 arg0);
 

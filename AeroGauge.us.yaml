@@ -50,7 +50,7 @@ segments:
       - [0xA220, c, game_A220]
       - [0xA910, c, game_A910]
       - [0xDA40, c, game_DA40]
-      - [0xE270, c, game_E270]
+      - [0xE270, c, race/race_init]
       - [0xEBD0, c, game_EBD0]
       - [0xEC90, c, game_EC90]
       - [0x10520, c, game_10520]

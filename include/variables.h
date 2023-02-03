@@ -1,6 +1,13 @@
 #include <ultra64.h>
 #include <PR/sched.h>
 
+//game_E270
+
+extern s32 gRaceLevel[]; //switch
+extern s32 D_8008BEBC;
+extern s8 D_80095538;
+extern s8 gPrintDest; //sprintf dest for game_E270
+
 //game_1FC0
 
 //0x8008B  asm symbols

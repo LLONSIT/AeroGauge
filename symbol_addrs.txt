@@ -270,6 +270,9 @@ set_col_render = 0x8001AB94;
 race_text = 0x8033F3B8;
 Print_text = 0x8001F790;
 Render_WRONG_WAY = 0x8001A750;
+Render_InitRaceMesg = 0x8000DE54;
+gRaceLevel = 0x80082124;
+gPrintDest = 0x8013F7E0;
 
 //DMA
 ai_update = 0x80001E50;
