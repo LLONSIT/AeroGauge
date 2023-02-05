@@ -54,7 +54,24 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_28470/func_8002BE5C.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_28470/func_8002C080.s")
+extern u8 D_803BB5F0; //idk the format
+
+void func_8002C080(Gfx** gDisplayList) {
+    Gfx* gDisplayListHead;
+
+
+    gDisplayListHead = *gDisplayList;
+    func_80057844(&gDisplayListHead);
+    gDPSetTextureImage(gDisplayListHead++, G_IM_FMT_I, G_IM_SIZ_8b, 128, &D_803BB5F0);
+    gDPSetTile(gDisplayListHead++, G_IM_FMT_I, G_IM_SIZ_8b, 16, 0x0000, G_TX_LOADTILE, 0, G_TX_NOMIRROR | G_TX_WRAP, 4, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOLOD);
+    gDPLoadSync(gDisplayListHead++);
+    gDPLoadTile(gDisplayListHead++, G_TX_LOADTILE, 0, 0, 0x01FC, 0x003C);
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetTile(gDisplayListHead++, G_IM_FMT_I, G_IM_SIZ_8b, 16, 0x0000, G_TX_RENDERTILE, 0, G_TX_NOMIRROR | G_TX_WRAP, 4, G_TX_NOLOD, G_TX_NOMIRROR | G_TX_CLAMP, G_TX_NOMASK, G_TX_NOLOD);
+    gDPSetTileSize(gDisplayListHead++, G_TX_RENDERTILE, 0, 0, 0x01FC, 0x003C);
+    gSPTextureRectangle(gDisplayListHead++, 0x02A4, 0x006C, 0x0494, 0x010C, G_TX_RENDERTILE, 0, 0, 0x0400, 0x0400);
+    *gDisplayList = gDisplayListHead;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_28470/func_8002C1E8.s")
 

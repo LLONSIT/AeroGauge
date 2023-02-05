@@ -257,4 +257,24 @@ typedef struct {
   u8 unk37;
   u8 pad38[0x5C - 0x38];
 }struct_80009EE0;
+
+
+//used 
+
+struct R_G_B_A {
+  u8 red;
+  u8 green;
+  u8 blue;
+  u8 alpha;
+};
+
+
+struct tr {
+  s16 ulx;
+  s16 uly;
+  s16 lrx;
+  s16 lry;
+};
+
+
 #endif 

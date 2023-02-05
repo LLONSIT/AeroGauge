@@ -41,7 +41,29 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_800558FC.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_80055A04.s")
+void DrawRectangleInDisplayList(Gfx** gDisplayList, struct R_G_B_A* color, struct tr* fig) {
+
+    Gfx *gDisplayListHead;
+
+    gDisplayListHead = *gDisplayList;
+
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetCycleType(gDisplayListHead++, G_CYC_1CYCLE);
+    gDPSetRenderMode(gDisplayListHead++, G_RM_AA_XLU_SURF, G_RM_AA_XLU_SURF2);
+    gDPSetCombineMode(gDisplayListHead++, G_CC_PRIMITIVE, G_CC_PRIMITIVE);
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetPrimColor(gDisplayListHead++, 0, 0, color->red, color->green, color->blue, color->alpha);
+    gDPFillRectangle(gDisplayListHead++,
+    fig->ulx,
+    fig->uly,
+    fig->lrx,
+    fig->lry);
+    gDPPipeSync(gDisplayListHead++);
+    *gDisplayList = gDisplayListHead;
+}
+
+
+//#pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_80055A04.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_80055B14.s")
 

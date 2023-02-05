@@ -88,13 +88,13 @@ extern u8 D_8008EBCC;
 extern Gfx *D_8019EDE4;
 extern Gfx *D_8019EDF8;
 
-void func_80032B48(Gfx** arg0) {
-    Gfx *sp1C;
-    sp1C = *arg0;
-    
+void func_80032B48(Gfx** gDisplayList) {
+    Gfx *gDisplayListHead;
+    gDisplayListHead = *gDisplayList;
+
     if (( D_8008EBCC >= 0xF) && ( D_8008EBCC < 0x1E)) {
-        func_80055A04(&sp1C, &D_8019EDE4, &D_8019EDF8);
+       DrawRectangleInDisplayList(&gDisplayListHead, &D_8019EDE4, &D_8019EDF8);
     }
-    *arg0 = sp1C;
+    *gDisplayList = gDisplayListHead;
 }
 
