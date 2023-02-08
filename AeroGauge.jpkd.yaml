@@ -1,0 +1,76 @@
+name: Aerogauge (Japanese)
+sha1: 0253c33355986ddda18a7a72b81b91ddc1bed978
+options:
+  basename: AeroGauge
+  target_path: baserom.jpkd.z64
+  base_path: .
+  compiler: IDO
+  find_file_boundaries: True
+  header_encoding: ASCII
+  platform: n64
+  # undefined_funcs_auto: True
+  # undefined_funcs_auto_path: undefined_funcs_auto.txt
+  # undefined_syms_auto: True
+  # undefined_syms_auto_path: undefined_syms_auto.txt
+  # symbol_addrs_path: symbol_addrs.txt
+  # asm_path: asm
+  # src_path: src
+  # build_path: build
+  # extensions_path: tools/splat_ext
+  # mips_abi_float_regs: o32
+  # section_order: [".text", ".data", ".rodata", ".bss"]
+  # auto_all_sections: [".data", ".rodata", ".bss"]
+  # libultra_symbols: True
+  # hardware_regs: True
+segments:
+  - name: header
+    type: header
+    start: 0x0
+  - name: boot
+    type: bin
+    start: 0x40
+  - name: main
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    subsegments:
+      - [0x1000, asm]
+      - [0x11C0, c, game_11C0]
+      - [0x20A0, asm]
+      - [0x2EC0, asm]
+      - [0x7180, asm]
+      - [0xAF30, asm]
+      - [0xE9A0, c, game_E9A0]
+      - [0xF080, asm]
+      - [0xF140, c, game_F140]
+      - [0x10B10, asm]
+      - [0x10E00, asm]
+      - [0x112C0, asm]
+      - [0x12A00, asm]
+      - [0x13AA0, asm]
+      - [0x14140, asm]
+      - [0x15390, asm]
+      - [0x15450, asm]
+      - [0x1A380, asm]
+      - [0x1A520, asm]
+      - [0x1A530, asm]
+      - [0x1F960, asm]
+      - [0x20B50, asm]
+      - [0x216B0, asm]
+      - [0x23080, asm]
+      - [0x238E0, asm]
+      - [0x25700, asm]
+      - [0x25890, asm]
+      - [0x25A70, asm]
+      - [0x269A0, asm]
+      - [0x27150, asm]
+      - [0x27200, asm]
+      - [0x272A0, asm]
+      - [0x34310, asm]
+      - [0x3D560, asm]
+      - [0x43F90, asm]
+
+
+  - type: bin
+    start: 0x7C870
+  - [0x800000]
