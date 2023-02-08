@@ -1,6 +1,6 @@
 #forked from mkst/sssv
 BASENAME  = AeroGauge
-VERSION  := us
+VERSION  := jpkd
 
 # Colors
 
@@ -121,7 +121,7 @@ endif
 ifeq ($(NRDC),1)
 	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c -iNAGE -t"AEROGAUGE" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
 	else
-	CRC := @tools/n64crc build/$(BASENAME).us.z64
+	CRC := @tools/n64crc build/$(BASENAME).jpkd.z64
 	endif
 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
@@ -134,7 +134,7 @@ LIBULTRA = lib/libultra_rom.a #Checking the symbols
 OPT_FLAGS      = -O2
 LOOP_UNROLL    =
 
-MIPSISET       = -mips2 -32
+MIPSISET       = -mips1 -32
 
 INCLUDE_CFLAGS = -I . -I include -I include/2.0 -I include/2.0/PR -I include/libc -I assets
 
@@ -179,7 +179,7 @@ GCC_FLAGS += -Wall -Wextra -Wno-missing-braces
 TARGET     = $(BUILD_DIR)/$(BASENAME).$(VERSION)
 LD_SCRIPT  = $(BASENAME).ld
 
-LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt  -T libultra_syms.txt
+LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt -T resolve.txt
 LD_FLAGS  += -Map $(TARGET).map --no-check-sections
 
 ifeq ($(VERSION),us)
@@ -217,7 +217,7 @@ dirs:
 check: .baserom.$(VERSION).ok
 
 verify: $(TARGET).z64
-	@sha1sum -c AeroGauge.us.sha1
+	@sha1sum -c AeroGauge.jpkd.sha1
 
 no_verify: $(TARGET).z64
 	@echo "Skipping SHA1SUM check!"
