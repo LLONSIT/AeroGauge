@@ -47,7 +47,7 @@ extern void func_8001C268(void);
 extern void func_8001DD30(u32 arg0);
 
 //game_1EDC0
-extern void func_80001418(s32 arg0);
+extern void func_80001418(u8 arg0);
 extern void func_800005C0(s32 arg0, s32 arg1);
 
 //game_1D5D60

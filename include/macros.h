@@ -8,3 +8,5 @@
 
 //game_10D60
 #define UNK_FLAG 2 //most likely whit that if( & 2)
+
+#define UNK_TYPE int //unknown type of certainly vars, like some textures

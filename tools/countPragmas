@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+import os
+
+def count_pragma_global_asm(path):
+    count = 0
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            with open(file_path, 'r') as f:
+                for line in f:
+                    if "#pragma GLOBAL_ASM" in line:
+                        count += 1
+    return count
+
+# Usage:
+path = '/home/usr/AeroGauge/src' 
+result = count_pragma_global_asm(path)
+print(f"#pragma GLOBAL_ASM : {result}")

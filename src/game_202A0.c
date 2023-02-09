@@ -52,17 +52,21 @@ s16 unk8;
 };
 
 
-//Wtf...
+//void* func_8001F998(Gfx**, s32, s32, u8, s32);     /* extern */
+extern s32 D_8008C8DC;
+extern s32 D_8008C910;
+extern s32 __osCurrentTime;
+
 /*
-void Print_text(Gfx** gDisplayList, u8* str, s32 var) {
+void Print_text(Gfx** gDisplayList, s8* str, s32 var) {
     Gfx* gDisplayListHead;
     s32 pad[2];
-
+    
     u8 var_a3;
     u8* var_s1;
     struct n *temp_v0;
     gDisplayListHead = *gDisplayList;
-
+    
     gDPPipeSync(gDisplayListHead++);
     gDPSetCycleType(gDisplayListHead++, G_CYC_1CYCLE);
     gSPTexture(gDisplayListHead++, 0x800, 0x800, 0, G_TX_RENDERTILE, G_ON);
@@ -93,8 +97,8 @@ loop_3:
         }
     }
     *gDisplayList = gDisplayListHead;
-}*/
-
+}
+*/
 #pragma GLOBAL_ASM("asm/nonmatchings/game_202A0/Print_text.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_202A0/func_8001F998.s")

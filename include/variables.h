@@ -45,11 +45,17 @@ extern f32 D_8013F7D0;
 extern f32 D_8013F7D4;
 
 
+//race_core
 //game_1A230
 extern s8 gPlayerRacePos;
 extern s32 D_8008C8CC;
 extern const char D_80096C94;
 extern f64 D_80096CD0;
+extern s32 D_8008C8D4;
+extern s8 D_80096BE4;
+extern s8 D_80096BF4;
+extern s8 D_80096C00;
+
 
 //game_10D60
 extern f32 gUnk_YPos; //it stores the player car position value
