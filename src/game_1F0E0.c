@@ -1,4 +1,5 @@
-#include "common.h"
+#include <ultra64.h>
+#include "macros.h"
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1F0E0/func_8001E4E0.s")
 
@@ -28,5 +29,5 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1F0E0/func_8001F10C.s")
 
-void func_8001F140(void) {
+UNUSED func_8001F140(void) {
 }

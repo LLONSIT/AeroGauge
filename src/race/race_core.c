@@ -87,7 +87,7 @@ void Render_WRONG_WAY(Gfx** gDisplayList, struct race_a *in_race, s32 unused_arg
 
     gDisplayListHead = *gDisplayList;
     Update_speedometer_colors(0xB5, 0x60, 0x14, 0xFF);
-    osSetTime(in_race->unk2 - 0x3C, in_race->unk4 + 0x13);
+    osSetTime(in_race->unk2 - 0x3C, in_race->unk4 + 0x13); //TODO
     sprintf(&dest - 2, &D_80096C94, (s32) ((f64) in_race->PlayerPos * D_80096CD0));
     Print_text(&gDisplayListHead, &dest - 2, &D_8008C8CC);
     *gDisplayList = gDisplayListHead;
