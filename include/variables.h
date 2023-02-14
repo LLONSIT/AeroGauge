@@ -98,10 +98,12 @@ extern s32 D_8008C8F8;
 extern s32 D_8008C8DC;
 extern s32 __osCurrentTime;
 extern s32 D_8008C910;
-extern s8 D_8008C8E4;
-extern s8 D_8008C8E8;
-extern s8 D_8008C8EC;
-extern s8 D_8008C8F0;
+
+//RGBA from game_202A0
+extern u8 gCurrentColorRed;
+extern u8 gCurrentColorBlue;
+extern u8 gCurrentColorGreen;
+extern u8 gCurrentColorAlpha;
 
 
 //game_2360

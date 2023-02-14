@@ -37,13 +37,17 @@ void func_8001F700(f64 arg0, f64 arg1) {
 }
 
 
+//For each print_text use (alomost) this is necessary.
 
-void func_8001F75C(u8 arg0, u8 arg1, u8 arg2, u8 arg3) {
-    D_8008C8E4 = arg0;
-    D_8008C8E8 = arg1;
-    D_8008C8EC = arg2;
-    D_8008C8F0 = arg3;
+void Update_speedometer_colors(u8 Red, u8 Blue, u8 Green, u8 Alpha) {
+    gCurrentColorRed = Red;
+    gCurrentColorBlue = Blue;
+    gCurrentColorGreen = Green;
+    gCurrentColorAlpha = Alpha;
 }
+
+
+//#pragma GLOBAL_ASM("asm/nonmatchings/game_202A0/Update_speedometer_colors.s")
 
 struct n {
 

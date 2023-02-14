@@ -29,6 +29,5 @@ UNUSED func_8000D658(s32 arg0) {
 }
 
 
-
 UNUSED func_8000D660(void) {
 }

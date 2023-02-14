@@ -15,7 +15,7 @@ s32 func_80009560(OSMesgQueue* arg0, OSPfs* arg1, s32 *arg2) {
 
     s32 sp2C;
     osCreateMesgQueue(&sp48, &sp34, 5);
-    osSetEventMesg(5, &sp48, 1);
+    osSetEventMesg(OS_EVENT_SI, &sp48, OS_EVENT_SW2);
     sp2C = osPfsInitPak(&sp48, arg1, arg2);
     if (osRecvMesg(&sp48, &sp30, 0) == 0) {
         do {

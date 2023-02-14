@@ -262,6 +262,7 @@ osViSetSpecialFeatures = 0x8006CAA0;
 osViGetCurrentFramebuffer = 0x8006FCB0;
 __osViCurr = 0x80094C50;
 
+
 //Game Symbols
 gSavePlayerYPos = 0x8013f898;
 gPlayerLapCount = 0x8013FC98;
@@ -274,6 +275,17 @@ Render_InitRaceMesg = 0x8000DE54;
 gRaceLevel = 0x80082124;
 gPrintDest = 0x8013F7E0;
 DrawRectangleInDisplayList = 0x80055A04;
+Print_Menu_Options = 0x8001BE50;
+Update_speedometer_colors = 0x8001F75C;
+gCurrentColor = 0x8008B7F0;
+
+
+//RGBA
+gCurrentColorRed   = 0x8008C8E4;
+gCurrentColorBlue  = 0x8008C8E8;
+gCurrentColorGreen = 0x8008C8EC;
+gCurrentColorAlpha = 0x8008C8F0;
+
 
 //DMA
 ai_update = 0x80001E50;
