@@ -12,7 +12,8 @@
 default:
 	@$(CC) CopyRom.c -o CopyRom
 	@$(CC) n64crc.c -o n64crc
-	@make  -C  ido5.3_recomp
+	@make  -C  ido-static-recomp/ setup
+	@make  -C ido-static-recomp/ VERSION=5.3
 	@printf "done\n"
 
 clean:

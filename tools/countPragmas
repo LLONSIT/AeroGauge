@@ -13,6 +13,6 @@ def count_pragma_global_asm(path):
     return count
 
 # Usage:
-path = '/home/usr/Quest/src' 
+path = '/your/directory'
 result = count_pragma_global_asm(path)
 print(f"#pragma GLOBAL_ASM : {result}")

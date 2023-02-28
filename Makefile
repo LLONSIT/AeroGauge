@@ -96,7 +96,7 @@ endif
 ifeq ($(USE_QEMU_IRIX),1)
 	CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc
 	else
-	CC	 := $(TOOLS_DIR)/ido5.3_recomp/cc
+	CC	 := $(TOOLS_DIR)/ido-static-recomp/build/5.3/out/cc
 	endif
 
 # 1: use the nrdc for crc calculation (requires qemu-irix)
@@ -261,7 +261,7 @@ $(GLOBAL_ASM_O_FILES): $(BUILD_DIR)/%.c.o: %.c  include/variables.h include/stru
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $(BUILD_DIR)/$<
 	@$(ASM_PROCESSOR) $(OPT_FLAGS) $< --post-process $@ \
 		--assembler "$(AS) $(ASFLAGS)" --asm-prelude $(ASM_PROCESSOR_DIR)/prelude.inc
-#	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
+	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
 endif
 
 # non asm-processor recipe
