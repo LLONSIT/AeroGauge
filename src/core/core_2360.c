@@ -15,7 +15,7 @@ extern c_struct D_8010C428;
 /*********************************************************
 *
 *
-* DMA Function: apparently updates the audio length record
+* INFO: apparently updates the audio length record
 *    		(AI_LEN_REG)
 *
 *

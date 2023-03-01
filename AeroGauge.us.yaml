@@ -14,7 +14,7 @@ options:
   generate_c_preamble: #include <ultra64.h>
   lib_path: build/lib
   gfx_ucode: f3dex
-  shiftable: False # For making the game a little shiftable
+  shiftable: True # For making the game a little shiftable
   extensions_path: tools/splat_extension #Soon LZMA
 
 
@@ -152,7 +152,7 @@ segments:
       - [0x686F0, c, libultra_nm/sl]
       - [0x687B0, c, os/osCreateThread]
       - [0x68900, c, os/osStartThread]
-      - [0x68A50, c, os/audio/alSeqpDelete]
+      - [0x68A50, c, libultra_nm/alSeqpDelete]
       - [0x68A80, c, os/audio/alSndpDelete]
       - [0x68AB0, c, os/osVirtualToPhysical]
       - [0x68B30, c, libultra_nm/aisetnextbuf]
@@ -238,7 +238,7 @@ segments:
       - [0x734C0, c, libultra_nm/resample]
       - [0x737C0, c, libultra_nm/env]
       - [0x74420, c, os/audio/auxbus]
-      - [0x74530, c, os/audio/save]
+      - [0x74530, c, libultra_nm/save]
       - [0x745F0, c, os/seq]
       - [0x74C10, c, libultra_nm/synsetpriority]
       - [0x74C20, c, os/audio/alCopy]
