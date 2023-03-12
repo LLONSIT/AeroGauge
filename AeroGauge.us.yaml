@@ -304,9 +304,8 @@ segments:
   - name: seg_7CC30
     type: bin
     start: 0x7CC30
- #   subsegments:
-#      - [0x7CC4C, bin]
-#      - [0x7D0C0, lzma]
+ #     - [0x7CC4C, bin]
+ #     - [0x7D0C0, lzma]
 
 
   - [0x800000]

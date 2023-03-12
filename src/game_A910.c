@@ -185,7 +185,14 @@ void func_8000C4AC(void *arg0, void *arg1, s32 *arg2) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000CDD0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000CDF8.s")
+
+extern s32 D_8013F7A4;
+
+void func_8000CDF8(s32 arg0) {
+    D_8013F7A4 = arg0;
+}
+
+//#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000CDF8.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000CE04.s")
 

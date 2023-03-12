@@ -83,3 +83,7 @@ extern u8 func_800623E8(s32 arg0);
 extern u8 func_80062018(s32 *arg0);
 extern s32 func_8006299C(s32 *arg0);
 
+//game_10640
+extern s32 func_800048B0(f32 arg0, s32 arg1, u8 arg2, u16 arg3);                 /* extern */
+extern u16 func_80009460(s32 arg0);                               /* extern */
+extern void func_8000CDF8(s32 arg0);

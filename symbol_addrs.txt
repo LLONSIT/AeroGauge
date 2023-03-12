@@ -283,7 +283,7 @@ gPrintDest = 0x8013F7E0;
 DrawRectangleInDisplayList = 0x80055A04;
 Pause_Menu_Options = 0x8001BE50;
 Call_update_speedometer_colors = 0x8001BFE4;
-
+gSelector = 0x8013FF90;
 
 //Color
 Update_speedometer_colors = 0x8001F75C;
@@ -308,3 +308,4 @@ gScreen_var3 = 0x80096AC4;
 
 //Text or bss?
 SegmentUnkStart = 0xC88D0;
+

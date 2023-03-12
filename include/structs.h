@@ -276,5 +276,15 @@ struct tr {
   s16 lry;
 };
 
+typedef struct {
+  s8 unk0;
+  s16 unk2;
+  s8 unk4;
+  s8 pad[4];
+  s8 unk9;
+  s8 filler[1];
+  s8 unkB;
+}gSelector_struct;
+
 
 #endif 

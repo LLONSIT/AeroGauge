@@ -144,12 +144,10 @@ struct unk_struct_8013FC *D_8013FC80;
 void func_8001BAD4(void) {
     D_8008B7DC = 0x7F;
     D_8008B7E0 = 0xFF;
-    D_8008B7E4 = 0x141 - D_8013FC80->unkFC;
+    D_8008B7E4 = 0x141 - D_8013FC80 -> unkFC;
     D_8008B7E8 = 0;
     D_8008B7EC = 0x140;
     }
 
-
-//#pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001BAD4.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001BB20.s")

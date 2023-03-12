@@ -1,6 +1,10 @@
 #include <ultra64.h>
 #include <PR/sched.h>
 
+//game_10640
+extern s32 D_8013FF84;
+
+
 //game_E270
 
 extern s32 gRaceLevel[]; //switch

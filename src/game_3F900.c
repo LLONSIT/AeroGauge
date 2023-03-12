@@ -34,20 +34,20 @@
 #pragma GLOBAL_ASM("asm/nonmatchings/game_3F900/func_8004184C.s")
 
 
-struct unk_struct_80041964 D_8013FF90;
+struct unk_struct_80041964 gSelector;
 
 void func_80041964(void) {
     if ((D_8019E6A8 == 0) && (D_8019EE02 & 0x10)) {
-        if (D_8013FF90.unk4 == 0) {
-            if (D_8013FF90.unk7 == 5) {
-                D_8013FF90.unk7 = 0;
+        if (gSelector.unk4 == 0) {
+            if (gSelector.unk7 == 5) {
+                gSelector.unk7 = 0;
                 return;
             }
-            D_8013FF90.unk7 = D_8013FF90.unk7 + 1;
+            gSelector.unk7 = gSelector.unk7 + 1;
             return;
         }
-        D_8013FF90.unk7 = D_8013FF90.unk7 ^ 1;
-    }   
+        gSelector.unk7 = gSelector.unk7 ^ 1;
+    }
 }
 
 

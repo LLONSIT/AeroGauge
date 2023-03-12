@@ -59,10 +59,6 @@ static void *func_800657B0(s32 arg0) {
     func_8000144C();
 }
 
-
-//#pragma GLOBAL_ASM("asm/nonmatchings/final_thread/func_80065884.s")
-
-
 #pragma GLOBAL_ASM("asm/nonmatchings/final_thread/func_800658FC.s")
 
  void func_80065AD0(void) {
