@@ -9,9 +9,9 @@ extern struct R_G_B_A gCurrentColor[];
 #pragma GLOBAL_ASM("asm/nonmatchings/menu/Pause/Pause_Menu_Options.s")
 
 
-void Call_update_speedometer_colors(s32 index) {
+void Call_Update_RGBA_Colors(int index) {
 
- Update_speedometer_colors(gCurrentColor[index].red, gCurrentColor[index].green, gCurrentColor[index].blue, gCurrentColor[index].alpha);
+ Update_RGBA_Colors(gCurrentColor[index].red, gCurrentColor[index].green, gCurrentColor[index].blue, gCurrentColor[index].alpha);
 
 }
 

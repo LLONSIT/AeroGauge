@@ -43,9 +43,9 @@ void func_800199A0(Gfx** gDisplayList) {
 
     func_80016238(&sp50, &sp4C, &sp48, D_8013FC94);
     if (D_8013FC8C & 1) {
-        Update_speedometer_colors(0xB5U, 0x60U, 0x14U, 0xFFU);
+        Update_RGBA_Colors(0xB5U, 0x60U, 0x14U, 0xFFU);
     } else {
-        Update_speedometer_colors(0xFFU, 0xFFU, 0xFFU, 0xFFU);
+        Update_RGBA_Colors(0xFFU, 0xFFU, 0xFFU, 0xFFU);
     }
 
     gDisplayListHead = *gDisplayList;
@@ -86,7 +86,7 @@ void Render_WRONG_WAY(Gfx** gDisplayList, struct race_a *in_race, s32 unused_arg
     short filler;
 
     gDisplayListHead = *gDisplayList;
-    Update_speedometer_colors(0xB5, 0x60, 0x14, 0xFF);
+    Update_RGBA_Colors(0xB5, 0x60, 0x14, 0xFF);
     osSetTime(in_race->unk2 - 0x3C, in_race->unk4 + 0x13); //TODO
     sprintf(&dest - 2, &D_80096C94, (s32) ((f64) in_race->PlayerPos * D_80096CD0));
     Print_text(&gDisplayListHead, &dest - 2, &D_8008C8CC);

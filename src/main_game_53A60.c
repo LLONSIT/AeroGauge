@@ -55,7 +55,26 @@ void func_80055734(Gfx** gDisplayList) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_800557F4.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_800558FC.s")
+
+void func_800558FC(Gfx** gDisplayList, struct R_G_B_A* color) {
+
+    Gfx *gDisplayListHead;
+
+    gDisplayListHead = *gDisplayList;
+
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetCycleType(gDisplayListHead++, G_CYC_1CYCLE);
+    gDPSetRenderMode(gDisplayListHead++, G_RM_XLU_SURF, G_RM_XLU_SURF2);
+    gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIDECALA_PRIM, G_CC_MODULATEIDECALA_PRIM);
+    gDPSetPrimColor(gDisplayListHead++, 0, 0, color->red, color->green, color->blue, color->alpha);
+    gDPSetTexturePersp(gDisplayListHead++, G_TP_NONE);
+    gDPSetTextureLOD(gDisplayListHead++, G_TL_TILE);
+    gDPSetTextureFilter(gDisplayListHead++, G_TF_BILERP);
+    gDPSetTextureConvert(gDisplayListHead++, G_TC_FILT);
+    gDPSetTextureLUT(gDisplayListHead++, G_TT_NONE);
+
+    *gDisplayList = gDisplayListHead;
+}
 
 void DrawRectangleInDisplayList(Gfx** gDisplayList, struct R_G_B_A* color, struct tr* fig) {
 

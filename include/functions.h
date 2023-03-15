@@ -87,3 +87,9 @@ extern s32 func_8006299C(s32 *arg0);
 extern s32 func_800048B0(f32 arg0, s32 arg1, u8 arg2, u16 arg3);                 /* extern */
 extern u16 func_80009460(s32 arg0);                               /* extern */
 extern void func_8000CDF8(s32 arg0);
+
+//game_4B490
+extern void func_800557F4(Gfx**,s32*);
+
+//main_game
+void func_800558FC(Gfx** gDisplayList, struct R_G_B_A* color);
