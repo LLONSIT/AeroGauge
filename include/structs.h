@@ -1,5 +1,6 @@
 #ifndef STRUCTS_H
 #define STRUCTS_H
+#include "macros.h"
 
 
 struct unk_8001DF40 {
@@ -286,5 +287,13 @@ typedef struct {
   s8 unkB;
 }gSelector_struct;
 
+
+typedef struct{
+  s32 unk0;
+  s8 unk4;
+  const s8 unk5;
+  u8 filler[0x5];
+  const s8 unkB;
+}gSelector_1;
 
 #endif 

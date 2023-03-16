@@ -50,9 +50,6 @@ void func_80041964(void) {
     }
 }
 
-
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_3F900/func_80041964.s")
-
 #pragma GLOBAL_ASM("asm/nonmatchings/game_3F900/func_800419D0.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_3F900/func_80041AF4.s")

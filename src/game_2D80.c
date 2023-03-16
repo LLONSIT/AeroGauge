@@ -1,4 +1,8 @@
-#include "common.h"
+#include <ultra64.h>
+#include "structs.h"
+#include "variables.h"
+#include "functions.h"
+#include "macros.h"
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2D80/func_80002180.s")
 
@@ -24,4 +28,12 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2D80/func_80004A5C.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_2D80/func_80004BF8.s")
+void func_80004BF8(void) {
+    func_80001418(0);
+    func_80001418(1);
+    func_80001418(2);
+    func_80001418(3);
+    func_80001418(4);
+    func_80001418(5);
+    func_80001418(6);
+}

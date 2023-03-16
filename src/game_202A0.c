@@ -46,9 +46,6 @@ void Update_RGBA_Colors(u8 Red, u8 Blue, u8 Green, u8 Alpha) {
     gCurrentColorAlpha = Alpha;
 }
 
-
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_202A0/Update_speedometer_colors.s")
-
 struct n {
 
 s8 pad[0x8];

@@ -89,7 +89,13 @@ extern u16 func_80009460(s32 arg0);                               /* extern */
 extern void func_8000CDF8(s32 arg0);
 
 //game_4B490
-extern void func_800557F4(Gfx**,s32*);
+extern void func_800557F4(Gfx**, struct R_G_B_A *color);
 
 //main_game
-void func_800558FC(Gfx** gDisplayList, struct R_G_B_A* color);
+void func_800558FC(Gfx** gDisplayList, struct R_G_B_A *color);
+
+//race_init
+void func_8000DEDC(Gfx **gDisplayList, s32 color);
+
+//game_470E0
+void func_80057844(Gfx **gDisplayList);

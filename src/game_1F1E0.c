@@ -71,10 +71,6 @@ void func_80032418(Gfx** gDisplayList) {
     *gDisplayList = gDisplayListHead;
 }
 
-
-
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_1F1E0/func_80032418.s")
-
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1F1E0/func_80032754.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1F1E0/func_80032A90.s")

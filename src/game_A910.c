@@ -192,8 +192,6 @@ void func_8000CDF8(s32 arg0) {
     D_8013F7A4 = arg0;
 }
 
-//#pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000CDF8.s")
-
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000CE04.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_A910/func_8000CE14.s")

@@ -1,5 +1,9 @@
+
+#ifndef VARIABLES_H
+#define VARIABLES_H
 #include <ultra64.h>
 #include <PR/sched.h>
+#include "macros.h"
 
 //game_10640
 extern s32 D_8013FF84;
@@ -185,5 +189,17 @@ extern u16 D_8013FC8C;
 extern u8 D_80081FD4;
 
 //core_16BD0
+/*blank*/
 
 
+//race_init
+extern u8 D_8008213C[];
+extern u8 D_80097988[];
+extern u8 D_8019ED3A[];
+
+
+//game_470E0
+extern UNK_TYPE D_803B8920;
+extern UNK_TYPE D_803BBDF8;
+
+#endif //VARIABLES_H
