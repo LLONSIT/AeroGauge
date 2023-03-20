@@ -13,7 +13,7 @@ s32 func_8000D670() {
     s32 var_v0;
     s32 var_v0_2;
 
-    for(var_v0 = 0; var_v0 != 8 ; ){
+    for(var_v0 = 0; var_v0 < 8 ; ){
         var_v0 += 4;
     }
 

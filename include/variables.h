@@ -1,4 +1,3 @@
-
 #ifndef VARIABLES_H
 #define VARIABLES_H
 #include <ultra64.h>
@@ -201,5 +200,13 @@ extern u8 D_8019ED3A[];
 //game_470E0
 extern UNK_TYPE D_803B8920;
 extern UNK_TYPE D_803BBDF8;
+extern UNK_TYPE D_8019EDB0;
+extern UNK_TYPE D_8019EDC8;
+
+//game_1FD50
+extern s32 D_8008B870[];
+
+//game_15D60
+extern f32 D_800969A8;
 
 #endif //VARIABLES_H

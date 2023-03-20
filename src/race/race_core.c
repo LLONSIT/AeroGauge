@@ -1,35 +1,47 @@
 #include <ultra64.h>
 #include "structs.h"
-#include <PR/gbi.h> //for macros
+#include <PR/gbi.h> //For macros.
 #include "functions.h"
 #include "variables.h"
-#include "macros.h" //for another macros
+#include "macros.h" //For another macros.
+#include "race_core.h" //Temp?
 
-/*
+/*******************************************
+*
+*  	AeroGauge Printf scheme:
+* 	if format.
+*    sprintf->dest->Print_text->message.
+*	else.
+*	Print_text->message.
+*
+*
+*
+*************************************/
 
-  AeroGauge Printf scheme:
-
-  sprintf->dest->Print_text
 
 
-*/
+/********************************************************
+*
+* INFO: Implement osSetTime!!!!!
+*
+*********************************************************/
+
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_80019630.s")
 
 
 struct in_local_unkStruct {
-
-u8 unk0;
-u16 unk2;
-u16 unk4;
-s32 unk8;
-
+   u8 unk0;
+   u16 unk2;
+   u16 unk4;
+   s32 unk8;
 };
 
 extern struct in_local_unkStruct D_8013FBD8;
 extern s32 D_8013FC94;
 
-//Match assist: tcmg2
+//Match assist: tcmg2.
 void func_800199A0(Gfx** gDisplayList) {
     Gfx* gDisplayListHead;
     s32 sp50;
@@ -98,15 +110,18 @@ void Render_WRONG_WAY(Gfx** gDisplayList, struct race_a *in_race, s32 unused_arg
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001A9D4.s")
 
+
 /**************************************************
 
 
- Initialize the color and set the render mode
+ Initialize the color and set the render mode.
 
 
 
 
 **************************************************/
+
+
 void set_col_render(Gfx** gDisplayList, struct struct_8001AB94* arg1) {
     Gfx* gDisplayListHead;
     s32 pad[2];
@@ -122,8 +137,31 @@ void set_col_render(Gfx** gDisplayList, struct struct_8001AB94* arg1) {
     *gDisplayList = gDisplayListHead;
 }
 
+void func_8001AC64(Gfx** gDisplayList, struct in_local_struct_8001AB94* arg1) {
+    Gfx* gDisplayListHead;
 
-#pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001AC64.s")
+    gDisplayListHead = *gDisplayList;
+
+    if (arg1->unk8 % 64) {
+        Update_RGBA_Colors(0xFF, 0xFF, 0, 0xFF);
+    } else {
+        Update_RGBA_Colors(0xFF, 0xFF, 0, 0x7F);
+    }
+
+    osSetTime(0x6A, arg1->unk2);
+    Print_text(&gDisplayListHead, &D_80096C98, &D_8008C540);
+
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetPrimColor(gDisplayListHead++, 0, 0, 0xFF, 0xFF, 0x00, 0x96);
+    gDPSetRenderMode(gDisplayListHead++, G_RM_CLD_SURF, G_RM_NOOP2);
+
+    if (arg1->unkC == 1) {
+        func_80019D0C(&gDisplayListHead, arg1->unk0, arg1->unk2, arg1->unk10, 0);
+    } else if (arg1->unkC == 2) {
+        func_80019D0C(&gDisplayListHead, arg1->unk0, arg1->unk2, arg1->unk10, 1);
+    }
+    *gDisplayList = gDisplayListHead;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001ADC4.s")
 

@@ -75,7 +75,14 @@ void func_800486B0(Gfx** gDisplayList) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_470E0/func_8004A0E8.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_470E0/func_8004A364.s")
+void func_8004A364(Gfx** gDisplayList) {
+    Gfx *gDisplayListHead;
+
+    gDisplayListHead = *gDisplayList;
+    func_80053394(&gDisplayListHead, &D_8019EDB0);
+    func_80053394(&gDisplayListHead, &D_8019EDC8);
+    *gDisplayList = gDisplayListHead;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_470E0/func_8004A3B4.s")
 

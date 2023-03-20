@@ -1,7 +1,7 @@
 #ifndef STRUCTS_H
 #define STRUCTS_H
 #include "macros.h"
-
+#include "types.h"
 
 struct unk_8001DF40 {
 
@@ -295,5 +295,19 @@ typedef struct{
   u8 filler[0x5];
   const s8 unkB;
 }gSelector_1;
+
+
+typedef struct {
+    f32 unk0;
+    f32 fovy;
+    f32 aspect;
+    f32 near;
+    f32 far;
+    f32 scale;
+    Vec3f eye;
+    Vec3f at;
+    Vec3f up;
+}mf;
+
 
 #endif 

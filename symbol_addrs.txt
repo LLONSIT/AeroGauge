@@ -283,7 +283,7 @@ gPrintDest = 0x8013F7E0;
 DrawRectangleInDisplayList = 0x80055A04;
 Pause_Menu_Options = 0x8001BE50;
 Call_Update_RGBA_Colors = 0x8001BFE4;
-gSelector = 0x8013FF90;
+gSelector = 0x8013FF90; //This could be considered as something like "this" in C++.
 
 //Color
 Update_RGBA_Colors = 0x8001F75C;

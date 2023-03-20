@@ -99,3 +99,9 @@ void func_8000DEDC(Gfx **gDisplayList, s32 color);
 
 //game_470E0
 void func_80057844(Gfx **gDisplayList);
+
+//game_63A60
+s32 func_80060970();                                  /* extern */
+s32 func_800609B4();                                  /* extern */
+s32 func_8006E520(OSPfs*);                            /* extern */
+
