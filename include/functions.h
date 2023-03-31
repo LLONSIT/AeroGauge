@@ -1,3 +1,6 @@
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+#include "types.h"
 //Functions prototypes
 
 
@@ -101,7 +104,11 @@ void func_8000DEDC(Gfx **gDisplayList, s32 color);
 void func_80057844(Gfx **gDisplayList);
 
 //game_63A60
-s32 func_80060970();                                  /* extern */
-s32 func_800609B4();                                  /* extern */
-s32 func_8006E520(OSPfs*);                            /* extern */
+void func_80060970(void);
+s32 func_800609B4();
+s32 func_8006E520(OSPfs*);
 
+//MTX
+void func_800249D0(Matrix, f32, f32, f32);
+
+#endif //FUNCTIONS_H

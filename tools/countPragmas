@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import os
+import sys
 
 def count_pragma_global_asm(path):
     count = 0
@@ -13,6 +14,10 @@ def count_pragma_global_asm(path):
     return count
 
 # Usage:
-path = '/your/directory/AeroGauge/src'
+if len(sys.argv) < 2:
+    print("Usage: python countPragmas directory_path")
+    sys.exit(1)
+
+path = sys.argv[1]
 result = count_pragma_global_asm(path)
 print(f"#pragma GLOBAL_ASM : {result}")

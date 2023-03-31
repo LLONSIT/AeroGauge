@@ -1,6 +1,6 @@
 .set noat
 .set noreorder
-.set gp=64
+#.set gp=64
 .macro glabel label
     .global \label
     \label:

@@ -17,11 +17,7 @@ s32 func_8000D670() {
         var_v0 += 4;
     }
 
-    if (gSelector.unk4 == 0) {
-        var_v0_2 = 3;
-    } else {
-        var_v0_2 = 4;
-    }
+    var_v0_2 = (gSelector.unk4 == 0) ? 3 : 4;
 
     if (gSelector.unkB >= var_v0_2) {
         return 0;
