@@ -7,7 +7,7 @@ def apply(config, args):
     elif os.path.exists(f'build/{basename}.eu.bin'):
         version = 'eu'
     else:
-        version = 'us'
+        version = 'jpkd'
 
     config['baseimg'] = f'baserom.us.z64'
     config['myimg'] = f'build/{basename}.{version}.z64'

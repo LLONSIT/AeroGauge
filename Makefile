@@ -96,7 +96,7 @@ endif
 ifeq ($(USE_QEMU_IRIX),1)
 	CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc
 	else
-	CC	 := $(TOOLS_DIR)/ido5.3_recomp/cc
+	CC	 := $(TOOLS_DIR)/ido-static-recomp/build/5.3/out/cc
 	endif
 
 # 1: use the nrdc for crc calculation (requires qemu-irix)
