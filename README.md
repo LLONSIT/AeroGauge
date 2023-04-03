@@ -1,7 +1,7 @@
 </p>
 <p align="left">
     <a href="" alt="Libultra">
-        <img src="https://img.shields.io/badge/Libultra-0.3%25-green" /></a>
+        <img src="https://img.shields.io/badge/Game%20code%20progress-9.76%25-brightgreen" /></a>
   
 </p>
 
