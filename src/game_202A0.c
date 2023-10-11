@@ -39,10 +39,10 @@ void func_8001F700(f64 arg0, f64 arg1) {
 
 //For each print_text use (almost) this is necessary.
 
-void Update_RGBA_Colors(u8 Red, u8 Blue, u8 Green, u8 Alpha) {
+void Update_RGBA_Colors(u8 Red, u8 Green, u8 Blue, u8 Alpha) {
     gCurrentColorRed = Red;
-    gCurrentColorBlue = Blue;
-    gCurrentColorGreen = Green;
+    gCurrentColorBlue = Green;
+    gCurrentColorGreen = Blue;
     gCurrentColorAlpha = Alpha;
 }
 

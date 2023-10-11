@@ -304,8 +304,12 @@ segments:
   - name: seg_7CC30
     type: bin
     start: 0x7CC30
- #     - [0x7CC4C, bin]
- #     - [0x7D0C0, lzma]
+    #subsegments:
+    #  - [0x7CC4C, bin]
+   #   - [0x7D0C0, bin]
+  #    - [0xCC92F, i8, assets/img/unk_CC92F.i8, 64, 64] #Numbers?
+ #     - [0xCD92F, bin] #pad
+#      - [0xD3975, bin]
 
 
   - [0x800000]
