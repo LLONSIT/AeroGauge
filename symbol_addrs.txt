@@ -309,3 +309,6 @@ gScreen_var3 = 0x80096AC4;
 //Text or bss?
 SegmentUnkStart = 0xC88D0;
 
+//Unused
+unused_80032BB0 = 0x80032BB0;
+unused_80035A98 = 0x80035A98;

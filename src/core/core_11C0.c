@@ -11,7 +11,7 @@ extern struct_80109BCC D_80109BCC[];
 
 void func_80000610(u8 arg0) {
     if (arg0 <= 0) {
-     D_80109BCC[arg0].unk0   = 1;
+     D_80109BCC[arg0].unk0 = 1;
     }
 }
 

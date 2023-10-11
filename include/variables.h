@@ -213,5 +213,15 @@ extern f32 D_800969A8;
 extern OSMesgQueue D_8019FB78;
 extern void *D_8019FB90;
 
+//game_337B0
+extern s32 D_8008C31C;
+extern u8 D_8008ED00;
+extern s32 D_8008ED18[];
+extern char* D_80097504;
+extern Gfx* D_8019E300;
+extern Gfx *D_8019E318;
+extern u8 D_8019E333;
+extern s32 D_801A0028[];
+
 
 #endif //VARIABLES_H

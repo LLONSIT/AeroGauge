@@ -33,7 +33,21 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_800555B4.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_80055674.s")
+void func_80055674(Gfx **gDisplayList) {
+    Gfx *gDisplayListHead = *gDisplayList;
+
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetCycleType(gDisplayListHead++, G_CYC_1CYCLE);
+    gDPSetRenderMode(gDisplayListHead++, G_RM_XLU_SURF, G_RM_XLU_SURF2);
+    gDPSetCombineMode(gDisplayListHead++, G_CC_DECALRGBA, G_CC_DECALRGBA);
+    gDPSetTexturePersp(gDisplayListHead++, G_TP_NONE);
+    gDPSetTextureLOD(gDisplayListHead++, G_TL_TILE);
+    gDPSetTextureFilter(gDisplayListHead++, G_TF_BILERP)
+    gDPSetTextureConvert(gDisplayListHead++, G_TC_FILT);
+
+    *gDisplayList = gDisplayListHead;
+}
+
 
 void func_80055734(Gfx** gDisplayList) {
 
