@@ -61,6 +61,7 @@ static void *func_800657B0(s32 arg0) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/final_thread/func_800658FC.s")
 
+
  void func_80065AD0(void) {
     if (osTvType == OS_TV_MPAL) {
         D_80092E3C = 0x1E;
