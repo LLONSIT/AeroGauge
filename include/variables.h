@@ -223,5 +223,8 @@ extern Gfx *D_8019E318;
 extern u8 D_8019E333;
 extern s32 D_801A0028[];
 
-
+//game_65FF0 (game init?)
+extern s32 D_80092DF4;
+extern s32 D_801A2090;
+extern s32 D_801A4240;
 #endif //VARIABLES_H

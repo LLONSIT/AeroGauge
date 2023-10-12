@@ -108,10 +108,7 @@ void func_800558FC(Gfx** gDisplayList, struct R_G_B_A* color) {
 }
 
 void DrawRectangleInDisplayList(Gfx** gDisplayList, struct R_G_B_A* color, struct tr* fig) {
-
-    Gfx *gDisplayListHead;
-
-    gDisplayListHead = *gDisplayList;
+    Gfx *gDisplayListHead = *gDisplayList;
 
     gDPPipeSync(gDisplayListHead++);
     gDPSetCycleType(gDisplayListHead++, G_CYC_1CYCLE);
@@ -125,7 +122,8 @@ void DrawRectangleInDisplayList(Gfx** gDisplayList, struct R_G_B_A* color, struc
     fig->lrx,
     fig->lry);
     gDPPipeSync(gDisplayListHead++);
-    *gDisplayList = gDisplayListHead;
+
+   *gDisplayList = gDisplayListHead;
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/main_game_53A60/func_80055B14.s")

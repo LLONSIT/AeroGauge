@@ -300,6 +300,7 @@ gCurrentColorAlpha = 0x8008C8F0;
 //DMA
 ai_update = 0x80001E50;
 ai_data   =   0x8007F560;
+BssStart = 0x800C7CD0;
 
 //Screen
 gScreen_var1 = 0x80096ABC; 
