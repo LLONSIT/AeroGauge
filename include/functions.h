@@ -108,6 +108,9 @@ void func_80060970(void);
 s32 func_800609B4();
 s32 func_8006E520(OSPfs*);
 
+//core
+void Update_RGBA_Colors(u8 Red, u8 Green, u8 Blue, u8 Alpha);
+
 //MTX
 void func_800249D0(Matrix, f32, f32, f32);
 

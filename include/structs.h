@@ -21,8 +21,6 @@ struct unk_struct_8006B {
 	s32 unk3C;
 	s32 unk40;
 	s32 unk28;
-
-
 };
 
 struct struct_8001AB94 {
@@ -32,6 +30,8 @@ struct struct_8001AB94 {
     s32 unk8;
     s32 unkC;
     s32 unk10;
+    s32 unk14;
+    s32 unk18;
 };
 
 
@@ -309,5 +309,12 @@ typedef struct {
     Vec3f up;
 }mf;
 
+struct unk_8001ADC4 {
+    u8 pad;
+    u8 pad1[0x47];
+    u8 unk48;
+    u8 b[7];
+    s8 unk50;
+};
 
 #endif 

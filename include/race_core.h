@@ -15,6 +15,11 @@ struct in_local_struct_8001AB94 {
     s32 unk10;
 };
 
-
+//TODO: join the different gSelector structs
+struct gSelector_2 {
+    s8 unk0;
+    s8 pad[0x18];
+    u8 unk19;
+};
 
 #endif //RACE_CORE_H

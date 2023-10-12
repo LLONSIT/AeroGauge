@@ -63,6 +63,10 @@ extern s8 D_80096BE4;
 extern s8 D_80096BF4;
 extern s8 D_80096C00;
 
+extern s8 D_80096CA4; //1%d
+extern s8 D_80096CA8; //1%d for printing the second number of the player position in race
+
+
 
 //game_10D60
 extern f32 gUnk_YPos; //it stores the player car position value

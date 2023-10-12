@@ -26,6 +26,7 @@
 *
 *********************************************************/
 
+extern struct gSelector_2 gSelector;
 
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_80019630.s")
@@ -163,7 +164,41 @@ void func_8001AC64(Gfx** gDisplayList, struct in_local_struct_8001AB94* arg1) {
     *gDisplayList = gDisplayListHead;
 }
 
-#pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001ADC4.s")
+void func_8001ADC4(Gfx** gDisplayList,  struct struct_8001AB94* arg1, struct unk_8001ADC4* arg2) {
+    Gfx* gDisplayListHead;
+    s8 sp40[1];
+    void* temp_a3;
+
+    if (((gSelector.unk0 != 0) || (gSelector.unk19 != 0)) && (gSelector.unk0 != 4) && (gSelector.unk0 != 2)) {
+        gDisplayListHead = *gDisplayList;
+        if ((ABS(arg2->unk50) % 2)) { //IDO tricks: int promotion
+            if (arg2->unk50  > 0) {
+                Update_RGBA_Colors(0, 0x15, 0xAE, 0xFF);
+            } else if (arg2->unk50 < 0) {
+                Update_RGBA_Colors(0xB5, 0x60, 0x14, 0xFF);
+            }
+        } else {
+            Update_RGBA_Colors(0xFF, 0xFF, 0xFF, 0xFF);
+        }
+        osSetTime(arg1->unk0, arg1->unk2);
+        sprintf(&sp40, &D_80096CA4, arg2->unk48);
+        Print_text(&gDisplayListHead, &sp40, arg1->unkC);
+        Update_RGBA_Colors(0xFF, 0xFF, 0xFF, 0xFF);
+        osSetTime(arg1->unk0 + 0x2A, arg1->unk2 + 0x10);
+        sprintf(&sp40, &D_80096CA8, (u8) gPlayerRacePos); //Print player position in race (second number)
+        Print_text(&gDisplayListHead, &sp40, arg1->unk10);
+        gDPPipeSync(gDisplayListHead++);
+        gDPSetPrimColor(gDisplayListHead++, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF);
+        //to check.
+        gDPSetRenderMode(gDisplayListHead++, G_RM_XLU_SURF, G_RM_XLU_SURF2);
+        func_80019D0C(&gDisplayListHead, (arg1->unk0 + 0x1E) & 0xFFFF, (arg1->unk2 + 0x10) & 0xFFFF, arg1->unk14, 0);
+        temp_a3 = arg1->unk18;
+        if (arg1->unk18 != NULL) {
+            func_80019D0C(&gDisplayListHead, (arg1->unk0 + 0x1F) & 0xFFFF, (arg1->unk2 + 4) & 0xFFFF, temp_a3, 0);
+        }
+        *gDisplayList = gDisplayListHead;
+    }
+}
 
 UNUSED func_8001AFFC(void) {
 }

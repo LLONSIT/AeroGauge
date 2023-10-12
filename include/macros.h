@@ -10,3 +10,5 @@
 #define UNK_FLAG 2 //most likely whit that if( & 2)
 
 #define UNK_TYPE int //unknown type of certainly vars, like some textures
+
+#define ABS(x) ((x) >= 0 ? (x) : -(x)) //is this a custom ABS?
