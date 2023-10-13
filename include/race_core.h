@@ -22,4 +22,17 @@ struct gSelector_2 {
     u8 unk19;
 };
 
+struct unk_8001B35C {
+/* 0x0 */ s32 unk0;
+/* 0x4 */ u16 unk4;
+/* 0x6 */ u16 unk6;
+/* 0x8 */ u16 unk8;
+/* 0xA */ u16 unkA;
+/* 0xC */ u16 unkC;
+/* 0xE */ u16 unkE;
+/* 0x10 */ f32 unk10;
+/* 0x14 */ s32 unk14;
+/* 0x18 */ s32 unk18;
+/* 0x1C */ s32 unk1C;
+};
 #endif //RACE_CORE_H

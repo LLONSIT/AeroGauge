@@ -205,7 +205,28 @@ UNUSED func_8001AFFC(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001B004.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001B35C.s")
+void func_8001B35C(Gfx** gDisplayList, struct unk_8001B35C* arg1, struct R_G_B_A* color) {
+    Gfx* gDisplayListHead = *gDisplayList;
+    s32 temp_f4;
+
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetRenderMode(gDisplayListHead++, CVG_DST_CLAMP | ZMODE_OPA | FORCE_BL | G_RM_PASS, CVG_DST_CLAMP | ZMODE_OPA | FORCE_BL | G_RM_NOOP2);
+    gDPSetCombineMode(gDisplayListHead++, G_CC_MODULATEIA_PRIM, G_CC_MODULATEIA_PRIM);
+    gDPSetPrimColor(gDisplayListHead++, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF);
+    func_80019D0C(&gDisplayListHead, (s32) arg1->unkC, (s32) arg1->unkE, arg1->unk1C, 0);
+    /* to check */
+    temp_f4 = (s32) (((f64) arg1->unk10 * D_80096CD8) / 100.0);
+    func_8001A9D4(&gDisplayListHead, arg1->unkC, ((arg1->unkE - temp_f4) + 0x2B) & 0xFFFF, 6, temp_f4);
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetPrimColor(gDisplayListHead++, 0, 0, 0xFF, 0xFF, 0xFF, 0xFF);
+    gDPSetRenderMode(gDisplayListHead++, G_RM_CLD_SURF, G_RM_NOOP2);
+    func_80019D0C(&gDisplayListHead, (s32) arg1->unk4, (s32) arg1->unk6, arg1->unk14, 0);
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetRenderMode(gDisplayListHead++, G_RM_CLD_SURF, G_RM_NOOP2);
+    gDPSetPrimColor(gDisplayListHead++, 0, 0, color->red, color->green, color->blue, color->alpha);
+    func_80019D0C(&gDisplayListHead, (s32) arg1->unk8, (s32) arg1->unkA, arg1->unk18, 0);
+    *gDisplayList = gDisplayListHead;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_8001B58C.s")
 
