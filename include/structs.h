@@ -218,6 +218,8 @@ typedef struct {
 
 }c_struct;  //Core struct
 
+
+ //This two structs are probably the same...
 typedef struct var_S {
 
  s8 pad[0x23C];
@@ -309,6 +311,42 @@ typedef struct {
     Vec3f up;
 }mf;
 
+//Figure out, if this members are actually used
+struct game_22EC0_80022FD0_unk {
+/* 0x00 */ u16 pad;
+/* 0x02 */ u16 pad1;
+/* 0x04 */ u16 unk4;
+/* 0x06 */ u16 pad2;
+/* 0x08 */ u8 unk8;
+/* 0x0C */ int unk0C;
+/* 0x10 */ int unk10;
+          int unk14;
+          int unk18;
+          int unk1C;
+          int unk20;
+          int unk24;
+          int unk28;
+          int unk2C;
+          int unk30;
+          int unk34;
+          int unk38;
+          int unk3C;
+            int unk40;
+            int unk44;
+            int unk48;
+            int unk4C;
+            float unk_X;
+            float unk_Y;
+            float unk_Z;
+            s32 unk_5C;
+    char kf[0x3C];
+    int unk9C;
+    int unkA0;
+    int unkA4;
+};
+
+
+
 struct unk_8001ADC4 {
     u8 pad;
     u8 pad1[0x47];
@@ -318,3 +356,4 @@ struct unk_8001ADC4 {
 };
 
 #endif 
+

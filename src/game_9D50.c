@@ -36,7 +36,7 @@ u16 func_80009438(s32 arg0) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_9D50/func_80009460.s")
 
-u8 func_80009488(void) {
+s32 func_80009488(void) {
     return D_80081FD4;
 }
 

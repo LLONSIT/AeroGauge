@@ -43,7 +43,7 @@ extern f32 func_80011484(s32 arg0);
 extern void func_80010C14(void * arg0, s32 arg1, s32 arg2);
 
 //game_9D50
-extern u8 func_80009488();
+extern s32 func_80009488();
 
 //game_1CC30
 extern void func_8001C268(void);
@@ -113,5 +113,10 @@ void Update_RGBA_Colors(u8 Red, u8 Green, u8 Blue, u8 Alpha);
 
 //MTX
 void func_800249D0(Matrix, f32, f32, f32);
+
+extern void func_800241F0(f32*, s32*);  
+extern void func_80024370(Matrix, Matrix, Matrix);              /* extern */
+extern void func_8006B750(Matrix, s32, s32, s32);    
+
 
 #endif //FUNCTIONS_H

@@ -2,6 +2,7 @@
 #define VARIABLES_H
 #include <ultra64.h>
 #include <PR/sched.h>
+#include "types.h"
 #include "macros.h"
 
 //game_10640
@@ -86,7 +87,7 @@ extern s32 D_8019EE10;
 extern s32 D_8019EE14;
 
 //game_16BD0
-extern s32 D_8013FC84;
+extern s32* D_8013FC84;
 
 //game_1CC30
 
@@ -227,8 +228,21 @@ extern Gfx *D_8019E318;
 extern u8 D_8019E333;
 extern s32 D_801A0028[];
 
+//game_22EC0
+extern Gfx* D_8016C508;
+extern Mtx* D_8016C510;
+extern Matrix D_8019DCF0;
+extern Matrix D_8019DD70;
+
+
 //game_65FF0 (game init?)
 extern s32 D_80092DF4;
 extern s32 D_801A2090;
 extern s32 D_801A4240;
+
+//game_1F1E0
+extern s32 D_8019E210;
+extern u8 D_8008EBCC;
+
 #endif //VARIABLES_H
+

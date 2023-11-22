@@ -62,7 +62,7 @@ UNUSED func_80017454(void) {
 //TODO: clarify this scope vars
 extern s8 gSelector;
 extern s32 D_8013FC80;
-extern s32 D_8013FC84;
+//extern s32 D_8013FC84;
 
 void func_80018C40(void) {
     func_80010548(D_8013FC80);
