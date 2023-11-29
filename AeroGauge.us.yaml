@@ -53,7 +53,7 @@ segments:
       - [0xE270, c, race/race_init]
       - [0xEBD0, c, game_EBD0]
       - [0xEC90, c, game_EC90]
-      - [0x10520, c, game_10520]
+      - [0x10520, c, controller_input_init]
       - [0x10640, c, game_10640]
       - [0x108F0, c, game_108F0]
       - [0x10D60, c, game_10D60]
@@ -82,7 +82,7 @@ segments:
       - [0x24B70, c, game_24B70]
       - [0x24CC0, c, game_24CC0]
       - [0x24D00, c, game_24D00]
-      - [0x24DF0, c, game_24DF0]
+      - [0x24DF0, c, copymtx]
       - [0x24E40, c, game_24E40]
       - [0x24EE0, c, game_24EE0]
       - [0x25440, c, game_25440]
@@ -300,17 +300,20 @@ segments:
 
 
 
-
   - name: seg_7CC30
     type: bin
     start: 0x7CC30
-    #subsegments:
-     # - [0x7CC4C, bin]
-     # - [0x7D0C0, bin]
-     # - [0xCC92F, bin] #Numbers?
-     # - [0xCD92F, bin] #pad
-     # - [0xD902B, bin] #LZMA compressed
-     # - [0xE7CFE, bin]
+#    subsegments:
+#      - [0x839B0, bin] # DL
+#      - [0x8BA10, bin]
+#      - [0x8BA80, bin]
+#      - [0x8BAE0, bin]
+
+#  - name: bss_seg
+#    type: code
+#    start: 0xC88D0
+#    subsegments:
+#      - [0x96100, .bss, entrypoint]
 
 
   - [0x800000]

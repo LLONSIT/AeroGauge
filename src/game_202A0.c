@@ -3,12 +3,16 @@
 #include "functions.h"
 #include "structs.h"
 
+u8 gCurrentColorRed; //!< Variables of type char to represent rgba colours
+u8 gCurrentColorBlue;
+u8 gCurrentColorGreen;
+u8 gCurrentColorAlpha;
+
 //TODO: should be u64 or s64
 void func_8001F6A0(s32 arg0, s32 arg1) {
     D_8008C8F4 = arg0;
     D_8008C8F8 = arg1;
 }
-
 
 void osSetTime(s32 arg0, s32 arg1) {
     D_8008C8DC = arg0;
@@ -54,9 +58,6 @@ s16 unk8;
 
 
 //void* func_8001F998(Gfx**, s32, s32, u8, s32);     /* extern */
-extern s32 D_8008C8DC;
-extern s32 D_8008C910;
-extern s32 __osCurrentTime;
 
 /*
 void Print_text(Gfx** gDisplayList, s8* str, s32 var) {

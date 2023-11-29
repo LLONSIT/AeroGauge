@@ -8,7 +8,7 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_22EC0/func_80022408.s")
 
-void func_800226AC(f32* arg0, struct game_22EC0_80022FD0_unk* arg1) {
+void func_800226AC(Matrix arg0, struct game_22EC0_80022FD0_unk* arg1) {
     s32 pad[30];
     void* temp_a1;
     void* temp_a1_2;
@@ -19,7 +19,7 @@ void func_800226AC(f32* arg0, struct game_22EC0_80022FD0_unk* arg1) {
         if (arg1->unk4 & 2) {
             if ((arg1->unk8 & 1) || (arg1->unk8 & 4)) {
                 arg1->unk9C = NULL;
-                func_800241F0(arg0, &arg1->unk_5C);
+                CopyMatrix(arg0, &arg1->unk_5C);
             } else {
                 arg1->unk9C = D_8016C510++;
                 func_80024370(&arg1->unk_5C, arg0, spA8[8]);

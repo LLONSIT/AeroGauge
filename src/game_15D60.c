@@ -5,7 +5,6 @@
 
 //global
 extern s32 D_8013FC80;
-
 typedef struct {
    /* */ u8 unk0;
   /* */  u8 unk1;

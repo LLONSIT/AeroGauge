@@ -28,7 +28,7 @@ extern  char* D_80096BB4;
 extern  char* D_80096BC0;
 extern  char* D_80096BC8;
 
-void func_800191FC(Gfx **gDisplayList, struct fa *arg1);
+//void func_800191FC(Gfx **gDisplayList, struct fa *arg1);
 void func_80019508(Gfx** gDisplayList);
 #define MORE_TO_LEFT 0xD
 #define NOT_FULLY_CENTERED 0xE

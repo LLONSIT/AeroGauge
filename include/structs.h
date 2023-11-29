@@ -345,7 +345,13 @@ struct game_22EC0_80022FD0_unk {
     int unkA4;
 };
 
-
+//Race core
+struct in_local_unkStruct {
+   u8 unk0;
+   u16 unk2;
+   u16 unk4;
+   s32 unk8;
+};
 
 struct unk_8001ADC4 {
     u8 pad;

@@ -113,8 +113,7 @@ void Update_RGBA_Colors(u8 Red, u8 Green, u8 Blue, u8 Alpha);
 
 //MTX
 void func_800249D0(Matrix, f32, f32, f32);
-
-extern void func_800241F0(f32*, s32*);  
+extern void CopyMatrix(Matrix dest_matrix, Matrix source_matrix);
 extern void func_80024370(Matrix, Matrix, Matrix);              /* extern */
 extern void func_8006B750(Matrix, s32, s32, s32);    
 

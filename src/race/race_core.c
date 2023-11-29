@@ -31,14 +31,6 @@ extern struct gSelector_2 gSelector;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/race/race_core/func_80019630.s")
 
-
-struct in_local_unkStruct {
-   u8 unk0;
-   u16 unk2;
-   u16 unk4;
-   s32 unk8;
-};
-
 extern struct in_local_unkStruct D_8013FBD8;
 extern s32 D_8013FC94;
 
@@ -233,7 +225,7 @@ void func_8001B35C(Gfx** gDisplayList, struct unk_8001B35C* arg1, struct R_G_B_A
 
 
 
-struct unk_struct_8013FC *D_8013FC80;
+extern struct unk_struct_8013FC *D_8013FC80;
 
 void func_8001BAD4(void) {
     D_8008B7DC = 0x7F;

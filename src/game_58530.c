@@ -1,7 +1,6 @@
 #include <ultra64.h>
 #include "functions.h"
 #include "variables.h"
-
  
 void func_80057930(void) {
     D_8008F640 = 0;
@@ -39,7 +38,6 @@ void func_80057930(void) {
         }
     }
 }
-
 
 void func_80057AA0(void) {
     if ( D_8008F640 != D_8019EE00) {

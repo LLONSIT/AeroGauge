@@ -13,8 +13,6 @@ extern s8 D_8019EE00;
 extern s8 D_8019EE01;
 extern u8 D_8008EBB0;
 extern u8 D_8008EBB4;
-extern s32 D_8019E210;
-extern s32 D_8019E218;
 extern s32 D_8019E22C;
 extern s32 D_8019E240;
 extern s32 D_8019E254;
@@ -25,7 +23,7 @@ extern s32 D_8019E2B8;
 extern s32 D_8019E2CC;
 extern Gfx* D_8019EDE4;
 extern Gfx *D_8019EDF8;
-//extern s32 D_8019EDF8;
+extern UNK_TYPE D_8019E218;
 
 void func_80032B48(Gfx** gDisplayList);
 void func_8002E5E0(Gfx** gdl1, Gfx** gdl2, Gfx** gdl3) {

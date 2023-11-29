@@ -4,6 +4,8 @@
 #include "structs.h"
 #include "macros.h"
 
+extern s32* D_8013FC80;
+
 struct struct_80018D6C {
   u8 unk0;
   u16 unk2;
@@ -11,8 +13,6 @@ struct struct_80018D6C {
   s32 unk18;
 };
 
-extern s32* D_8013FC80;
-extern s32* D_8013FC84;
 extern s8 gSelector;
 
 void func_80018D6C(Gfx **gDisplayList, struct struct_80018D6C *arg1, struct R_G_B_A *color);
