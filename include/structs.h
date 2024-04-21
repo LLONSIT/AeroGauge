@@ -67,4 +67,24 @@ struct struct_800820D4 {
     char pad[0x1];
 };
 
+
+typedef struct {
+/* 0x0 */ s8 unk0;
+/* 0x2 */ short unk2;
+/* 0x4 */ s8 unk4;
+/* 0x5 */ s8 unk5;
+/* 0x6 */ s8 unk6;
+/* 0x7 */ s8 unk7;
+/* 0x8 */ s8 unk8;
+/* 0x9 */ s8 unk9;
+/* 0xA */ s8 unkA;
+/* 0xB */ s8 unkB;
+/* 0xC */ s8 pad[1];
+/* 0x10 */ int unk10;
+/* 0x14 */ int unk14;
+/* 0x18 */ s8 unk18;
+/* 0x19 */ s8 unk19;
+/* 0x1A */ u8 unk1A;
+}struct_8013FF90;
+
 #endif /* STRUCTS_H */

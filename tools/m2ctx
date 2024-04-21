@@ -24,7 +24,6 @@ CPP_FLAGS = [
   #  "-DSCRIPT(...)={}"
  #   "-D__attribute__(...)=",
 #    "-D__asm__(...)=",
-    "-DGLOBAL_ASM(...)=",
     "-ffreestanding",
     "-nostdinc",
     "-Iinclude/libc",

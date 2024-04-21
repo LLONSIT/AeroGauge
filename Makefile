@@ -272,8 +272,7 @@ $(TARGET).bin: $(TARGET).elf
 	@printf "[$(CYAN) GNU Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
-	@printf "[$(PINK) CopyRom $(NO_COL)]  $<\n"
-	@tools/CopyRom $< $@ #mask
+	@cp $(TARGET).bin $(TARGET).z64
 	@printf "[$(GREEN) (CRC Calculation) $(NO_COL)]  $<\n"
 	$(CRC)
 

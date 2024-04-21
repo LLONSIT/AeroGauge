@@ -27,4 +27,12 @@ void func_8006578C();
 void func_80065740(s32);
 void func_800555B4(Gfx**);
 void func_80040BBC(Gfx** gDisplayList);
+void func_8000CCF0();
+s32 func_80015D70();
+s32 func_80015F2C();
+void func_80015FD0();
+void func_8001E4A4();
+void func_8001EC0();
+void func_8001E6FC(OSMesgQueue* );
+void func_80065704(UNK_TYPE*, UNK_TYPE*); 
 #endif /* FUNCTIONS_H */

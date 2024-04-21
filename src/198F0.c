@@ -13,7 +13,7 @@ void func_80018CF0(Gfx** gDisplayList) {
     if (D_8013FC8C & 2) {
         //sizeof?
         func_80018D6C(&gDisplayListHead, D_8013FC80 + 9, D_8013FC80);
-        if (D_8013FF90 == 5) {
+        if (D_8013FF90.unk0 == 5) {
             func_80018D6C(&gDisplayListHead, D_8013FC84 + 9, D_8013FC84);
         }
     }
