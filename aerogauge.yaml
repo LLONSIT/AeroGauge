@@ -1,0 +1,315 @@
+name: Aerogauge (North America)
+sha1: 77626171c35fb1a4dfebb0927280897f362225ed
+options:
+  basename: aerogauge
+  target_path: baserom.us.z64
+  elf_path: build/aerogauge.elf
+  base_path: .
+  platform: n64
+  compiler: IDO
+  asm_path: asm
+  src_path: src
+  build_path: build
+  create_asm_dependencies: True
+  ld_script_path: AeroGauge.ld
+  ld_dependencies: True
+  find_file_boundaries: True
+  header_encoding: ASCII
+  o_as_suffix: True
+  use_legacy_include_asm: False
+  mips_abi_float_regs: o32
+  asm_function_macro: glabel
+  asm_jtbl_label_macro: jlabel
+  asm_data_macro: dlabel
+  migrate_rodata_to_functions: yes
+  # section_order: [".text", ".data", ".rodata", ".bss"]
+  #auto_all_sections: [".data", ".rodata", ".bss"]
+  symbol_addrs_path:
+    - symbol_addrs.txt
+    - libultra_symbols.txt
+  reloc_addrs_path:
+    - reloc_addrs.txt
+  # undefined_funcs_auto_path: undefined_funcs_auto.txt
+  # undefined_syms_auto_path: undefined_syms_auto.txt
+
+  extensions_path: tools/splat_ext
+  # string_encoding: ASCII
+  # data_string_encoding: ASCII
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+  ##libultra_symbols: True
+  #hardware_regs: True
+  gfx_ucode: f3dex
+segments:
+  - name: header
+    type: header
+    start: 0x0
+
+  - name: boot
+    type: bin
+    start: 0x40
+
+  - name: entry
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    subsegments:
+      - [0x1000, hasm]
+
+  - name: Game_engine
+    type: code
+    start: 0x1050
+    vram: 0x80000450
+    follows_vram: entry
+    #bss_size: 0xE81A0
+    subsegments:
+      - [0x1050, c]
+      - [0x11C0, c]
+      - [0x1FC0, c]
+      - [0x2360, c]
+      - [0x2D80, c]
+      - [0x5850, c]
+      - [0x6BE0, c]
+      - [0x6C90, c]
+      - [0x6EA0, c]
+      - [0x9D50, c]
+      - [0xA160, c]
+      - [0xA220, c]
+      - [0xA910, c]
+      - [0xDA40, c]
+      - [0xE270, c]
+      - [0xEBD0, c]
+      - [0xEC90, c]
+      - [0x10520, c]
+      - [0x10640, c]
+      - [0x108F0, c]
+      - [0x10D60, c]
+      - [0x12760, c]
+      - [0x14060, c]
+      - [0x14720, c]
+      - [0x15020, c]
+      - [0x15D60, c]
+      - [0x16840, c]
+      - [0x16BD0, c]
+      - [0x198F0, c]
+      - [0x19A90, c, synfreefx]
+      - [0x19AA0, c]
+      - [0x1A230, c, 1A230]
+      - [0x1CA50, c]
+      - [0x1CC30, c]
+      - [0x1EDC0, c]
+      - [0x1F0E0, c]
+      - [0x1FD50, c]
+      - [0x202A0, c]
+      - [0x20D90, c]
+      - [0x22680, c]
+      - [0x22EC0, c]
+      - [0x24530, c]
+      - [0x24890, c]
+      - [0x24B70, c]
+      - [0x24CC0, c]
+      - [0x24D00, c]
+      - [0x24DF0, c]
+      - [0x24E40, c]
+      - [0x24EE0, c]
+      - [0x25440, c]
+      - [0x255D0, c]
+      - [0x25760, c]
+      - [0x25A60, c]
+      - [0x25BE0, c]
+      - [0x25D70, c]
+      - [0x25F20, c]
+      - [0x25FC0, c]
+      - [0x26440, c]
+      - [0x26520, c]
+      - [0x265C0, c]
+      - [0x26610, c]
+      - [0x28470, c]
+      - [0x2E0B0, c]
+      - [0x2F1E0, c]
+      - [0x337B0, c]
+      - [0x37B40, c]
+      - [0x3AD90, c]
+      - [0x3C840, c]
+      - [0x3F900, c]
+      - [0x43090, c]
+      - [0x470E0, c]
+      - [0x4B490, c]
+      - [0x4FA50, c]
+      - [0x53A60, c]
+      - [0x57E00, c]
+      - [0x58530, c]
+      - [0x58710, c]
+      - [0x5D0C0, c]
+      - [0x5D350, c]
+      - [0x5F6B0, c]
+      - [0x61570, c]
+      - [0x62900, c]
+      - [0x63A60, c]
+      - [0x65610, c]
+      - [0x65FF0, c, main]
+      - [0x66230, c]
+      - [0x66340, c]
+
+      - [0x66700, c, Libultra/audio/heapinit]
+      - [0x66740, c, Libultra/audio/heapalloc]
+      - [0x667A0, c, Libultra/audio/bnkf]
+      - [0x669F0, c, Libultra/audio/cspsetbank]
+      - [0x66A30, c, Libultra/os/createmesgqueue]
+      - [0x66A60, hasm, invaldcache]
+      - [0x66B10, c, Libultra/io/pidma]
+      - [0x66C20, c, Libultra/audio/cspsetvol]
+      - [0x66C60, c, Libultra/audio/seqpstop]
+      - [0x66C90, c, Libultra/os/recvmesg]
+      - [0x66DD0, c, Libultra/audio/cseq]
+      - [0x67890, c, Libultra/audio/seqpsetseq]
+      - [0x678D0, c, Libultra/audio/seqpplay]
+      - [0x67900, asm, cents2ratio]
+      - [0x67950, c, Libultra/gu/sinf] #TODO
+      - [0x67B10, asm, sndplayer]
+      - [0x68220, c, Libultra/audio/sndpallocate]
+      - [0x682C0, c, Libultra/audio/sndpsetsound]
+      - [0x682E0, c, Libultra/audio/sndpsetvol]
+      - [0x68340, c, Libultra/audio/sndpsetpan]
+      - [0x683A0, c, Libultra/audio/sndpsetfxmix]
+      - [0x68400, c, Libultra/audio/sndpsetpitch]
+      - [0x68460, c, Libultra/audio/sndpstop]
+      - [0x684B0, c, Libultra/audio/sndpgetstate]
+      - [0x684D0, c, Libultra/audio/sndpdeallocate]
+      - [0x68520, c, Libultra/audio/sndpplay]
+      - [0x68590, c, Libultra/io/aisetfreq]
+      - [0x686F0, c, Libultra/audio/sl] #TODO: Migrate data
+      - [0x687B0, c, Libultra/os/createthread]
+      - [0x68900, c, Libultra/os/startthread]
+      - [0x68A50, c, Libultra/audio/seqpdelete]
+      - [0x68A80, c, Libultra/audio/sndpdelete]
+      - [0x68AB0, c, Libultra/os/virtualtophysical]
+      - [0x68B30, c, Libultra/io/aisetnextbuf] #TODO: Migrate Data..
+      - [0x68BE0, c, Libultra/io/aigetlen]
+      - [0x68BF0, c, Libultra/audio/synthesizer]
+      - [0x692D0, c, Libultra/os/sendmesg]
+      - [0x69420, c, Libultra/audio/seqplayer]
+      - [0x6AD60, asm]
+      - [0x6B170, asm]
+      - [0x6B2C0, asm]
+      - [0x6B350, asm]
+      - [0x6B580, asm]
+      - [0x6B670, asm]
+      - [0x6B710, asm]
+      - [0x6B850, asm]
+      - [0x6B9F0, hasm, sqrtf]
+      - [0x6BA00, asm]
+      - [0x6BA70, asm]
+      - [0x6BAE0, asm]
+      - [0x6BE20, asm]
+      - [0x6C2E0, asm]
+      - [0x6C3F0, asm]
+      - [0x6C5E0, asm]
+      - [0x6C660, asm]
+      - [0x6C8F0, asm]
+      - [0x6CE30, asm]
+      - [0x6D0A0, hasm, bzero]
+      - [0x6D140, asm]
+      - [0x6D490, asm]
+      - [0x6D6A0, asm]
+      - [0x6D860, asm]
+      - [0x6D900, asm]
+      - [0x6D940, asm]
+      - [0x6D9E0, asm]
+      - [0x6DBA0, asm]
+      - [0x6DCF0, asm]
+      - [0x6DE40, asm]
+      - [0x6DED0, asm]
+      - [0x6E420, asm]
+      - [0x6EA40, asm]
+      - [0x6EEF0, asm]
+      - [0x6EF80, asm]
+      - [0x6F720, asm]
+      - [0x6FC40, asm]
+      - [0x703F0, asm]
+      - [0x70750, asm]
+      - [0x707C0, asm]
+      - [0x70830, asm]
+      - [0x70DC0, asm]
+      - [0x70E70, asm]
+      - [0x71120, asm]
+      - [0x713F0, asm]
+      - [0x71460, asm]
+      - [0x714A0, asm]
+      - [0x71DB0, asm]
+      - [0x71E40, asm]
+      - [0x71E50, asm]
+      - [0x71EF0, asm]
+      - [0x71FB0, asm]
+      - [0x72780, asm]
+      - [0x72820, asm]
+      - [0x734C0, asm]
+      - [0x737C0, asm]
+      - [0x74420, asm]
+      - [0x74530, asm]
+      - [0x74CA0, asm]
+      - [0x74E40, asm]
+      - [0x74EF0, asm]
+      - [0x75E90, asm]
+      - [0x761F0, asm]
+      - [0x77910, asm]
+      - [0x77920, asm]
+      - [0x77E60, asm]
+      - [0x781C0, asm]
+      - [0x786E0, asm]
+      - [0x78BC0, asm]
+      - [0x78BD0, asm]
+      - [0x78F50, asm]
+      - [0x78F60, asm]
+      - [0x79270, asm]
+      - [0x792F0, asm]
+      - [0x79300, asm]
+      - [0x79340, asm]
+      - [0x793D0, asm]
+      - [0x79400, asm]
+      - [0x79430, asm]
+      - [0x79450, asm]
+      - [0x79500, asm]
+      - [0x79580, asm]
+      - [0x795E0, asm]
+      - [0x79640, asm]
+      - [0x79740, asm]
+      - [0x79C10, asm]
+      - [0x7A920, asm]
+      - [0x7AA30, asm]
+      - [0x7AA50, asm]
+      - [0x7B6A0, asm]
+      - [0x7B6D0, asm]
+      - [0x7B970, asm]
+      - [0x7C430, asm]
+      - [0x7C440, asm]
+      - [0x7C4A0, asm]
+      - [0x7C7D0, asm]
+      - [0x7C820, asm]
+      - [0x7C870, asm]
+      - [0x7CA00, asm]
+      - [0x7CC30, bin, ucode]
+      #- [0x80170, rodata]
+      # - [0x99540, .rodata, Libultra/audio/cseq]
+      # - [0x99550, rodata]
+      # - [0x99560, rodata]
+      # - [0x99595, bss]
+      # - [0x182595, bin]
+      # - [0x99540, .rodata, Libultra/audio/cseq]
+      # - [0x99550, rodata]
+      # - [0x99560, rodata]
+      # - [0x99570, bin] # p a d
+      #- [0x99540, .rodata, Libultra/audio/cseq]
+      #- [0x99550, rodata]
+      #- [0x99560, bin]
+
+
+      #- [0xB9540, .rodata, 66DD0]
+      #- { start: 0xC88D0, type: bss, vram: 0x800C7CD0 }
+
+
+
+
+
+
+  - [0x800000]
