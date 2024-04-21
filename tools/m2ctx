@@ -30,7 +30,7 @@ CPP_FLAGS = [
     "-Iinclude/libc",
     "-Iinclude",
     "-Ibuild",
-    "-Iinclude/2.0",
+    "-Iinclude/2.0I",
     "-Isrc",
     "-I.",
 ]
@@ -41,15 +41,13 @@ import shutil
 
 def import_c_file(in_file) -> str:
 
-    Message = '/**** \nSpeedy Context file for AeroGauge!\nGenerated on '
+    Message = '/**** \nSpeedy Context file for Project_AG!\nGenerated on '
 
     with open("/etc/os-release") as f:
         for line in f:
             if "PRETTY_NAME" in line:
                 Message += line.split("=")[1].strip('"\n') + "\n"
                 Message += 'Linux Kernel ' + subprocess.check_output(['uname', '-r']).strip().decode('utf-8') + ')\n****/\n'
-
-
                 break
 
     Message += '/* by tools/m2ctx\n****/\n'

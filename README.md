@@ -1,10 +1,4 @@
-
-
-
-# AeroGauge
-AeroGauge is a Fzero style game, but it has different and special mechanics!
-
-
+# Project AG
 
 ```diff
 + Some info +
@@ -60,6 +54,3 @@ AeroGauge is a Fzero style game, but it has different and special mechanics!
 	│   ├── race: Race logic related funcs
 	└── tools: tools like asm differ or the compiler, are here
 	
-
-
-
