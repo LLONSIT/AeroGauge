@@ -69,7 +69,7 @@ struct struct_800820D4 {
 
 
 typedef struct {
-/* 0x0 */ s8 unk0;
+/* 0x0 */ u8 unk0;
 /* 0x2 */ short unk2;
 /* 0x4 */ s8 unk4;
 /* 0x5 */ s8 unk5;
@@ -87,4 +87,9 @@ typedef struct {
 /* 0x1A */ u8 unk1A;
 }struct_8013FF90;
 
+struct unk_struct_80024240 {
+/* 0x0 */ f32 unk0;
+/* 0x4 */ f32 unk4;
+/* 0x8 */ f32 unk8;
+};
 #endif /* STRUCTS_H */

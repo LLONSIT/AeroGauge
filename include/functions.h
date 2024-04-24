@@ -35,4 +35,13 @@ void func_8001E4A4();
 void func_8001EC0();
 void func_8001E6FC(OSMesgQueue* );
 void func_80065704(UNK_TYPE*, UNK_TYPE*); 
+void update_rgba(u8 red, u8 green, u8 blue, u8 aplha);
+void func_8001BFE4(int index);
+float func_8006ADF0(float);
+void func_8001E1C0();
+void func_8001E46C(void);
+void func_8001E340(void);
+s32 func_8000CE14(s32);
+extern void func_80009298(OSMesgQueue *);
+s32 func_80009560(OSMesgQueue* arg0, OSPfs* arg1, s32 *arg2);
 #endif /* FUNCTIONS_H */

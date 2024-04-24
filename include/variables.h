@@ -48,4 +48,8 @@ extern s32 D_8008F620;
 extern s32 D_8008F62C;
 
 extern struct_8013FF90 D_8013FF90;
+extern s16 D_80109BDC;
+
+extern s8 D_8013FF9B;
+
 #endif /* VARIABLES_H */

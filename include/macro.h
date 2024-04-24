@@ -13,4 +13,6 @@
 //TODO: Find the proper type
 #define TEX_RGBA_16 UNK_TYPE
 
+#define SQUARE(x) (x * x)
+
 #endif /* MACRO_H */

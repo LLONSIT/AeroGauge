@@ -227,8 +227,8 @@ distclean: clean
 ### Recipes
 
 .baserom.$(VERSION).ok: baserom.$(VERSION).z64
-	@echo "$$(cat $(BASENAME).$(VERSION).sha1)  $<" | sha1sum --check
-	@touch $@
+	echo "$$(cat $(BASENAME).$(VERSION).sha1)  $<" | sha1sum --check
+	touch $@
 
 $(TARGET).elf: dirs $(BASENAME).ld $(O_FILES) $(LANG_RNC_O_FILES) $(IMAGE_O_FILES)
 	@$(LD) $(LD_FLAGS) $(LD_FLAGS_EXTRA) -o $@

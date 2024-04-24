@@ -7,11 +7,15 @@ char gCurrentColorRed[4] = {0xFF, 0, 0, 0}
 char gCurrentColorGreen[4] = {0xFF, 0, 0, 0}
 char gCurrentColorBlue[4] = {0xFF, 0, 0, 0}
 char gCurrentColorAlpha[4] = {0xFF, 0, 0, 0}
+f64 D_8008C900 = 1.0;
+f64 D_8008C908 = 1.0;
 #else
 char gCurrentColorRed;
 char gCurrentColorGreen;
 char gCurrentColorBlue;
 char gCurrentColorAlpha;
+f64 D_8008C900;
+f64 D_8008C908;
 #endif
 
 
@@ -24,7 +28,14 @@ char gCurrentColorAlpha;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/202A0/func_8001F6F4.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/202A0/func_8001F700.s")
+void func_8001F700(f64 arg0, f64 arg1) {
+    if (arg0 > 0.0) {
+        D_8008C900 = 1.0 / arg0;
+    }
+    if (arg1 > 0.0) {
+        D_8008C908 = 1.0 / arg1;
+    }
+}
 
 void update_rgba(char red, char green, char blue, char alpha) {
     gCurrentColorRed = red;

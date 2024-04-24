@@ -61,7 +61,7 @@ segments:
     start: 0x1050
     vram: 0x80000450
     follows_vram: entry
-    #bss_size: 0xE81A0
+    rodata_size: 0xD
     subsegments:
       - [0x1050, c]
       - [0x11C0, c]
@@ -92,7 +92,7 @@ segments:
       - [0x16840, c]
       - [0x16BD0, c]
       - [0x198F0, c]
-      - [0x19A90, c, synfreefx]
+      - [0x19A90, c, Libultra/audio/synfreefx]
       - [0x19AA0, c]
       - [0x1A230, c, 1A230]
       - [0x1CA50, c]
@@ -289,6 +289,8 @@ segments:
       - [0x7C870, asm]
       - [0x7CA00, asm]
       - [0x7CC30, bin, ucode]
+#      - [0x975C0, .rodata, 16840]
+#      - [0x975F0, bin]
       #- [0x80170, rodata]
       # - [0x99540, .rodata, Libultra/audio/cseq]
       # - [0x99550, rodata]
