@@ -5,7 +5,9 @@ gCurrentColorRed = 0x8008C8E4;
 gCurrentColorGreen = 0x8008C8E8;
 gCurrentColorBlue = 0x8008C8EC;
 gCurrentColorAlpha = 0x8008C8F0;
-
+Rand = 0x800240C0;
+Set_seed_value = 0x800240F0;
+Seed = 0x8019E040;
 //Not undefined...
 func_80070DE4 = 0x80070DE4; //defined:true
 func_80017454 = 0x80017454; //defined:true

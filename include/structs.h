@@ -99,4 +99,9 @@ struct struct_8008FAE0 {
 /* 0x8 */ u16 unk8;
 };
 
+struct  unk_struct_D801DD30 {
+    char pad[0x2C8];
+    s16 unk2C8;
+};
+
 #endif /* STRUCTS_H */

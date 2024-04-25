@@ -55,4 +55,6 @@ extern s8 D_8013FF9B;
 extern s8 D_8008F29C[4];
 
 extern s8 D_8008EAB0;
+
+extern OSMesgQueue D_8019FB78;
 #endif /* VARIABLES_H */

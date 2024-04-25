@@ -50,4 +50,8 @@ s32 func_80009438(s32);                               /* extern */
 s32 func_80009460(s32);
 void print_text(Gfx**, char*, s32* );                         
 void func_8001F700(f64, f64);
+void func_80060970(void);
+void func_80026578(u32 arg0);
+void func_800609B4(void);
+void osViExtendVStart(s32);
 #endif /* FUNCTIONS_H */
