@@ -1,4 +1,5 @@
 #include <ultra64.h>
+#include "game.h"
 #include "macro.h"
 #include "variables.h"
 #include "structs.h"
@@ -13,7 +14,7 @@ void func_80018CF0(Gfx** gDisplayList) {
     if (D_8013FC8C & 2) {
         //sizeof?
         func_80018D6C(&gDisplayListHead, D_8013FC80 + 9, D_8013FC80);
-        if ((s8)D_8013FF90.unk0 == 5) {
+        if ((s8)D_8013FF90.GameMode == VS_MODE) {
             func_80018D6C(&gDisplayListHead, D_8013FC84 + 9, D_8013FC84);
         }
     }

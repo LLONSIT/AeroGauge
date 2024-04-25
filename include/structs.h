@@ -69,7 +69,7 @@ struct struct_800820D4 {
 
 
 typedef struct {
-/* 0x0 */ u8 unk0;
+/* 0x0 */ u8 GameMode;
 /* 0x2 */ short unk2;
 /* 0x4 */ s8 unk4;
 /* 0x5 */ s8 unk5;
@@ -92,4 +92,11 @@ struct unk_struct_80024240 {
 /* 0x4 */ f32 unk4;
 /* 0x8 */ f32 unk8;
 };
+
+struct struct_8008FAE0 {
+/* 0x0 */ int pad;
+/* 0x4 */ int unk4;
+/* 0x8 */ u16 unk8;
+};
+
 #endif /* STRUCTS_H */

@@ -1,5 +1,6 @@
 #include <ultra64.h>
 #include <PR/sched.h>
+#include "game.h"
 #include "functions.h"
 #include "variables.h"
 #include "structs.h"
@@ -122,7 +123,7 @@ s32 func_80015E04(s32 arg0) {
 #endif
 
 void func_80015EC0(void) {
-    D_8013FF90.unk0 = 0;
+    D_8013FF90.GameMode = TIME_ATTACK;
     D_8013FF90.unk2 = 0x78;
     D_8013FF90.unk4 = 0;
     D_8013FF90.unk5 = 1;

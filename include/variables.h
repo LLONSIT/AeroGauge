@@ -52,4 +52,7 @@ extern s16 D_80109BDC;
 
 extern s8 D_8013FF9B;
 
+extern s8 D_8008F29C[4];
+
+extern s8 D_8008EAB0;
 #endif /* VARIABLES_H */

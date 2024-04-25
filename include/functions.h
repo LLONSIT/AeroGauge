@@ -44,4 +44,10 @@ void func_8001E340(void);
 s32 func_8000CE14(s32);
 extern void func_80009298(OSMesgQueue *);
 s32 func_80009560(OSMesgQueue* arg0, OSPfs* arg1, s32 *arg2);
+extern f32 func_80023C90(f32);
+f32 func_80023E7C(f32 arg0, f32 arg1);
+s32 func_80009438(s32);                               /* extern */
+s32 func_80009460(s32);
+void print_text(Gfx**, char*, s32* );                         
+void func_8001F700(f64, f64);
 #endif /* FUNCTIONS_H */

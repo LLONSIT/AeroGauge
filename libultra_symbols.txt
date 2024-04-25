@@ -98,6 +98,7 @@ alSynAllocVoice = 0x8006A838;
 alSynStartVoiceParams = 0x8006A980;
 alSynSetFXMix = 0x8006AA70;
 guScaleF = 0x8006ABB0;
+osSetIntMask = 0x8006AB10;
 guRotateRPY = 0x8006AC04;
 coss = 0x8006AC50;
 __cosf = 0x8006AC80;

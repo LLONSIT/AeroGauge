@@ -146,7 +146,7 @@ endif
 CFLAGS := -Wab,-r4300_mul -non_shared -G 0 -Xcpluscomm -fullwarn  -nostdinc -g0
 CFLAGS += $(DEFINES)
 # ignore compiler warnings about anonymous structs
-CFLAGS += -woff 649,838,712 
+CFLAGS += -woff 649,838,712,516 
 CFLAGS += $(INCLUDE_CFLAGS)
 
 CHECK_WARNINGS := -Wall -Wextra -Wno-format-security -Wno-unknown-pragmas -Wunused-function -Wno-unused-parameter -Wno-unused-variable -Wno-missing-braces -Wno-int-conversion

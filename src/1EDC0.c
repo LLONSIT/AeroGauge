@@ -72,14 +72,14 @@ void func_8001E218(void) {
 
 #ifdef NEEDS_RODATA
 void func_8001E340(void) {
-    switch (D_8013FF90.unk0) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
+    switch (D_8013FF90.GameMode) {
+    case TIME_ATTACK:
+    case SINGLE_TIME:
+    case SINGLE_TIME_1:
+    case GRANDPRIX_TOTAL_TIME:
+    case GRANDPRIX_NO_TOTAL_TIME:
+    case VS_MODE:
+    case UNKNOWN1:
         func_8001E1C0();
         return;
     case 7:
