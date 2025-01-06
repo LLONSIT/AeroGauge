@@ -22,7 +22,6 @@ void func_8001F040(Gfx* arg0);
 void func_8001EC78(Gfx *, Gfx**, s32);
 void func_80039670(Gfx** gDisplayList);
 void func_800557F4(Gfx** gDisplayList, struct R_G_B_A* arg1);
-void func_800654C0(s32);
 void func_8006578C();
 void func_80065740(s32);
 void func_800555B4(Gfx**);
