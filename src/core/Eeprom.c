@@ -11,7 +11,7 @@ u8 D_8019FFE8;
 OSMesgQueue D_801A8750;
 OSSched   D_801A8868;
 OSScClient D_801AAAF8;
-s32 D_8019FB78;
+OSMesgQueue D_8019FB78;
 
 extern u8 D_80092D58;
 extern u8 D_80098820[];
@@ -26,6 +26,11 @@ extern u32 D_8019FC18[];
 extern u8 D_8019FDF8;
 
 u8 func_80062210(void);
+void func_800623E8(int);
+void func_80060970(void);
+void func_800609B4(void);
+void func_800627E0(void*);
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/core/Eeprom/func_80061D00.s")
 
@@ -129,7 +134,7 @@ u8 func_80062210(void) {
     } 
     
     sixty_four_bits.sp34 = sixty_four_bits.sp2C;
-    if (osEepromLongWrite(&D_8019FB78, 1U,  &sixty_four_bits.sp2C, 0x10) != 0) {
+    if (osEepromLongWrite(&D_8019FB78, 1U,  (u8*)&sixty_four_bits.sp2C, 0x10) != 0) {
         sp3E = 0x20;
     }
     
