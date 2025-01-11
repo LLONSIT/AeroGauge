@@ -86,7 +86,207 @@ void func_800265A0(void);
 s8 func_80027104(Gfx** gDisplayList);
 void func_800277E0(void);
 
+// info: Some regallocs
+// Scratch: https://decomp.me/scratch/em8KD
+// Score: 365 (99.4%)
+#ifdef NON_MATCHINGS
+
+
+extern s32 D_80082150;
+extern s32 D_80082154[];
+extern s32 D_8008EA60[];
+extern s32 D_8008EA6C[];
+extern u8 D_8008EA7C;
+extern u8 D_8008EA80;
+extern u8 D_8008EA88;
+extern u8 D_8008EA8C;
+extern u8 D_8008EA90;
+extern s32 D_8008EA94;
+extern s32 D_8008EA98;
+extern u8 D_8008EA9B;
+extern s32 D_8008EA9C;
+extern f32 D_8008F298;
+extern  D_8019E050;
+extern  D_8019E068;
+
+struct UnkStruct_8008EA80 {
+    u8 unk0;
+    u8 unk1;
+    s32 unk5;
+    s32 unk9;
+};
+
+void func_80025A10(Gfx** gDisplayList) {
+    Gfx* gDisplayListHead;
+    s32 temp_v0;
+
+    static u8 D_8008EA8C;
+    static u8 D_8008EA90;    
+    static s32 D_8008EA94;
+    static s32 D_8008EA9C;
+    
+    
+
+    if (D_8008EA7C == 1) {
+        D_8008EA7C = 0;
+        if (func_80009488() != 0) {
+            D_8008EA84 = 1;
+            func_800013C0(0x24, 4);
+            goto block_29;
+        }
+        D_8008EA80 = 1;
+        func_800013C0(0x25, 4);
+        osViExtendVStart(3);
+        D_8013FF84 = 2;
+        return;
+    }
+    if (D_8008EA7C == 2) {
+        gDisplayListHead = *gDisplayList;
+
+        gDPSetPrimColor(gDisplayListHead++, 0, 0, 255, 255, 255, 255);
+        func_80019D0C(&gDisplayListHead, 0x38U, 0x64U, (s32) &D_8008EA60, 0);
+        func_80019D0C(&gDisplayListHead, 0x38U, 0x84U, (s32) &D_8008EA6C, 0);
+        
+        if ((++D_8008EA90) >= 0x1F) {
+            D_8008EA7C = 1;
+            D_8008EA90 = 0;
+        }
+        *gDisplayList = gDisplayListHead;
+        return;
+    }
+    if (D_8008EA7C == 3) {
+        func_80015D70();
+        switch (D_8008EA94) {                       /* irregular */
+        default:
+        case 0:
+            temp_v0 = func_80026384(0);
+            D_8008EA98 = temp_v0;
+            if (temp_v0 != 0) {
+                if (temp_v0 == 0x15) {
+                    D_8008EA94 = 1;
+                    return;
+                }
+                if (temp_v0 == 0x1B) {
+                    D_8008EA94 = 1;
+                    return;
+                }
+                if (temp_v0 == 2) {
+                    return;
+                }
+            } else {
+                D_8008EA7C = 2;
+                return;
+            }
+            break;
+        case 1:
+            gDisplayListHead = *gDisplayList;
+            
+            gDPSetPrimColor(gDisplayListHead++, 0, 0, 255, 255, 255, 255);
+            func_800564B0(&gDisplayListHead, D_8008EA9B);
+            
+            *gDisplayList = gDisplayListHead;
+            
+            if ((++D_8008EA9C) >= 0x3C) {
+                D_8008EA9C = 0;
+                D_8008EA94 = 2;
+            }
+            break;
+        case 2:
+            gDisplayListHead = *gDisplayList;
+            gDPSetPrimColor(gDisplayListHead++, 0, 0, 255, 255, 255, 255);
+            func_80055DE8(&gDisplayListHead, 9);
+            *gDisplayList = gDisplayListHead;
+            temp_v0 = func_80009460(0);
+            if (temp_v0 & 0x8000) {
+                D_8013FF84 = 7;
+                D_8008EA94 = 0;
+                func_800013C0(0x2A, 4);
+                return;
+            }
+            if (temp_v0 & 0x4000) {
+                D_8008EA94 = 3;
+                func_800013C0(0x26, 4);
+                return;
+            }
+            break;
+        case 3:
+            if ((++D_8008EA9C) >= 0x1E) {
+                D_8008EA7C = 2;
+                D_8008EA9C = 0;
+                D_8008EA94 = 0;
+                return;
+            }
+        }
+    } else {
+block_29:
+        if (D_8008EA88) {
+            func_80026000();
+            D_8008EA88 = 0;
+            D_8008EA8C = 0;
+        }
+        gDisplayListHead = *gDisplayList;
+        func_80057930();
+        
+        if (!D_8008EA80) {
+            if ((D_8008EA84 > 0) && (D_8008EA84 < 0x53)) {
+                display_jetmorning(&gDisplayListHead); // display_jetmorning
+                *gDisplayList = gDisplayListHead;
+                D_8008EA84 += 1;
+                return;
+            }
+            if (D_8008EA84 == 0x53) {
+                D_8013FF84 = 9;
+                D_8008EA84++;
+                return;
+            }
+        }
+        if ((D_8019EE02 & 0x1000) || (D_8019EE02 & 0x8000) || (D_8019EE02 & 0x2000)) {
+            D_8008EA8C = 1;
+        }
+        if (D_8008EA8C == 0) {
+            if (D_8008EA78 == 0) {
+                func_80053E7C(&gDisplayListHead, &D_8019E050);
+                if (func_80052F84(&D_8019EDDC, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f) != 0) {
+                    D_8008EA88 = 1;
+                    D_8008EA78 = 1;
+                    D_8008EA90 = 0;
+                }
+                func_80055A04(&gDisplayListHead, &D_8019EDDC, &D_8019EDE8);
+            } else if (D_8008EA78 == 1) {
+                func_80053394(&gDisplayListHead, &D_8019E068);
+                if (func_80052F84(&D_8019EDDC, 0.5f, 2.0f, 1.0f, 1.0f, 1.0f) != 0) {
+                    D_8008EA88 = 1;
+                    D_8008EA78 = 0;
+                    D_8008EA90 = 0;
+                    osViExtendVStart(1);
+                    D_8013FF84 = 2;
+                }
+                func_80055A04(&gDisplayListHead, &D_8019EDDC, &D_8019EDE8);
+            }
+        } else {
+            func_80000610(0);
+            D_8008EA88 = 1;
+            D_8008F298 = 0.0f;
+            D_8008EA78 = 0;
+            D_8008EA90 = 0;
+            osViExtendVStart(0);
+            D_8013FF84 = 3;
+        }
+        D_8008EA90++;
+        func_80057AA0();
+        *gDisplayList = gDisplayListHead;
+        if ((D_8008EA78 == 0) && (D_8008EA90 == 0x2C)) {
+            func_80000610(0);
+            func_80015E04(D_80082154[D_80082150]);
+            D_80109BDC = 0x6E14;
+            func_800005C0(0x14U, 0U);
+        }
+    }
+}
+
+#else
 #pragma GLOBAL_ASM("asm/nonmatchings/26610/func_80025A10.s")
+#endif
 
 #ifdef NON_MATCHING
 struct m {
@@ -179,13 +379,13 @@ block_4:
 #pragma GLOBAL_ASM("asm/nonmatchings/26610/func_80026000.s")
 #endif
 
-//Wof: 610
-void func_80026120(Gfx** gDisplayList) {
+//display_jetmorning 
+void display_jetmorning(Gfx** gDisplayList) {
     Gfx* gDisplayListHead;
 
     GFX_ASSIGN(gDisplayListHead, gDisplayList);
 
-    update_rgba(0x64, 0xFF, 0x64, 0xFF);
+    update_rgba(100, 255, 100, 255);
     func_8001F700(1.0, 1.0);
 
     if (D_8008EA84 == 9) {
@@ -632,3 +832,4 @@ void func_800277E0(void) {
         D_8008F29C[0] = 1;
     }
 }
+

@@ -12,3 +12,5 @@ Seed = 0x8019E040;
 func_80070DE4 = 0x80070DE4; //defined:true
 func_80017454 = 0x80017454; //defined:true
 parse_args = 0x800654C0; //defined:true
+gPlayerRacePos = 0x8013FCE0;
+display_jetmorning = 0x80026120;

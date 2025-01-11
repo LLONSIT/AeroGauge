@@ -10,6 +10,10 @@
 
 #define GFX_UPDATE(x,y) *x = y
 
+#define GFX_CMD_BEGIN() GFX_ASSIGN(gDisplayListHead, gDisplayList);
+
+#define GFX_CMD_END() GFX_UPDATE(gDisplayList, gDisplayListHead);
+
 //TODO: Find the proper type
 #define TEX_RGBA_16 UNK_TYPE
 

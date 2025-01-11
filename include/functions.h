@@ -8,7 +8,7 @@ void func_80019D0C(Gfx** arg0, u16 arg1, u16 arg2, UNK_TYPE arg3, s32 arg4);
 void func_8003ED00(Gfx*, UNK_TYPE*, UNK_TYPE*); 
 void func_8001F0D8(void);
 void func_80000610(s32);
-void func_80001418(s32);
+void func_80001418(u8);
 void* func_800216E0(u16);
 void* func_800217F4(u16);
 void func_80015594(void*);

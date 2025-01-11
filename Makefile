@@ -115,7 +115,7 @@ IMG_CONVERT = $(PYTHON) $(TOOLS_DIR)/image_converter.py
 OPT_FLAGS      = -O2
 LOOP_UNROLL    =
 
-MIPSISET       = -mips2 -32
+MIPSISET       = -mips2  -32
 
 INCLUDE_CFLAGS = -I . -I include -I include/2.0I -I include/2.0I/PR  -I assets
 

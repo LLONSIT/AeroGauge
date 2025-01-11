@@ -292,9 +292,8 @@ segments:
       - [0x7C870, asm]
       - [0x7CA00, asm]
       - [0x7CC30, bin, ucode]
-#      - [0x994D0, .rodata, main]
-      - [0x99520, bin]
-
+      #- [0x7CC40, data]
+      #- [0xC88D0, bin]
 
       #- [0xB9540, .rodata, 66DD0]
       #- { start: 0xC88D0, type: bss, vram: 0x800C7CD0 }
