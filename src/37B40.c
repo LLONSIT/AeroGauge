@@ -4,7 +4,7 @@
 #include "macro.h"
 
 
-int D_8008EDC8;
+extern int D_8008EDC8;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/37B40/func_80036F40.s")
 

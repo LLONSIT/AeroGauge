@@ -4,8 +4,8 @@
 #include "macro.h"
 
 
-TEX_RGBA_16 D_80399100;
-TEX_RGBA_16 D_803992F8;
+extern TEX_RGBA_16 D_80399100;
+extern TEX_RGBA_16 D_803992F8;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/3F900/func_8003ED00.s")
 

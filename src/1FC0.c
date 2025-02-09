@@ -29,11 +29,11 @@ typedef struct unkthing
     ALSound *unk10[0x10]; // how many???
 } unkthing;
 
-struct gauge_struct D_80109C28[7];
-ALSound *D_80109C24;
-struct unkthing *D_80109C20;
+extern struct gauge_struct D_80109C28[7];
+extern ALSound *D_80109C24;
+extern struct unkthing *D_80109C20;
 
-var D_80109C30[4];
+extern var D_80109C30[4];
 
 void func_800013C0(u8 arg0, u8 arg1)
 {

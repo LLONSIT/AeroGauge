@@ -12,12 +12,12 @@ struct _202A0
 char gCurrentColorRed[4] = {0xFF, 0, 0, 0} char gCurrentColorGreen[4] = {0xFF, 0, 0, 0} char gCurrentColorBlue[4] = {0xFF, 0, 0, 0} char gCurrentColorAlpha[4] = {0xFF, 0, 0, 0} f64 D_8008C900 = 1.0;
 f64 D_8008C908 = 1.0;
 #else
-char gCurrentColorRed;
-char gCurrentColorGreen;
-char gCurrentColorBlue;
-char gCurrentColorAlpha;
-f64 D_8008C900;
-f64 D_8008C908;
+extern char gCurrentColorRed;
+extern char gCurrentColorGreen;
+extern char gCurrentColorBlue;
+extern char gCurrentColorAlpha;
+extern f64 D_8008C900;
+extern f64 D_8008C908;
 #endif
 
 

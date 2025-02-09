@@ -1,4 +1,23 @@
-#include "common.h"
+#include <ultra64.h>
+#include "ag_math.h"
+#include "functions.h"
+#include "variables.h"
+
+struct UnkStruct_80011820 {
+    /* 0x00 */ char pad0[4];
+    /* 0x04 */ u16 unk4;                            /* inferred */
+    /* 0x06 */ s16 unk6;                            /* inferred */
+    /* 0x08 */ char pad8[0x2C];                     /* maybe part of unk6[0x17]? */
+    /* 0x34 */ char unk34;                            /* inferred */
+    /* 0x35 */ char unk35;                            /* inferred */
+    /* 0x36 */ char unk36;                            /* inferred */
+    /* 0x37 */ char unk37;                            /* inferred */
+    /* 0x38 */ char pad38[0x24];                    /* maybe part of unk37[0x25]? */
+    /* 0x5C */ Matrix unk5C;                        /* inferred */
+    /* 0x6C */ char pad6C[0x10];                    /* maybe part of unk5C[5]? */
+    /* 0xAC */ s32 unkAC;                           /* inferred */
+    /* 0xB0 */ char padB0[0x20];                    /* maybe part of unkAC[9]? */
+};    
 
 #pragma GLOBAL_ASM("asm/nonmatchings/10D60/func_80010160.s")
 

@@ -2,10 +2,10 @@
 #include "functions.h"
 
 //.data, rodata
-f32 D_80097230;
-f32 D_80097234;
-f64 D_80097238;
-f64 D_80097240;
+extern f32 D_80097230;
+extern f32 D_80097234;
+extern f64 D_80097238;
+extern f64 D_80097240;
 
 //File declarations
 f32 func_80023E7C(f32 arg0, f32 arg1);

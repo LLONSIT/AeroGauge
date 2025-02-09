@@ -22,10 +22,11 @@ options:
   asm_jtbl_label_macro: jlabel
   asm_data_macro: dlabel
   migrate_rodata_to_functions: yes
-  # section_order: [".text", ".data", ".rodata", ".bss"]
+  section_order: [".text", ".data", ".rodata", ".bss"]
   #auto_all_sections: [".data", ".rodata", ".bss"]
   symbol_addrs_path:
     - symbol_addrs.txt
+    - audio_symbols.txt
     - libultra_symbols.txt
   reloc_addrs_path:
     - reloc_addrs.txt
@@ -60,13 +61,13 @@ segments:
     type: code
     start: 0x1050
     vram: 0x80000450
+    bss_size: 0xE81A0
     follows_vram: entry
-    rodata_size: 0xD
     subsegments:
-      - [0x1050, c]
+      - [0x1050, c, core/audio]
       - [0x11C0, c]
       - [0x1FC0, c]
-      - [0x2360, c]
+      - [0x2360, c, core/audiomgr]
       - [0x2D80, c]
       - [0x5850, c]
       - [0x6BE0, c]
@@ -164,7 +165,7 @@ segments:
       - [0x66DD0, c, Libultra/audio/cseq]
       - [0x67890, c, Libultra/audio/seqpsetseq]
       - [0x678D0, c, Libultra/audio/seqpplay]
-      - [0x67900, asm, cents2ratio]
+      - [0x67900, c, Libultra/audio/cents2ratio]
       - [0x67950, c, Libultra/gu/sinf] #TODO
       - [0x67B10, asm, sndplayer]
       - [0x68220, c, Libultra/audio/sndpallocate]
@@ -199,7 +200,9 @@ segments:
       - [0x6B580, c, Libultra/audio/synstartvoiceparam]
       - [0x6B670, c, Libultra/audio/synsetfxmix]
       - [0x6B710, hasm, setintmask]
-      - [0x6B850, asm]
+      - [0x6B7B0, c, Libultra/gu/scale]
+      - [0x6B850, c, Libultra/gu/coss]
+      - [0x6B880, c, Libultra/gu/cosf]
       - [0x6B9F0, hasm, sqrtf]
       - [0x6BA00, asm]
       - [0x6BA70, asm]
@@ -291,11 +294,124 @@ segments:
       - [0x7C820, asm]
       - [0x7C870, asm]
       - [0x7CA00, asm]
-      - [0x7CC30, bin, ucode]
-      #- [0x7CC40, data]
-      #- [0xC88D0, bin]
+      - [0x7CC30, bin, gspF3DEX_fifo]
+      - [0x80150, data]
+      - [0x8BDF0, .data, 16840]
+      - [0x8BE00, data]
+      - [0x939F0, .data, main]
+      - [0x93A10, data]
 
-      #- [0xB9540, .rodata, 66DD0]
+      # Rodata start
+      - [0x95990, rodata]
+      - [0x95CA0, rodata]
+      - [0x95CE0, rodata]
+      - [0x95E00, rodata]
+      - [0x95E10, rodata]
+      - [0x95EB0, rodata]
+      - [0x95EC0, rodata]
+      - [0x96000, rodata]
+      - [0x96010, rodata]
+      - [0x960A0, rodata]
+      - [0x96190, rodata]
+      - [0x96EC0, rodata]
+      - [0x96ED0, rodata]
+      - [0x96F00, rodata]
+      - [0x96F60, rodata]
+      - [0x96FD0, rodata]
+      - [0x97010, rodata]
+      - [0x97030, rodata]
+      - [0x97090, rodata]
+      - [0x970C0, rodata]
+      - [0x97110, rodata]
+      - [0x975C0, .rodata, 16840]
+      - [0x975F0, rodata]
+      - [0x97750, rodata]
+      - [0x97910, rodata]
+      - [0x97AE0, rodata]
+      - [0x97AF0, rodata]
+      - [0x97B20, rodata]
+      - [0x97B70, rodata]
+      - [0x97BB0, rodata]
+      - [0x97D10, rodata]
+      - [0x97DD0, rodata]
+      - [0x97E20, rodata]
+      - [0x97E50, rodata]
+      - [0x97F30, rodata]
+      - [0x97FE0, rodata]
+      - [0x980F0, rodata]
+      - [0x98160, rodata]
+      - [0x981C0, rodata]
+      - [0x98250, rodata]
+      - [0x98310, rodata]
+      - [0x98420, rodata]
+      - [0x984A0, rodata]
+      - [0x984C0, rodata]
+      - [0x984E0, rodata]
+      - [0x98580, rodata]
+      - [0x98610, rodata]
+      - [0x988F0, rodata]
+      - [0x98F30, rodata]
+      - [0x99230, rodata]
+      - [0x992F0, rodata]
+      - [0x993B0, rodata]
+      - [0x994B0, rodata]
+      - [0x994D0, .rodata, main]
+      - [0x99520, rodata]
+      - [0x99540, .rodata, Libultra/audio/cseq]
+      - [0x99550, .rodata, Libultra/audio/cents2ratio]
+      - [0x99560, rodata]
+      - [0x995B0, rodata]
+      - [0x99840, rodata]
+      - [0x99910, rodata]
+      - [0x99920, rodata]
+      - [0x99930, rodata]
+      - [0x99940, rodata]
+      - [0x99990, rodata]
+      - [0x99A00, rodata]
+      - [0x99A60, rodata]
+      - [0x99A70, rodata]
+      - [0x99BC0, rodata]
+      - [0x99C20, rodata]
+      - [0x99D60, rodata]
+      - [0x9A060, rodata]
+      - [0x9A120, rodata]
+      - [0x9A190, rodata]
+      - [0x9A1F0, rodata]
+      - [0x9EF80, rodata]
+      - [0xA0670, rodata]
+      - [0xA08A0, rodata]
+      - [0xA1AB0, rodata]
+      - [0xA4C00, rodata]
+      - [0xA5360, rodata]
+      - [0xA54C0, rodata]
+      - [0xA5C70, rodata]
+      - [0xA69C0, rodata]
+      - [0xA7A10, rodata]
+      - [0xA8CA0, rodata]
+      - [0xA98E0, rodata]
+      - [0xAB8D0, rodata]
+      - [0xAD8C0, rodata]
+      - [0xAF8B0, rodata]
+      - [0xAF900, rodata]
+      - [0xB0300, rodata]
+      - [0xC7610, rodata]
+      - [0xC7E10, rodata]
+      - [0xC8610, rodata]
+      - { type: bss, vram: 0x800C7CD0 }
+      - { type: .bss, vram: 0x8013FF80, name: 16840}
+      - { name: main_bss_pad_1, type: bss, vram: 0x8013FF90}
+
+  - name: Unk_bin
+    type: bin
+    start: 0xC88D0
+
+
+
+  - name: rom_padding
+    type: bin
+    start: 0x64A8C0
+
+
       #- { start: 0xC88D0, type: bss, vram: 0x800C7CD0 }
 
 

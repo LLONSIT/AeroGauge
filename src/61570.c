@@ -3,7 +3,7 @@
 #include "structs.h"
 
 //.bss
-void* D_8019FBE0;
+extern void* D_8019FBE0;
 
 //File declarations
 void func_80060B64(OSMesgQueue* arg0, struct unk_struct_D801DD30* arg1, u8 arg2);

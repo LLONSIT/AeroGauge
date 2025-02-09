@@ -4,8 +4,8 @@
 #include "variables.h"
 #include "macro.h"
 
-struct struct_800820D4 D_800820D4[DEF_UNK_SIZE];
-s32 D_8013F7A0;
+extern struct struct_800820D4 D_800820D4[DEF_UNK_SIZE];
+extern s32 D_8013F7A0;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/A910/func_80009D10.s")
 

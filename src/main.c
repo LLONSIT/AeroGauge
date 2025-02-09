@@ -1,33 +1,36 @@
 #include <ultra64.h>
 #include "functions.h"
 
-extern int D_80092DF0;
-extern int D_80092DF4;
-extern int D_80092DF8;
-extern int D_80092DFC;
-extern int D_80092E00;
-extern int D_80092E04;
+//.data
+int gVerbose = FALSE;
+int gDebugger = FALSE;
+int gSilent = FALSE;
+int gLogging = FALSE;
+int D_80092E00 = FALSE;
+int D_80092E04 = FALSE;
 
 extern OSThread D_801A2090;
 extern void* D_801A4240;
 
 void parse_args(u8* arg0);
 void func_800653F0(void *arg);
-void* func_80065454(void* entry);
+void* idle_thread(void* entry);
 
 //Main function
-void func_800653F0(void *arg) {
+void main(void *arg) {
     osInitialize();
     parse_args(NULL);
-    osCreateThread(&D_801A2090, 1, func_80065454, arg, &D_801A4240, 0xA);
+    osCreateThread(&D_801A2090, 1, idle_thread, arg, &D_801A4240, 0xA);
     osStartThread(&D_801A2090);
 }
 
-void* func_80065454(void* entry) {
+void* idle_thread(void* entry) {
     func_80065740(0xA);
-    if (D_80092DF4 == 0) {
+
+    if (!gDebugger) {
         func_8006578C();
     }
+
     osSetThreadPri(NULL, 0);
     while (TRUE);
 }
@@ -37,7 +40,6 @@ void* func_80065454(void* entry) {
 * From MISC.C from the n64 sdk
 *
 */
-#ifdef RODATA
 void parse_args(u8* arg) {
     s32 argc = 1;
     u8* buf[32];
@@ -75,28 +77,26 @@ void parse_args(u8* arg) {
     while(argc >= 2 && *bufptr[1] == '-') {
         switch((bufptr[1][1])) {
                 case 'd':
-                    D_80092DF4 = 1;
+                    gDebugger = TRUE;
                     break;
                 case 'v':
-                    D_80092DF0 = 1;
+                    gVerbose = TRUE;
                     break;
                 case 's':
-                    D_80092DF8 = 1;
+                    gSilent = TRUE;
                     break;
                 case 'l':
-                    D_80092DFC = 1;
+                    gLogging = TRUE;
                     break;
+                /* Two extra cases? */
                 case 'n':
-                    D_80092E00 = 1;
+                    D_80092E00 = TRUE;
                     break;
                 case 'g':
-                    D_80092E04 = 1;
+                    D_80092E04 = TRUE;
                     break;
         }
         argc--;
         bufptr++;            
     }
 }
-#else
-#pragma GLOBAL_ASM("asm/nonmatchings/main/parse_args.s")
-#endif

@@ -15,7 +15,8 @@ void func_80065630(void) {
     }
 }
 
-void func_80065690(u32 arg0, void *arg1, u32 arg2) {
+/* Original name: romCopy */
+void dma_copy(u32 arg0, void *arg1, u32 arg2) {
     OSIoMesg sp30;
     void *sp2C;
 
@@ -29,6 +30,6 @@ void func_80065704(u32 *arg0, u32 *arg1) {
     u32 temp_a0;
 
     temp_a0 = arg1[0];
-    func_80065690(temp_a0, arg0, arg1[1] - temp_a0);
+    dma_copy(temp_a0, arg0, arg1[1] - temp_a0);
 }
 

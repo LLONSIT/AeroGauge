@@ -28,10 +28,6 @@ static u32 __readVarLen(ALCSeq *s,u32 track);
 static u8  __getTrackByte(ALCSeq *s,u32 track);
 static u32 __alCSeqGetTrackEvent(ALCSeq *seq, u32 track, ALEvent *event);
 
-#ifdef AVOID_RODATA_USE
-extern f64 D_80098948;
-extern f64 D_80098940;
-#endif
 
 void alCSeqNew(ALCSeq *seq, u8 *ptr)
 {
@@ -248,24 +244,15 @@ static u32 __alCSeqGetTrackEvent(ALCSeq *seq, u32 track, ALEvent *event)
     return TRUE;
 }
 
-//Need to resolve this ahhhhhh
 f32 alCSeqTicksToSec(ALCSeq *seq, s32 ticks, u32 tempo)
 {
     return ((f32) (((f32)(ticks) * (f32)(tempo)) /
-#ifdef AVOID_RODATA_USE
-                     ((f32)(seq->base->division) * D_80098948)));
-#else
     ((f32)(seq->base->division) * 1000000.0)));
-#endif
 }
 
 u32 alCSeqSecToTicks(ALCSeq *seq, f32 sec, u32 tempo)
 {
-#ifdef AVOID_RODATA_USE
-    return (u32)(((sec * D_80098940) * seq->base->division) / tempo);
-#else
     return (u32)(((sec * 1000000.0) * seq->base->division) / tempo);
-#endif
 }
 
 

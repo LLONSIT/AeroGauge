@@ -5,7 +5,7 @@
 #include <ultra64.h>
 
 /* .bss */
-unsigned int Seed;
+extern unsigned int Seed;
 
 /* File declarations */
 int Rand(void);

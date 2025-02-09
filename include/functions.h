@@ -53,4 +53,5 @@ void func_80060970(void);
 void func_80026578(u32 arg0);
 void func_800609B4(void);
 void osViExtendVStart(s32);
+//void copymtx(Matrix dest_matrix, Matrix source_matrix);
 #endif /* FUNCTIONS_H */

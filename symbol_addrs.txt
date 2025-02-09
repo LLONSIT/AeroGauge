@@ -14,3 +14,7 @@ func_80017454 = 0x80017454; //defined:true
 parse_args = 0x800654C0; //defined:true
 gPlayerRacePos = 0x8013FCE0;
 display_jetmorning = 0x80026120;
+main = 0x800653F0; //defined:true
+gDebugger = 0x80092DF4; //defined:true
+jtbl_80094D90 = 0x80094D90; //defined:true type:jtbl
+Unk_bin_ROM_START = 0xC88D0; //defined:true

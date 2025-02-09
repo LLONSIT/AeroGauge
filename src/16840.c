@@ -5,17 +5,10 @@
 #include "variables.h"
 #include "structs.h"
 #include "macro.h"
+#include "segment.h"
 
-
-#ifdef NEEDS_DATA
-s32 D_8008B1F0 = 0;
-s32 D_8008B1F8[2] = {0, 0};
-long long D_8008B220[14];
-#else
-s32 D_8008B1F0;
-long long D_8008B220[4];
-s32 D_8008B1F8;
-#endif
+// External data
+extern long long D_8008B220[4];
 
 //.bss
 u32 D_8013FF80;
@@ -24,9 +17,8 @@ s32 D_8013FF88;
 s32 D_8013FF8C;
 
 //Unclassified
-u8 D_C88D0[DEF_UNK_SIZE];
-u8 D_183B90[DEF_UNK_SIZE];
-s32 D_80270800[DEF_UNK_SIZE];
+extern u8 D_183B90[DEF_UNK_SIZE];
+extern s32 D_80270800[DEF_UNK_SIZE];
 
 //File declarations
 void func_80015C40(void);
@@ -44,7 +36,6 @@ void func_80015C40(void) {
     D_8008B84C = 1;
 }
 
-#ifdef NEEDS_RODATA
 void func_80015C8C(void) {
     if (D_8013FF80 != D_8013FF84) {
         D_8013FF80 = D_8013FF84;
@@ -84,9 +75,9 @@ void func_80015C8C(void) {
         return;
     }
 }
-#else
-#pragma GLOBAL_ASM("asm/nonmatchings/16840/func_80015C8C.s")
-#endif
+
+
+s32 D_8008B1F0 = 0;
 
 s32 func_80015D70(void) {
     if (D_8008B1F0 == 0) {
@@ -102,7 +93,6 @@ s32 func_80015D70(void) {
     }
 }
 
-#ifdef NEEDS_DATA
 s32 func_80015E04(s32 arg0) {
     static s32 D_8008B1F4 = 0xFFFFFFFF;
     if ((D_8008B1F0 != 0) || (D_8008B1F4 != arg0)) {
@@ -118,9 +108,6 @@ s32 func_80015E04(s32 arg0) {
     return FALSE;
     }
 }
-#else
-#pragma GLOBAL_ASM("asm/nonmatchings/16840/func_80015E04.s")
-#endif
 
 void func_80015EC0(void) {
     D_8013FF90.GameMode = TIME_ATTACK;
@@ -140,12 +127,14 @@ void func_80015EC0(void) {
     D_8013FF90.unk1A = 1;
 }
 
+s32 D_8008B1F8 = 0;
+
 s32 func_80015F2C(void) {
     if (D_8008B1F8 == 0) {
         func_80000610(0);
         osScRemoveClient(&D_801A8868, &D_801AAAF8);
         func_8001E6FC(&D_801A8750);
-        func_80065690(D_C88D0, D_80270800, D_183B90 - D_C88D0);
+        dma_copy(Unk_bin_ROM_START, D_80270800, D_183B90 - Unk_bin_ROM_START);
         osScAddClient(&D_801A8868, &D_801AAAF8, &D_801A8750);
         D_8008B1F8 = 1;
         return TRUE;

@@ -4,30 +4,30 @@
 #include "structs.h"
 
 //.data
-s32 D_8008BC38;
-u8 D_8008EA84;
-s8 D_8008EAA8;
-struct struct_8008FAE0 D_8008FAE0;
-u8 D_8008FAEA;
-u8 D_8008FAEE;
-s8 D_8008EAA4;
-s32  D_100A288;
-s32  D_100C090;
-s32  D_100C0B8;
-s32  D_1010680;
-s32 D_8008EA78;
-u8 D_8008EAA0;
-s8 D_8008EAA4;
-s32 D_8008EAAC;
-u8 D_8008EAB4;
-u8 D_8008EAB8;
-u8 D_8008EABC;
-u8 D_8008EAC0;
-s8 D_8008EAC4;
-u32 D_8008F290;
-s8 D_8008F640;
-f32 D_80097310;
-f32 D_80097314;
+extern s32 D_8008BC38;
+extern u8 D_8008EA84;
+extern s8 D_8008EAA8;
+extern struct struct_8008FAE0 D_8008FAE0;
+extern u8 D_8008FAEA;
+extern u8 D_8008FAEE;
+extern s8 D_8008EAA4;
+extern s32  D_100A288;
+extern s32  D_100C090;
+extern s32  D_100C0B8;
+extern s32  D_1010680;
+extern s32 D_8008EA78;
+extern u8 D_8008EAA0;
+extern s8 D_8008EAA4;
+extern s32 D_8008EAAC;
+extern u8 D_8008EAB4;
+extern u8 D_8008EAB8;
+extern u8 D_8008EABC;
+extern u8 D_8008EAC0;
+extern s8 D_8008EAC4;
+extern u32 D_8008F290;
+extern s8 D_8008F640;
+extern f32 D_80097310;
+extern f32 D_80097314;
 
 
 //.rodata
@@ -44,35 +44,35 @@ char D_8009727C = "I";
 char D_80097288 = "N";
 char D_80097294 = "G";
 #else
-char D_80097250;
-char D_80097254;
-char D_80097258;
-char D_8009725C;
-char D_80097264;
-char D_8009726C;
-char D_80097274;
-char D_8009727C;
-char D_80097288;
-char D_80097294;
+extern char D_80097250;
+extern char D_80097254;
+extern char D_80097258;
+extern char D_8009725C;
+extern char D_80097264;
+extern char D_8009726C;
+extern char D_80097274;
+extern char D_8009727C;
+extern char D_80097288;
+extern char D_80097294;
 #endif
 
 //.bss?
-UNK_TYPE D_8019E088;
-UNK_TYPE D_8019E0A0;
-UNK_TYPE D_8019E0B8;
-UNK_TYPE D_8019E0D0;
-UNK_TYPE D_8019EDDC;
-UNK_TYPE D_8019EDE0;
-UNK_TYPE D_8019EDE8;
-UNK_TYPE D_8019EDF0;
-s8 D_8019EE00;
-u16 D_8019EE02;
-UNK_TYPE D_80385670;
-UNK_TYPE D_803856B8;
-UNK_TYPE D_803856D0;
-UNK_TYPE D_80385718;
-UNK_TYPE D_80385730;
-UNK_TYPE D_80385778;
+extern UNK_TYPE D_8019E088;
+extern UNK_TYPE D_8019E0A0;
+extern UNK_TYPE D_8019E0B8;
+extern UNK_TYPE D_8019E0D0;
+extern UNK_TYPE D_8019EDDC;
+extern UNK_TYPE D_8019EDE0;
+extern UNK_TYPE D_8019EDE8;
+extern UNK_TYPE D_8019EDF0;
+extern s8 D_8019EE00;
+extern u16 D_8019EE02;
+extern UNK_TYPE D_80385670;
+extern UNK_TYPE D_803856B8;
+extern UNK_TYPE D_803856D0;
+extern UNK_TYPE D_80385718;
+extern UNK_TYPE D_80385730;
+extern UNK_TYPE D_80385778;
 
 //File declarations
 void func_80026000(void);
@@ -379,7 +379,6 @@ block_4:
 #pragma GLOBAL_ASM("asm/nonmatchings/26610/func_80026000.s")
 #endif
 
-//display_jetmorning 
 void display_jetmorning(Gfx** gDisplayList) {
     Gfx* gDisplayListHead;
 

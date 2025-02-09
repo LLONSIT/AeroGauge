@@ -19,9 +19,9 @@ f32 alCents2Ratio(s32 cents)
     f32 ratio = 1.0f;
     
     if (cents >= 0) {
-        x = cents2ratio_rodata_0000;         /* 2^(1/1200) */
+        x = 1.00057779f;         /* 2^(1/1200) */
     } else {
-        x = cents2ratio_rodata_0004;       /* 2^(-1/1200) */
+        x = 0.9994225441f;       /* 2^(-1/1200) */
         cents = -cents;
     }
     

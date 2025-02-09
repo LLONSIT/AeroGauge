@@ -1,6 +1,4 @@
 #include "common.h"
-struct unk_800005C0* D_80109C18;
-
 
 #pragma GLOBAL_ASM("asm/nonmatchings/11C0/func_800005C0.s")
 

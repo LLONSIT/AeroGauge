@@ -4,14 +4,14 @@
 s32 func_8006299C(s32 *arg0);
 
 
-u8 D_80092D54;
+extern u8 D_80092D54;
 extern s32 D_8013FF84;
-s32 D_8019E0F0;
-u8 D_8019FFE8;
-OSMesgQueue D_801A8750;
-OSSched   D_801A8868;
-OSScClient D_801AAAF8;
-OSMesgQueue D_8019FB78;
+extern s32 D_8019E0F0;
+extern u8 D_8019FFE8;
+extern OSMesgQueue D_801A8750;
+extern OSSched   D_801A8868;
+extern OSScClient D_801AAAF8;
+extern OSMesgQueue D_8019FB78;
 
 extern u8 D_80092D58;
 extern u8 D_80098820[];

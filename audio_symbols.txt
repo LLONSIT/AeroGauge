@@ -1,0 +1,7 @@
+// From simple n64 sdk demo (audiomgr.c)
+init_audio = 0x80000450; //defined:true
+
+gAudioHeap = 0x800C7CD8;
+gAlHeap = 0x80109B88;
+gNextDMA = 0x8007F558; 
+dma_copy = 0x80065690;
