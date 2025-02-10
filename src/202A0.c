@@ -21,7 +21,7 @@ extern f64 D_8008C908;
 #endif
 
 
-Gfx* func_8001F998(Gfx**, s32, s32, u8, s32);     /* extern */
+Gfx* draw_text(Gfx**, s32, s32, u8, s32);     /* extern */
 
 extern s32 D_8008C8DC;
 extern s32 D_8008C910;
@@ -85,7 +85,7 @@ void print_text(Gfx **gDisplayList, char *str, s32 var)
         var_s1 = str;
         while (c)
         {
-            temp_v0 = func_8001F998(&gDisplayListHead, D_8008C8DC, __osCurrentTime1, c, var);
+            temp_v0 = draw_text(&gDisplayListHead, D_8008C8DC, __osCurrentTime1, c, var);
             if (temp_v0 != NULL)
             {
                 if (D_8008C910 < 0)
@@ -113,4 +113,4 @@ void print_text(Gfx **gDisplayList, char *str, s32 var)
 #else
 #pragma GLOBAL_ASM("asm/nonmatchings/202A0/print_text.s")
 #endif
-#pragma GLOBAL_ASM("asm/nonmatchings/202A0/func_8001F998.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/202A0/draw_text.s")

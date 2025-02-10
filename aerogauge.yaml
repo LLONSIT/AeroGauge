@@ -296,6 +296,8 @@ segments:
       - [0x7CA00, asm]
       - [0x7CC30, bin, gspF3DEX_fifo]
       - [0x80150, data]
+      - [0x82DB0, .data, 10520]
+      - [0x82DD0, data]
       - [0x8BDF0, .data, 16840]
       - [0x8BE00, data]
       - [0x939F0, .data, main]
@@ -312,7 +314,8 @@ segments:
       - [0x96000, rodata]
       - [0x96010, rodata]
       - [0x960A0, rodata]
-      - [0x96190, rodata]
+      - [0x96190, .rodata, 10520]
+      - [0x961A0, rodata]
       - [0x96EC0, rodata]
       - [0x96ED0, rodata]
       - [0x96F00, rodata]
@@ -400,11 +403,32 @@ segments:
       - { type: bss, vram: 0x800C7CD0 }
       - { type: .bss, vram: 0x8013FF80, name: 16840}
       - { name: main_bss_pad_1, type: bss, vram: 0x8013FF90}
+      - { type: .bss, vram: 0x8019E040, name: rand}
+      - { name: main_bss_pad_2, type: bss, vram: 0x8019E050}
+
 
   - name: Unk_bin
     type: bin
     start: 0xC88D0
 
+
+  - name: BankSegment
+    type: bin
+    start: 0x49FAD0
+
+  - name: SegmentTblStart
+    type: bin
+    start: 0x4A30F0
+
+
+  - name: SeqSegment
+    type: bin
+    start: 0x5A0490
+
+
+  - name: SegmentTblEnd
+    type: bin
+    start: 0x5A2840
 
 
   - name: rom_padding

@@ -1,6 +1,12 @@
 #ifndef MACRO_H
 #define MACRO_H
 
+#ifdef __GNUC__
+#define UNUSED __attribute__((unused))
+#else
+#define UNUSED //Ignore for IDO
+#endif
+
 #define UNK_TYPE int
 #define BOOL int
 #define TRUE 1

@@ -1,6 +1,6 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/audiomgr/func_80001760.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/core/audiomgr/amCreateAudioMgr.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/core/audiomgr/func_80001A54.s")
 

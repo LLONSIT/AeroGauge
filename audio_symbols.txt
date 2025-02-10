@@ -1,7 +1,21 @@
 // From simple n64 sdk demo (audiomgr.c)
 init_audio = 0x80000450; //defined:true
 
-gAudioHeap = 0x800C7CD8;
-gAlHeap = 0x80109B88;
-gNextDMA = 0x8007F558; 
-dma_copy = 0x80065690;
+gAudioHeap = 0x800C7CD8; //defined:true
+gAlHeap = 0x80109B88; //defined:true
+gNextDMA = 0x8007F558; //defined:true
+dma_copy = 0x80065690; //defined:true
+
+BankSegment_ROM_START = 0x49FAD0; //defined:true
+SegmentTblStart_ROM_START = 0x4A30F0; //defined:true
+SeqSegment_ROM_START = 0x5A0490; //defined:true
+SegmentTblEnd_ROM_START = 0x5A2840; //defined:true
+
+
+gAlConfig = 0x80109BA0;  //defined:true
+gBankPtr = 0x80109B98; //defined:true
+gSeqPtr = 0x80109B9C; //defined:true
+
+
+//_bankSegmentRomEnd = 0x4A30F0;
+amCreateAudioMgr = 0x80001760; //defined:true

@@ -9,7 +9,7 @@ int gLogging = FALSE;
 int D_80092E00 = FALSE;
 int D_80092E04 = FALSE;
 
-extern OSThread D_801A2090;
+extern OSThread gIdleThread;
 extern void* D_801A4240;
 
 void parse_args(u8* arg0);
@@ -20,8 +20,8 @@ void* idle_thread(void* entry);
 void main(void *arg) {
     osInitialize();
     parse_args(NULL);
-    osCreateThread(&D_801A2090, 1, idle_thread, arg, &D_801A4240, 0xA);
-    osStartThread(&D_801A2090);
+    osCreateThread(&gIdleThread, 1, idle_thread, arg, &D_801A4240, 0xA);
+    osStartThread(&gIdleThread);
 }
 
 void* idle_thread(void* entry) {

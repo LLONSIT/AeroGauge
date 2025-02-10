@@ -5,8 +5,8 @@ gCurrentColorRed = 0x8008C8E4;
 gCurrentColorGreen = 0x8008C8E8;
 gCurrentColorBlue = 0x8008C8EC;
 gCurrentColorAlpha = 0x8008C8F0;
-Rand = 0x800240C0;
-Set_seed_value = 0x800240F0;
+rand = 0x800240C0;
+srand = 0x800240F0;
 Seed = 0x8019E040;
 //Not undefined...
 func_80070DE4 = 0x80070DE4; //defined:true
@@ -18,3 +18,5 @@ main = 0x800653F0; //defined:true
 gDebugger = 0x80092DF4; //defined:true
 jtbl_80094D90 = 0x80094D90; //defined:true type:jtbl
 Unk_bin_ROM_START = 0xC88D0; //defined:true
+gIdleThread = 0x801A2090; //defined:true
+draw_text = 0x8001F998;
