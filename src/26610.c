@@ -389,43 +389,43 @@ void display_jetmorning(Gfx** gDisplayList) {
 
     if (D_8008EA84 == 9) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_80097250, &D_8008BC38);
+        print_text(&gDisplayListHead, "J", &D_8008BC38);
     }
     if (D_8008EA84 == 0xA) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_80097254, &D_8008BC38);
+        print_text(&gDisplayListHead, " E", &D_8008BC38);
     }
     if (D_8008EA84 == 0xB) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_80097258, &D_8008BC38);
+        print_text(&gDisplayListHead, "  T", &D_8008BC38);
     }
     if (D_8008EA84 == 0x29) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_8009725C, &D_8008BC38);
+        print_text(&gDisplayListHead, "   M", &D_8008BC38);
     }
     if (D_8008EA84 == 0x2A) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_80097264, &D_8008BC38);
+        print_text(&gDisplayListHead, "    O", &D_8008BC38);
     }
     if (D_8008EA84 == 0x2B) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_8009726C, &D_8008BC38);
+        print_text(&gDisplayListHead, "     R", &D_8008BC38);
     }
     if (D_8008EA84 == 0x33) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_80097274, &D_8008BC38);
+        print_text(&gDisplayListHead, "      N", &D_8008BC38);
     }
     if (D_8008EA84 == 0x34) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_8009727C, &D_8008BC38);
+        print_text(&gDisplayListHead, "       I", &D_8008BC38);
     }
     if (D_8008EA84 == 0x35) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_80097288, &D_8008BC38);
+        print_text(&gDisplayListHead, "        N", &D_8008BC38);
     }
     if (D_8008EA84 == 0x36) {
         osSetTime(0xC9 << 0 | 0xAC0000000 << 4);
-        print_text(&gDisplayListHead, &D_80097294, &D_8008BC38);
+        print_text(&gDisplayListHead, "         G", &D_8008BC38);
     }
 
     GFX_UPDATE(gDisplayList, gDisplayListHead);
@@ -511,7 +511,6 @@ s32 func_80026524(OSPfs* arg0) {
     return 0;
 }
 
-#ifdef NEEDS_RODATA
 void func_80026578(u32 arg0) {
     switch (arg0) {
     case 0:
@@ -545,9 +544,6 @@ void func_80026578(u32 arg0) {
         break;
     }
 }
-#else
-#pragma GLOBAL_ASM("asm/nonmatchings/26610/func_80026578.s")
-#endif
 
 void func_800265A0(void) {
     osViExtendVStart(1);

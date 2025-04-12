@@ -338,7 +338,7 @@ segments:
       - [0x97D10, rodata]
       - [0x97DD0, rodata]
       - [0x97E20, rodata]
-      - [0x97E50, rodata]
+      - [0x97E50, .rodata, 26610]
       - [0x97F30, rodata]
       - [0x97FE0, rodata]
       - [0x980F0, rodata]
